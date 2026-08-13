@@ -26,8 +26,8 @@ html,body{margin:0;padding:0;background:var(--bg);color:#ffffff}
   line-height:1.45 !important;
   color:#ffffff !important;
 }
-#dk-app{min-height:100dvh;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}
-.wrap{max-width:1180px;margin:0 auto;height:100dvh;display:flex;flex-direction:column;gap:10px;
+#dk-app{min-height:100vh;min-height:100dvh;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}
+.wrap{max-width:1180px;margin:0 auto;height:100vh;height:100dvh;display:flex;flex-direction:column;gap:10px;
   padding:12px 14px calc(12px + env(safe-area-inset-bottom))}
 
 .lang{display:inline-flex;border:1px solid var(--gold);border-radius:999px;overflow:hidden;flex:0 0 auto}
@@ -58,7 +58,7 @@ html,body{margin:0;padding:0;background:var(--bg);color:#ffffff}
 .tile:active{transform:translateY(0)}
 /* Square image via padding-hack (robust on iOS Safari, where aspect-ratio on <img> is unreliable) */
 .tile-imgwrap{position:relative;width:100%;padding-top:100%;height:0;overflow:hidden;background:#0b0b0b;flex:0 0 auto}
-.tile-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.tile-img{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;object-fit:cover;display:block}
 .tile-body{padding:7px 10px 9px;display:flex;flex-direction:column;gap:2px;flex:0 0 auto}
 .tile-cat{margin:0;font-size:9.5px;color:var(--gold) !important;text-transform:uppercase;letter-spacing:.5px !important;font-weight:600}
 .tile-name{margin:0;font-size:13px;font-weight:600;line-height:1.2 !important;min-height:2.4em;
