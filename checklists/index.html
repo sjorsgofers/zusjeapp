@@ -90,7 +90,11 @@
       border-radius:18px;
       background:linear-gradient(180deg, #151515 0%, #111111 100%);
       padding:18px;
-      text-align:left;
+      min-height:100px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
       color:var(--text);
       cursor:pointer;
       box-shadow:
@@ -112,7 +116,7 @@
       font-size:22px;
       font-weight:900;
       color:var(--gold);
-      margin:0 0 8px;
+      margin:0;
     }
 
     .menu-card-text{
@@ -381,30 +385,21 @@
     <!-- MENU -->
     <section class="screen active" id="screen-menu">
       <div class="menu-wrap">
-        <div class="hero">
-          <h1 class="hero-title">Checklist menu</h1>
-          <div class="hero-subtitle">Kies de checklist die je nodig hebt</div>
-        </div>
-
         <div class="menu-grid">
           <button class="menu-card" data-open-screen="screen-openen">
             <div class="menu-card-title">Openen</div>
-            <p class="menu-card-text">Openingschecklist met terras, voorbereiding en taken voor 16:00.</p>
           </button>
 
           <button class="menu-card" data-open-screen="screen-beneden">
             <div class="menu-card-title">Beneden</div>
-            <p class="menu-card-text">Sluitchecklist voor bar beneden, koffiehoek, overige taken en dagtaken.</p>
           </button>
 
           <button class="menu-card" data-open-screen="screen-boven">
             <div class="menu-card-title">Boven</div>
-            <p class="menu-card-text">Sluitchecklist voor bar boven, restauranttaken en daggebonden taken.</p>
           </button>
 
           <button class="menu-card" data-open-screen="screen-run">
             <div class="menu-card-title">Run</div>
-            <p class="menu-card-text">Run-checklist met alle vaste afsluitende handelingen.</p>
           </button>
         </div>
       </div>

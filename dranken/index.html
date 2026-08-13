@@ -130,6 +130,7 @@ html,body{margin:0;padding:0;background:var(--bg);color:#ffffff}
       <div class="lang" role="group" aria-label="Taal / Language">
         <button id="langNL" type="button" data-lang="nl">NL</button>
         <button id="langEN" type="button" data-lang="en">EN</button>
+        <button id="langDE" type="button" data-lang="de">DE</button>
       </div>
     </div>
 
@@ -168,13 +169,20 @@ const CAT_EN = {
   "Fris":"Soft drinks","Cocktails":"Cocktails","Bier":"Beer",
   "Wijn":"Wine","Sterke drank":"Spirits","Koffie en thee":"Coffee & tea"
 };
+const CAT_DE = {
+  "Fris":"Softdrinks","Cocktails":"Cocktails","Bier":"Bier",
+  "Wijn":"Wein","Sterke drank":"Spirituosen","Koffie en thee":"Kaffee & Tee"
+};
 const T = {
-  nl:{ subtitle:"Zoek per drankje de bereidingswijze op", placeholder:"Zoek een drankje…",
+  nl:{ placeholder:"Zoek een drankje…",
        prep:"Bereidingswijze", step:"stap", steps:"stappen", glas:"Glas", fles:"Fles",
        empty:"Geen drankjes gevonden", emptyFor:"Geen drankjes gevonden voor" },
-  en:{ subtitle:"Look up the preparation for each drink", placeholder:"Search a drink…",
+  en:{ placeholder:"Search a drink…",
        prep:"Preparation", step:"step", steps:"steps", glas:"Glass", fles:"Bottle",
-       empty:"No drinks found", emptyFor:"No drinks found for" }
+       empty:"No drinks found", emptyFor:"No drinks found for" },
+  de:{ placeholder:"Getränk suchen…",
+       prep:"Zubereitung", step:"Schritt", steps:"Schritte", glas:"Glas", fles:"Flasche",
+       empty:"Keine Getränke gefunden", emptyFor:"Keine Getränke gefunden für" }
 };
 
 let DATA = [];
@@ -199,7 +207,7 @@ function normalize(str){
 function normKey(str){
   return normalize(str).replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim();
 }
-function catLabel(cat){ return lang==="en" ? CAT_EN[cat] : cat; }
+function catLabel(cat){ return lang==="en" ? CAT_EN[cat] : lang==="de" ? CAT_DE[cat] : cat; }
 
 // Build display items: wines grouped into one item with glas/fles variants; everything else single.
 function buildDisplay(){
@@ -207,36 +215,39 @@ function buildDisplay(){
   const wineGroups = new Map();
   for (const d of DATA){
     if (d.category === "Wijn"){
-      let vtype = "fles", base = d.name, base_en = d.name_en;
+      let vtype = "fles", base = d.name, base_en = d.name_en, base_de = d.name_de;
       if (d.name.startsWith("Glas ")){ vtype="glas"; base=d.name.slice(5); }
       else if (d.name.startsWith("Fles ")){ vtype="fles"; base=d.name.slice(5); }
       if (d.name_en.startsWith("Glass of ")) base_en=d.name_en.slice(9);
       else if (d.name_en.startsWith("Bottle of ")) base_en=d.name_en.slice(10);
+      if (d.name_de.startsWith("Glas ")) base_de=d.name_de.slice(5);
+      else if (d.name_de.startsWith("Flasche ")) base_de=d.name_de.slice(8);
       const key = normKey(base);
       let item = wineGroups.get(key);
       if (!item){
-        item = { category:"Wijn", isWine:true, name:base, name_en:base_en, variants:{} };
+        item = { category:"Wijn", isWine:true, name:base, name_en:base_en, name_de:base_de, variants:{} };
         wineGroups.set(key, item);
         DISPLAY.push(item);
       }
       item.variants[vtype] = d;
     } else {
-      DISPLAY.push({ category:d.category, isWine:false, name:d.name, name_en:d.name_en, variants:{ single:d } });
+      DISPLAY.push({ category:d.category, isWine:false, name:d.name, name_en:d.name_en, name_de:d.name_de, variants:{ single:d } });
     }
   }
 }
 
-function itemName(item){ return lang==="en" ? item.name_en : item.name; }
+function itemName(item){ return lang==="en" ? item.name_en : lang==="de" ? item.name_de : item.name; }
 function defaultVariant(item){
   return item.variants.glas ? "glas" : (item.variants.fles ? "fles" : "single");
 }
 function variantDrink(item, v){ return item.variants[v]; }
-function drinkSteps(d){ return lang==="en" ? d.steps_en : d.steps; }
+function drinkSteps(d){ return lang==="en" ? d.steps_en : lang==="de" ? d.steps_de : d.steps; }
 
 function applyLang(){
   document.documentElement.lang = lang;
   document.getElementById("langNL").classList.toggle("active", lang==="nl");
   document.getElementById("langEN").classList.toggle("active", lang==="en");
+  document.getElementById("langDE").classList.toggle("active", lang==="de");
   document.getElementById("q").placeholder = T[lang].placeholder;
   document.getElementById("prepLabel").textContent = T[lang].prep;
   const vt = document.getElementById("variantToggle");
@@ -262,9 +273,9 @@ function buildTabs(){
 }
 
 function itemMatches(item, q){
-  if (normalize(item.name).includes(q) || normalize(item.name_en).includes(q)) return true;
+  if (normalize(item.name).includes(q) || normalize(item.name_en).includes(q) || normalize(item.name_de).includes(q)) return true;
   return Object.values(item.variants).some(d =>
-    normalize(d.name).includes(q) || normalize(d.name_en).includes(q));
+    normalize(d.name).includes(q) || normalize(d.name_en).includes(q) || normalize(d.name_de).includes(q));
 }
 
 function render(){
@@ -402,6 +413,7 @@ function setLang(l){
 
 document.getElementById("langNL").addEventListener("click", () => setLang("nl"));
 document.getElementById("langEN").addEventListener("click", () => setLang("en"));
+document.getElementById("langDE").addEventListener("click", () => setLang("de"));
 document.getElementById("variantToggle").addEventListener("click", e => {
   const b = e.target.closest("button"); if (!b || !currentItem) return;
   currentVariant = b.dataset.v; renderVariant();

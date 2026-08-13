@@ -14,6 +14,12 @@
    "Rinse the pilsner glass well so it is completely degreased.",
    "Tap the beer and skim off the foam properly.",
    "Serve it on a coaster with the logo facing the guest."
+  ],
+  "name_de": "Grolsch Premium",
+  "steps_de": [
+   "Spüle das Pilsglas gut aus, sodass es vollständig fettfrei ist.",
+   "Zapfe das Bier und schäume es richtig ab.",
+   "Serviere es auf einem Untersetzer mit dem Logo zum Gast."
   ]
  },
  {
@@ -31,6 +37,12 @@
    "Rinse the Weizen beer glass well so it is completely degreased.",
    "Tap the beer and skim off the foam properly.",
    "Serve it on a coaster with the logo facing the guest."
+  ],
+  "name_de": "Grolsch Weizen",
+  "steps_de": [
+   "Spüle das Weizenbierglas gut aus, sodass es vollständig fettfrei ist.",
+   "Zapfe das Bier und schäume es richtig ab.",
+   "Serviere es auf einem Untersetzer mit dem Logo zum Gast."
   ]
  },
  {
@@ -48,6 +60,12 @@
    "Make sure you have a polished, grease-free and dry Grimbergen beer glass.",
    "Tap the Grimbergen blond.",
    "Serve it on a coaster with the logo facing the guest."
+  ],
+  "name_de": "Grolsch Saisonbier vom Fass - Grimbergen Blond",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes Grimbergen-Bierglas hast.",
+   "Zapfe das Grimbergen Blond.",
+   "Serviere es auf einem Untersetzer mit dem Logo zum Gast."
   ]
  },
  {
@@ -65,6 +83,12 @@
    "Make sure you have a polished, grease-free and dry pilsner glass.",
    "Open the bottle.",
    "Serve the beer with the label facing the guest and the pilsner glass to the left of it."
+  ],
+  "name_de": "Grolsch 0.0%",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes Pilsglas hast.",
+   "Öffne die Flasche.",
+   "Serviere das Bier mit dem Etikett zum Gast und dem Pilsglas links davor."
   ]
  },
  {
@@ -82,6 +106,12 @@
    "Make sure you have a polished, grease-free and dry radler 0.0% glass.",
    "Open the bottle.",
    "Serve the beer with the label facing the guest and the radler 0.0% glass to the left of it."
+  ],
+  "name_de": "Grolsch Radler 0.0%",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes Radler-0,0%-Glas hast.",
+   "Öffne die Flasche.",
+   "Serviere das Bier mit dem Etikett zum Gast und dem Radler-0,0%-Glas links davor."
   ]
  },
  {
@@ -99,6 +129,12 @@
    "Make sure you have a polished, grease-free and dry Weizen glass.",
    "Open the bottle.",
    "Serve the beer with the label facing the guest and the Weizen glass to the left of it."
+  ],
+  "name_de": "Grolsch Weizen 0.0%",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes Weizenglas hast.",
+   "Öffne die Flasche.",
+   "Serviere das Bier mit dem Etikett zum Gast und dem Weizenglas links davor."
   ]
  },
  {
@@ -116,6 +152,12 @@
    "Make sure you have a polished, grease-free and dry Zusje special beer glass.",
    "Open the bottle.",
    "Serve the beer with the label facing the guest and the Zusje special beer glass to the left of it."
+  ],
+  "name_de": "Saisonbier 0,0% - Eeuwige jeugd Vrijer",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes Zusje-Spezialbierglas hast.",
+   "Öffne die Flasche.",
+   "Serviere das Bier mit dem Etikett zum Gast und dem Zusje-Spezialbierglas links davor."
   ]
  },
  {
@@ -133,6 +175,12 @@
    "Make sure you have a polished, grease-free and dry Zusje special beer glass.",
    "Fill the glass with 7 ice cubes and open the bottle.",
    "Serve the beer with the label facing the guest and the Zusje special beer glass to the left of it."
+  ],
+  "name_de": "Liefmans Fruitesse 0.0%",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes Zusje-Spezialbierglas hast.",
+   "Fülle das Glas mit 7 Eiswürfeln und öffne die Flasche.",
+   "Serviere das Bier mit dem Etikett zum Gast und dem Zusje-Spezialbierglas links davor."
   ]
  },
  {
@@ -150,6 +198,12 @@
    "Make sure you have a polished, grease-free and dry Zusje special beer glass.",
    "Open the bottle.",
    "Serve the beer with the label facing the guest and the Zusje special beer glass to the left of it."
+  ],
+  "name_de": "Chouffe 0,0%",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes Zusje-Spezialbierglas hast.",
+   "Öffne die Flasche.",
+   "Serviere das Bier mit dem Etikett zum Gast und dem Zusje-Spezialbierglas links davor."
   ]
  },
  {
@@ -167,6 +221,12 @@
    "Make sure you have a polished, grease-free and dry Grimbergen beer glass.",
    "Open the bottle.",
    "Serve the beer with the label facing the guest and the Grimbergen beer glass to the left of it."
+  ],
+  "name_de": "Grimbergen Tripel",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes Grimbergen-Bierglas hast.",
+   "Öffne die Flasche.",
+   "Serviere das Bier mit dem Etikett zum Gast und dem Grimbergen-Bierglas links davor."
   ]
  },
  {
@@ -184,6 +244,12 @@
    "Make sure you have a polished, grease-free and dry Duvel beer glass.",
    "Open the bottle.",
    "Serve the beer with the label facing the guest and the Duvel beer glass to the left of it."
+  ],
+  "name_de": "Duvel",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes Duvel-Bierglas hast.",
+   "Öffne die Flasche.",
+   "Serviere das Bier mit dem Etikett zum Gast und dem Duvel-Bierglas links davor."
   ]
  },
  {
@@ -201,6 +267,12 @@
    "Make sure you have a polished, grease-free and dry Zusje special beer glass.",
    "Open the bottle.",
    "Serve the beer with the label facing the guest and the Zusje special beer glass to the left of it."
+  ],
+  "name_de": "'t Gouden IJ",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes Zusje-Spezialbierglas hast.",
+   "Öffne die Flasche.",
+   "Serviere das Bier mit dem Etikett zum Gast und dem Zusje-Spezialbierglas links davor."
   ]
  },
  {
@@ -218,6 +290,12 @@
    "Make sure you have a polished, grease-free and dry Zusje special beer glass.",
    "Open the bottle.",
    "Serve the beer with the label facing the guest and the Zusje special beer glass to the left of it."
+  ],
+  "name_de": "'t IJ I.P.A.",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes Zusje-Spezialbierglas hast.",
+   "Öffne die Flasche.",
+   "Serviere das Bier mit dem Etikett zum Gast und dem Zusje-Spezialbierglas links davor."
   ]
  },
  {
@@ -235,6 +313,12 @@
    "Make sure you have a polished, grease-free and dry Zusje special beer glass.",
    "Fill the glass with 7 ice cubes and open the bottle.",
    "Serve the beer with the label facing the guest and the Zusje special beer glass to the left of it."
+  ],
+  "name_de": "Liefmans Fruitesse",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes Zusje-Spezialbierglas hast.",
+   "Fülle das Glas mit 7 Eiswürfeln und öffne die Flasche.",
+   "Serviere das Bier mit dem Etikett zum Gast und dem Zusje-Spezialbierglas links davor."
   ]
  },
  {
@@ -252,6 +336,12 @@
    "Make sure you have a polished, grease-free and dry Zusje special beer glass.",
    "Fill the glass with 7 ice cubes and open the bottle.",
    "Serve the beer with the label facing the guest and the Zusje special beer glass to the left of it."
+  ],
+  "name_de": "Liefmans Peach",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes Zusje-Spezialbierglas hast.",
+   "Fülle das Glas mit 7 Eiswürfeln und öffne die Flasche.",
+   "Serviere das Bier mit dem Etikett zum Gast und dem Zusje-Spezialbierglas links davor."
   ]
  },
  {
@@ -269,6 +359,12 @@
    "Make sure you have a polished, grease-free and dry Zusje special beer glass.",
    "Open the bottle.",
    "Serve the beer with the label facing the guest and the Zusje special beer glass to the left of it."
+  ],
+  "name_de": "Chouffe Cherry",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes Zusje-Spezialbierglas hast.",
+   "Öffne die Flasche.",
+   "Serviere das Bier mit dem Etikett zum Gast und dem Zusje-Spezialbierglas links davor."
   ]
  },
  {
@@ -298,6 +394,18 @@
    "Add a short cocktail straw.",
    "Open the Royal Bliss tonic bottle.",
    "Serve the Royal Bliss tonic bottle with the label facing the guest and the Gin & Tonic glass to the left of it."
+  ],
+  "name_de": "Gin Tonic",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes Gin-Tonic-Glas hast.",
+   "Fülle das Glas mit 7 Eiswürfeln.",
+   "Fülle den Jigger (Barmaß) mit dem Zusje-Gin (30 Milliliter).",
+   "Füge 8 Wacholderbeeren und einen halben Zweig Rosmarin hinzu.",
+   "Stecke eine Zitronenscheibe auf einen Zusje-Spieß. (ACHTUNG: Es muss eine ganze Scheibe sein, also die Zitrone nicht halbieren, sondern eine Scheibe einer ganzen Zitrone verwenden!)",
+   "Füge diese zum Gin-Tonic-Glas hinzu und achte darauf, dass der Zitronen(saft) den Gin nicht berührt, sonst verfärbt sich der Gin.",
+   "Füge einen kurzen Cocktailhalm hinzu.",
+   "Öffne die Royal-Bliss-Tonic-Flasche.",
+   "Serviere die Royal-Bliss-Tonic-Flasche mit dem Etikett zum Gast und dem Gin-Tonic-Glas links davor."
   ]
  },
  {
@@ -317,6 +425,13 @@
    "Using a bar measure, measure 100 milliliters of sparkling water and pour it into the glass.",
    "Then, using a bar measure, measure 100 milliliters of Mojito and pour it into the glass as well.",
    "Garnish the drink with 2 slices of lime, one sprig of mint and one long cocktail straw."
+  ],
+  "name_de": "Mojito",
+  "steps_de": [
+   "Fülle ein Longdrinkglas mit wenig Eiswürfeln.",
+   "Miss mit einem Barmaß 100 Milliliter Sprudelwasser ab und gieße es ins Glas.",
+   "Miss anschließend mit einem Barmaß 100 Milliliter Mojito ab und gieße ihn ebenfalls ins Glas.",
+   "Garniere das Getränk mit 2 Limettenscheiben, einem Zweig Minze und einem langen Cocktailhalm."
   ]
  },
  {
@@ -344,6 +459,17 @@
    "Tap against the side of the shaker to open it. Check whether there is enough foam (if not, shake the shaker well again until there is a nice layer of foam).",
    "Pour using the cocktail strainer, so the ice does not go into the glass.",
    "Garnish the drink with 3 coffee beans."
+  ],
+  "name_de": "Espresso Martini",
+  "steps_de": [
+   "Nimm ein Pornstar-Martini-Glas.",
+   "Fülle die kleine Seite des Shakers vollständig mit Eiswürfeln.",
+   "Miss mit einem Barmaß 150 Milliliter Espresso Martini aus der Flasche ab und gieße ihn in die große Seite des Shakers.",
+   "Setze anschließend die beiden Seiten des Shakers aufeinander und achte darauf, dass sie fest sitzen.",
+   "Shake den Shaker gut.",
+   "Schlage gegen die Seite des Shakers, um ihn zu öffnen. Prüfe, ob genug Schaum vorhanden ist (falls nicht, shake den Shaker erneut gut, bis eine schöne Schaumschicht entsteht).",
+   "Gieße mit dem Cocktailsieb ein, damit das Eis nicht ins Glas gelangt.",
+   "Garniere das Getränk mit 3 Kaffeebohnen."
   ]
  },
  {
@@ -375,6 +501,19 @@
    "Cut a passion fruit in half.",
    "Garnish the drink with half a passion fruit.",
    "Alongside the Pornstar Martini, serve 30 milliliters of Zusje cava in a liqueur glass."
+  ],
+  "name_de": "Pornstar Martini",
+  "steps_de": [
+   "Nimm ein Pornstar-Martini-Glas.",
+   "Fülle die kleine Seite des Shakers vollständig mit Eiswürfeln.",
+   "Miss mit einem Barmaß 150 Milliliter Pornstar Martini aus der Flasche ab und gieße ihn in die große Seite des Shakers.",
+   "Setze anschließend die beiden Seiten des Shakers aufeinander und achte darauf, dass sie fest sitzen.",
+   "Shake den Shaker gut.",
+   "Schlage gegen die Seite des Shakers, um ihn zu öffnen. Prüfe, ob genug Schaum vorhanden ist (falls nicht, shake den Shaker erneut gut, bis eine schöne Schaumschicht entsteht).",
+   "Gieße mit dem Cocktailsieb ein, damit das Eis nicht ins Glas gelangt.",
+   "Schneide eine Passionsfrucht in zwei Hälften.",
+   "Garniere das Getränk mit einer halben Passionsfrucht.",
+   "Serviere neben dem Pornstar Martini 30 Milliliter Zusje-Cava in einem Likörglas dazu."
   ]
  },
  {
@@ -396,6 +535,14 @@
    "Pour 75 milliliters of Limocello spritz into the glass and 125 milliliters of sparkling water on top.",
    "Garnish the glass by placing the 2 slices of lemon in the glass and a sprig of mint.",
    "Finally, add a short cocktail straw."
+  ],
+  "name_de": "Limocello Spritz",
+  "steps_de": [
+   "Nimm ein poliertes Weinglas und fülle es mit 7 Eiswürfeln.",
+   "Schneide 2 Zitronenscheiben.",
+   "Gieße 75 Milliliter Limocello Spritz ins Glas und darauf 125 Milliliter Sprudelwasser.",
+   "Garniere das Glas, indem du die 2 Zitronenscheiben und einen Zweig Minze ins Glas legst.",
+   "Stecke zum Schluss noch einen kurzen Cocktailhalm hinein."
   ]
  },
  {
@@ -417,6 +564,14 @@
    "Pour 75 milliliters of Arancia Rosa Spritz into the glass and 125 milliliters of sparkling water on top.",
    "Garnish the glass by placing 2 slices of orange in the glass.",
    "Finally, add a short cocktail straw."
+  ],
+  "name_de": "Zusje Spritz",
+  "steps_de": [
+   "Nimm ein poliertes Weinglas und fülle es mit 7 Eiswürfeln.",
+   "Schneide 2 Orangenscheiben.",
+   "Gieße 75 Milliliter Arancia Rosa Spritz ins Glas und darauf 125 Milliliter Sprudelwasser.",
+   "Garniere das Glas, indem du 2 Orangenscheiben ins Glas legst.",
+   "Stecke zum Schluss noch einen kurzen Cocktailhalm hinein."
   ]
  },
  {
@@ -442,6 +597,16 @@
    "Then add 50 milliliters of Bibs Classico from the Cocktail Club.",
    "Garnish the glass by placing the 2 slices of orange in the glass.",
    "Finally, add a short cocktail straw."
+  ],
+  "name_de": "Aperol Spritz",
+  "steps_de": [
+   "Nimm ein poliertes Weinglas und fülle es mit 7 Eiswürfeln.",
+   "Schneide 2 Orangenscheiben.",
+   "Gieße 125 Milliliter Sprudelwasser ins Weinglas.",
+   "Füge mit dem Ausgießer 20 Milliliter Aperol hinzu.",
+   "Füge außerdem 50 Milliliter Bibs Classico vom Cocktail Club hinzu.",
+   "Garniere das Glas, indem du die 2 Orangenscheiben ins Glas legst.",
+   "Stecke zum Schluss noch einen kurzen Cocktailhalm hinein."
   ]
  },
  {
@@ -473,6 +638,19 @@
    "Cut a passion fruit in half.",
    "Garnish the drink with half a passion fruit.",
    "Alongside the Pornstar Martini, serve 30 milliliters of Zusje cava in a liqueur glass."
+  ],
+  "name_de": "Pornstar Martini (alkoholfrei)",
+  "steps_de": [
+   "Nimm ein Pornstar-Martini-Glas.",
+   "Fülle die kleine Seite des Shakers vollständig mit Eiswürfeln.",
+   "Miss mit einem Barmaß 150 Milliliter Pornstar Martini 0,0% aus der Flasche ab und gieße ihn in die große Seite des Shakers (ACHTUNG: Verwende dafür den 0,0%-Shaker).",
+   "Setze anschließend die beiden Seiten des Shakers aufeinander und achte darauf, dass sie fest sitzen.",
+   "Shake den Shaker gut.",
+   "Schlage gegen die Seite des Shakers, um ihn zu öffnen. Prüfe, ob genug Schaum vorhanden ist (falls nicht, shake den Shaker erneut gut, bis eine schöne Schaumschicht entsteht).",
+   "Gieße mit dem Cocktailsieb ein, damit das Eis nicht ins Glas gelangt.",
+   "Schneide eine Passionsfrucht in zwei Hälften.",
+   "Garniere das Getränk mit einer halben Passionsfrucht.",
+   "Serviere neben dem Pornstar Martini 30 Milliliter Zusje-Cava in einem Likörglas dazu."
   ]
  },
  {
@@ -498,6 +676,16 @@
    "Take a glass filter jug and add two scoops of the cassis tea.",
    "Then fill the jug with boiling water. (Pressing the button once is enough, the same as making a cup of tea.)",
    "Serve the iced tea, and explain that the tea needs to steep for a few more minutes and cool down."
+  ],
+  "name_de": "Frischer sommerlicher Eistee Cassis",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes großes Longdrinkglas hast.",
+   "Fülle das Glas vollständig mit Eis.",
+   "Stecke einen Zweig Minze hinein; er darf ruhig über das Glas hinausragen.",
+   "Stecke einen langen Cocktailhalm dazu.",
+   "Nimm ein Glasfilterkännchen und gib zwei Messlöffel des Cassis-Tees hinein.",
+   "Fülle das Kännchen anschließend mit kochendem Wasser. (Einmal auf den Knopf drücken reicht, genauso wie beim Zubereiten einer Tasse Tee.)",
+   "Serviere den Eistee und erkläre, dass der Tee noch einige Minuten ziehen und abkühlen muss."
   ]
  },
  {
@@ -525,6 +713,17 @@
    "Take a glass filter jug and add two scoops of the pear & papaya tea.",
    "Then fill the jug with boiling water. (Pressing the button once is enough, the same as making a cup of tea.)",
    "Serve the iced tea, and explain that the tea needs to steep for a few more minutes and cool down."
+  ],
+  "name_de": "Frischer Eistee Icy Pear",
+  "steps_de": [
+   "Sorge dafür, dass du ein poliertes, fettfreies und trockenes großes Longdrinkglas hast.",
+   "Schneide 1 Limettenspalte und 2 Zitronenscheiben.",
+   "Fülle das Glas vollständig mit Eis und achte darauf, dass du die Zitrone und Limette in Schichten zwischen das Eis gibst.",
+   "Stecke einen Zweig Minze hinein; er darf ruhig über das Glas hinausragen.",
+   "Stecke einen langen Cocktailhalm dazu.",
+   "Nimm ein Glasfilterkännchen und gib zwei Messlöffel des Birnen-&-Papaya-Tees hinein.",
+   "Fülle das Kännchen anschließend mit kochendem Wasser. (Einmal auf den Knopf drücken reicht, genauso wie beim Zubereiten einer Tasse Tee.)",
+   "Serviere den Eistee und erkläre, dass der Tee noch einige Minuten ziehen und abkühlen muss."
   ]
  },
  {
@@ -548,6 +747,15 @@
    "Cut 2 wedges of lime and add them to the glass.",
    "Then pinch off a top of the mint and stick it on top in the glass.",
    "Serve the Mojito 0.0% with a long cocktail straw."
+  ],
+  "name_de": "Mojito (alkoholfrei)",
+  "steps_de": [
+   "Fülle ein Longdrinkglas mit wenig Eiswürfeln.",
+   "Gib 150 Milliliter Sprudelwasser hinzu.",
+   "Fülle das Barmaß mit 50 Milliliter Mojito 0,0% und gieße dies ebenfalls ins Glas.",
+   "Schneide 2 Limettenspalten und gib sie ins Glas.",
+   "Zupfe anschließend eine Spitze der Minze ab und stecke sie oben ins Glas.",
+   "Serviere den Mojito 0,0% mit einem langen Cocktailhalm."
   ]
  },
  {
@@ -565,6 +773,12 @@
    "Fill a grease-free, dry and polished soft drink glass with 3 ice cubes.",
    "Open the bottle.",
    "Serve the soft drink with the label facing the guest and the soft drink glass to the left of it."
+  ],
+  "name_de": "Coca-Cola",
+  "steps_de": [
+   "Fülle ein fettfreies, trockenes und poliertes Erfrischungsgetränkglas mit 3 Eiswürfeln.",
+   "Öffne die Flasche.",
+   "Serviere das Erfrischungsgetränk mit dem Etikett zum Gast und dem Erfrischungsgetränkglas links davor."
   ]
  },
  {
@@ -582,6 +796,12 @@
    "Fill a grease-free, dry and polished soft drink glass with 3 ice cubes.",
    "Open the bottle.",
    "Serve the soft drink with the label facing the guest and the soft drink glass to the left of it."
+  ],
+  "name_de": "Coca-Cola Zero",
+  "steps_de": [
+   "Fülle ein fettfreies, trockenes und poliertes Erfrischungsgetränkglas mit 3 Eiswürfeln.",
+   "Öffne die Flasche.",
+   "Serviere das Erfrischungsgetränk mit dem Etikett zum Gast und dem Erfrischungsgetränkglas links davor."
   ]
  },
  {
@@ -599,6 +819,12 @@
    "Fill a grease-free, dry and polished soft drink glass with 3 ice cubes.",
    "Open the bottle.",
    "Serve the soft drink with the label facing the guest and the soft drink glass to the left of it."
+  ],
+  "name_de": "Fanta Orange",
+  "steps_de": [
+   "Fülle ein fettfreies, trockenes und poliertes Erfrischungsgetränkglas mit 3 Eiswürfeln.",
+   "Öffne die Flasche.",
+   "Serviere das Erfrischungsgetränk mit dem Etikett zum Gast und dem Erfrischungsgetränkglas links davor."
   ]
  },
  {
@@ -616,6 +842,12 @@
    "Fill a grease-free, dry and polished soft drink glass with 3 ice cubes.",
    "Open the bottle.",
    "Serve the soft drink with the label facing the guest and the soft drink glass to the left of it."
+  ],
+  "name_de": "Sprite",
+  "steps_de": [
+   "Fülle ein fettfreies, trockenes und poliertes Erfrischungsgetränkglas mit 3 Eiswürfeln.",
+   "Öffne die Flasche.",
+   "Serviere das Erfrischungsgetränk mit dem Etikett zum Gast und dem Erfrischungsgetränkglas links davor."
   ]
  },
  {
@@ -633,6 +865,12 @@
    "Fill a grease-free, dry and polished soft drink glass with 3 ice cubes.",
    "Open the bottle.",
    "Serve the soft drink with the label facing the guest and the soft drink glass to the left of it."
+  ],
+  "name_de": "Fanta cassis",
+  "steps_de": [
+   "Fülle ein fettfreies, trockenes und poliertes Erfrischungsgetränkglas mit 3 Eiswürfeln.",
+   "Öffne die Flasche.",
+   "Serviere das Erfrischungsgetränk mit dem Etikett zum Gast und dem Erfrischungsgetränkglas links davor."
   ]
  },
  {
@@ -650,6 +888,12 @@
    "Fill a grease-free, dry and polished tumbler glass with 5 ice cubes and 1 wedge of orange.",
    "Add 1 short cocktail straw and a stirrer to the ice cubes and open the bottle.",
    "Serve the soft drink with the label facing the guest and the tumbler glass to the left of it."
+  ],
+  "name_de": "Fuze tea Sparkling",
+  "steps_de": [
+   "Fülle ein fettfreies, trockenes und poliertes Tumblerglas mit 5 Eiswürfeln und 1 Orangenspalte.",
+   "Stecke 1 kurzen Cocktailhalm und einen Stößel zu den Eiswürfeln und öffne die Flasche.",
+   "Serviere das Erfrischungsgetränk mit dem Etikett zum Gast und dem Tumblerglas links davor."
   ]
  },
  {
@@ -667,6 +911,12 @@
    "Fill a grease-free, dry and polished tumbler glass with 5 ice cubes and 1 wedge of orange.",
    "Add 1 short cocktail straw and a stirrer to the ice cubes and open the bottle.",
    "Serve the soft drink with the label facing the guest and the tumbler glass to the left of it."
+  ],
+  "name_de": "Fuze tea Green",
+  "steps_de": [
+   "Fülle ein fettfreies, trockenes und poliertes Tumblerglas mit 5 Eiswürfeln und 1 Orangenspalte.",
+   "Stecke 1 kurzen Cocktailhalm und einen Stößel zu den Eiswürfeln und öffne die Flasche.",
+   "Serviere das Erfrischungsgetränk mit dem Etikett zum Gast und dem Tumblerglas links davor."
   ]
  },
  {
@@ -684,6 +934,12 @@
    "Fill a grease-free, dry and polished tumbler glass with 5 ice cubes and 1 wedge of orange.",
    "Add 1 short cocktail straw and a stirrer to the ice cubes and open the bottle.",
    "Serve the soft drink with the label facing the guest and the tumbler glass to the left of it."
+  ],
+  "name_de": "Fuze tea Mango",
+  "steps_de": [
+   "Fülle ein fettfreies, trockenes und poliertes Tumblerglas mit 5 Eiswürfeln und 1 Orangenspalte.",
+   "Stecke 1 kurzen Cocktailhalm und einen Stößel zu den Eiswürfeln und öffne die Flasche.",
+   "Serviere das Erfrischungsgetränk mit dem Etikett zum Gast und dem Tumblerglas links davor."
   ]
  },
  {
@@ -701,6 +957,12 @@
    "Fill a grease-free, dry and polished tumbler glass with 5 ice cubes and 1 slice of lemon.",
    "Add 1 short cocktail straw and a stirrer to the ice cubes and open the bottle.",
    "Serve the soft drink with the label facing the guest and the tumbler glass to the left of it."
+  ],
+  "name_de": "Tonic",
+  "steps_de": [
+   "Fülle ein fettfreies, trockenes und poliertes Tumblerglas mit 5 Eiswürfeln und 1 Zitronenscheibe.",
+   "Stecke 1 kurzen Cocktailhalm und einen Stößel zu den Eiswürfeln und öffne die Flasche.",
+   "Serviere das Erfrischungsgetränk mit dem Etikett zum Gast und dem Tumblerglas links davor."
   ]
  },
  {
@@ -718,6 +980,12 @@
    "Fill a grease-free, dry and polished tumbler glass with 5 ice cubes and 1 sprig of mint.",
    "Add 1 short cocktail straw and a stirrer to the ice cubes and open the bottle.",
    "Serve the soft drink with the label facing the guest and the tumbler glass to the left of it."
+  ],
+  "name_de": "Ginger ale",
+  "steps_de": [
+   "Fülle ein fettfreies, trockenes und poliertes Tumblerglas mit 5 Eiswürfeln und 1 Zweig Minze.",
+   "Stecke 1 kurzen Cocktailhalm und einen Stößel zu den Eiswürfeln und öffne die Flasche.",
+   "Serviere das Erfrischungsgetränk mit dem Etikett zum Gast und dem Tumblerglas links davor."
   ]
  },
  {
@@ -735,6 +1003,12 @@
    "Fill a grease-free, dry and polished tumbler glass with 5 ice cubes and 1 wedge of lime.",
    "Add 1 short cocktail straw and a stirrer to the ice cubes and open the bottle.",
    "Serve the soft drink with the label facing the guest and the tumbler glass to the left of it."
+  ],
+  "name_de": "Bitter lemon",
+  "steps_de": [
+   "Fülle ein fettfreies, trockenes und poliertes Tumblerglas mit 5 Eiswürfeln und 1 Limettenspalte.",
+   "Stecke 1 kurzen Cocktailhalm und einen Stößel zu den Eiswürfeln und öffne die Flasche.",
+   "Serviere das Erfrischungsgetränk mit dem Etikett zum Gast und dem Tumblerglas links davor."
   ]
  },
  {
@@ -752,6 +1026,12 @@
    "Fill a grease-free, dry and polished tumbler glass with 5 ice cubes and 1 sprig of mint.",
    "Add 1 short cocktail straw and a stirrer to the ice cubes and open the bottle.",
    "Serve the soft drink with the label facing the guest and the tumbler glass to the left of it."
+  ],
+  "name_de": "Ginger beer",
+  "steps_de": [
+   "Fülle ein fettfreies, trockenes und poliertes Tumblerglas mit 5 Eiswürfeln und 1 Zweig Minze.",
+   "Stecke 1 kurzen Cocktailhalm und einen Stößel zu den Eiswürfeln und öffne die Flasche.",
+   "Serviere das Erfrischungsgetränk mit dem Etikett zum Gast und dem Tumblerglas links davor."
   ]
  },
  {
@@ -769,6 +1049,12 @@
    "Fill a grease-free, dry and polished tumbler glass with 5 ice cubes and 1 wedge of lime.",
    "Add 1 short cocktail straw and a stirrer to the ice cubes and open the bottle.",
    "Serve the soft drink with the label facing the guest and the tumbler glass to the left of it."
+  ],
+  "name_de": "Pink Berry",
+  "steps_de": [
+   "Fülle ein fettfreies, trockenes und poliertes Tumblerglas mit 5 Eiswürfeln und 1 Limettenspalte.",
+   "Stecke 1 kurzen Cocktailhalm und einen Stößel zu den Eiswürfeln und öffne die Flasche.",
+   "Serviere das Erfrischungsgetränk mit dem Etikett zum Gast und dem Tumblerglas links davor."
   ]
  },
  {
@@ -784,6 +1070,11 @@
   "steps_en": [
    "Take a grease-free, dry and polished soft drink glass and open the bottle.",
    "Serve the soft drink with the label facing the guest and the soft drink glass to the left of it."
+  ],
+  "name_de": "Apfelsaft",
+  "steps_de": [
+   "Nimm ein fettfreies, trockenes und poliertes Erfrischungsgetränkglas und öffne die Flasche.",
+   "Serviere das Erfrischungsgetränk mit dem Etikett zum Gast und dem Erfrischungsgetränkglas links davor."
   ]
  },
  {
@@ -799,6 +1090,11 @@
   "steps_en": [
    "Take a grease-free, dry and polished soft drink glass and open the bottle.",
    "Serve the soft drink with the label facing the guest and the soft drink glass to the left of it."
+  ],
+  "name_de": "Orangensaft",
+  "steps_de": [
+   "Nimm ein fettfreies, trockenes und poliertes Erfrischungsgetränkglas und öffne die Flasche.",
+   "Serviere das Erfrischungsgetränk mit dem Etikett zum Gast und dem Erfrischungsgetränkglas links davor."
   ]
  },
  {
@@ -816,6 +1112,12 @@
    "Fill a Made Blue bottle 0.35L with still water and close it with a Made Blue still water cap (silver).",
    "Hang a Made Blue label around the neck of the bottle.",
    "Serve the Made Blue bottle 0.35L with the label facing the guest and a water glass to the left of it."
+  ],
+  "name_de": "Tafelwasser still 0,35L",
+  "steps_de": [
+   "Fülle eine Made-Blue-Flasche 0,35L mit stillem Wasser und verschließe sie mit einem Made-Blue-Verschluss für stilles Wasser (silber).",
+   "Hänge ein Made-Blue-Etikett um den Hals der Flasche.",
+   "Serviere die Made-Blue-Flasche 0,35L mit dem Etikett zum Gast und einem Wasserglas links davor."
   ]
  },
  {
@@ -833,6 +1135,12 @@
    "Fill a Made Blue bottle 0.35L with sparkling water and close it with a Made Blue sparkling water cap (gold).",
    "Hang a Made Blue label around the neck of the bottle.",
    "Serve the Made Blue bottle 0.35L with the label facing the guest and a water glass to the left of it."
+  ],
+  "name_de": "Tafelwasser sprudelnd 0,35L",
+  "steps_de": [
+   "Fülle eine Made-Blue-Flasche 0,35L mit Sprudelwasser und verschließe sie mit einem Made-Blue-Verschluss für Sprudelwasser (gold).",
+   "Hänge ein Made-Blue-Etikett um den Hals der Flasche.",
+   "Serviere die Made-Blue-Flasche 0,35L mit dem Etikett zum Gast und einem Wasserglas links davor."
   ]
  },
  {
@@ -850,6 +1158,12 @@
    "Fill a Made Blue bottle 0.7L with still water and close it with a Made Blue still water cap (silver).",
    "Hang a Made Blue label around the neck of the bottle.",
    "Serve the Made Blue bottle 0.7L with the label facing the guest and a water glass to the left of it."
+  ],
+  "name_de": "Tafelwasser still 0,7L",
+  "steps_de": [
+   "Fülle eine Made-Blue-Flasche 0,7L mit stillem Wasser und verschließe sie mit einem Made-Blue-Verschluss für stilles Wasser (silber).",
+   "Hänge ein Made-Blue-Etikett um den Hals der Flasche.",
+   "Serviere die Made-Blue-Flasche 0,7L mit dem Etikett zum Gast und einem Wasserglas links davor."
   ]
  },
  {
@@ -867,6 +1181,12 @@
    "Fill a Made Blue bottle 0.7L with sparkling water and close it with a Made Blue sparkling water cap (gold).",
    "Hang a Made Blue label around the neck of the bottle.",
    "Serve the Made Blue bottle 0.7L with the label facing the guest and a water glass to the left of it."
+  ],
+  "name_de": "Tafelwasser sprudelnd 0,7L",
+  "steps_de": [
+   "Fülle eine Made-Blue-Flasche 0,7L mit Sprudelwasser und verschließe sie mit einem Made-Blue-Verschluss für Sprudelwasser (gold).",
+   "Hänge ein Made-Blue-Etikett um den Hals der Flasche.",
+   "Serviere die Made-Blue-Flasche 0,7L mit dem Etikett zum Gast und einem Wasserglas links davor."
   ]
  },
  {
@@ -884,6 +1204,12 @@
    "Take a dry, grease-free and polished tumbler glass.",
    "(For a whisky on ice, add 3 ice cubes.)",
    "Measure 35 ml of whisky and pour it into the tumbler glass. (For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ],
+  "name_de": "Johnnie Walker Red Label Whisky",
+  "steps_de": [
+   "Nimm ein trockenes, fettfreies und poliertes Tumblerglas.",
+   "(Bei einem Whisky mit Eis füge 3 Eiswürfel hinzu.)",
+   "Miss 35 ml Whisky ab und gieße ihn ins Tumblerglas. (Bei Mixgetränken nimm ein Tumblerglas mit 3 Eiswürfeln und einem schwarzen 14-cm-Halm + dem passenden Erfrischungsgetränk.)"
   ]
  },
  {
@@ -899,6 +1225,11 @@
   "steps_en": [
    "Take a dry, grease-free and polished cognac glass.",
    "Measure 35 ml of cognac and pour it into the cognac glass."
+  ],
+  "name_de": "Remy Martin VSOP Cognac",
+  "steps_de": [
+   "Nimm ein trockenes, fettfreies und poliertes Cognacglas.",
+   "Miss 35 ml Cognac ab und gieße ihn ins Cognacglas."
   ]
  },
  {
@@ -916,6 +1247,12 @@
    "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
    "Measure 35 ml of Rum and pour it into the liqueur glass (or tumbler glass).",
    "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ],
+  "name_de": "Rum",
+  "steps_de": [
+   "Nimm ein trockenes, fettfreies und poliertes Likörglas (bei einem Likör mit Eis nimm ein Tumblerglas mit 3 Eiswürfeln).",
+   "Miss 35 ml Rum ab und gieße ihn ins Likörglas (oder Tumblerglas).",
+   "(Bei Mixgetränken nimm ein Tumblerglas mit 3 Eiswürfeln und einem schwarzen 14-cm-Halm + dem passenden Erfrischungsgetränk.)"
   ]
  },
  {
@@ -933,6 +1270,12 @@
    "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
    "Measure 35 ml of Vodka and pour it into the liqueur glass (or tumbler glass).",
    "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ],
+  "name_de": "Vodka",
+  "steps_de": [
+   "Nimm ein trockenes, fettfreies und poliertes Likörglas (bei einem Likör mit Eis nimm ein Tumblerglas mit 3 Eiswürfeln).",
+   "Miss 35 ml Wodka ab und gieße ihn ins Likörglas (oder Tumblerglas).",
+   "(Bei Mixgetränken nimm ein Tumblerglas mit 3 Eiswürfeln und einem schwarzen 14-cm-Halm + dem passenden Erfrischungsgetränk.)"
   ]
  },
  {
@@ -950,6 +1293,12 @@
    "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
    "Measure 35 ml of Vieux and pour it into the liqueur glass (or tumbler glass).",
    "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ],
+  "name_de": "Vieux",
+  "steps_de": [
+   "Nimm ein trockenes, fettfreies und poliertes Likörglas (bei einem Likör mit Eis nimm ein Tumblerglas mit 3 Eiswürfeln).",
+   "Miss 35 ml Vieux ab und gieße ihn ins Likörglas (oder Tumblerglas).",
+   "(Bei Mixgetränken nimm ein Tumblerglas mit 3 Eiswürfeln und einem schwarzen 14-cm-Halm + dem passenden Erfrischungsgetränk.)"
   ]
  },
  {
@@ -967,6 +1316,12 @@
    "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
    "Measure 35 ml of Jägermeister and pour it into the liqueur glass (or tumbler glass).",
    "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ],
+  "name_de": "Jägermeister",
+  "steps_de": [
+   "Nimm ein trockenes, fettfreies und poliertes Likörglas (bei einem Likör mit Eis nimm ein Tumblerglas mit 3 Eiswürfeln).",
+   "Miss 35 ml Jägermeister ab und gieße ihn ins Likörglas (oder Tumblerglas).",
+   "(Bei Mixgetränken nimm ein Tumblerglas mit 3 Eiswürfeln und einem schwarzen 14-cm-Halm + dem passenden Erfrischungsgetränk.)"
   ]
  },
  {
@@ -984,6 +1339,12 @@
    "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
    "Measure 35 ml of Jonge Jenever and pour it into the liqueur glass (or tumbler glass).",
    "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ],
+  "name_de": "Junger Genever",
+  "steps_de": [
+   "Nimm ein trockenes, fettfreies und poliertes Likörglas (bei einem Likör mit Eis nimm ein Tumblerglas mit 3 Eiswürfeln).",
+   "Miss 35 ml Jonge Jenever ab und gieße ihn ins Likörglas (oder Tumblerglas).",
+   "(Bei Mixgetränken nimm ein Tumblerglas mit 3 Eiswürfeln und einem schwarzen 14-cm-Halm + dem passenden Erfrischungsgetränk.)"
   ]
  },
  {
@@ -1001,6 +1362,12 @@
    "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
    "Measure 35 ml of Licor 43 and pour it into the liqueur glass (or tumbler glass).",
    "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ],
+  "name_de": "Licor 43",
+  "steps_de": [
+   "Nimm ein trockenes, fettfreies und poliertes Likörglas (bei einem Likör mit Eis nimm ein Tumblerglas mit 3 Eiswürfeln).",
+   "Miss 35 ml Licor 43 ab und gieße ihn ins Likörglas (oder Tumblerglas).",
+   "(Bei Mixgetränken nimm ein Tumblerglas mit 3 Eiswürfeln und einem schwarzen 14-cm-Halm + dem passenden Erfrischungsgetränk.)"
   ]
  },
  {
@@ -1018,6 +1385,12 @@
    "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
    "Measure 35 ml of Tia Maria and pour it into the liqueur glass (or tumbler glass).",
    "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ],
+  "name_de": "Tia maria",
+  "steps_de": [
+   "Nimm ein trockenes, fettfreies und poliertes Likörglas (bei einem Likör mit Eis nimm ein Tumblerglas mit 3 Eiswürfeln).",
+   "Miss 35 ml Tia Maria ab und gieße ihn ins Likörglas (oder Tumblerglas).",
+   "(Bei Mixgetränken nimm ein Tumblerglas mit 3 Eiswürfeln und einem schwarzen 14-cm-Halm + dem passenden Erfrischungsgetränk.)"
   ]
  },
  {
@@ -1035,6 +1408,12 @@
    "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
    "Measure 35 ml of Baileys and pour it into the liqueur glass (or tumbler glass).",
    "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ],
+  "name_de": "Baileys",
+  "steps_de": [
+   "Nimm ein trockenes, fettfreies und poliertes Likörglas (bei einem Likör mit Eis nimm ein Tumblerglas mit 3 Eiswürfeln).",
+   "Miss 35 ml Baileys ab und gieße ihn ins Likörglas (oder Tumblerglas).",
+   "(Bei Mixgetränken nimm ein Tumblerglas mit 3 Eiswürfeln und einem schwarzen 14-cm-Halm + dem passenden Erfrischungsgetränk.)"
   ]
  },
  {
@@ -1052,6 +1431,12 @@
    "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
    "Measure 35 ml of Disaronno and pour it into the liqueur glass (or tumbler glass).",
    "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ],
+  "name_de": "Disaronno",
+  "steps_de": [
+   "Nimm ein trockenes, fettfreies und poliertes Likörglas (bei einem Likör mit Eis nimm ein Tumblerglas mit 3 Eiswürfeln).",
+   "Miss 35 ml Disaronno ab und gieße ihn ins Likörglas (oder Tumblerglas).",
+   "(Bei Mixgetränken nimm ein Tumblerglas mit 3 Eiswürfeln und einem schwarzen 14-cm-Halm + dem passenden Erfrischungsgetränk.)"
   ]
  },
  {
@@ -1069,6 +1454,12 @@
    "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
    "Measure 35 ml of Limoncello and pour it into the liqueur glass (or tumbler glass).",
    "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ],
+  "name_de": "Limoncello",
+  "steps_de": [
+   "Nimm ein trockenes, fettfreies und poliertes Likörglas (bei einem Likör mit Eis nimm ein Tumblerglas mit 3 Eiswürfeln).",
+   "Miss 35 ml Limoncello ab und gieße ihn ins Likörglas (oder Tumblerglas).",
+   "(Bei Mixgetränken nimm ein Tumblerglas mit 3 Eiswürfeln und einem schwarzen 14-cm-Halm + dem passenden Erfrischungsgetränk.)"
   ]
  },
  {
@@ -1086,6 +1477,12 @@
    "Make sure you have a dry, grease-free and polished port glass.",
    "Pour the port into it up to above the bulge of the glass.",
    "Serve the glass."
+  ],
+  "name_de": "Glas Roter Portwein",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Portglas.",
+   "Gieße den Port hinein, bis über die Wölbung des Glases.",
+   "Serviere das Glas."
   ]
  },
  {
@@ -1107,6 +1504,14 @@
    "Place the coffee cup on the coffee saucer with the handle to the right and the spoon to the upper right of the handle.",
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ],
+  "name_de": "Kaffee",
+  "steps_de": [
+   "Fülle den Kolben (mit 1 Auslauf) mit den gemahlenen Kaffeebohnen.",
+   "Setze den Kolben in die Kaffeemaschine, stelle die Kaffeetasse darunter und drücke die Taste mit der vollen Kaffeetasse. (Achte darauf, den Kolben gut zu reinigen und fest anzudrücken.)",
+   "Stelle die Kaffeetasse auf die Kaffeeuntertasse mit dem Henkel nach rechts und dem Löffel rechts oben über dem Henkel.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben."
   ]
  },
  {
@@ -1128,6 +1533,14 @@
    "Place the espresso cup on the espresso saucer with the handle to the right and the spoon to the upper right of the handle.",
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ],
+  "name_de": "Espresso",
+  "steps_de": [
+   "Fülle den Kolben (mit 1 Auslauf) mit den gemahlenen Espressobohnen.",
+   "Setze den Kolben in die Kaffeemaschine, stelle die Espressotasse darunter und drücke die Taste mit der halbvollen Kaffeetasse. (Achte darauf, den Kolben gut zu reinigen und fest anzudrücken.)",
+   "Stelle die Espressotasse auf die Espressountertasse mit dem Henkel nach rechts und dem Löffel rechts oben über dem Henkel.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben."
   ]
  },
  {
@@ -1151,6 +1564,15 @@
    "Place the cappuccino cup on the cappuccino saucer with the handle to the right and the spoon to the upper right of the handle.",
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ],
+  "name_de": "Cappuccino",
+  "steps_de": [
+   "Fülle den Kolben (mit 1 Auslauf) mit den gemahlenen Espressobohnen.",
+   "Setze den Kolben in die Kaffeemaschine, stelle die Cappuccinotasse darunter und drücke die Taste mit der halbvollen Kaffeetasse. (Achte darauf, den Kolben gut zu reinigen und fest anzudrücken.)",
+   "Erzeuge den Cappuccinoschaum mit dem Lattiz und gieße ihn auf den Espresso in der Cappuccinotasse.",
+   "Stelle die Cappuccinotasse auf die Cappuccinountertasse mit dem Henkel nach rechts und dem Löffel rechts oben über dem Henkel.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben."
   ]
  },
  {
@@ -1176,6 +1598,16 @@
    "Place the tea glass on the saucer with the handle to the right and the spoon to the upper right of the handle.",
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ],
+  "name_de": "Caffè Latte",
+  "steps_de": [
+   "Fülle den Kolben (mit 1 Auslauf) mit den gemahlenen Kaffeebohnen.",
+   "Setze den Kolben in die Kaffeemaschine, stelle eine Kaffeetasse darunter und drücke die Taste mit der vollen Kaffeetasse. (Achte darauf, den Kolben gut zu reinigen und fest anzudrücken.)",
+   "Nimm ein Teeglas, stelle es unter den Lattiz und fülle es mit Milchschaum (achte darauf, dass noch Platz für den Kaffee bleibt).",
+   "Gieße den Kaffee in den Milchschaum im Teeglas.",
+   "Stelle das Teeglas auf die Untertasse mit dem Henkel nach rechts und dem Löffel rechts oben über dem Henkel.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben."
   ]
  },
  {
@@ -1199,6 +1631,15 @@
    "Place the cappuccino cup on the cappuccino saucer with the handle to the right and the spoon to the upper right of the handle.",
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ],
+  "name_de": "Flat white",
+  "steps_de": [
+   "Fülle den Kolben (mit 1 Auslauf) mit den gemahlenen Espressobohnen.",
+   "Setze den Kolben in die Kaffeemaschine, stelle die Cappuccinotasse darunter und drücke die Taste mit der halbvollen Kaffeetasse (mache dies zweimal, sodass du zwei Espressi hast, oder verwende den Doppelkolben). (Achte darauf, den Kolben gut zu reinigen und fest anzudrücken.)",
+   "Erzeuge den Cappuccinoschaum mit dem Lattiz und gieße ihn auf den Espresso in der Cappuccinotasse.",
+   "Stelle die Cappuccinotasse auf die Cappuccinountertasse mit dem Henkel nach rechts und dem Löffel rechts oben über dem Henkel.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben."
   ]
  },
  {
@@ -1224,6 +1665,16 @@
    "Take a large spoon and hang it on the coffee glass.",
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ],
+  "name_de": "Latte macchiato",
+  "steps_de": [
+   "Fülle den Kolben (mit 1 Auslauf) mit den gemahlenen Espressobohnen.",
+   "Setze den Kolben in die Kaffeemaschine, stelle ein kleines Kaffeekännchen darunter und drücke die Taste mit der halbvollen Kaffeetasse. (Achte darauf, den Kolben gut zu reinigen und fest anzudrücken.)",
+   "Nimm ein Latteglas, stelle es unter den Lattiz und fülle es mit Milchschaum (achte darauf, dass noch etwas Platz für den Espresso bleibt).",
+   "Gieße den Espresso aus dem Kaffeekännchen in den Milchschaum im Kaffeeglas.",
+   "Nimm einen großen Löffel und hänge ihn ans Kaffeeglas.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben."
   ]
  },
  {
@@ -1249,6 +1700,16 @@
    "Take a large spoon and hang it on the coffee glass.",
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ],
+  "name_de": "Latte Macchiato Karamell",
+  "steps_de": [
+   "Fülle den Kolben (mit 1 Auslauf) mit den gemahlenen Espressobohnen.",
+   "Setze den Kolben in die Kaffeemaschine, stelle ein kleines Kaffeekännchen darunter und drücke die Taste mit der halbvollen Kaffeetasse. (Achte darauf, den Kolben gut zu reinigen und fest anzudrücken.)",
+   "Nimm ein Latteglas und gib den Monin-Karamellsirup hinein, stelle es unter den Lattiz und fülle es mit Milchschaum (achte darauf, dass noch etwas Platz für den Espresso bleibt).",
+   "Gieße den Espresso aus dem Kaffeekännchen in den Milchschaum im Kaffeeglas.",
+   "Nimm einen großen Löffel und hänge ihn ans Kaffeeglas.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben."
   ]
  },
  {
@@ -1274,6 +1735,16 @@
    "Take a large spoon and hang it on the coffee glass.",
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ],
+  "name_de": "Latte Macchiato Weiße Schokolade",
+  "steps_de": [
+   "Fülle den Kolben (mit 1 Auslauf) mit den gemahlenen Espressobohnen.",
+   "Setze den Kolben in die Kaffeemaschine, stelle ein kleines Kaffeekännchen darunter und drücke die Taste mit der halbvollen Kaffeetasse. (Achte darauf, den Kolben gut zu reinigen und fest anzudrücken.)",
+   "Nimm ein Latteglas und gib den Monin-Sirup weiße Schokolade hinein, stelle es unter den Lattiz und fülle es mit Milchschaum (achte darauf, dass noch etwas Platz für den Espresso bleibt).",
+   "Gieße den Espresso aus dem Kaffeekännchen in den Milchschaum im Kaffeeglas.",
+   "Nimm einen großen Löffel und hänge ihn ans Kaffeeglas.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben."
   ]
  },
  {
@@ -1299,6 +1770,16 @@
    "Hang the latte spoon against the outside of the glass.",
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ],
+  "name_de": "Irish coffee",
+  "steps_de": [
+   "Gib den (Haus-)Whisky und einen Löffel braunen Zucker in ein Latteglas und erwärme es mit der Dampfdüse der Kaffeemaschine.",
+   "Fülle den Kolben (mit 2 Ausläufen) mit den gemahlenen Espressobohnen.",
+   "Setze den Kolben in die Kaffeemaschine, stelle eine Kaffeetasse darunter und drücke die Taste mit der vollen Kaffeetasse. (Achte darauf, den Kolben gut zu reinigen und fest anzudrücken.)",
+   "Gieße den Kaffee auf den (Haus-)Whisky und spritze 25 ml Schlagsahne darauf. (Achtung! Verwende nur 1 Kapsel im Siphon und schüttle ihn nicht übermäßig.)",
+   "Hänge den Lattelöffel an die Außenseite des Glases.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben."
   ]
  },
  {
@@ -1324,6 +1805,16 @@
    "Hang the latte spoon against the outside of the glass.",
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ],
+  "name_de": "Spanish coffee",
+  "steps_de": [
+   "Gib den Tia Maria in ein Latteglas und erwärme es mit der Dampfdüse der Kaffeemaschine.",
+   "Fülle den Kolben (mit 2 Ausläufen) mit den gemahlenen Espressobohnen.",
+   "Setze den Kolben in die Kaffeemaschine, stelle eine Kaffeetasse darunter und drücke die Taste mit der Kaffeetasse. (Achte darauf, den Kolben gut zu reinigen und fest anzudrücken.)",
+   "Gieße den Kaffee auf den Tia Maria und spritze 25 ml Schlagsahne darauf. (Achtung! Verwende nur 1 Kapsel im Siphon und schüttle ihn nicht übermäßig.)",
+   "Hänge den Lattelöffel an die Außenseite des Glases.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben."
   ]
  },
  {
@@ -1349,6 +1840,16 @@
    "Hang the latte spoon against the outside of the glass.",
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ],
+  "name_de": "French coffee",
+  "steps_de": [
+   "Gib den Grand Marnier in ein Latteglas und erwärme es mit der Dampfdüse der Kaffeemaschine.",
+   "Fülle den Kolben (mit 2 Ausläufen) mit den gemahlenen Espressobohnen.",
+   "Setze den Kolben in die Kaffeemaschine, stelle eine Kaffeetasse darunter und drücke die Taste mit der vollen Kaffeetasse. (Achte darauf, den Kolben gut zu reinigen und fest anzudrücken.)",
+   "Gieße den Kaffee auf den Grand Marnier und spritze 25 ml Schlagsahne darauf. (Achtung! Verwende nur 1 Kapsel im Siphon und schüttle ihn nicht übermäßig.)",
+   "Hänge den Lattelöffel an die Außenseite des Glases.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben."
   ]
  },
  {
@@ -1374,6 +1875,16 @@
    "Hang the latte spoon against the outside of the glass.",
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ],
+  "name_de": "Italienischer Kaffee",
+  "steps_de": [
+   "Gib den Amaretto in ein Latteglas und erwärme es mit der Dampfdüse der Kaffeemaschine.",
+   "Fülle den Kolben (mit 2 Ausläufen) mit den gemahlenen Espressobohnen.",
+   "Setze den Kolben in die Kaffeemaschine, stelle eine Kaffeetasse darunter und drücke die Taste mit der vollen Kaffeetasse. (Achte darauf, den Kolben gut zu reinigen und fest anzudrücken.)",
+   "Gieße den Kaffee auf den Amaretto und spritze 25 ml Schlagsahne darauf. (Achtung! Verwende nur 1 Kapsel im Siphon und schüttle ihn nicht übermäßig.)",
+   "Hänge den Lattelöffel an die Außenseite des Glases.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben."
   ]
  },
  {
@@ -1397,6 +1908,15 @@
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up.",
    "Serve this together with the tea mill."
+  ],
+  "name_de": "Tee",
+  "steps_de": [
+   "Nimm ein Teeglas, stelle es unter die Kaffeemaschine, wo das kochende Wasser herauskommt, und drücke die Taste.",
+   "Setze in die Tasse ein Teesieb mit dem Deckel/Untersetzer darauf.",
+   "Stelle die Tasse auf die Teeuntertasse mit dem Henkel nach rechts und dem Löffel rechts oben über dem Henkel.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben.",
+   "Serviere dies zusammen mit der Teemühle."
   ]
  },
  {
@@ -1418,6 +1938,14 @@
    "Place the cup on the tea saucer with the handle to the right and the spoon to the upper right of the handle.",
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up, and for the mint tea also add a honey spoon to the box."
+  ],
+  "name_de": "Frischer Minztee",
+  "steps_de": [
+   "Nimm ein Teeglas, stelle es unter die Kaffeemaschine, wo das kochende Wasser herauskommt, und drücke die Taste.",
+   "Füge dem Teeglas mit dem kochenden Wasser zwei Zweige Minze hinzu.",
+   "Stelle die Tasse auf die Teeuntertasse mit dem Henkel nach rechts und dem Löffel rechts oben über dem Henkel.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben und füge beim Minztee auch einen Honiglöffel zur Schachtel hinzu."
   ]
  },
  {
@@ -1443,6 +1971,16 @@
    "Place the cup on the tea saucer with the handle to the right and the spoon to the upper right of the handle.",
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up, and for the ginger tea also add a honey spoon to the box."
+  ],
+  "name_de": "Frischer Ingwertee",
+  "steps_de": [
+   "Nimm ein Teeglas, stelle es unter die Kaffeemaschine, wo das kochende Wasser herauskommt, und drücke die Taste.",
+   "Nimm einen 't-Zusje-Spieß.",
+   "Schneide 3 Ingwerscheiben und stecke sie auf den Spieß.",
+   "Schneide eine Zitronenscheibe ab und gib sie in die Tasse mit Wasser und dem Spieß.",
+   "Stelle die Tasse auf die Teeuntertasse mit dem Henkel nach rechts und dem Löffel rechts oben über dem Henkel.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben und füge beim Ingwertee auch einen Honiglöffel zur Schachtel hinzu."
   ]
  },
  {
@@ -1466,6 +2004,15 @@
    "Take a latte spoon and hang it on the coffee glass.",
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ],
+  "name_de": "Chai Latte",
+  "steps_de": [
+   "Gib 20 Milliliter Monin Chai-Tea-Sirup in ein Latteglas.",
+   "Füge die aufgeschäumte Milch zum Glas hinzu.",
+   "Garniere den Latte mit Zimtpulver.",
+   "Nimm einen Lattelöffel und hänge ihn ans Kaffeeglas.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben."
   ]
  },
  {
@@ -1495,6 +2042,18 @@
    "Take a latte spoon and hang it on the coffee glass.",
    "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
    "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ],
+  "name_de": "Dirty Chai Latte",
+  "steps_de": [
+   "Gib 20 Milliliter Monin Chai-Tea-Sirup in ein Latteglas.",
+   "Fülle den Kolben (mit 1 Auslauf) mit den gemahlenen Espressobohnen.",
+   "Setze den Kolben in die Kaffeemaschine, stelle die Espressotasse darunter und drücke die Taste mit der halbvollen Kaffeetasse. (Achte darauf, den Kolben gut zu reinigen und fest anzudrücken.)",
+   "Füge den Espresso zum Latteglas mit dem Monin Chai-Tea-Sirup hinzu.",
+   "Füge die aufgeschäumte Milch zum Glas hinzu.",
+   "Garniere den Latte mit Zimtpulver.",
+   "Nimm einen Lattelöffel und hänge ihn ans Kaffeeglas.",
+   "Fülle die Kaffeeschachtel mit einem Zuckerstick, einem Milchtöpfchen, einem Zusje-Schokolädchen und einem Lutscher.",
+   "Lege zum Schluss oben in die Schachtel einen Keks mit dem Zusje-Logo nach oben."
   ]
  },
  {
@@ -1510,6 +2069,11 @@
   "steps_en": [
    "Make sure you have a dry, grease-free and polished cava glass.",
    "Pour 150 milliliters of Zusje cava into it and close the bottle again properly with the champagne stopper."
+  ],
+  "name_de": "Glas Zusje cava",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Cavaglas.",
+   "Gieße 150 Milliliter Zusje-Cava hinein und verschließe die Flasche wieder gut mit dem Champagnerverschluss."
   ]
  },
  {
@@ -1533,6 +2097,15 @@
    "Let one of the guests taste the Zusje cava by pouring a small layer.",
    "Once the Zusje cava is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.)",
    "Put the bottle of Zusje cava back in the wine cooler."
+  ],
+  "name_de": "Flasche Zusje cava",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte Cavagläser.",
+   "Stelle die Flasche in einen Weinkühler und diesen in den Weinkühlerhalter.",
+   "Gib den Gästen ein Cavaglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Zusje-Cava probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Zusje-Cava genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.)",
+   "Stelle die Flasche Zusje-Cava wieder zurück in den Weinkühler."
   ]
  },
  {
@@ -1548,6 +2121,11 @@
   "steps_en": [
    "Make sure you have a dry, grease-free and polished cava glass.",
    "Pour 150 milliliters of Zusje bubbel into it and close the bottle again properly with the champagne stopper."
+  ],
+  "name_de": "Glas Zusje bubbel",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Cavaglas.",
+   "Gieße 150 Milliliter Zusje-Bubbel hinein und verschließe die Flasche wieder gut mit dem Champagnerverschluss."
   ]
  },
  {
@@ -1571,6 +2149,15 @@
    "Let one of the guests taste the Zusje bubbel by pouring a small layer.",
    "Once the Zusje bubbel is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.)",
    "Put the bottle of Zusje bubbel back in the wine cooler."
+  ],
+  "name_de": "Flasche Zusje bubbel",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte Cavagläser.",
+   "Stelle die Flasche in einen Weinkühler und diesen in den Weinkühlerhalter.",
+   "Gib den Gästen ein Cavaglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Zusje-Bubbel probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Zusje-Bubbel genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.)",
+   "Stelle die Flasche Zusje-Bubbel wieder zurück in den Weinkühler."
   ]
  },
  {
@@ -1586,6 +2173,11 @@
   "steps_en": [
    "Make sure you have a dry, grease-free and polished cava glass.",
    "Pour 150 milliliters of Zusje Cava Rosé into it and close the bottle again properly with the champagne stopper."
+  ],
+  "name_de": "Glas Zusje Cava Rosé",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Cavaglas.",
+   "Gieße 150 Milliliter Zusje Cava Rosé hinein und verschließe die Flasche wieder gut mit dem Champagnerverschluss."
   ]
  },
  {
@@ -1609,6 +2201,15 @@
    "Let one of the guests taste the Zusje Cava Rosé by pouring a small layer.",
    "Once the Zusje Cava Rosé is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.)",
    "Put the bottle of Zusje Cava Rosé back in the wine cooler."
+  ],
+  "name_de": "Flasche Zusje Cava Rosé",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte Cavagläser.",
+   "Stelle die Flasche in einen Weinkühler und diesen in den Weinkühlerhalter.",
+   "Gib den Gästen ein Cavaglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Zusje Cava Rosé probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Zusje Cava Rosé genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.)",
+   "Stelle die Flasche Zusje Cava Rosé wieder zurück in den Weinkühler."
   ]
  },
  {
@@ -1626,6 +2227,12 @@
    "Make sure you have a dry, grease-free and polished wine glass.",
    "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
    "Serve the glass with the logo facing the guest."
+  ],
+  "name_de": "Glas Zusje Chardonnay",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Weinglas.",
+   "Gieße den Wein hinein, bis zur Unterkante des 'Z/Zusje-Logos'.",
+   "Serviere das Glas mit dem Logo zum Gast."
   ]
  },
  {
@@ -1649,6 +2256,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back in the wine cooler."
+  ],
+  "name_de": "Flasche Zusje Chardonnay",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte Weingläser.",
+   "Stelle die Flasche in einen Weinkühler und diesen in den Weinkühlerhalter.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück in den Weinkühler."
   ]
  },
  {
@@ -1666,6 +2282,12 @@
    "Make sure you have a dry, grease-free and polished wine glass.",
    "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
    "Serve the glass with the logo facing the guest."
+  ],
+  "name_de": "Glas Zusje süßer Weißwein",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Weinglas.",
+   "Gieße den Wein hinein, bis zur Unterkante des 'Z/Zusje-Logos'.",
+   "Serviere das Glas mit dem Logo zum Gast."
   ]
  },
  {
@@ -1689,6 +2311,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back in the wine cooler."
+  ],
+  "name_de": "Flasche Zusje süßer Weißwein",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte Weingläser.",
+   "Stelle die Flasche in einen Weinkühler und diesen in den Weinkühlerhalter.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück in den Weinkühler."
   ]
  },
  {
@@ -1706,6 +2337,12 @@
    "Make sure you have a dry, grease-free and polished wine glass.",
    "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
    "Serve the glass with the logo facing the guest."
+  ],
+  "name_de": "Glas Farina Pinot Grigio",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Weinglas.",
+   "Gieße den Wein hinein, bis zur Unterkante des 'Z/Zusje-Logos'.",
+   "Serviere das Glas mit dem Logo zum Gast."
   ]
  },
  {
@@ -1729,6 +2366,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back in the wine cooler."
+  ],
+  "name_de": "Flasche Farina Pinot Grigio",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte Weingläser.",
+   "Stelle die Flasche in einen Weinkühler und diesen in den Weinkühlerhalter.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück in den Weinkühler."
   ]
  },
  {
@@ -1746,6 +2392,12 @@
    "Make sure you have a dry, grease-free and polished wine glass.",
    "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
    "Serve the glass with the logo facing the guest."
+  ],
+  "name_de": "Glas Ramon Bilbao Verdejo",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Weinglas.",
+   "Gieße den Wein hinein, bis zur Unterkante des 'Z/Zusje-Logos'.",
+   "Serviere das Glas mit dem Logo zum Gast."
   ]
  },
  {
@@ -1769,6 +2421,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back in the wine cooler."
+  ],
+  "name_de": "Flasche Ramon Bilbao Verdejo",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte Weingläser.",
+   "Stelle die Flasche in einen Weinkühler und diesen in den Weinkühlerhalter.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück in den Weinkühler."
   ]
  },
  {
@@ -1786,6 +2447,12 @@
    "Make sure you have a dry, grease-free and polished wine glass.",
    "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
    "Serve the glass with the logo facing the guest."
+  ],
+  "name_de": "Glas Twin Island Sauvignon Blanc",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Weinglas.",
+   "Gieße den Wein hinein, bis zur Unterkante des 'Z/Zusje-Logos'.",
+   "Serviere das Glas mit dem Logo zum Gast."
   ]
  },
  {
@@ -1809,6 +2476,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back in the wine cooler."
+  ],
+  "name_de": "Flasche Twin Island Sauvignon Blanc",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte Weingläser.",
+   "Stelle die Flasche in einen Weinkühler und diesen in den Weinkühlerhalter.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück in den Weinkühler."
   ]
  },
  {
@@ -1826,6 +2502,12 @@
    "Make sure you have a dry, grease-free and polished wine glass.",
    "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
    "Serve the glass with the logo facing the guest."
+  ],
+  "name_de": "Glas Kendall-Jackson Reserve Chardonnay",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Weinglas.",
+   "Gieße den Wein hinein, bis zur Unterkante des 'Z/Zusje-Logos'.",
+   "Serviere das Glas mit dem Logo zum Gast."
   ]
  },
  {
@@ -1849,6 +2531,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back in the wine cooler."
+  ],
+  "name_de": "Flasche Kendall-Jackson Reserve Chardonnay",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte Weingläser.",
+   "Stelle die Flasche in einen Weinkühler und diesen in den Weinkühlerhalter.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück in den Weinkühler."
   ]
  },
  {
@@ -1872,6 +2563,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back in the wine cooler."
+  ],
+  "name_de": "Flasche Hubert Brochard Sancerre Blanc 2023",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte Weingläser.",
+   "Stelle die Flasche in einen Weinkühler und diesen in den Weinkühlerhalter.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück in den Weinkühler."
   ]
  },
  {
@@ -1895,6 +2595,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back in the wine cooler."
+  ],
+  "name_de": "Flasche Chanson Chablis 2022",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte Weingläser.",
+   "Stelle die Flasche in einen Weinkühler und diesen in den Weinkühlerhalter.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück in den Weinkühler."
   ]
  },
  {
@@ -1912,6 +2621,12 @@
    "Make sure you have a dry, grease-free and polished wine glass.",
    "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
    "Serve the glass with the logo facing the guest."
+  ],
+  "name_de": "Glas L'OIE 0 Blanc 0.0%",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Weinglas.",
+   "Gieße den Wein hinein, bis zur Unterkante des 'Z/Zusje-Logos'.",
+   "Serviere das Glas mit dem Logo zum Gast."
   ]
  },
  {
@@ -1935,6 +2650,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back in the wine cooler."
+  ],
+  "name_de": "Flasche L'OIE 0 Blanc 0.0%",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte Weingläser.",
+   "Stelle die Flasche in einen Weinkühler und diesen in den Weinkühlerhalter.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück in den Weinkühler."
   ]
  },
  {
@@ -1952,6 +2676,12 @@
    "Make sure you have a dry, grease-free and polished wine glass.",
    "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
    "Serve the glass with the logo facing the guest."
+  ],
+  "name_de": "Glas Zusje Rosé",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Weinglas.",
+   "Gieße den Wein hinein, bis zur Unterkante des 'Z/Zusje-Logos'.",
+   "Serviere das Glas mit dem Logo zum Gast."
   ]
  },
  {
@@ -1975,6 +2705,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back in the wine cooler."
+  ],
+  "name_de": "Flasche Coté Soleil Rosé",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte Weingläser.",
+   "Stelle die Flasche in einen Weinkühler und diesen in den Weinkühlerhalter.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück in den Weinkühler."
   ]
  },
  {
@@ -1992,6 +2731,12 @@
    "Make sure you have a dry, grease-free and polished wine glass.",
    "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
    "Serve the glass with the logo facing the guest."
+  ],
+  "name_de": "Glas Bisous",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Weinglas.",
+   "Gieße den Wein hinein, bis zur Unterkante des 'Z/Zusje-Logos'.",
+   "Serviere das Glas mit dem Logo zum Gast."
   ]
  },
  {
@@ -2015,6 +2760,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back in the wine cooler."
+  ],
+  "name_de": "Flasche Bisous",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte Weingläser.",
+   "Stelle die Flasche in einen Weinkühler und diesen in den Weinkühlerhalter.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück in den Weinkühler."
   ]
  },
  {
@@ -2032,6 +2786,12 @@
    "Make sure you have a dry, grease-free and polished wine glass.",
    "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
    "Serve the glass with the logo facing the guest."
+  ],
+  "name_de": "Glas La Vie en Rose",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Weinglas.",
+   "Gieße den Wein hinein, bis zur Unterkante des 'Z/Zusje-Logos'.",
+   "Serviere das Glas mit dem Logo zum Gast."
   ]
  },
  {
@@ -2055,6 +2815,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back in the wine cooler."
+  ],
+  "name_de": "Flasche La Vie en Rose",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte Weingläser.",
+   "Stelle die Flasche in einen Weinkühler und diesen in den Weinkühlerhalter.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück in den Weinkühler."
   ]
  },
  {
@@ -2072,6 +2841,12 @@
    "Make sure you have a dry, grease-free and polished wine glass.",
    "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
    "Serve the glass with the logo facing the guest."
+  ],
+  "name_de": "Glas Zusje Merlot",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Weinglas.",
+   "Gieße den Wein hinein, bis zur Unterkante des 'Z/Zusje-Logos'.",
+   "Serviere das Glas mit dem Logo zum Gast."
   ]
  },
  {
@@ -2095,6 +2870,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back on the table."
+  ],
+  "name_de": "Flasche Zusje Merlot",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte große Weingläser.",
+   "Stelle die Flasche in die Mitte zu den Gästen auf den Tisch.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück auf den Tisch."
   ]
  },
  {
@@ -2112,6 +2896,12 @@
    "Make sure you have a dry, grease-free and polished wine glass.",
    "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
    "Serve the glass with the logo facing the guest."
+  ],
+  "name_de": "Glas Al Mercado Syrah - Garnacho Tinta",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Weinglas.",
+   "Gieße den Wein hinein, bis zur Unterkante des 'Z/Zusje-Logos'.",
+   "Serviere das Glas mit dem Logo zum Gast."
   ]
  },
  {
@@ -2135,6 +2925,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back on the table."
+  ],
+  "name_de": "Flasche Al Mercado Syrah - Garnacho Tinta",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte große Weingläser.",
+   "Stelle die Flasche in die Mitte zu den Gästen auf den Tisch.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück auf den Tisch."
   ]
  },
  {
@@ -2152,6 +2951,12 @@
    "Make sure you have a dry, grease-free and polished wine glass.",
    "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
    "Serve the glass with the logo facing the guest."
+  ],
+  "name_de": "Glas Salentein 'El Portillo Malbec",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Weinglas.",
+   "Gieße den Wein hinein, bis zur Unterkante des 'Z/Zusje-Logos'.",
+   "Serviere das Glas mit dem Logo zum Gast."
   ]
  },
  {
@@ -2175,6 +2980,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back on the table."
+  ],
+  "name_de": "Flasche Salentein 'El Portillo Malbec'",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte große Weingläser.",
+   "Stelle die Flasche in die Mitte zu den Gästen auf den Tisch.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück auf den Tisch."
   ]
  },
  {
@@ -2192,6 +3006,12 @@
    "Make sure you have a dry, grease-free and polished wine glass.",
    "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
    "Serve the glass with the logo facing the guest."
+  ],
+  "name_de": "Glas Stefani Venezia",
+  "steps_de": [
+   "Sorge für ein trockenes, fettfreies und poliertes Weinglas.",
+   "Gieße den Wein hinein, bis zur Unterkante des 'Z/Zusje-Logos'.",
+   "Serviere das Glas mit dem Logo zum Gast."
   ]
  },
  {
@@ -2215,6 +3035,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back on the table."
+  ],
+  "name_de": "Flasche Stefani Venezia",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte große Weingläser.",
+   "Stelle die Flasche in die Mitte zu den Gästen auf den Tisch.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück auf den Tisch."
   ]
  },
  {
@@ -2238,6 +3067,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back on the table."
+  ],
+  "name_de": "Flasche Farina Valpolicella Ripasso Classico Superiore",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte große Weingläser.",
+   "Stelle die Flasche in die Mitte zu den Gästen auf den Tisch.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück auf den Tisch."
   ]
  },
  {
@@ -2261,6 +3099,15 @@
    "Let one of the guests taste the wine by pouring a small layer.",
    "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
    "Put the bottle of wine back on the table."
+  ],
+  "name_de": "Flasche Ramon Bilbao Crianza DOC Rioja",
+  "steps_de": [
+   "Sorge für ausreichend trockene, fettfreie und polierte große Weingläser.",
+   "Stelle die Flasche in die Mitte zu den Gästen auf den Tisch.",
+   "Gib den Gästen ein Weinglas mit dem Logo zu jedem Gast.",
+   "Lass einen der Gäste den Wein probieren, indem du eine kleine Schicht einschenkst.",
+   "Wenn der Wein genehmigt ist, werden zuerst die Gläser der anderen Gäste eingeschenkt und danach das der Person, die probiert hat. (Frauen vor Männern und von alt nach jung.) Gieße den Wein bis zur Unterkante des 'Z/Zusje-Logos' ein.",
+   "Stelle die Weinflasche wieder zurück auf den Tisch."
   ]
  }
 ]
