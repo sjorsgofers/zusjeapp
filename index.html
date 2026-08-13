@@ -13,8 +13,9 @@
 <meta name="application-name" content="Zusje">
 <meta name="format-detection" content="telephone=no">
 <link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
+<link rel="apple-touch-icon" href="icon-192.png">
 <link rel="shortcut icon" href="favicon.png">
+<link rel="manifest" href="manifest.json">
 
 <style>
 :root{ --gold:#c8a45b; --bg:#111111; --bg2:#0b0b0b; --bar:64px; }
@@ -31,8 +32,9 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
   padding-top:calc(8px + env(safe-area-inset-top));
   background:var(--bg2);border-bottom:1px solid rgba(200,164,91,.35);position:relative;z-index:2}
 .tabbar .logo{height:34px;width:auto;display:block;flex:0 0 auto;margin-right:2px}
-.tabs{display:flex;gap:8px;flex:1;justify-content:center}
-.tab{appearance:none;border:1px solid var(--gold);background:transparent;color:#fff;
+.tabs{display:flex;gap:8px;flex:1;justify-content:center;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:2px 0}
+.tabs::-webkit-scrollbar{display:none}
+.tab{appearance:none;flex:0 0 auto;border:1px solid var(--gold);background:transparent;color:#fff;
   font-size:15px;font-weight:600;padding:10px 20px;border-radius:999px;cursor:pointer;
   transition:background .15s ease;white-space:nowrap}
 .tab:hover{background:#1a1a1a}
@@ -53,13 +55,19 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
 @media (max-width:560px){ .kioskhint{font-size:12px;padding:8px 42px 8px 12px} }
 .frame{position:absolute;inset:0;width:100%;height:100%;border:0;display:none;background:var(--bg)}
 .frame.active{display:block}
+
+/* Screensaver — dashboard shown after 1 min idle; any input dismisses it */
+#screensaver{position:fixed;inset:0;z-index:100;background:#000;display:none}
+#screensaver.show{display:block}
+#screensaver iframe{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none}
 .frameholder{position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:#fff;opacity:.6;font-size:14px;text-align:center;padding:24px}
 .frameholder.active{display:flex}
 
 @media (max-width:560px){
-  .tab{font-size:13.5px;padding:9px 14px}
+  .tab{font-size:13.5px;padding:9px 13px}
   .tabbar{gap:7px}
-  .tabbar .logo{height:30px}
+  .tabbar .logo{display:none}
+  .tabs{justify-content:flex-start}
   .tablink{width:38px;height:38px}
 }
 
@@ -109,6 +117,7 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
     <nav class="tabs" role="tablist" aria-label="Onderdelen">
       <button class="tab active" type="button" role="tab" data-tab="dranken">Dranken</button>
       <button class="tab" type="button" role="tab" data-tab="allergenen">Allergenen</button>
+      <button class="tab" type="button" role="tab" data-tab="checklists">Checklists</button>
       <button class="tab" type="button" role="tab" data-tab="kiosk">Kiosk</button>
     </nav>
     <a id="kioskOpen" class="tablink hidden" href="https://kiosk.shiftbase.com/" target="_blank" rel="noopener" title="Kiosk in nieuw tabblad openen" aria-label="Kiosk in nieuw tabblad openen">↗</a>
@@ -121,20 +130,30 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
     </div>
     <iframe id="f-dranken"    class="frame active" title="Dranken"    data-src="dranken/index.html"></iframe>
     <iframe id="f-allergenen" class="frame"        title="Allergenen" data-src="allergenen/index.html"></iframe>
+    <iframe id="f-checklists" class="frame"        title="Checklists" data-src="checklists/index.html"></iframe>
     <iframe id="f-kiosk"      class="frame"        title="Kiosk"      data-src="https://kiosk.shiftbase.com/"
             allow="camera; microphone; fullscreen; geolocation; clipboard-write" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </main>
 </div>
 
+<!-- Screensaver overlay (dashboard) -->
+<div id="screensaver" aria-hidden="true">
+  <iframe id="f-screensaver" title="Dashboard" data-src="https://sjorsgofers.github.io/monitor-dashboard/"
+          allow="fullscreen" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
 <script>
 (function(){
-  const TABS = ["dranken","allergenen","kiosk"];
+  const TABS = ["dranken","allergenen","checklists","kiosk"];
   const shell = document.getElementById("shell");
 
   function frame(name){ return document.getElementById("f-"+name); }
   function ensureLoaded(name){
     const f = frame(name);
-    if (f && f.dataset.src && !f.src){ f.src = f.dataset.src; }
+    if (f && f.dataset.src && !f.src){
+      f.addEventListener("load", () => attachFrameActivity(f), { once:true });
+      f.src = f.dataset.src;
+    }
   }
 
   function activate(name){
@@ -166,12 +185,61 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
     b.addEventListener("click", () => activate(b.dataset.tab));
   });
 
+  /* ---------- Screensaver / idle ---------- */
+  const IDLE_MS = 60000;                 // 1 minuut
+  const ACT_EVENTS = ["mousemove","mousedown","keydown","touchstart","wheel","scroll"];
+  const screensaver = document.getElementById("screensaver");
+  let idleTimer = null;
+  let saverOn = false;
+  let idleReady = false;
+
+  function showSaver(){
+    const f = document.getElementById("f-screensaver");
+    if (f && f.dataset.src && !f.src) f.src = f.dataset.src;
+    screensaver.classList.add("show");
+    screensaver.setAttribute("aria-hidden","false");
+    saverOn = true;
+  }
+  function hideSaver(){
+    screensaver.classList.remove("show");
+    screensaver.setAttribute("aria-hidden","true");
+    saverOn = false;
+  }
+  function onActivity(){
+    if (!idleReady) return;
+    if (saverOn) hideSaver();
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(showSaver, IDLE_MS);
+  }
+  function bindActivity(target){
+    if (!target) return;
+    ACT_EVENTS.forEach(ev => {
+      try { target.addEventListener(ev, onActivity, { passive:true }); } catch(e){}
+    });
+  }
+  // Interaction inside a same-origin sub-app iframe also counts as activity.
+  function attachFrameActivity(f){
+    try { bindActivity(f.contentDocument); } catch(e){ /* cross-origin (kiosk): ignore */ }
+  }
+  function initIdle(){
+    if (idleReady) return;
+    idleReady = true;
+    bindActivity(document);
+    bindActivity(screensaver);           // moving over the dashboard dismisses it
+    // frames already loaded before init get bound too
+    ["dranken","allergenen","checklists","kiosk"].forEach(n => {
+      const f = frame(n); if (f && f.src) attachFrameActivity(f);
+    });
+    idleTimer = setTimeout(showSaver, IDLE_MS);
+  }
+
   function startApp(){
     document.getElementById("loginGate").classList.add("hidden");
     shell.classList.add("show");
     let tab = "dranken";
     try { tab = localStorage.getItem("zusje_hub_tab") || "dranken"; } catch(e){}
     activate(tab);
+    initIdle();
   }
 
   // Login
@@ -194,6 +262,13 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
   try { unlocked = sessionStorage.getItem("zusje_hub_unlocked") === "1"; } catch(e){}
   if (unlocked) startApp();
 })();
+
+// Register service worker so the app is installable and works offline.
+if ("serviceWorker" in navigator){
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch(err => console.warn("SW registratie mislukt:", err));
+  });
+}
 </script>
 </body>
 </html>

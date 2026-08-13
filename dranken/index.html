@@ -27,43 +27,38 @@ html,body{margin:0;padding:0;background:var(--bg);color:#ffffff}
   color:#ffffff !important;
 }
 #dk-app{min-height:100dvh;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}
-.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px}
+.wrap{max-width:1180px;margin:0 auto;height:100dvh;display:flex;flex-direction:column;gap:10px;
+  padding:12px 14px calc(12px + env(safe-area-inset-bottom))}
 
-/* Top bar */
-.topbar{display:flex;justify-content:flex-end;margin-bottom:4px}
-.lang{display:inline-flex;border:1px solid var(--gold);border-radius:999px;overflow:hidden}
-.lang button{border:0;background:transparent;color:#ffffff !important;font-size:13px;font-weight:600;padding:7px 14px;cursor:pointer}
+.lang{display:inline-flex;border:1px solid var(--gold);border-radius:999px;overflow:hidden;flex:0 0 auto}
+.lang button{border:0;background:transparent;color:#ffffff !important;font-size:13px;font-weight:600;padding:9px 14px;cursor:pointer}
 .lang button.active{background:var(--gold);color:#0b0b0b !important}
 
-.brand{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:12px}
-.brand img{width:78px;max-width:26vw;display:block}
-.title{margin:0;text-align:center;font-size:24px;font-weight:600}
-.subtitle{margin:2px 0 0;text-align:center;font-size:13px;color:#ffffff !important;opacity:.7}
-
 /* Search */
-.search-row{display:flex;gap:10px;align-items:center;max-width:560px;margin:14px auto 4px}
-.search{flex:1;min-height:48px;border:1px solid var(--gold);border-radius:28px;padding:0 20px;font-size:16px;outline:none;background:var(--bg);color:#ffffff}
+.search-row{display:flex;gap:10px;align-items:center;margin:0;flex:0 0 auto}
+.search{flex:1;min-width:0;min-height:48px;border:1px solid var(--gold);border-radius:28px;padding:0 20px;font-size:16px;outline:none;background:var(--bg);color:#ffffff}
 .search::placeholder{color:#ffffff !important;opacity:.55}
 .search:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,164,91,.18)}
 
 /* Tabs */
-.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 18px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0;flex:0 0 auto}
 .tab{min-height:40px;padding:0 16px;border:1px solid var(--gold);border-radius:24px;background:var(--bg);color:#ffffff !important;font-size:14px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:background .15s ease}
 .tab .count{font-size:12px;opacity:.65;font-weight:500}
 .tab:hover{background:#1a1a1a}
 .tab.active{background:var(--gold);color:#0b0b0b !important}
 .tab.active *{color:#0b0b0b !important}
 
-/* Tiles — dense responsive grid so all tiles fit on screen */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:12px}
-.tile{border:1px solid var(--gold);border-radius:14px;background:var(--bg);overflow:hidden;cursor:pointer;text-align:left;display:flex;flex-direction:column;transition:transform .12s ease, box-shadow .15s ease}
+/* Tiles — grid fills remaining height; JS sets column count so all tiles fit on screen */
+.grid{display:grid;gap:8px;flex:1 1 auto;min-height:0;align-content:start;overflow:hidden;grid-template-columns:repeat(4,minmax(0,1fr))}
+.tile{border:1px solid var(--gold);border-radius:14px;background:var(--bg);overflow:hidden;cursor:pointer;text-align:left;display:flex;flex-direction:column;min-height:0;transition:transform .12s ease, box-shadow .15s ease}
 .tile:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(200,164,91,.16)}
 .tile:active{transform:translateY(0)}
-.tile-img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#0b0b0b;display:block}
-.tile-body{padding:9px 11px 11px;display:flex;flex-direction:column;gap:3px}
+.tile-img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#0b0b0b;display:block;flex:0 0 auto}
+.tile-body{padding:7px 10px 9px;display:flex;flex-direction:column;gap:2px;min-height:0}
 .tile-cat{margin:0;font-size:9.5px;color:var(--gold) !important;text-transform:uppercase;letter-spacing:.5px !important;font-weight:600}
-.tile-name{margin:0;font-size:13.5px;font-weight:600;line-height:1.25 !important}
-.tile-meta{margin:0;font-size:11.5px;color:#ffffff !important;opacity:.5}
+.tile-name{margin:0;font-size:13px;font-weight:600;line-height:1.2 !important;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tile-meta{margin:0;font-size:11px;color:#ffffff !important;opacity:.5}
 .tile-meta.wine{color:var(--gold) !important;opacity:.85;font-weight:600}
 
 .empty{grid-column:1/-1;border:1px dashed var(--gold);border-radius:16px;padding:32px 16px;text-align:center;color:#ffffff !important;opacity:.8}
@@ -95,12 +90,11 @@ html,body{margin:0;padding:0;background:var(--bg);color:#ffffff}
 .hidden{display:none !important}
 
 @media (max-width:640px){
-  .wrap{padding:14px 12px 36px}
-  .title{font-size:21px}
-  .grid{grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:10px}
-  .tile-body{padding:8px 9px 10px}
-  .tile-name{font-size:12.5px}
-  .tab{min-height:38px;padding:0 13px;font-size:13px}
+  .wrap{padding:10px 12px calc(10px + env(safe-area-inset-bottom))}
+  .grid{gap:7px}
+  .tile-body{padding:6px 8px 8px}
+  .tile-name{font-size:12px}
+  .tab{min-height:36px;padding:0 12px;font-size:12.5px}
   .modal-head{padding:4px 18px 10px}
   .modal-body{padding:8px 18px 22px}
   .modal-title{font-size:20px}
@@ -131,23 +125,12 @@ html,body{margin:0;padding:0;background:var(--bg);color:#ffffff}
 <div id="protectedApp">
 <div id="dk-app">
   <div class="wrap">
-    <div class="topbar">
+    <div class="search-row">
+      <input id="q" class="search" type="text" aria-label="Zoek een drankje">
       <div class="lang" role="group" aria-label="Taal / Language">
         <button id="langNL" type="button" data-lang="nl">NL</button>
         <button id="langEN" type="button" data-lang="en">EN</button>
       </div>
-    </div>
-
-    <div class="brand">
-      <img src="logo.png" alt="Zusje logo">
-      <div>
-        <h1 class="title">Drankenkaart</h1>
-        <p id="subtitle" class="subtitle"></p>
-      </div>
-    </div>
-
-    <div class="search-row">
-      <input id="q" class="search" type="text" aria-label="Zoek een drankje">
     </div>
 
     <nav id="tabs" class="tabs" aria-label="Categorieën"></nav>
@@ -254,7 +237,6 @@ function applyLang(){
   document.documentElement.lang = lang;
   document.getElementById("langNL").classList.toggle("active", lang==="nl");
   document.getElementById("langEN").classList.toggle("active", lang==="en");
-  document.getElementById("subtitle").textContent = T[lang].subtitle;
   document.getElementById("q").placeholder = T[lang].placeholder;
   document.getElementById("prepLabel").textContent = T[lang].prep;
   const vt = document.getElementById("variantToggle");
@@ -293,6 +275,7 @@ function render(){
 
   if (!list.length){
     const msg = q ? `${T[lang].emptyFor} “${escapeHtml(query)}”.` : `${T[lang].empty}.`;
+    gridEl.style.gridTemplateColumns = "1fr";
     gridEl.innerHTML = `<div class="empty">${msg}</div>`;
     return;
   }
@@ -321,6 +304,50 @@ function render(){
       </div>
     </button>`;
   }).join("");
+  scheduleFit();
+}
+
+// Fit all tiles of the active view into the visible grid area by choosing the
+// smallest number of columns (= largest tiles) that still fits vertically.
+let fitScheduled = false;
+function scheduleFit(){
+  if (fitScheduled) return;
+  fitScheduled = true;
+  requestAnimationFrame(() => { fitScheduled = false; fitGrid(); });
+}
+function fitGrid(){
+  const grid = document.getElementById("grid");
+  const tiles = grid.querySelectorAll(".tile");
+  const n = tiles.length;
+  if (!n) return;
+  const availH = grid.clientHeight;
+  const availW = grid.clientWidth;
+  if (availH <= 0 || availW <= 0) return;   // hidden / not laid out yet
+  const gap = 8;
+  const border = 2;                         // tile border top+bottom
+  // Tallest text body (reliable to measure — no image involved). Tiles use a
+  // square image, so a tile's height ≈ column width + body height + border.
+  let bodyH = 0;
+  tiles.forEach(t => {
+    const b = t.querySelector(".tile-body");
+    if (b) bodyH = Math.max(bodyH, b.getBoundingClientRect().height);
+  });
+  if (!bodyH || bodyH < 20) bodyH = 46;
+  let chosen = n;
+  for (let c = 1; c <= n; c++){
+    const colW = (availW - (c - 1) * gap) / c;
+    const tileH = colW + bodyH + border;    // square image + text + border
+    const rows = Math.ceil(n / c);
+    const totalH = rows * tileH + (rows - 1) * gap;
+    if (totalH <= availH){ chosen = c; break; }
+    chosen = c;
+  }
+  grid.style.gridTemplateColumns = `repeat(${chosen},minmax(0,1fr))`;
+}
+window.addEventListener("resize", scheduleFit);
+window.addEventListener("orientationchange", scheduleFit);
+if (window.ResizeObserver){
+  new ResizeObserver(scheduleFit).observe(document.documentElement);
 }
 
 function renderVariant(){
