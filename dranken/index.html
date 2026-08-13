@@ -50,7 +50,10 @@ html,body{margin:0;padding:0;background:var(--bg);color:#ffffff}
 
 /* Tiles — grid fills remaining height; JS sets column count so all tiles fit on screen */
 .grid{display:grid;gap:8px;flex:1 1 auto;min-height:0;align-content:start;overflow-y:auto;overflow-x:hidden;grid-template-columns:repeat(4,minmax(0,1fr))}
-.tile{border:1px solid var(--gold);border-radius:14px;background:var(--bg);overflow:hidden;cursor:pointer;text-align:left;display:flex;flex-direction:column;min-height:0;transition:transform .12s ease, box-shadow .15s ease}
+/* Block layout (NOT flex): Safari renders flex/grid on <button> incorrectly,
+   which collapsed the image and hid the titles. Normal block flow stacks the
+   image and the text body reliably in every browser. */
+.tile{border:1px solid var(--gold);border-radius:14px;background:var(--bg);overflow:hidden;cursor:pointer;text-align:left;display:block;padding:0;margin:0;-webkit-appearance:none;appearance:none;font:inherit;color:inherit;transition:transform .12s ease, box-shadow .15s ease}
 .tile:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(200,164,91,.16)}
 .tile:active{transform:translateY(0)}
 /* Square image via padding-hack (robust on iOS Safari, where aspect-ratio on <img> is unreliable) */
@@ -68,12 +71,23 @@ html,body{margin:0;padding:0;background:var(--bg);color:#ffffff}
 /* Modal */
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;padding:18px;z-index:50;opacity:0;pointer-events:none;transition:opacity .16s ease}
 .overlay.open{opacity:1;pointer-events:auto}
-.modal{width:100%;max-width:560px;max-height:90dvh;overflow-y:auto;background:var(--bg);border:1px solid var(--gold);border-radius:22px;box-shadow:0 20px 60px rgba(0,0,0,.6);transform:translateY(12px) scale(.98);transition:transform .18s ease}
+.modal{position:relative;width:100%;max-width:960px;max-height:92dvh;overflow-y:auto;background:var(--bg);border:1px solid var(--gold);border-radius:22px;box-shadow:0 20px 60px rgba(0,0,0,.6);transform:translateY(12px) scale(.98);transition:transform .18s ease}
 .overlay.open .modal{transform:translateY(0) scale(1)}
 .modal-hero{position:relative}
-.modal-hero img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:#0b0b0b}
+.modal-hero img{width:100%;height:clamp(190px,32vh,300px);object-fit:cover;display:block;background:#0b0b0b}
 .modal-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top, rgba(17,17,17,1) 2%, rgba(17,17,17,0) 45%);pointer-events:none}
-.close{position:absolute;top:12px;right:12px;width:38px;height:38px;border:1px solid var(--gold);background:rgba(11,11,11,.72);border-radius:999px;color:var(--gold) !important;font-size:22px;line-height:1 !important;cursor:pointer;display:grid;place-items:center;z-index:2}
+.close{position:absolute;top:12px;right:12px;width:38px;height:38px;border:1px solid var(--gold);background:rgba(11,11,11,.72);border-radius:999px;color:var(--gold) !important;font-size:22px;line-height:1 !important;cursor:pointer;display:grid;place-items:center;z-index:3}
+
+/* Wide screens: two columns (photo left, steps right) — uses the screen width
+   and greatly reduces scrolling. */
+@media (min-width:760px){
+  .modal{max-width:960px;max-height:86dvh;overflow:hidden;display:grid;grid-template-columns:minmax(300px,38%) 1fr;grid-template-rows:auto 1fr}
+  .modal-hero{grid-column:1;grid-row:1 / span 2;height:100%;overflow:hidden}
+  .modal-hero img{height:100%;min-height:100%}
+  .modal-hero::after{display:none}
+  .modal-head{grid-column:2;grid-row:1;margin-top:0 !important;padding:22px 28px 10px !important}
+  .modal-body{grid-column:2;grid-row:2;min-height:0;overflow-y:auto;padding:6px 28px 26px !important}
+}
 .close:hover{background:#1a1a1a}
 .modal-head{padding:4px 22px 12px;margin-top:-6px;position:relative;z-index:1}
 .modal-cat{margin:0 0 4px;font-size:11px;color:var(--gold) !important;text-transform:uppercase;letter-spacing:.6px !important;font-weight:600}
@@ -146,9 +160,9 @@ html,body{margin:0;padding:0;background:var(--bg);color:#ffffff}
 <!-- Modal -->
 <div id="overlay" class="overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="modal">
+    <button id="modalClose" class="close" type="button" aria-label="Sluiten">×</button>
     <div class="modal-hero">
       <img id="modalImg" src="" alt="">
-      <button id="modalClose" class="close" type="button" aria-label="Sluiten">×</button>
     </div>
     <div class="modal-head">
       <p id="modalCat" class="modal-cat"></p>
@@ -298,22 +312,11 @@ function render(){
     const v0 = defaultVariant(item);
     const d0 = variantDrink(item, v0);
     const showCat = q ? `<p class="tile-cat">${escapeHtml(catLabel(item.category))}</p>` : '';
-    let meta;
-    if (item.isWine){
-      const hasBoth = item.variants.glas && item.variants.fles;
-      meta = hasBoth
-        ? `<p class="tile-meta wine">${T[lang].glas} · ${T[lang].fles}</p>`
-        : `<p class="tile-meta wine">${item.variants.glas ? T[lang].glas : T[lang].fles}</p>`;
-    } else {
-      const n = d0.steps.length;
-      meta = `<p class="tile-meta">${n} ${n===1?T[lang].step:T[lang].steps}</p>`;
-    }
     return `<button class="tile" type="button" onclick="openModal(${idx})">
       <div class="tile-imgwrap"><img class="tile-img" src="${escapeHtml(d0.img)}" alt="${escapeHtml(itemName(item))}" loading="lazy"></div>
       <div class="tile-body">
         ${showCat}
         <p class="tile-name">${escapeHtml(itemName(item))}</p>
-        ${meta}
       </div>
     </button>`;
   }).join("");
