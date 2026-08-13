@@ -57,14 +57,6 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
 .frame{position:absolute;inset:0;width:100%;height:100%;border:0;display:none;background:var(--bg)}
 .frame.active{display:block}
 
-/* External-link panel (Reserveringen — site blocks embedding) */
-.extpanel{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:28px;background:var(--bg)}
-.extpanel.active{display:flex}
-.extpanel h2{margin:0;font-size:20px;font-weight:600;color:#fff}
-.extpanel p{margin:0;max-width:440px;color:#fff;opacity:.7;font-size:14px;line-height:1.55}
-.extpanel .ext-btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);background:var(--gold);color:#0b0b0b;font-weight:700;font-size:16px;padding:14px 26px;border-radius:999px;text-decoration:none;margin-top:4px}
-.extpanel .ext-btn:hover{filter:brightness(.95)}
-
 /* Screensaver — dashboard shown after 1 min idle; any input dismisses it */
 #screensaver{position:fixed;inset:0;z-index:100;background:#000;display:none}
 #screensaver.show{display:block}
@@ -143,11 +135,6 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
     <iframe id="f-checklists" class="frame"        title="Checklists" data-src="checklists/index.html"></iframe>
     <iframe id="f-kiosk"      class="frame"        title="Kiosk"      data-src="https://kiosk.shiftbase.com/"
             allow="camera; microphone; fullscreen; geolocation; clipboard-write" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <div id="f-reserveringen" class="extpanel">
-      <h2>Reserveringen</h2>
-      <p>Deze site kan niet in de app worden ingebed. Open de reserveringen in een apart venster en log daar in.</p>
-      <a class="ext-btn" href="https://zusje.reserveersysteem.eu/contao?do=restaurant_dashboard&restaurant=1009" target="_blank" rel="noopener">Reserveringen openen ↗</a>
-    </div>
   </main>
 </div>
 
@@ -159,7 +146,8 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
 
 <script>
 (function(){
-  const TABS = ["dranken","allergenen","checklists","reserveringen","kiosk"];
+  const TABS = ["dranken","allergenen","checklists","kiosk"];
+  const RESERVERINGEN_URL = "https://zusje.reserveersysteem.eu/contao?do=restaurant_dashboard&restaurant=1009";
   const shell = document.getElementById("shell");
 
   function frame(name){ return document.getElementById("f-"+name); }
@@ -197,7 +185,10 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
   });
 
   document.querySelectorAll(".tab").forEach(b => {
-    b.addEventListener("click", () => activate(b.dataset.tab));
+    b.addEventListener("click", () => {
+      if (b.dataset.tab === "reserveringen"){ window.open(RESERVERINGEN_URL, "_blank", "noopener"); return; }
+      activate(b.dataset.tab);
+    });
   });
 
   /* ---------- Screensaver / idle ---------- */
