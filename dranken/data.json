@@ -688,8 +688,8 @@
  },
  {
   "code": "ZF09",
-  "name": "Royal Bliss: Tonic",
-  "name_en": "Royal Bliss: Tonic",
+  "name": "Tonic",
+  "name_en": "Tonic",
   "category": "Fris",
   "img": "images/ZF09.jpeg",
   "steps": [
@@ -705,8 +705,8 @@
  },
  {
   "code": "ZF10",
-  "name": "Royal Bliss: Ginger ale",
-  "name_en": "Royal Bliss: Ginger ale",
+  "name": "Ginger ale",
+  "name_en": "Ginger ale",
   "category": "Fris",
   "img": "images/ZF10.jpeg",
   "steps": [
@@ -722,8 +722,8 @@
  },
  {
   "code": "ZF11",
-  "name": "Royal Bliss: Bitter lemon",
-  "name_en": "Royal Bliss: Bitter lemon",
+  "name": "Bitter lemon",
+  "name_en": "Bitter lemon",
   "category": "Fris",
   "img": "images/ZF11.jpeg",
   "steps": [
@@ -739,8 +739,8 @@
  },
  {
   "code": "ZF12",
-  "name": "Royal Bliss: Ginger beer",
-  "name_en": "Royal Bliss: Ginger beer",
+  "name": "Ginger beer",
+  "name_en": "Ginger beer",
   "category": "Fris",
   "img": "images/ZF12.jpeg",
   "steps": [
@@ -756,8 +756,8 @@
  },
  {
   "code": "ZF13",
-  "name": "Royal Bliss: Pink Berry",
-  "name_en": "Royal Bliss: Pink Berry",
+  "name": "Pink Berry",
+  "name_en": "Pink Berry",
   "category": "Fris",
   "img": "images/ZF13.jpeg",
   "steps": [
@@ -773,8 +773,8 @@
  },
  {
   "code": "ZF14",
-  "name": "Minute maid: Appelsap",
-  "name_en": "Minute Maid: Apple juice",
+  "name": "Appelsap",
+  "name_en": "Apple juice",
   "category": "Fris",
   "img": "images/ZF14.jpeg",
   "steps": [
@@ -788,8 +788,8 @@
  },
  {
   "code": "ZF15",
-  "name": "Minute maid: Sinaasappelsap",
-  "name_en": "Minute Maid: Orange juice",
+  "name": "Sinaasappelsap",
+  "name_en": "Orange juice",
   "category": "Fris",
   "img": "images/ZF15.jpeg",
   "steps": [
