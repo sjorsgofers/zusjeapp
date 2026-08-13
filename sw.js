@@ -1,5 +1,10 @@
 /* Zusje App service worker — installable PWA + offline shell */
-const CACHE = "zusje-app-v4";
+const CACHE = "zusje-app-v5";
+
+// Allow the page to tell a waiting worker to activate immediately.
+self.addEventListener("message", event => {
+  if (event.data === "skipWaiting") self.skipWaiting();
+});
 
 // Core files that make the app open offline. Sub-app images are cached at runtime.
 const PRECACHE = [
