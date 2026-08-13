@@ -1,0 +1,2266 @@
+[
+ {
+  "code": "ZB01",
+  "name": "Grolsch Premium",
+  "name_en": "Grolsch Premium",
+  "category": "Bier",
+  "img": "images/ZB01.jpeg",
+  "steps": [
+   "Spoel het pilsener glas goed zodat deze helemaal ontvet is.",
+   "Tap het biertje en schuim deze op de juiste manier af.",
+   "Serveer deze uit op een viltje met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Rinse the pilsner glass well so it is completely degreased.",
+   "Tap the beer and skim off the foam properly.",
+   "Serve it on a coaster with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZB02",
+  "name": "Grolsch Weizen",
+  "name_en": "Grolsch Weizen",
+  "category": "Bier",
+  "img": "images/ZB02.jpeg",
+  "steps": [
+   "Spoel het Weizen bierglas goed zodat deze helemaal ontvet is.",
+   "Tap het biertje en schuim deze op de juiste manier af.",
+   "Serveer deze uit op een viltje met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Rinse the Weizen beer glass well so it is completely degreased.",
+   "Tap the beer and skim off the foam properly.",
+   "Serve it on a coaster with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZB03",
+  "name": "Grolsch seizoensbier van de tap - Grimbergen Blond",
+  "name_en": "Grolsch seasonal beer on tap - Grimbergen Blond",
+  "category": "Bier",
+  "img": "images/ZB03.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog Grimbergen bierglas hebt.",
+   "Tap de Grimbergen blond.",
+   "Serveer deze uit op een viltje met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry Grimbergen beer glass.",
+   "Tap the Grimbergen blond.",
+   "Serve it on a coaster with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZB04",
+  "name": "Grolsch 0.0%",
+  "name_en": "Grolsch 0.0%",
+  "category": "Bier",
+  "img": "images/ZB04.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog pilsener glas hebt.",
+   "Open het flesje.",
+   "Serveer het bier uit met het etiket naar de gast toe en links daarvoor het pilsener glas."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry pilsner glass.",
+   "Open the bottle.",
+   "Serve the beer with the label facing the guest and the pilsner glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZB05",
+  "name": "Grolsch Radler 0.0%",
+  "name_en": "Grolsch Radler 0.0%",
+  "category": "Bier",
+  "img": "images/ZB05.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog radler 0.0% glas hebt.",
+   "Open het flesje.",
+   "Serveer het bier uit met het etiket naar de gast toe en links daarvoor het radler 0.0% glas."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry radler 0.0% glass.",
+   "Open the bottle.",
+   "Serve the beer with the label facing the guest and the radler 0.0% glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZB06",
+  "name": "Grolsch Weizen 0.0%",
+  "name_en": "Grolsch Weizen 0.0%",
+  "category": "Bier",
+  "img": "images/ZB06.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog Weizen glas hebt.",
+   "Open het flesje.",
+   "Serveer het bier uit met het etiket naar de gast toe en links daarvoor het Weizen glas."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry Weizen glass.",
+   "Open the bottle.",
+   "Serve the beer with the label facing the guest and the Weizen glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZB07",
+  "name": "Seizoensbier 0.0% - Eeuwige jeugd Vrijer",
+  "name_en": "Seasonal beer 0.0% - Eeuwige jeugd Vrijer",
+  "category": "Bier",
+  "img": "images/ZB07.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog Zusje speciaal bierglas hebt.",
+   "Open het flesje.",
+   "Serveer het bier uit met het etiket naar de gast toe en links daarvoor het Zusje speciaal bierglas."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry Zusje special beer glass.",
+   "Open the bottle.",
+   "Serve the beer with the label facing the guest and the Zusje special beer glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZB08",
+  "name": "Liefmans Fruitesse 0.0%",
+  "name_en": "Liefmans Fruitesse 0.0%",
+  "category": "Bier",
+  "img": "images/ZB08.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog Zusje speciaal bierglas hebt.",
+   "Vul het glas met 7 ijsklonten en open het flesje.",
+   "Serveer het bier uit met het etiket naar de gast toe en links daarvoor het Zusje speciaal bierglas."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry Zusje special beer glass.",
+   "Fill the glass with 7 ice cubes and open the bottle.",
+   "Serve the beer with the label facing the guest and the Zusje special beer glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZB09",
+  "name": "Chouffe 0,0%",
+  "name_en": "Chouffe 0,0%",
+  "category": "Bier",
+  "img": "images/ZB09.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog Zusje speciaal bierglas hebt.",
+   "Open het flesje.",
+   "Serveer het bier uit met het etiket naar de gast toe en links daarvoor het Zusje speciaal bierglas."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry Zusje special beer glass.",
+   "Open the bottle.",
+   "Serve the beer with the label facing the guest and the Zusje special beer glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZB10",
+  "name": "Grimbergen Tripel",
+  "name_en": "Grimbergen Tripel",
+  "category": "Bier",
+  "img": "images/ZB10.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog Grimbergen bierglas hebt.",
+   "Open het flesje.",
+   "Serveer het bier uit met het etiket naar de gast toe en links daarvoor het Grimbergen bierglas."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry Grimbergen beer glass.",
+   "Open the bottle.",
+   "Serve the beer with the label facing the guest and the Grimbergen beer glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZB11",
+  "name": "Duvel",
+  "name_en": "Duvel",
+  "category": "Bier",
+  "img": "images/ZB11.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog Duvel bierglas hebt.",
+   "Open het flesje.",
+   "Serveer het bier uit met het etiket naar de gast toe en links daarvoor het Duvel bierglas."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry Duvel beer glass.",
+   "Open the bottle.",
+   "Serve the beer with the label facing the guest and the Duvel beer glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZB12",
+  "name": "'t Gouden IJ",
+  "name_en": "'t Gouden IJ",
+  "category": "Bier",
+  "img": "images/ZB12.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog Zusje speciaal bierglas hebt.",
+   "Open het flesje.",
+   "Serveer het bier uit met het etiket naar de gast toe en links daarvoor het Zusje speciaal bierglas."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry Zusje special beer glass.",
+   "Open the bottle.",
+   "Serve the beer with the label facing the guest and the Zusje special beer glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZB13",
+  "name": "'t IJ I.P.A.",
+  "name_en": "'t IJ I.P.A.",
+  "category": "Bier",
+  "img": "images/ZB13.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog Zusje speciaal bierglas hebt.",
+   "Open het flesje.",
+   "Serveer het bier uit met het etiket naar de gast toe en links daarvoor het Zusje speciaal bierglas."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry Zusje special beer glass.",
+   "Open the bottle.",
+   "Serve the beer with the label facing the guest and the Zusje special beer glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZB14",
+  "name": "Liefmans Fruitesse",
+  "name_en": "Liefmans Fruitesse",
+  "category": "Bier",
+  "img": "images/ZB14.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog Zusje speciaal bierglas hebt.",
+   "Vul het glas met 7 ijsklonten en open het flesje.",
+   "Serveer het bier uit met het etiket naar de gast toe en links daarvoor het Zusje speciaal bierglas."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry Zusje special beer glass.",
+   "Fill the glass with 7 ice cubes and open the bottle.",
+   "Serve the beer with the label facing the guest and the Zusje special beer glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZB15",
+  "name": "Liefmans Peach",
+  "name_en": "Liefmans Peach",
+  "category": "Bier",
+  "img": "images/ZB15.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog Zusje speciaal bier glas hebt.",
+   "Vul het glas met 7 ijsklonten en open het flesje.",
+   "Serveer het bier uit met het etiket naar de gast toe en links daarvoor het Zusje speciaal bier glas."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry Zusje special beer glass.",
+   "Fill the glass with 7 ice cubes and open the bottle.",
+   "Serve the beer with the label facing the guest and the Zusje special beer glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZB16",
+  "name": "Chouffe Cherry",
+  "name_en": "Chouffe Cherry",
+  "category": "Bier",
+  "img": "images/ZB16.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog Zusje speciaal bierglas hebt.",
+   "Open het flesje.",
+   "Serveer het bier uit met het etiket naar de gast toe en links daarvoor het Zusje speciaal bierglas."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry Zusje special beer glass.",
+   "Open the bottle.",
+   "Serve the beer with the label facing the guest and the Zusje special beer glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZC01",
+  "name": "Gin Tonic",
+  "name_en": "Gin Tonic",
+  "category": "Cocktails",
+  "img": "images/ZC01.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog Gin-Tonic glas hebt.",
+   "Vul het glas met 7 ijsklontjes.",
+   "Vul de Jigger (barmaatje) met het Zusje gin (30 milliliter).",
+   "Voeg 8 jeneverbessen en een half takje rozemarijn toe.",
+   "Spies een citroenschijf op een Zusje satéprikker. (LET OP: dit moet een heel schijfje zijn, dus de citroen niet door de helft maar een plakje van een volledige citroen!)",
+   "Voeg deze toe aan het Gin-Tonic glas, zorg ervoor dat het citroen(sap) de gin niet raakt, anders verkleurt de gin.",
+   "Voeg een kort cocktailrietje toe.",
+   "Open het Royal Bliss tonic flesje.",
+   "Serveer het Royal Bliss tonic flesje uit met het etiket naar de gast toe en links daarvoor het Gin-Tonic glas."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry Gin & Tonic glass.",
+   "Fill the glass with 7 ice cubes.",
+   "Fill the jigger (bar measure) with the Zusje gin (30 milliliters).",
+   "Add 8 juniper berries and half a sprig of rosemary.",
+   "Skewer a slice of lemon on a Zusje cocktail pick. (NOTE: this must be a whole slice, so do not halve the lemon but use a slice of a full lemon!)",
+   "Add this to the Gin & Tonic glass, making sure the lemon (juice) does not touch the gin, otherwise the gin discolours.",
+   "Add a short cocktail straw.",
+   "Open the Royal Bliss tonic bottle.",
+   "Serve the Royal Bliss tonic bottle with the label facing the guest and the Gin & Tonic glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZC02",
+  "name": "Mojito",
+  "name_en": "Mojito",
+  "category": "Cocktails",
+  "img": "images/ZC02.jpeg",
+  "steps": [
+   "Vul een longdrink glas klein met ijsklontjes.",
+   "Meet met behulp van een barmaatje 100 milliliter bruiswater en schenk deze in het glas.",
+   "Meet vervolgens met behulp van een barmaatje 100 milliliter Mojito en schenk deze in het glas erbij.",
+   "Garneer het drankje af met 2 schijfjes limoen, één takje munt en één lang cocktailrietje."
+  ],
+  "steps_en": [
+   "Fill a longdrink glass with a small amount of ice cubes.",
+   "Using a bar measure, measure 100 milliliters of sparkling water and pour it into the glass.",
+   "Then, using a bar measure, measure 100 milliliters of Mojito and pour it into the glass as well.",
+   "Garnish the drink with 2 slices of lime, one sprig of mint and one long cocktail straw."
+  ]
+ },
+ {
+  "code": "ZC03",
+  "name": "Espresso Martini",
+  "name_en": "Espresso Martini",
+  "category": "Cocktails",
+  "img": "images/ZC03.jpeg",
+  "steps": [
+   "Pak een Pornstar Martini glas.",
+   "Vul de kleine kant van de shakebeker volledig met ijsblokjes.",
+   "Meet met behulp van een barmaatje 150 milliliter Espresso Martini uit de fles en schenk deze in de grote zijde van de shakebeker.",
+   "Vervolgens doe je de twee zijdes van de beker op elkaar en zorg dat deze goed en stevig op elkaar zit.",
+   "Shake de beker goed.",
+   "Sla tegen de zijkant van de shakebeker om de beker te openen. Controleer of er voldoende schuim op zit (is dit niet het geval schud je de beker dus nogmaals goed totdat er mooie schuimlaag op zit).",
+   "Schenk met behulp van de cocktailzeef, zodat het ijs niet meegaat in het glas.",
+   "Garneer het drankje af met 3 stuks koffiebonen."
+  ],
+  "steps_en": [
+   "Take a Pornstar Martini glass.",
+   "Fill the small side of the shaker completely with ice cubes.",
+   "Using a bar measure, measure 150 milliliters of Espresso Martini from the bottle and pour it into the large side of the shaker.",
+   "Then put the two sides of the shaker together and make sure they fit tightly on each other.",
+   "Shake the shaker well.",
+   "Tap against the side of the shaker to open it. Check whether there is enough foam (if not, shake the shaker well again until there is a nice layer of foam).",
+   "Pour using the cocktail strainer, so the ice does not go into the glass.",
+   "Garnish the drink with 3 coffee beans."
+  ]
+ },
+ {
+  "code": "ZC04",
+  "name": "Pornstar Martini",
+  "name_en": "Pornstar Martini",
+  "category": "Cocktails",
+  "img": "images/ZC04.jpeg",
+  "steps": [
+   "Pak een Pornstar Martini glas.",
+   "Vul de kleine kant van de shakebeker volledig met ijsblokjes.",
+   "Meet met behulp van een barmaatje 150 milliliter Pornstar Martini uit de fles en schenk deze in de grote zijde van de shakebeker.",
+   "Vervolgens doe je de twee zijdes van de beker op elkaar en zorg dat deze goed en stevig op elkaar zit.",
+   "Shake de beker goed.",
+   "Sla tegen de zijkant van de shakebeker om de beker te openen. Controleer of er voldoende schuim op zit (is dit niet het geval schud je de beker dus nogmaals goed totdat er mooie schuimlaag op zit).",
+   "Schenk met behulp van de cocktailzeef, zodat het ijs niet meegaat in het glas.",
+   "Snijd een passievrucht door de helft.",
+   "Garneer het drankje af met een halve passievrucht.",
+   "Serveer naast de Pornstar Martini in een likeur glas 30 milliliter Zusje cava erbij."
+  ],
+  "steps_en": [
+   "Take a Pornstar Martini glass.",
+   "Fill the small side of the shaker completely with ice cubes.",
+   "Using a bar measure, measure 150 milliliters of Pornstar Martini from the bottle and pour it into the large side of the shaker.",
+   "Then put the two sides of the shaker together and make sure they fit tightly on each other.",
+   "Shake the shaker well.",
+   "Tap against the side of the shaker to open it. Check whether there is enough foam (if not, shake the shaker well again until there is a nice layer of foam).",
+   "Pour using the cocktail strainer, so the ice does not go into the glass.",
+   "Cut a passion fruit in half.",
+   "Garnish the drink with half a passion fruit.",
+   "Alongside the Pornstar Martini, serve 30 milliliters of Zusje cava in a liqueur glass."
+  ]
+ },
+ {
+  "code": "ZC05",
+  "name": "Limocello Spritz",
+  "name_en": "Limocello Spritz",
+  "category": "Cocktails",
+  "img": "images/ZC05.jpeg",
+  "steps": [
+   "Pak een gepoleerd wijnglas en vul deze met 7 ijsblokjes.",
+   "Snijd 2 schijfjes citroen.",
+   "Schenk in het glas 75 milliliter Limocello spritz en daarop 125 milliliter bruiswater",
+   "Garneer het glas af door de 2 schijfjes citroen in het glas te leggen en een takje munt.",
+   "Als laatste steek je hierin nog een kort cocktailrietje."
+  ],
+  "steps_en": [
+   "Take a polished wine glass and fill it with 7 ice cubes.",
+   "Cut 2 slices of lemon.",
+   "Pour 75 milliliters of Limocello spritz into the glass and 125 milliliters of sparkling water on top.",
+   "Garnish the glass by placing the 2 slices of lemon in the glass and a sprig of mint.",
+   "Finally, add a short cocktail straw."
+  ]
+ },
+ {
+  "code": "ZC06",
+  "name": "Zusje Spritz",
+  "name_en": "Zusje Spritz",
+  "category": "Cocktails",
+  "img": "images/ZC06.jpeg",
+  "steps": [
+   "Pak een gepoleerd wijnglas en vul deze met 7 ijsblokjes.",
+   "Snijd 2 sinaasappel plakjes.",
+   "Schenk in het glas 75 millilter Arancia Rosa Spritz en daarop 125 milliliter bruiswater.",
+   "Garneer het glas af door 2 sinaasappel plakjes in het glas te leggen.",
+   "Als laatste steek je hierin nog een kort cocktailrietje."
+  ],
+  "steps_en": [
+   "Take a polished wine glass and fill it with 7 ice cubes.",
+   "Cut 2 slices of orange.",
+   "Pour 75 milliliters of Arancia Rosa Spritz into the glass and 125 milliliters of sparkling water on top.",
+   "Garnish the glass by placing 2 slices of orange in the glass.",
+   "Finally, add a short cocktail straw."
+  ]
+ },
+ {
+  "code": "ZC07",
+  "name": "Aperol Spritz",
+  "name_en": "Aperol Spritz",
+  "category": "Cocktails",
+  "img": "images/ZC07.jpeg",
+  "steps": [
+   "Pak een gepoleerd wijnglas en vul deze met 7 ijsblokjes.",
+   "Snijd 2 sinaasappel plakjes.",
+   "Schenk 125 milliliter bruiswater in het wijnglas.",
+   "Schenk hier 20 milliliter Aperol bij met behulp van het schenktuitje.",
+   "Schenk daarbij nog 50 milliliter Bibs Classico van de Cocktail club.",
+   "Garneer het glas af door de 2 plakjes sinaasappel in het glas te leggen.",
+   "Als laatste steek je hierin nog een kort cocktailrietje."
+  ],
+  "steps_en": [
+   "Take a polished wine glass and fill it with 7 ice cubes.",
+   "Cut 2 slices of orange.",
+   "Pour 125 milliliters of sparkling water into the wine glass.",
+   "Add 20 milliliters of Aperol using the pour spout.",
+   "Then add 50 milliliters of Bibs Classico from the Cocktail Club.",
+   "Garnish the glass by placing the 2 slices of orange in the glass.",
+   "Finally, add a short cocktail straw."
+  ]
+ },
+ {
+  "code": "ZC08",
+  "name": "Pornstar Martini alcoholvrij",
+  "name_en": "Pornstar Martini (non-alcoholic)",
+  "category": "Cocktails",
+  "img": "images/ZC08.jpeg",
+  "steps": [
+   "Pak een Pornstar Martini glas.",
+   "Vul de kleine kant van de shakebeker volledig met ijsblokjes.",
+   "Meet met behulp van een barmaatje 150 milliliter Pornstar Martini 0.0% uit de fles en schenk deze in de grote zijde van de shakebeker (LET OP: gebruik hiervoor de 0.0% shakebaker).",
+   "Vervolgens doe je de twee zijdes van de shakebeker op elkaar en zorg dat deze goed en stevig op elkaar zit.",
+   "Shake de beker goed.",
+   "Sla tegen de zijkant van de shakebeker om de beker te openen. Controleer of er voldoende schuim op zit (is dit niet het geval schud je de beker dus nogmaals goed totdat er mooie schuimlaag op zit).",
+   "Schenk met behulp van de cocktailzeef, zodat het ijs niet meegaat in het glas.",
+   "Snijd een passievrucht door de helft.",
+   "Garneer het drankje af met een halve passievrucht.",
+   "Serveer naast de Pornstar Martini in een likeur glas 30 milliliter Zusje cava erbij."
+  ],
+  "steps_en": [
+   "Take a Pornstar Martini glass.",
+   "Fill the small side of the shaker completely with ice cubes.",
+   "Using a bar measure, measure 150 milliliters of Pornstar Martini 0.0% from the bottle and pour it into the large side of the shaker (NOTE: use the 0.0% shaker for this).",
+   "Then put the two sides of the shaker together and make sure they fit tightly on each other.",
+   "Shake the shaker well.",
+   "Tap against the side of the shaker to open it. Check whether there is enough foam (if not, shake the shaker well again until there is a nice layer of foam).",
+   "Pour using the cocktail strainer, so the ice does not go into the glass.",
+   "Cut a passion fruit in half.",
+   "Garnish the drink with half a passion fruit.",
+   "Alongside the Pornstar Martini, serve 30 milliliters of Zusje cava in a liqueur glass."
+  ]
+ },
+ {
+  "code": "ZC09",
+  "name": "Verse zomerse ijsthee Cassis",
+  "name_en": "Fresh summer iced tea Cassis",
+  "category": "Cocktails",
+  "img": "images/ZC09.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog longdrink glas groot hebt.",
+   "Vul het glas met volledig met ijs.",
+   "Steek er een takje munt in, deze mag best boven het glas uitkomen.",
+   "Steek er een lang cocktailrietje bij.",
+   "Pak een glazenfilterkannetje en voeg hierin twee maatschepjes van de cassis thee toe.",
+   "Vul vervolgens het kannetje met kokend water. (Een keer op de knop drukken is voldoende, hetzelfde als dat er een kop thee wordt gezet).",
+   "Serveer de ijsthee, en leg hierbij uit dat de thee nog enkele minuten moet trekken en af moet koelen."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry large longdrink glass.",
+   "Fill the glass completely with ice.",
+   "Stick a sprig of mint in it; it may stick out above the glass.",
+   "Add a long cocktail straw.",
+   "Take a glass filter jug and add two scoops of the cassis tea.",
+   "Then fill the jug with boiling water. (Pressing the button once is enough, the same as making a cup of tea.)",
+   "Serve the iced tea, and explain that the tea needs to steep for a few more minutes and cool down."
+  ]
+ },
+ {
+  "code": "ZC10",
+  "name": "Verse ijsthee Icy Pear",
+  "name_en": "Fresh iced tea Icy Pear",
+  "category": "Cocktails",
+  "img": "images/ZC10.jpeg",
+  "steps": [
+   "Zorg ervoor dat je een gepoleerd, vetvrij en droog longdrink glas groot hebt.",
+   "Snijd 1 partje limoen en 2 schijfjes citroen.",
+   "Vul het glas met volledig met ijs en zorg dat je de citroen en limoen in laagjes tussen het ijs voegt.",
+   "Steek er een takje munt in, deze mag best boven het glas uitkomen.",
+   "Steek er een lang cocktailrietje bij.",
+   "Pak een glazenfilterkannetje en voeg hierin twee maatschepjes van de peer & papaya thee toe.",
+   "Vul vervolgens het kannetje met kokend water. (Een keer op de knop drukken is voldoende, hetzelfde als dat er een kop thee wordt gezet).",
+   "Serveer de ijsthee, en leg hierbij uit dat de thee nog enkele minuten moet trekken en af moet koelen."
+  ],
+  "steps_en": [
+   "Make sure you have a polished, grease-free and dry large longdrink glass.",
+   "Cut 1 wedge of lime and 2 slices of lemon.",
+   "Fill the glass completely with ice, making sure you add the lemon and lime in layers between the ice.",
+   "Stick a sprig of mint in it; it may stick out above the glass.",
+   "Add a long cocktail straw.",
+   "Take a glass filter jug and add two scoops of the pear & papaya tea.",
+   "Then fill the jug with boiling water. (Pressing the button once is enough, the same as making a cup of tea.)",
+   "Serve the iced tea, and explain that the tea needs to steep for a few more minutes and cool down."
+  ]
+ },
+ {
+  "code": "ZC11",
+  "name": "Mojito alcoholvrij",
+  "name_en": "Mojito (non-alcoholic)",
+  "category": "Cocktails",
+  "img": "images/ZC11.jpeg",
+  "steps": [
+   "Vul een longdrink glas klein met ijsklontjes.",
+   "Doe hier 150 milliliter bruiswater bij.",
+   "Vul het barmaatje met 50 milliliter Mojito 0.0% en schenk dit ook in het glas.",
+   "Snijd 2 partjes limoen en voeg deze toe in het glas.",
+   "Pak vervolgens een topje van de munt af en steek deze bovenop in het glas.",
+   "Serveer de Mojito 0.0% met een lang cocktailrietje."
+  ],
+  "steps_en": [
+   "Fill a longdrink glass with a small amount of ice cubes.",
+   "Add 150 milliliters of sparkling water to it.",
+   "Fill the bar measure with 50 milliliters of Mojito 0.0% and pour this into the glass as well.",
+   "Cut 2 wedges of lime and add them to the glass.",
+   "Then pinch off a top of the mint and stick it on top in the glass.",
+   "Serve the Mojito 0.0% with a long cocktail straw."
+  ]
+ },
+ {
+  "code": "ZF01",
+  "name": "Coca-Cola",
+  "name_en": "Coca-Cola",
+  "category": "Fris",
+  "img": "images/ZF01.jpeg",
+  "steps": [
+   "Vul een vetvrij, droog en gepoleerd frisdrank glas met 3 ijsklontjes.",
+   "Open het flesje.",
+   "Serveer de frisdrank uit met het etiket naar de gast toe en het frisdrank glas er linksvoor."
+  ],
+  "steps_en": [
+   "Fill a grease-free, dry and polished soft drink glass with 3 ice cubes.",
+   "Open the bottle.",
+   "Serve the soft drink with the label facing the guest and the soft drink glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF02",
+  "name": "Coca-Cola Zero",
+  "name_en": "Coca-Cola Zero",
+  "category": "Fris",
+  "img": "images/ZF02.jpeg",
+  "steps": [
+   "Vul een vetvrij, droog en gepoleerd frisdrank glas met 3 ijsklontjes.",
+   "Open het flesje.",
+   "Serveer de frisdrank uit met het etiket naar de gast toe en het frisdrank glas er linksvoor."
+  ],
+  "steps_en": [
+   "Fill a grease-free, dry and polished soft drink glass with 3 ice cubes.",
+   "Open the bottle.",
+   "Serve the soft drink with the label facing the guest and the soft drink glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF03",
+  "name": "Fanta Orange",
+  "name_en": "Fanta Orange",
+  "category": "Fris",
+  "img": "images/ZF03.jpeg",
+  "steps": [
+   "Vul een vetvrij, droog en gepoleerd frisdrank glas met 3 ijsklontjes.",
+   "Open het flesje.",
+   "Serveer de frisdrank uit met het etiket naar de gast toe en het frisdrank glas er linksvoor."
+  ],
+  "steps_en": [
+   "Fill a grease-free, dry and polished soft drink glass with 3 ice cubes.",
+   "Open the bottle.",
+   "Serve the soft drink with the label facing the guest and the soft drink glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF04",
+  "name": "Sprite",
+  "name_en": "Sprite",
+  "category": "Fris",
+  "img": "images/ZF04.jpeg",
+  "steps": [
+   "Vul een vetvrij, droog en gepoleerd frisdrank glas met 3 ijsklontjes.",
+   "Open het flesje.",
+   "Serveer de frisdrank uit met het etiket naar de gast toe en het frisdrank glas er linksvoor."
+  ],
+  "steps_en": [
+   "Fill a grease-free, dry and polished soft drink glass with 3 ice cubes.",
+   "Open the bottle.",
+   "Serve the soft drink with the label facing the guest and the soft drink glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF05",
+  "name": "Fanta cassis",
+  "name_en": "Fanta cassis",
+  "category": "Fris",
+  "img": "images/ZF05.jpeg",
+  "steps": [
+   "Vul een vetvrij, droog en gepoleerd frisdrank glas met 3 ijsklontjes.",
+   "Open het flesje.",
+   "Serveer de frisdrank uit met het etiket naar de gast toe en het frisdrank glas er linksvoor."
+  ],
+  "steps_en": [
+   "Fill a grease-free, dry and polished soft drink glass with 3 ice cubes.",
+   "Open the bottle.",
+   "Serve the soft drink with the label facing the guest and the soft drink glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF06",
+  "name": "Fuze tea Sparkling",
+  "name_en": "Fuze tea Sparkling",
+  "category": "Fris",
+  "img": "images/ZF06.jpeg",
+  "steps": [
+   "Vul een vetvrij, droog en gepoleerd tumbler glas met 5 ijsklontjes en 1 sinaasappel partje.",
+   "Steek 1 kort cocktailrietje en een stamper bij de ijsklontjes en open het flesje.",
+   "Serveer de frisdrank uit met het etiket naar de gast toe en het tumbler glas er linksvoor."
+  ],
+  "steps_en": [
+   "Fill a grease-free, dry and polished tumbler glass with 5 ice cubes and 1 wedge of orange.",
+   "Add 1 short cocktail straw and a stirrer to the ice cubes and open the bottle.",
+   "Serve the soft drink with the label facing the guest and the tumbler glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF07",
+  "name": "Fuze tea Green",
+  "name_en": "Fuze tea Green",
+  "category": "Fris",
+  "img": "images/ZF07.jpeg",
+  "steps": [
+   "Vul een vetvrij, droog en gepoleerd tumbler glas met 5 ijsklontjes en 1 sinaasappel partje.",
+   "Steek 1 kort cocktailrietje en een stamper bij de ijsklontjes en open het flesje.",
+   "Serveer de frisdrank uit met het etiket naar de gast toe en het tumbler glas er linksvoor."
+  ],
+  "steps_en": [
+   "Fill a grease-free, dry and polished tumbler glass with 5 ice cubes and 1 wedge of orange.",
+   "Add 1 short cocktail straw and a stirrer to the ice cubes and open the bottle.",
+   "Serve the soft drink with the label facing the guest and the tumbler glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF08",
+  "name": "Fuze tea Mango",
+  "name_en": "Fuze tea Mango",
+  "category": "Fris",
+  "img": "images/ZF08.jpeg",
+  "steps": [
+   "Vul een vetvrij, droog en gepoleerd tumbler glas met 5 ijsklontjes en 1 sinaasappel partje.",
+   "Steek 1 kort cocktailrietje en een stamper bij de ijsklontjes en open het flesje.",
+   "Serveer de frisdrank uit met het etiket naar de gast toe en het tumbler glas er linksvoor."
+  ],
+  "steps_en": [
+   "Fill a grease-free, dry and polished tumbler glass with 5 ice cubes and 1 wedge of orange.",
+   "Add 1 short cocktail straw and a stirrer to the ice cubes and open the bottle.",
+   "Serve the soft drink with the label facing the guest and the tumbler glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF09",
+  "name": "Royal Bliss: Tonic",
+  "name_en": "Royal Bliss: Tonic",
+  "category": "Fris",
+  "img": "images/ZF09.jpeg",
+  "steps": [
+   "Vul een vetvrij, droog en gepoleerd tumbler glas met 5 ijsklontjes en 1 schijfje citroen.",
+   "Steek 1 kort cocktailrietje en een stamper bij de ijsklontjes en open het flesje.",
+   "Serveer de frisdrank uit met het etiket naar de gast toe en het tumbler glas er linksvoor."
+  ],
+  "steps_en": [
+   "Fill a grease-free, dry and polished tumbler glass with 5 ice cubes and 1 slice of lemon.",
+   "Add 1 short cocktail straw and a stirrer to the ice cubes and open the bottle.",
+   "Serve the soft drink with the label facing the guest and the tumbler glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF10",
+  "name": "Royal Bliss: Ginger ale",
+  "name_en": "Royal Bliss: Ginger ale",
+  "category": "Fris",
+  "img": "images/ZF10.jpeg",
+  "steps": [
+   "Vul een vetvrij, droog en gepoleerd tumbler glas met 5 ijsklontjes en 1 takje munt.",
+   "Steek 1 kort cocktailrietje en een stamper bij de ijsklontjes en open het flesje.",
+   "Serveer de frisdrank uit met het etiket naar de gast toe en het tumbler glas er linksvoor."
+  ],
+  "steps_en": [
+   "Fill a grease-free, dry and polished tumbler glass with 5 ice cubes and 1 sprig of mint.",
+   "Add 1 short cocktail straw and a stirrer to the ice cubes and open the bottle.",
+   "Serve the soft drink with the label facing the guest and the tumbler glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF11",
+  "name": "Royal Bliss: Bitter lemon",
+  "name_en": "Royal Bliss: Bitter lemon",
+  "category": "Fris",
+  "img": "images/ZF11.jpeg",
+  "steps": [
+   "Vul een vetvrij, droog en gepoleerd tumbler glas met 5 ijsklontjes en 1 partje limoen.",
+   "Steek 1 kort cocktailrietje en een stamper bij de ijsklontjes en open het flesje.",
+   "Serveer de frisdrank uit met het etiket naar de gast toe en het tumbler glas er linksvoor."
+  ],
+  "steps_en": [
+   "Fill a grease-free, dry and polished tumbler glass with 5 ice cubes and 1 wedge of lime.",
+   "Add 1 short cocktail straw and a stirrer to the ice cubes and open the bottle.",
+   "Serve the soft drink with the label facing the guest and the tumbler glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF12",
+  "name": "Royal Bliss: Ginger beer",
+  "name_en": "Royal Bliss: Ginger beer",
+  "category": "Fris",
+  "img": "images/ZF12.jpeg",
+  "steps": [
+   "Vul een vetvrij, droog en gepoleerd tumbler glas met 5 ijsklontjes en 1 takje munt.",
+   "Steek 1 kort cocktailrietje en een stamper bij de ijsklontjes en open het flesje.",
+   "Serveer de frisdrank uit met het etiket naar de gast toe en het tumbler glas er linksvoor."
+  ],
+  "steps_en": [
+   "Fill a grease-free, dry and polished tumbler glass with 5 ice cubes and 1 sprig of mint.",
+   "Add 1 short cocktail straw and a stirrer to the ice cubes and open the bottle.",
+   "Serve the soft drink with the label facing the guest and the tumbler glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF13",
+  "name": "Royal Bliss: Pink Berry",
+  "name_en": "Royal Bliss: Pink Berry",
+  "category": "Fris",
+  "img": "images/ZF13.jpeg",
+  "steps": [
+   "Vul een vetvrij, droog en gepoleerd tumbler glas met 5 ijsklontjes en 1 partje limoen.",
+   "Steek 1 kort cocktailrietje en een stamper bij de ijsklontjes en open het flesje.",
+   "Serveer de frisdrank uit met het etiket naar de gast toe en het tumbler glas er linksvoor."
+  ],
+  "steps_en": [
+   "Fill a grease-free, dry and polished tumbler glass with 5 ice cubes and 1 wedge of lime.",
+   "Add 1 short cocktail straw and a stirrer to the ice cubes and open the bottle.",
+   "Serve the soft drink with the label facing the guest and the tumbler glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF14",
+  "name": "Minute maid: Appelsap",
+  "name_en": "Minute Maid: Apple juice",
+  "category": "Fris",
+  "img": "images/ZF14.jpeg",
+  "steps": [
+   "Neem een vetvrij, droog en gepoleerd frisdrank glas en open het flesje.",
+   "Serveer de frisdrank uit met het etiket naar de gast toe en het frisdrank glas er linksvoor."
+  ],
+  "steps_en": [
+   "Take a grease-free, dry and polished soft drink glass and open the bottle.",
+   "Serve the soft drink with the label facing the guest and the soft drink glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF15",
+  "name": "Minute maid: Sinaasappelsap",
+  "name_en": "Minute Maid: Orange juice",
+  "category": "Fris",
+  "img": "images/ZF15.jpeg",
+  "steps": [
+   "Neem een vetvrij, droog en gepoleerd frisdrank glas en open het flesje.",
+   "Serveer de frisdrank uit met het etiket naar de gast toe en het frisdrank glas er linksvoor."
+  ],
+  "steps_en": [
+   "Take a grease-free, dry and polished soft drink glass and open the bottle.",
+   "Serve the soft drink with the label facing the guest and the soft drink glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF16",
+  "name": "Tafelwater plat 0.35L",
+  "name_en": "Still table water 0.35L",
+  "category": "Fris",
+  "img": "images/ZF16.jpeg",
+  "steps": [
+   "Vul een Made blue fles 0.35L met plat water en sluit deze af met een Made blue dop platwater (zilver).",
+   "Hang een Made blue label om de hals van de fles.",
+   "Serveer de Made blue fles 0.35L uit met het etiket naar de gast toe en daar links voor een waterglas."
+  ],
+  "steps_en": [
+   "Fill a Made Blue bottle 0.35L with still water and close it with a Made Blue still water cap (silver).",
+   "Hang a Made Blue label around the neck of the bottle.",
+   "Serve the Made Blue bottle 0.35L with the label facing the guest and a water glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF17",
+  "name": "Tafelwater bruisend 0.35L",
+  "name_en": "Sparkling table water 0.35L",
+  "category": "Fris",
+  "img": "images/ZF17.jpeg",
+  "steps": [
+   "Vul een Made blue fles 0.35L met bruiswater en sluit deze af met een Made blue dop bruiswater (goud).",
+   "Hang een Made blue label om de hals van de fles.",
+   "Serveer de Made blue fles 0.35L uit met het etiket naar de gast toe en daar links voor een waterglas."
+  ],
+  "steps_en": [
+   "Fill a Made Blue bottle 0.35L with sparkling water and close it with a Made Blue sparkling water cap (gold).",
+   "Hang a Made Blue label around the neck of the bottle.",
+   "Serve the Made Blue bottle 0.35L with the label facing the guest and a water glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF18",
+  "name": "Tafelwater plat 0.7L",
+  "name_en": "Still table water 0.7L",
+  "category": "Fris",
+  "img": "images/ZF18.jpeg",
+  "steps": [
+   "Vul een Made blue fles 0.7L met plat water en sluit deze af met een Made blue dop platwater (zilver).",
+   "Hang een Made blue label om de hals van de fles.",
+   "Serveer de Made blue fles 0.7L uit met het etiket naar de gast toe en daar links voor een waterglas."
+  ],
+  "steps_en": [
+   "Fill a Made Blue bottle 0.7L with still water and close it with a Made Blue still water cap (silver).",
+   "Hang a Made Blue label around the neck of the bottle.",
+   "Serve the Made Blue bottle 0.7L with the label facing the guest and a water glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZF19",
+  "name": "Tafelwater bruisend 0.7L",
+  "name_en": "Sparkling table water 0.7L",
+  "category": "Fris",
+  "img": "images/ZF19.jpeg",
+  "steps": [
+   "Vul een Made blue fles 0.7L met bruiswater en sluit deze af met een Made blue dop bruiswater (goud).",
+   "Hang een Made blue label om de hals van de fles.",
+   "Serveer de Made blue fles 0.7L uit met het etiket naar de gast toe en daar links voor een waterglas."
+  ],
+  "steps_en": [
+   "Fill a Made Blue bottle 0.7L with sparkling water and close it with a Made Blue sparkling water cap (gold).",
+   "Hang a Made Blue label around the neck of the bottle.",
+   "Serve the Made Blue bottle 0.7L with the label facing the guest and a water glass to the left of it."
+  ]
+ },
+ {
+  "code": "ZG01",
+  "name": "Johnnie Walker Red label Whisky",
+  "name_en": "Johnnie Walker Red Label Whisky",
+  "category": "Sterke drank",
+  "img": "images/ZG01.jpeg",
+  "steps": [
+   "Neem een droog, vetvrij en gepoleerd tumbler glas.",
+   "(Bij een whisky met ijs voeg dan 3 ijsklontjes toe.)",
+   "Meet 35 ml whisky af en giet deze in het tumbler glas. (Bij mixdranken neem dan een tumbler glas met 3 ijsklontjes en een zwart rietje van 14 cm + de bij behorende frisdrank.)"
+  ],
+  "steps_en": [
+   "Take a dry, grease-free and polished tumbler glass.",
+   "(For a whisky on ice, add 3 ice cubes.)",
+   "Measure 35 ml of whisky and pour it into the tumbler glass. (For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ]
+ },
+ {
+  "code": "ZG02",
+  "name": "Remy Martin VSOP cognac",
+  "name_en": "Remy Martin VSOP Cognac",
+  "category": "Sterke drank",
+  "img": "images/ZG02.jpeg",
+  "steps": [
+   "Neem een droog, vetvrij en gepoleerd cognac glas.",
+   "Meet 35 ml cognac af en giet deze in het cognac glas."
+  ],
+  "steps_en": [
+   "Take a dry, grease-free and polished cognac glass.",
+   "Measure 35 ml of cognac and pour it into the cognac glass."
+  ]
+ },
+ {
+  "code": "ZG03",
+  "name": "Rum",
+  "name_en": "Rum",
+  "category": "Sterke drank",
+  "img": "images/ZG03.jpeg",
+  "steps": [
+   "Neem een droge, vetvrije en gepoleerde likeur glas (bij een likeur met ijs neem dan een tumbler glas met 3 ijsklontjes).",
+   "Meet 35 ml Rum af en giet deze in de likeur glas (of tumbler glas).",
+   "(Bij mixdranken neem dan een tumbler glas met 3 ijsklontjes en een zwart rietje van 14 cm + de bij behorende frisdrank)."
+  ],
+  "steps_en": [
+   "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
+   "Measure 35 ml of Rum and pour it into the liqueur glass (or tumbler glass).",
+   "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ]
+ },
+ {
+  "code": "ZG04",
+  "name": "Vodka",
+  "name_en": "Vodka",
+  "category": "Sterke drank",
+  "img": "images/ZG04.jpeg",
+  "steps": [
+   "Neem een droge, vetvrije en gepoleerde likeur glas (bij een likeur met ijs neem dan een tumbler glas met 3 ijsklontjes).",
+   "Meet 35 ml Vodka af en giet deze in de likeur glas (of tumbler glas).",
+   "(Bij mixdranken neem dan een tumbler glas met 3 ijsklontjes en een zwart rietje van 14 cm + de bij behorende frisdrank)."
+  ],
+  "steps_en": [
+   "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
+   "Measure 35 ml of Vodka and pour it into the liqueur glass (or tumbler glass).",
+   "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ]
+ },
+ {
+  "code": "ZG05",
+  "name": "Vieux",
+  "name_en": "Vieux",
+  "category": "Sterke drank",
+  "img": "images/ZG05.jpeg",
+  "steps": [
+   "Neem een droge, vetvrije en gepoleerde likeur glas (bij een likeur met ijs neem dan een tumbler glas met 3 ijsklontjes).",
+   "Meet 35 ml Vieux af en giet deze in de likeur glas (of tumbler glas).",
+   "(Bij mixdranken neem dan een tumbler glas met 3 ijsklontjes en een zwart rietje van 14 cm + de bij behorende frisdrank)."
+  ],
+  "steps_en": [
+   "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
+   "Measure 35 ml of Vieux and pour it into the liqueur glass (or tumbler glass).",
+   "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ]
+ },
+ {
+  "code": "ZG06",
+  "name": "Jägermeister",
+  "name_en": "Jägermeister",
+  "category": "Sterke drank",
+  "img": "images/ZG06.jpeg",
+  "steps": [
+   "Neem een droge, vetvrije en gepoleerde likeur glas (bij een likeur met ijs neem dan een tumbler glas met 3 ijsklontjes).",
+   "Meet 35 ml Jägermeister af en giet deze in de likeur glas (of tumbler glas).",
+   "(Bij mixdranken neem dan een tumbler glas met 3 ijsklontjes en een zwart rietje van 14 cm + de bij behorende frisdrank)."
+  ],
+  "steps_en": [
+   "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
+   "Measure 35 ml of Jägermeister and pour it into the liqueur glass (or tumbler glass).",
+   "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ]
+ },
+ {
+  "code": "ZG07",
+  "name": "Jonge jenever",
+  "name_en": "Young jenever",
+  "category": "Sterke drank",
+  "img": "images/ZG07.jpeg",
+  "steps": [
+   "Neem een droge, vetvrije en gepoleerde likeur glas(bij een likeur met ijs neem dan een tumbler glas met 3 ijsklontjes).",
+   "Meet 35 ml Jonge Jenever af en giet deze in de likeur glas (of tumbler glas).",
+   "(Bij mixdranken neem dan een tumbler glas met 3 ijsklontjes en een zwart rietje van 14 cm + de bij behorende frisdrank)."
+  ],
+  "steps_en": [
+   "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
+   "Measure 35 ml of Jonge Jenever and pour it into the liqueur glass (or tumbler glass).",
+   "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ]
+ },
+ {
+  "code": "ZG08",
+  "name": "Licor 43",
+  "name_en": "Licor 43",
+  "category": "Sterke drank",
+  "img": "images/ZG08.jpeg",
+  "steps": [
+   "Neem een droge, vetvrije en gepoleerde likeur glas (bij een likeur met ijs neem dan een tumbler glas met 3 ijsklontjes).",
+   "Meet 35 ml licor 43 af en giet deze in de likeur glas (of tumbler glas).",
+   "(Bij mixdranken neem dan een tumbler glas met 3 ijsklontjes en een zwart rietje van 14 cm + de bij behorende frisdrank)."
+  ],
+  "steps_en": [
+   "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
+   "Measure 35 ml of Licor 43 and pour it into the liqueur glass (or tumbler glass).",
+   "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ]
+ },
+ {
+  "code": "ZG09",
+  "name": "Tia maria",
+  "name_en": "Tia maria",
+  "category": "Sterke drank",
+  "img": "images/ZG09.jpeg",
+  "steps": [
+   "Neem een droge, vetvrije en gepoleerde likeur glas (bij een likeur met ijs neem dan een tumbler glas met 3 ijsklontjes).",
+   "Meet 35 ml Tia Maria af en giet deze in de likeur glas (of tumbler glas).",
+   "(Bij mixdranken neem dan een tumbler glas met 3 ijsklontjes en een zwart rietje van 14 cm + de bij behorende frisdrank)."
+  ],
+  "steps_en": [
+   "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
+   "Measure 35 ml of Tia Maria and pour it into the liqueur glass (or tumbler glass).",
+   "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ]
+ },
+ {
+  "code": "ZG10",
+  "name": "Baileys",
+  "name_en": "Baileys",
+  "category": "Sterke drank",
+  "img": "images/ZG10.jpeg",
+  "steps": [
+   "Neem een droge, vetvrije en gepoleerde likeur glas (bij een likeur met ijs neem dan een tumbler glas met 3 ijsklontjes).",
+   "Meet 35 ml Baileys af en giet deze in de likeur glas (of tumbler glas).",
+   "(Bij mixdranken neem dan een tumbler glas met 3 ijsklontjes en een zwart rietje van 14 cm + de bij behorende frisdrank)."
+  ],
+  "steps_en": [
+   "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
+   "Measure 35 ml of Baileys and pour it into the liqueur glass (or tumbler glass).",
+   "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ]
+ },
+ {
+  "code": "ZG11",
+  "name": "Disaronno",
+  "name_en": "Disaronno",
+  "category": "Sterke drank",
+  "img": "images/ZG11.jpeg",
+  "steps": [
+   "Neem een droge, vetvrije en gepoleerde likeur glas (bij een likeur met ijs neem dan een tumbler glas met 3 ijsklontjes).",
+   "Meet 35 ml Disaronno af en giet deze in de likeur glas (of tumbler glas).",
+   "(Bij mixdranken neem dan een tumbler glas met 3 ijsklontjes en een zwart rietje van 14 cm + de bij behorende frisdrank)."
+  ],
+  "steps_en": [
+   "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
+   "Measure 35 ml of Disaronno and pour it into the liqueur glass (or tumbler glass).",
+   "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ]
+ },
+ {
+  "code": "ZG12",
+  "name": "Limoncello",
+  "name_en": "Limoncello",
+  "category": "Sterke drank",
+  "img": "images/ZG12.jpeg",
+  "steps": [
+   "Neem een droge, vetvrije en gepoleerde likeur glas (bij een likeur met ijs neem dan een tumbler glas met 3 ijsklontjes).",
+   "Meet 35 ml Limoncello af en giet deze in de likeur glas (of tumbler glas).",
+   "(Bij mixdranken neem dan een tumbler glas met 3 ijsklontjes en een zwart rietje van 14 cm + de bij behorende frisdrank)."
+  ],
+  "steps_en": [
+   "Take a dry, grease-free and polished liqueur glass (for a liqueur on ice, take a tumbler glass with 3 ice cubes).",
+   "Measure 35 ml of Limoncello and pour it into the liqueur glass (or tumbler glass).",
+   "(For mixed drinks, take a tumbler glass with 3 ice cubes and a black 14 cm straw + the accompanying soft drink.)"
+  ]
+ },
+ {
+  "code": "ZG13",
+  "name": "Glas Rode Port",
+  "name_en": "Glass of Red Port",
+  "category": "Sterke drank",
+  "img": "images/ZG13.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd port glas.",
+   "Schenk hierin de port tot boven de bolling van het glas.",
+   "Serveer het glas uit."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished port glass.",
+   "Pour the port into it up to above the bulge of the glass.",
+   "Serve the glass."
+  ]
+ },
+ {
+  "code": "ZK01",
+  "name": "Koffie",
+  "name_en": "Coffee",
+  "category": "Koffie en thee",
+  "img": "images/ZK01.jpeg",
+  "steps": [
+   "Vul de piston (met 1 uitgang) met de gemalen koffiebonen.",
+   "Plaats de piston in het koffiezetapparaat, zet het koffie kopje eronder en druk op het knopje waar het volle koffie kopje op staat. (Let daarbij op dat je de piston goed schoonmaakt en aandrukt.)",
+   "Plaats het koffie kopje op de koffie schotel met het oortje naar rechts en het lepeltje rechtsboven het oortje.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven."
+  ],
+  "steps_en": [
+   "Fill the piston (with 1 outlet) with the ground coffee beans.",
+   "Place the piston in the coffee machine, put the coffee cup underneath and press the button showing the full coffee cup. (Make sure you clean the piston well and press it firmly.)",
+   "Place the coffee cup on the coffee saucer with the handle to the right and the spoon to the upper right of the handle.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ]
+ },
+ {
+  "code": "ZK02",
+  "name": "Espresso",
+  "name_en": "Espresso",
+  "category": "Koffie en thee",
+  "img": "images/ZK02.jpeg",
+  "steps": [
+   "Vul de piston (met 1 uitgang) met de gemalen espressobonen.",
+   "Plaats de piston in het koffiezetapparaat, zet het espresso kopje eronder en druk op het knopje waar het half volle koffie kopje op staat. (Let daarbij op dat je de piston goed schoonmaakt en aandrukt.)",
+   "Plaats het espresso kopje op de espresso schotel met het oortje naar rechts en het lepeltje rechtsboven het oortje.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven."
+  ],
+  "steps_en": [
+   "Fill the piston (with 1 outlet) with the ground espresso beans.",
+   "Place the piston in the coffee machine, put the espresso cup underneath and press the button showing the half-full coffee cup. (Make sure you clean the piston well and press it firmly.)",
+   "Place the espresso cup on the espresso saucer with the handle to the right and the spoon to the upper right of the handle.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ]
+ },
+ {
+  "code": "ZK03",
+  "name": "Cappuccino",
+  "name_en": "Cappuccino",
+  "category": "Koffie en thee",
+  "img": "images/ZK03.jpeg",
+  "steps": [
+   "Vul de piston (met 1 uitgang) met de gemalen espressobonen.",
+   "Plaats de piston in het koffiezetapparaat, zet het cappuccino kopje eronder en druk op het knopje waar het half volle koffie kopje op staat. (Let daarbij op dat je de piston goed schoonmaakt en aandrukt.)",
+   "Maak het cappuccino schuim met behulp van de Lattiz en schenk deze op de espresso in het cappuccino kopje.",
+   "Plaats het cappuccino kopje op de cappuccino schotel met het oortje naar rechts en het lepeltje rechtsboven het oortje.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven."
+  ],
+  "steps_en": [
+   "Fill the piston (with 1 outlet) with the ground espresso beans.",
+   "Place the piston in the coffee machine, put the cappuccino cup underneath and press the button showing the half-full coffee cup. (Make sure you clean the piston well and press it firmly.)",
+   "Make the cappuccino foam using the Lattiz and pour it onto the espresso in the cappuccino cup.",
+   "Place the cappuccino cup on the cappuccino saucer with the handle to the right and the spoon to the upper right of the handle.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ]
+ },
+ {
+  "code": "ZK04",
+  "name": "Caffé latte",
+  "name_en": "Caffè latte",
+  "category": "Koffie en thee",
+  "img": "images/ZK04.jpeg",
+  "steps": [
+   "Vul de piston (met 1 uitgang) met de gemalen koffiebonen.",
+   "Plaats de piston in het koffiezetapparaat, zet een koffie kopje eronder en druk op het knopje waar het volle koffie kopje op staat. (Let daarbij op dat je de piston goed schoonmaakt en aandrukt.)",
+   "Pak een theeglas, zet deze onder de Lattiz en vul deze met melkschuim (zorg ervoor dat er nog ruimte over blijft voor de koffie).",
+   "Schenk de koffie bij het melkschuim in het theeglas.",
+   "Plaats het theeglas op het schoteltje met het oortje naar rechts en het lepeltje rechtsboven het oortje.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven."
+  ],
+  "steps_en": [
+   "Fill the piston (with 1 outlet) with the ground coffee beans.",
+   "Place the piston in the coffee machine, put a coffee cup underneath and press the button showing the full coffee cup. (Make sure you clean the piston well and press it firmly.)",
+   "Take a tea glass, place it under the Lattiz and fill it with milk foam (make sure there is still room left for the coffee).",
+   "Pour the coffee into the milk foam in the tea glass.",
+   "Place the tea glass on the saucer with the handle to the right and the spoon to the upper right of the handle.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ]
+ },
+ {
+  "code": "ZK05",
+  "name": "Flat white",
+  "name_en": "Flat white",
+  "category": "Koffie en thee",
+  "img": "images/ZK05.jpeg",
+  "steps": [
+   "Vul de piston (met 1 uitgang) met de gemalen espressobonen.",
+   "Plaats de piston in het koffiezetapparaat, zet het cappuccino kopje eronder en druk op het knopje waar het half volle koffie kopje op staat (doe dit tweemaal, zodat je twee espresso hebt of doe het met de dubbele piston). (Let daarbij op dat je de piston goed schoonmaakt en aandrukt.)",
+   "Maak het cappuccino schuim met behulp van de Lattiz en schenk deze op de espresso in het cappuccino kopje.",
+   "Plaats het cappuccino kopje op de cappuccino schotel met het oortje naar rechts en het lepeltje rechtsboven het oortje.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven."
+  ],
+  "steps_en": [
+   "Fill the piston (with 1 outlet) with the ground espresso beans.",
+   "Place the piston in the coffee machine, put the cappuccino cup underneath and press the button showing the half-full coffee cup (do this twice so you have two espressos, or use the double piston). (Make sure you clean the piston well and press it firmly.)",
+   "Make the cappuccino foam using the Lattiz and pour it onto the espresso in the cappuccino cup.",
+   "Place the cappuccino cup on the cappuccino saucer with the handle to the right and the spoon to the upper right of the handle.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ]
+ },
+ {
+  "code": "ZK06",
+  "name": "Latte macchiato",
+  "name_en": "Latte macchiato",
+  "category": "Koffie en thee",
+  "img": "images/ZK06.jpeg",
+  "steps": [
+   "Vul de piston (met 1 uitgang) met de gemalen espressobonen.",
+   "Plaats de piston in het koffiezetapparaat, zet een klein koffiekannetje eronder en druk op het knopje waar het half volle koffie kopje op staat. (Let daarbij op dat je de piston goed schoonmaakt en aandrukt.)",
+   "Pak een latte glas, zet deze onder de Lattiz en vul deze met melkschuim (zorg ervoor dat er nog een beetje ruimte over blijft voor de espresso).",
+   "Schenk de espresso uit het koffiekannetje bij het melkschuim in het koffieglas.",
+   "Pak een grote lepel en hang deze aan het koffieglas.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven."
+  ],
+  "steps_en": [
+   "Fill the piston (with 1 outlet) with the ground espresso beans.",
+   "Place the piston in the coffee machine, put a small coffee jug underneath and press the button showing the half-full coffee cup. (Make sure you clean the piston well and press it firmly.)",
+   "Take a latte glass, place it under the Lattiz and fill it with milk foam (make sure there is still a little room left for the espresso).",
+   "Pour the espresso from the coffee jug into the milk foam in the coffee glass.",
+   "Take a large spoon and hang it on the coffee glass.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ]
+ },
+ {
+  "code": "ZK07",
+  "name": "Latte macchiato Karamel",
+  "name_en": "Latte macchiato Caramel",
+  "category": "Koffie en thee",
+  "img": "images/ZK07.jpeg",
+  "steps": [
+   "Vul de piston (met 1 uitgang) met de gemalen espressobonen.",
+   "Plaats de piston in het koffiezetapparaat, zet een klein koffiekannetje eronder en druk op het knopje waar het half volle koffie kopje op staat. (Let daarbij op dat je de piston goed schoonmaakt en aandrukt.)",
+   "Pak een latte glas en doe hier de Monin karamel siroop in, zet deze onder de Lattiz en vul deze met melkschuim (zorg ervoor dat er nog een beetje ruimte over blijft voor de espresso).",
+   "Schenk de espresso uit het koffiekannetje bij het melkschuim in het koffieglas.",
+   "Pak een grote lepel en hang deze aan het koffieglas.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven."
+  ],
+  "steps_en": [
+   "Fill the piston (with 1 outlet) with the ground espresso beans.",
+   "Place the piston in the coffee machine, put a small coffee jug underneath and press the button showing the half-full coffee cup. (Make sure you clean the piston well and press it firmly.)",
+   "Take a latte glass and put the Monin caramel syrup in it, place it under the Lattiz and fill it with milk foam (make sure there is still a little room left for the espresso).",
+   "Pour the espresso from the coffee jug into the milk foam in the coffee glass.",
+   "Take a large spoon and hang it on the coffee glass.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ]
+ },
+ {
+  "code": "ZK08",
+  "name": "Latte macchiato Witte chocolade",
+  "name_en": "Latte macchiato White chocolate",
+  "category": "Koffie en thee",
+  "img": "images/ZK08.jpeg",
+  "steps": [
+   "Vul de piston (met 1 uitgang) met de gemalen espressobonen.",
+   "Plaats de piston in het koffiezetapparaat, zet een klein koffiekannetje eronder en druk op het knopje waar het half volle koffie kopje op staat. (Let daarbij op dat je de piston goed schoonmaakt en aandrukt.)",
+   "Pak een latte glas en doe hier de Monin witte chocolade siroop in, zet deze onder de Lattiz en vul deze met melkschuim (zorg ervoor dat er nog een beetje ruimte over blijft voor de espresso).",
+   "Schenk de espresso uit het koffiekannetje bij het melkschuim in het koffieglas.",
+   "Pak een grote lepel en hang deze aan het koffieglas.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven."
+  ],
+  "steps_en": [
+   "Fill the piston (with 1 outlet) with the ground espresso beans.",
+   "Place the piston in the coffee machine, put a small coffee jug underneath and press the button showing the half-full coffee cup. (Make sure you clean the piston well and press it firmly.)",
+   "Take a latte glass and put the Monin white chocolate syrup in it, place it under the Lattiz and fill it with milk foam (make sure there is still a little room left for the espresso).",
+   "Pour the espresso from the coffee jug into the milk foam in the coffee glass.",
+   "Take a large spoon and hang it on the coffee glass.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ]
+ },
+ {
+  "code": "ZK09",
+  "name": "Irish coffee",
+  "name_en": "Irish coffee",
+  "category": "Koffie en thee",
+  "img": "images/ZK09.jpeg",
+  "steps": [
+   "Doe de (huis) whisky en een schepje basterdsuiker in een latte glas en verwarm deze met behulp van het stoompijpje op de koffiemachine.",
+   "Vul de piston (met 2 uitgangen) met de gemalen espressobonen.",
+   "Plaats de piston in het koffiezetapparaat, zet een koffie kopje eronder en druk op het knopje waar het volle koffie kopje op staan. (Let daarbij op dat je de piston goed schoonmaakt en aandrukt.)",
+   "Giet de koffie op de (huis) Whisky en spuit hier 25 ml geslagen room op. (Let op! Gebruik maar 1 patroon in de kidde en schudt deze niet overmatig.)",
+   "Hang de latte lepel tegen de buitenkant van het glas.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven."
+  ],
+  "steps_en": [
+   "Put the (house) whisky and a scoop of soft brown sugar in a latte glass and heat it using the steam pipe on the coffee machine.",
+   "Fill the piston (with 2 outlets) with the ground espresso beans.",
+   "Place the piston in the coffee machine, put a coffee cup underneath and press the button showing the full coffee cup. (Make sure you clean the piston well and press it firmly.)",
+   "Pour the coffee onto the (house) whisky and spray 25 ml of whipped cream on top. (Note! Use only 1 cartridge in the whipper and do not shake it excessively.)",
+   "Hang the latte spoon against the outside of the glass.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ]
+ },
+ {
+  "code": "ZK10",
+  "name": "Spanish coffee",
+  "name_en": "Spanish coffee",
+  "category": "Koffie en thee",
+  "img": "images/ZK10.jpeg",
+  "steps": [
+   "Doe de Tia Maria in een latte glas en verwarm deze met behulp van het stoompijpje op de koffiemachine.",
+   "Vul de piston (met 2 uitgangen) met de gemalen espressobonen.",
+   "Plaats de piston in het koffiezetapparaat, zet een koffie kopje eronder en druk op het knopje waar het koffie kopje op staan. (Let daarbij op dat je de piston goed schoonmaakt en aandrukt.)",
+   "Giet de koffie op de Tia Maria en spuit hier 25 ml geslagen room op. (Let op! Gebruik maar 1 patroon in de kidde en schudt deze niet overmatig.)",
+   "Hang de latte lepel tegen de buitenkant van het glas.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven."
+  ],
+  "steps_en": [
+   "Put the Tia Maria in a latte glass and heat it using the steam pipe on the coffee machine.",
+   "Fill the piston (with 2 outlets) with the ground espresso beans.",
+   "Place the piston in the coffee machine, put a coffee cup underneath and press the button showing the coffee cup. (Make sure you clean the piston well and press it firmly.)",
+   "Pour the coffee onto the Tia Maria and spray 25 ml of whipped cream on top. (Note! Use only 1 cartridge in the whipper and do not shake it excessively.)",
+   "Hang the latte spoon against the outside of the glass.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ]
+ },
+ {
+  "code": "ZK11",
+  "name": "French coffee",
+  "name_en": "French coffee",
+  "category": "Koffie en thee",
+  "img": "images/ZK11.jpeg",
+  "steps": [
+   "Doe de Grand Marnier in een latte glas en verwarm deze met behulp van het stoompijpje op de koffiemachine.",
+   "Vul de piston (met 2 uitgangen) met de gemalen espressobonen.",
+   "Plaats de piston in het koffiezetapparaat, zet een koffie kopje eronder en druk op het knopje waar het volle koffie kopje op staan. (Let daarbij op dat je de piston goed schoonmaakt en aandrukt.)",
+   "Giet de koffie op de Grand Marnier en spuit hier 25 ml geslagen room op. (Let op! Gebruik maar 1 patroon in de kidde en schudt deze niet overmatig.)",
+   "Hang de latte lepel tegen de buitenkant van het glas.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven."
+  ],
+  "steps_en": [
+   "Put the Grand Marnier in a latte glass and heat it using the steam pipe on the coffee machine.",
+   "Fill the piston (with 2 outlets) with the ground espresso beans.",
+   "Place the piston in the coffee machine, put a coffee cup underneath and press the button showing the full coffee cup. (Make sure you clean the piston well and press it firmly.)",
+   "Pour the coffee onto the Grand Marnier and spray 25 ml of whipped cream on top. (Note! Use only 1 cartridge in the whipper and do not shake it excessively.)",
+   "Hang the latte spoon against the outside of the glass.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ]
+ },
+ {
+  "code": "ZK12",
+  "name": "Italiaanse koffie",
+  "name_en": "Italian coffee",
+  "category": "Koffie en thee",
+  "img": "images/ZK12.jpeg",
+  "steps": [
+   "Doe de Amaretto in een latte glas en verwarm deze met behulp van het stoompijpje op de koffiemachine.",
+   "Vul de piston (met 2 uitgangen) met de gemalen espressobonen.",
+   "Plaats de piston in het koffiezetapparaat, zet een koffie kopje eronder en druk op het knopje waar het volle koffie kopje op staan. (Let daarbij op dat je de piston goed schoonmaakt en aandrukt.)",
+   "Giet de koffie op de Amaretto en spuit hier 25 ml geslagen room op. (Let op! Gebruik maar 1 patroon in de kidde en schudt deze niet overmatig.)",
+   "Hang de latte lepel tegen de buitenkant van het glas.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven."
+  ],
+  "steps_en": [
+   "Put the Amaretto in a latte glass and heat it using the steam pipe on the coffee machine.",
+   "Fill the piston (with 2 outlets) with the ground espresso beans.",
+   "Place the piston in the coffee machine, put a coffee cup underneath and press the button showing the full coffee cup. (Make sure you clean the piston well and press it firmly.)",
+   "Pour the coffee onto the Amaretto and spray 25 ml of whipped cream on top. (Note! Use only 1 cartridge in the whipper and do not shake it excessively.)",
+   "Hang the latte spoon against the outside of the glass.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ]
+ },
+ {
+  "code": "ZT01",
+  "name": "Thee",
+  "name_en": "Tea",
+  "category": "Koffie en thee",
+  "img": "images/ZT01.jpeg",
+  "steps": [
+   "Pak een theeglas, zet deze onder het koffiezetapparaat waar het kokende water uit komt en druk op de knop.",
+   "Zet in het kopje een theezeefje met daarop de deksel/onderzetter.",
+   "Plaats het kopje op de theeschotel met het oortje naar rechts en het lepeltje rechtsboven het oortje.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven.",
+   "Serveer dit samen met de thee molen."
+  ],
+  "steps_en": [
+   "Take a tea glass, place it under the coffee machine where the boiling water comes out and press the button.",
+   "Place a tea strainer in the cup with the lid/coaster on top.",
+   "Place the cup on the tea saucer with the handle to the right and the spoon to the upper right of the handle.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up.",
+   "Serve this together with the tea mill."
+  ]
+ },
+ {
+  "code": "ZT02",
+  "name": "Verse muntthee",
+  "name_en": "Fresh mint tea",
+  "category": "Koffie en thee",
+  "img": "images/ZT02.jpeg",
+  "steps": [
+   "Pak een theeglas, zet deze onder het koffiezetapparaat waar het kokende water uit komt en druk op de knop.",
+   "Voeg twee takken munt toe aan het theeglas met het kokende water.",
+   "Plaats het kopje op de theeschotel met het oortje naar rechts en het lepeltje rechtsboven het oortje.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven, voeg bij de munt thee ook een honinglepel aan het doosje toe."
+  ],
+  "steps_en": [
+   "Take a tea glass, place it under the coffee machine where the boiling water comes out and press the button.",
+   "Add two sprigs of mint to the tea glass with the boiling water.",
+   "Place the cup on the tea saucer with the handle to the right and the spoon to the upper right of the handle.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up, and for the mint tea also add a honey spoon to the box."
+  ]
+ },
+ {
+  "code": "ZT03",
+  "name": "Verse gemberthee",
+  "name_en": "Fresh ginger tea",
+  "category": "Koffie en thee",
+  "img": "images/ZT03.jpeg",
+  "steps": [
+   "Pak een theeglas, zet deze onder het koffiezetapparaat waar het kokende water uit komt en druk op de knop.",
+   "Pak een 't Zusje satéprikker.",
+   "Snijd 3 plakjes gember en prik deze door de satéprikker.",
+   "Snijd een plakje citroen af en voeg deze toe in het kopje met water en de prikker.",
+   "Plaats het kopje op de theeschotel met het oortje naar rechts en het lepeltje rechtsboven het oortje.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven, voeg bij de gember thee ook een honinglepel aan het doosje toe."
+  ],
+  "steps_en": [
+   "Take a tea glass, place it under the coffee machine where the boiling water comes out and press the button.",
+   "Take a 't Zusje cocktail pick.",
+   "Cut 3 slices of ginger and skewer them on the cocktail pick.",
+   "Cut a slice of lemon and add it to the cup with water and the pick.",
+   "Place the cup on the tea saucer with the handle to the right and the spoon to the upper right of the handle.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up, and for the ginger tea also add a honey spoon to the box."
+  ]
+ },
+ {
+  "code": "ZT04",
+  "name": "Chai Latte",
+  "name_en": "Chai Latte",
+  "category": "Koffie en thee",
+  "img": "images/ZT04.jpeg",
+  "steps": [
+   "Doe 20 milliliter Monin Chai Tea Siroop in een latte glas.",
+   "Voeg de opgeschuimde melk toe aan het glas.",
+   "Garneer de latte met kaneelpoeder.",
+   "Pak een latte lepel en hang deze aan het koffieglas.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven."
+  ],
+  "steps_en": [
+   "Put 20 milliliters of Monin Chai Tea Syrup in a latte glass.",
+   "Add the foamed milk to the glass.",
+   "Garnish the latte with cinnamon powder.",
+   "Take a latte spoon and hang it on the coffee glass.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ]
+ },
+ {
+  "code": "ZT05",
+  "name": "Dirty Chai Latte",
+  "name_en": "Dirty Chai Latte",
+  "category": "Koffie en thee",
+  "img": "images/ZT05.jpeg",
+  "steps": [
+   "Doe 20 milliliter Monin Chai Tea Siroop in een latte glas.",
+   "Vul de piston (met 1 uitgang) met de gemalen espressobonen.",
+   "Plaats de piston in het koffiezetapparaat, zet het espresso kopje eronder en druk op het knopje waar het half volle koffie kopje op staat. (Let daarbij op dat je de piston goed schoonmaakt en aandrukt.)",
+   "Voeg de espresso toe aan het latte glas met de Monin Chai Tea Siroop.",
+   "Voeg de opgeschuimde melk toe aan het glas.",
+   "Garneer de latte met kaneelpoeder.",
+   "Pak een latte lepel en hang deze aan het koffieglas.",
+   "Vul het koffiedoosje met een suikerstick, melkcupje, Zusje chocolaatje en een lolly.",
+   "Leg als laatste boven in het doosje een koekje met het logo van Zusje naar boven."
+  ],
+  "steps_en": [
+   "Put 20 milliliters of Monin Chai Tea Syrup in a latte glass.",
+   "Fill the piston (with 1 outlet) with the ground espresso beans.",
+   "Place the piston in the coffee machine, put the espresso cup underneath and press the button showing the half-full coffee cup. (Make sure you clean the piston well and press it firmly.)",
+   "Add the espresso to the latte glass with the Monin Chai Tea Syrup.",
+   "Add the foamed milk to the glass.",
+   "Garnish the latte with cinnamon powder.",
+   "Take a latte spoon and hang it on the coffee glass.",
+   "Fill the coffee box with a sugar stick, milk cup, Zusje chocolate and a lollipop.",
+   "Finally, place a biscuit on top in the box with the Zusje logo facing up."
+  ]
+ },
+ {
+  "code": "ZW01",
+  "name": "Glas Zusje cava",
+  "name_en": "Glass of Zusje cava",
+  "category": "Wijn",
+  "img": "images/ZW01.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd cava glas.",
+   "Schenk hierin 150 milliliter Zusje cava en sluit de fles weer goed af met de champagne afsluiter."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished cava glass.",
+   "Pour 150 milliliters of Zusje cava into it and close the bottle again properly with the champagne stopper."
+  ]
+ },
+ {
+  "code": "ZW02",
+  "name": "Fles Zusje cava",
+  "name_en": "Bottle of Zusje cava",
+  "category": "Wijn",
+  "img": "images/ZW02.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde cava glazen.",
+   "Plaats de fles in een wijnkoeler en zet deze in de wijnkoelhouder.",
+   "Geef de gasten een cava glas met het logo naar elke gast toe.",
+   "Laat een van de gasten de Zusje cava proeven door een klein laagje in te schenken.",
+   "Als de Zusje cava is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong).",
+   "Zet de fles Zusje cava weer terug in de wijnkoeler."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished cava glasses.",
+   "Place the bottle in a wine cooler and put it in the wine cooler holder.",
+   "Give the guests a cava glass with the logo facing each guest.",
+   "Let one of the guests taste the Zusje cava by pouring a small layer.",
+   "Once the Zusje cava is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.)",
+   "Put the bottle of Zusje cava back in the wine cooler."
+  ]
+ },
+ {
+  "code": "ZW03",
+  "name": "Glas Zusje bubbel",
+  "name_en": "Glass of Zusje bubbel",
+  "category": "Wijn",
+  "img": "images/ZW03.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd cava glas.",
+   "Schenk hierin 150 milliliter Zusje bubbel en sluit de fles weer goed af met de champagne afsluiter."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished cava glass.",
+   "Pour 150 milliliters of Zusje bubbel into it and close the bottle again properly with the champagne stopper."
+  ]
+ },
+ {
+  "code": "ZW04",
+  "name": "Fles Zusje bubbel",
+  "name_en": "Bottle of Zusje bubbel",
+  "category": "Wijn",
+  "img": "images/ZW04.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde cava glazen.",
+   "Plaats de fles in een wijnkoeler en zet deze in de wijnkoelhouder.",
+   "Geef de gasten een cava glas met het logo naar elke gast toe.",
+   "Laat een van de gasten de Zusje bubbel proeven door een klein laagje in te schenken.",
+   "Als de Zusje bubbel is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong).",
+   "Zet de fles Zusje bubbel weer terug in de wijnkoeler."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished cava glasses.",
+   "Place the bottle in a wine cooler and put it in the wine cooler holder.",
+   "Give the guests a cava glass with the logo facing each guest.",
+   "Let one of the guests taste the Zusje bubbel by pouring a small layer.",
+   "Once the Zusje bubbel is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.)",
+   "Put the bottle of Zusje bubbel back in the wine cooler."
+  ]
+ },
+ {
+  "code": "ZW05",
+  "name": "Glas Zusje Cava Rosé",
+  "name_en": "Glass of Zusje Cava Rosé",
+  "category": "Wijn",
+  "img": "images/ZW05.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd cava glas.",
+   "Schenk hierin 150 milliliter Zusje Cava Rosé en sluit de fles weer goed af met de champagne afsluiter."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished cava glass.",
+   "Pour 150 milliliters of Zusje Cava Rosé into it and close the bottle again properly with the champagne stopper."
+  ]
+ },
+ {
+  "code": "ZW06",
+  "name": "Fles Zusje Cava Rosé",
+  "name_en": "Bottle of Zusje Cava Rosé",
+  "category": "Wijn",
+  "img": "images/ZW06.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde cava glazen.",
+   "Plaats de fles in een wijnkoeler en zet deze in de wijnkoelhouder.",
+   "Geef de gasten een cava glas met het logo naar elke gast toe.",
+   "Laat een van de gasten de Zusje Cava Rosé proeven door een klein laagje in te schenken.",
+   "Als de Zusje Cava Rosé is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong).",
+   "Zet de fles Zusje Cava Rosé weer terug in de wijnkoeler."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished cava glasses.",
+   "Place the bottle in a wine cooler and put it in the wine cooler holder.",
+   "Give the guests a cava glass with the logo facing each guest.",
+   "Let one of the guests taste the Zusje Cava Rosé by pouring a small layer.",
+   "Once the Zusje Cava Rosé is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.)",
+   "Put the bottle of Zusje Cava Rosé back in the wine cooler."
+  ]
+ },
+ {
+  "code": "ZW07",
+  "name": "Glas Zusje Chardonnay",
+  "name_en": "Glass of Zusje Chardonnay",
+  "category": "Wijn",
+  "img": "images/ZW07.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd wijnglas.",
+   "Schenk hierin de wijn tot de onderkant van de 'Z/Zusje logo'.",
+   "Serveer het glas uit met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished wine glass.",
+   "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
+   "Serve the glass with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZW08",
+  "name": "Fles Zusje Chardonnay",
+  "name_en": "Bottle of Zusje Chardonnay",
+  "category": "Wijn",
+  "img": "images/ZW08.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde wijnglazen.",
+   "Plaats de fles in een wijnkoeler en zet deze in de wijnkoelhouder.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug in de wijnkoeler."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished wine glasses.",
+   "Place the bottle in a wine cooler and put it in the wine cooler holder.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back in the wine cooler."
+  ]
+ },
+ {
+  "code": "ZW09",
+  "name": "Glas Zusje zoete witte wijn",
+  "name_en": "Glass of Zusje sweet white wine",
+  "category": "Wijn",
+  "img": "images/ZW09.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd wijnglas.",
+   "Schenk hierin de wijn tot de onderkant van de 'Z/Zusje logo'.",
+   "Serveer het glas uit met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished wine glass.",
+   "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
+   "Serve the glass with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZW10",
+  "name": "Fles Zusje zoete witte wijn",
+  "name_en": "Bottle of Zusje sweet white wine",
+  "category": "Wijn",
+  "img": "images/ZW10.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde wijnglazen.",
+   "Plaats de fles in een wijnkoeler en zet deze in de wijnkoelhouder.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug in de wijnkoeler."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished wine glasses.",
+   "Place the bottle in a wine cooler and put it in the wine cooler holder.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back in the wine cooler."
+  ]
+ },
+ {
+  "code": "ZW11",
+  "name": "Glas Farina Pinot Grigio",
+  "name_en": "Glass of Farina Pinot Grigio",
+  "category": "Wijn",
+  "img": "images/ZW11.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd wijnglas.",
+   "Schenk hierin de wijn tot de onderkant van de 'Z/Zusje logo'.",
+   "Serveer het glas uit met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished wine glass.",
+   "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
+   "Serve the glass with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZW12",
+  "name": "Fles Farina Pinot Grigio",
+  "name_en": "Bottle of Farina Pinot Grigio",
+  "category": "Wijn",
+  "img": "images/ZW12.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde wijnglazen.",
+   "Plaats de fles in een wijnkoeler en zet deze in de wijnkoelhouder.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug in de wijnkoeler."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished wine glasses.",
+   "Place the bottle in a wine cooler and put it in the wine cooler holder.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back in the wine cooler."
+  ]
+ },
+ {
+  "code": "ZW13",
+  "name": "Glas Ramon Bilbao Verdejo",
+  "name_en": "Glass of Ramon Bilbao Verdejo",
+  "category": "Wijn",
+  "img": "images/ZW13.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd wijnglas.",
+   "Schenk hierin de wijn tot de onderkant van de 'Z/Zusje logo'.",
+   "Serveer het glas uit met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished wine glass.",
+   "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
+   "Serve the glass with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZW14",
+  "name": "Fles Ramon Bilbao Verdejo",
+  "name_en": "Bottle of Ramon Bilbao Verdejo",
+  "category": "Wijn",
+  "img": "images/ZW14.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde wijnglazen.",
+   "Plaats de fles in een wijnkoeler en zet deze in de wijnkoelhouder.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug in de wijnkoeler."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished wine glasses.",
+   "Place the bottle in a wine cooler and put it in the wine cooler holder.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back in the wine cooler."
+  ]
+ },
+ {
+  "code": "ZW15",
+  "name": "Glas Twin Island Sauvignon Blanc",
+  "name_en": "Glass of Twin Island Sauvignon Blanc",
+  "category": "Wijn",
+  "img": "images/ZW15.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd wijnglas.",
+   "Schenk hierin de wijn tot de onderkant van de 'Z/Zusje logo'.",
+   "Serveer het glas uit met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished wine glass.",
+   "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
+   "Serve the glass with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZW16",
+  "name": "Fles Twin Island Sauvignon Blanc",
+  "name_en": "Bottle of Twin Island Sauvignon Blanc",
+  "category": "Wijn",
+  "img": "images/ZW16.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde wijnglazen.",
+   "Plaats de fles in een wijnkoeler en zet deze in de wijnkoelhouder.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug in de wijnkoeler."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished wine glasses.",
+   "Place the bottle in a wine cooler and put it in the wine cooler holder.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back in the wine cooler."
+  ]
+ },
+ {
+  "code": "ZW17",
+  "name": "Glas Kendall-Jackson Reserve Chardonnay",
+  "name_en": "Glass of Kendall-Jackson Reserve Chardonnay",
+  "category": "Wijn",
+  "img": "images/ZW17.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd wijnglas.",
+   "Schenk hierin de wijn tot de onderkant van de 'Z/Zusje logo'.",
+   "Serveer het glas uit met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished wine glass.",
+   "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
+   "Serve the glass with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZW18",
+  "name": "Fles Kendall-Jackson Reserve Chardonnay",
+  "name_en": "Bottle of Kendall-Jackson Reserve Chardonnay",
+  "category": "Wijn",
+  "img": "images/ZW18.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde wijnglazen.",
+   "Plaats de fles in een wijnkoeler en zet deze in de wijnkoelhouder.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug in de wijnkoeler."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished wine glasses.",
+   "Place the bottle in a wine cooler and put it in the wine cooler holder.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back in the wine cooler."
+  ]
+ },
+ {
+  "code": "ZW19",
+  "name": "Fles Hubert Brochard Sancerre Blanc 2023",
+  "name_en": "Bottle of Hubert Brochard Sancerre Blanc 2023",
+  "category": "Wijn",
+  "img": "images/ZW19.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde wijnglazen.",
+   "Plaats de fles in een wijnkoeler en zet deze in de wijnkoelhouder.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug in de wijnkoeler."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished wine glasses.",
+   "Place the bottle in a wine cooler and put it in the wine cooler holder.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back in the wine cooler."
+  ]
+ },
+ {
+  "code": "ZW20",
+  "name": "Fles Chanson Chablis 2022",
+  "name_en": "Bottle of Chanson Chablis 2022",
+  "category": "Wijn",
+  "img": "images/ZW20.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde wijnglazen.",
+   "Plaats de fles in een wijnkoeler en zet deze in de wijnkoelhouder.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug in de wijnkoeler."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished wine glasses.",
+   "Place the bottle in a wine cooler and put it in the wine cooler holder.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back in the wine cooler."
+  ]
+ },
+ {
+  "code": "ZW21",
+  "name": "Glas L'OIE 0 Blanc 0.0%",
+  "name_en": "Glass of L'OIE 0 Blanc 0.0%",
+  "category": "Wijn",
+  "img": "images/ZW21.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd wijnglas.",
+   "Schenk hierin de wijn tot de onderkant van de 'Z/Zusje logo'.",
+   "Serveer het glas uit met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished wine glass.",
+   "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
+   "Serve the glass with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZW22",
+  "name": "Fles L'OIE 0 Blanc 0.0%",
+  "name_en": "Bottle of L'OIE 0 Blanc 0.0%",
+  "category": "Wijn",
+  "img": "images/ZW22.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde wijnglazen.",
+   "Plaats de fles in een wijnkoeler en zet deze in de wijnkoelhouder.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug in de wijnkoeler."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished wine glasses.",
+   "Place the bottle in a wine cooler and put it in the wine cooler holder.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back in the wine cooler."
+  ]
+ },
+ {
+  "code": "ZW23",
+  "name": "Glas Zusje Rosé",
+  "name_en": "Glass of Zusje Rosé",
+  "category": "Wijn",
+  "img": "images/ZW23.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd wijnglas.",
+   "Schenk hierin de wijn tot de onderkant van de 'Z/Zusje logo'.",
+   "Serveer het glas uit met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished wine glass.",
+   "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
+   "Serve the glass with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZW24",
+  "name": "Fles Coté Soleil Rosé",
+  "name_en": "Bottle of Coté Soleil Rosé",
+  "category": "Wijn",
+  "img": "images/ZW24.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde wijnglazen.",
+   "Plaats de fles in een wijnkoeler en zet deze in de wijnkoelhouder.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug in de wijnkoeler."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished wine glasses.",
+   "Place the bottle in a wine cooler and put it in the wine cooler holder.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back in the wine cooler."
+  ]
+ },
+ {
+  "code": "ZW25",
+  "name": "Glas Bisous",
+  "name_en": "Glass of Bisous",
+  "category": "Wijn",
+  "img": "images/ZW25.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd wijnglas.",
+   "Schenk hierin de wijn tot de onderkant van de 'Z/Zusje logo'.",
+   "Serveer het glas uit met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished wine glass.",
+   "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
+   "Serve the glass with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZW26",
+  "name": "Fles Bisous",
+  "name_en": "Bottle of Bisous",
+  "category": "Wijn",
+  "img": "images/ZW26.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde wijnglazen.",
+   "Plaats de fles in een wijnkoeler en zet deze in de wijnkoelhouder.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug in de wijnkoeler."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished wine glasses.",
+   "Place the bottle in a wine cooler and put it in the wine cooler holder.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back in the wine cooler."
+  ]
+ },
+ {
+  "code": "ZW27",
+  "name": "Glas La Vie en Rose",
+  "name_en": "Glass of La Vie en Rose",
+  "category": "Wijn",
+  "img": "images/ZW27.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd wijnglas.",
+   "Schenk hierin de wijn tot de onderkant van de 'Z/Zusje logo'.",
+   "Serveer het glas uit met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished wine glass.",
+   "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
+   "Serve the glass with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZW28",
+  "name": "Fles La Vie en Rose",
+  "name_en": "Bottle of La Vie en Rose",
+  "category": "Wijn",
+  "img": "images/ZW28.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde wijnglazen.",
+   "Plaats de fles in een wijnkoeler en zet deze in de wijnkoelhouder.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug in de wijnkoeler."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished wine glasses.",
+   "Place the bottle in a wine cooler and put it in the wine cooler holder.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back in the wine cooler."
+  ]
+ },
+ {
+  "code": "ZW29",
+  "name": "Glas Zusje Merlot",
+  "name_en": "Glass of Zusje Merlot",
+  "category": "Wijn",
+  "img": "images/ZW29.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd wijnglas.",
+   "Schenk hierin de wijn tot de onderkant van het 'Z/Zusje logo'.",
+   "Serveer het glas uit met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished wine glass.",
+   "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
+   "Serve the glass with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZW30",
+  "name": "Fles Zusje Merlot",
+  "name_en": "Bottle of Zusje Merlot",
+  "category": "Wijn",
+  "img": "images/ZW30.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde grote wijnglazen.",
+   "Plaats de fles in het midden bij de gasten op tafel.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door middel van een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug op de tafel."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished large wine glasses.",
+   "Place the bottle in the middle among the guests on the table.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back on the table."
+  ]
+ },
+ {
+  "code": "ZW31",
+  "name": "Glas Al Mercado Syrah - Garnacho Tinta",
+  "name_en": "Glass of Al Mercado Syrah - Garnacho Tinta",
+  "category": "Wijn",
+  "img": "images/ZW31.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd wijnglas.",
+   "Schenk hierin de wijn tot de onderkant van het 'Z/Zusje logo'.",
+   "Serveer het glas uit met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished wine glass.",
+   "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
+   "Serve the glass with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZW32",
+  "name": "Fles Al Mercado Syrah - Garnacho Tinta",
+  "name_en": "Bottle of Al Mercado Syrah - Garnacho Tinta",
+  "category": "Wijn",
+  "img": "images/ZW32.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde grote wijnglazen.",
+   "Plaats de fles in het midden bij de gasten op tafel.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door middel van een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug op de tafel."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished large wine glasses.",
+   "Place the bottle in the middle among the guests on the table.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back on the table."
+  ]
+ },
+ {
+  "code": "ZW33",
+  "name": "Glas Salentein 'El Portillo Malbec",
+  "name_en": "Glass of Salentein 'El Portillo Malbec",
+  "category": "Wijn",
+  "img": "images/ZW33.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd wijnglas.",
+   "Schenk hierin de wijn tot de onderkant van de 'Z/Zusje logo'.",
+   "Serveer het glas uit met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished wine glass.",
+   "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
+   "Serve the glass with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZW34",
+  "name": "Fles Salentein 'El Portillo Malbec'",
+  "name_en": "Bottle of Salentein 'El Portillo Malbec'",
+  "category": "Wijn",
+  "img": "images/ZW34.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde grote wijnglazen.",
+   "Plaats de fles in het midden bij de gasten op tafel.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door middel van een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug op de tafel."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished large wine glasses.",
+   "Place the bottle in the middle among the guests on the table.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back on the table."
+  ]
+ },
+ {
+  "code": "ZW35",
+  "name": "Glas Stefani Venezia",
+  "name_en": "Glass of Stefani Venezia",
+  "category": "Wijn",
+  "img": "images/ZW35.jpeg",
+  "steps": [
+   "Zorg voor een droog, vetvrij en gepoleerd wijnglas.",
+   "Schenk hierin de wijn tot de onderkant van de 'Z/Zusje logo'.",
+   "Serveer het glas uit met het logo naar de gast toe."
+  ],
+  "steps_en": [
+   "Make sure you have a dry, grease-free and polished wine glass.",
+   "Pour the wine into it up to the bottom of the 'Z/Zusje logo'.",
+   "Serve the glass with the logo facing the guest."
+  ]
+ },
+ {
+  "code": "ZW36",
+  "name": "Fles Stefani Venezia",
+  "name_en": "Bottle of Stefani Venezia",
+  "category": "Wijn",
+  "img": "images/ZW36.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde grote wijnglazen.",
+   "Plaats de fles in het midden bij de gasten op tafel.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door middel van een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug op de tafel."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished large wine glasses.",
+   "Place the bottle in the middle among the guests on the table.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back on the table."
+  ]
+ },
+ {
+  "code": "ZW37",
+  "name": "Fles Farina Valpolicella Ripasso Classico Superiore",
+  "name_en": "Bottle of Farina Valpolicella Ripasso Classico Superiore",
+  "category": "Wijn",
+  "img": "images/ZW37.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde grote wijnglazen.",
+   "Plaats de fles in het midden bij de gasten op tafel.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door middel van een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug op de tafel."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished large wine glasses.",
+   "Place the bottle in the middle among the guests on the table.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back on the table."
+  ]
+ },
+ {
+  "code": "ZW38",
+  "name": "Fles Ramon Bilbao Crianza DOC Rioja",
+  "name_en": "Bottle of Ramon Bilbao Crianza DOC Rioja",
+  "category": "Wijn",
+  "img": "images/ZW38.jpeg",
+  "steps": [
+   "Zorg voor voldoende droge, vetvrije en gepoleerde grote wijnglazen.",
+   "Plaats de fles in het midden bij de gasten op tafel.",
+   "Geef de gasten een wijnglas met het logo naar elke gast toe.",
+   "Laat een van de gasten de wijn proeven door middel van een klein laagje in te schenken.",
+   "Als de wijn is goedgekeurd worden eerst de glazen van de andere gasten ingeschonken en daarna van degene die heeft geproefd. (Vrouwen voor mannen en van oud naar jong). Schenk de wijn uit tot de onderkant van de 'Z /Zusje logo'.",
+   "Zet de fles wijn weer terug op de tafel."
+  ],
+  "steps_en": [
+   "Make sure you have enough dry, grease-free and polished large wine glasses.",
+   "Place the bottle in the middle among the guests on the table.",
+   "Give the guests a wine glass with the logo facing each guest.",
+   "Let one of the guests taste the wine by pouring a small layer.",
+   "Once the wine is approved, first fill the glasses of the other guests and then of the one who tasted. (Women before men and from old to young.) Pour the wine up to the bottom of the 'Z /Zusje logo'.",
+   "Put the bottle of wine back on the table."
+  ]
+ }
+]
