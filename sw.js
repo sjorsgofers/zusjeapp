@@ -1,5 +1,5 @@
 /* Zusje App service worker — installable PWA + offline shell */
-const CACHE = "zusje-app-v1";
+const CACHE = "zusje-app-v3";
 
 // Core files that make the app open offline. Sub-app images are cached at runtime.
 const PRECACHE = [
@@ -46,9 +46,10 @@ self.addEventListener("fetch", event => {
   const isData = url.pathname.endsWith(".json");
 
   if (isHTML || isData){
-    // Network-first: keep content fresh, fall back to cache when offline.
+    // Network-first, bypassing the browser HTTP cache so updates always arrive.
+    // Falls back to the offline cache only when the network is unavailable.
     event.respondWith(
-      fetch(req)
+      fetch(req, { cache: "no-store" })
         .then(res => {
           const copy = res.clone();
           caches.open(CACHE).then(c => c.put(req, copy)).catch(()=>{});
