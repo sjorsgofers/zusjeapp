@@ -1,13 +1,24 @@
-# Zusje Drankenkaart
+# Zusje App
 
-Interne app voor het personeel van restaurant Zusje om per drankje de bereidingswijze op te zoeken.
+Interne app voor het personeel van restaurant Zusje. Werkt op telefoon, iPad en computer.
 
-- Categorieën: Fris, Cocktails, Bier, Wijn, Sterke drank, Koffie en thee
-- Klik op een drankje voor de bereidingswijze en een afbeelding
-- Taalknop rechtsboven: Nederlands / Engels
+Live: **https://sjorsgofers.github.io/zusjeapp/** — wachtwoord: `zusje2026`
 
-Live: https://sjorsgofers.github.io/zusjeapp/
+## Tabbladen
+- **Dranken** — bereidingswijze per drankje opzoeken (NL/EN, foto's, glas/fles-keuze bij wijn). Bron: `dranken/`.
+- **Allergenen** — allergenen per gerecht opzoeken. Bron: `allergenen/`.
+- **Kiosk** — de Shiftbase-kiosk (`https://kiosk.shiftbase.com/`) fullscreen ingebed.
+  Auto-login is niet mogelijk (browserbeveiliging voor externe iframes). Per apparaat éénmalig inloggen met
+  **Account ID 105540** en **Kiosk code gr3gh**; de kiosk onthoudt dit daarna. Er staat een eenmalige hint in de app.
 
-## Data bijwerken
-Alle drankjes staan in `data.json` (`name`, `name_en`, `category`, `img`, `steps`, `steps_en`).
-Afbeeldingen staan in `images/` met bestandsnaam `<code>.jpeg` (bijv. `ZB01.jpeg`).
+## Structuur
+```
+index.html            # shell met tabbladen + gezamenlijke login
+dranken/              # drankenkaart-app (index.html, data.json, images/)
+allergenen/           # allergenen-app (index.html, data.json)
+logo.png / favicon.png
+```
+
+## Bijwerken
+- Dranken: `dranken/data.json` (`name`, `name_en`, `category`, `img`, `steps`, `steps_en`) + foto in `dranken/images/<code>.jpeg`.
+- Allergenen: `allergenen/data.json`.

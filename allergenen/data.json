@@ -1,0 +1,6531 @@
+[
+  {
+    "title": "01. Charcuterie bordje",
+    "components": [
+      {
+        "name": "Serranoham gesneden",
+        "resolvedName": "Serranoham gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Varkensvlees",
+          "zout",
+          "suiker",
+          "conserveermiddelen: E252 en E250",
+          "antioxidant: E301"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Grissini",
+        "resolvedName": "Grissini",
+        "dbFound": true,
+        "ingredients": [
+          "Tarwebloem",
+          "water",
+          "gist",
+          "zout",
+          "inactief zuurdesem (tarwebloem, roggebloem)",
+          "olijfolie"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      },
+      {
+        "name": "Vijgenjam",
+        "resolvedName": "Vijgenjam",
+        "dbFound": true,
+        "ingredients": [
+          "Vijg",
+          "suiker",
+          "pectine",
+          "citroenzuur"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Gesneden manchego",
+        "resolvedName": "Gesneden manchego",
+        "dbFound": true,
+        "ingredients": [
+          "Gepasteuriseerde schapenmelk",
+          "zout",
+          "stabilisator: E509",
+          "conserveermiddel: ei-lysozym",
+          "stremsel",
+          "zuursel"
+        ],
+        "allergens": [
+          "Ei"
+        ]
+      },
+      {
+        "name": "Gesneden cornichons",
+        "resolvedName": "Gesneden cornichons",
+        "dbFound": true,
+        "ingredients": [
+          "augurken",
+          "water",
+          "suiker",
+          "zout",
+          "voedingszuur: azijnzuur",
+          "natuurazijn",
+          "verstevigingsmiddel: E509",
+          "conserveermiddel: E223 (sulfiet)"
+        ],
+        "allergens": [
+          "Sulfieten"
+        ]
+      },
+      {
+        "name": "Gesneden fuet",
+        "resolvedName": "Gesneden fuet",
+        "dbFound": true,
+        "ingredients": [
+          "Varkensvlees",
+          "varkensvet",
+          "lactose",
+          "zout",
+          "melkpoeder",
+          "dextrose",
+          "specerijen",
+          "antioxidant: E301",
+          "conserveermiddelen: E252",
+          "E250",
+          "kleurstof: E120",
+          "eetbare natuurdarm"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Ei",
+      "Sulfieten",
+      "Melk",
+      "Lactose"
+    ]
+  },
+  {
+    "title": "02. Surimisalade",
+    "components": [
+      {
+        "name": "Komkommer julienne",
+        "resolvedName": "Komkommer julienne",
+        "dbFound": true,
+        "ingredients": [
+          "Komkommer"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Surimisalade",
+        "resolvedName": "Surimisalade",
+        "dbFound": true,
+        "ingredients": [
+          "visbereiding met visspiereiwit 37% (water, alaska koolvis (Theragra chalcogramma) msc* en pacifische heek (Merluccius productus) msc* (vis) 12%, zetmeel (tarwe, aardappel, maïs, doperwt), scharrelei-eiwit, koolzaadolie, soja-eiwit, suiker, zout, natuurlijk aroma (bevat schaaldier), kleurstof: E160d)",
+          "koolzaadolie",
+          "water",
+          "natuurazijn",
+          "suiker",
+          "gekookte krab 2% (schaaldier)",
+          "gepasteuriseerd scharreleigeel",
+          "gemodificeerd maïszetmeel",
+          "tomatenpuree",
+          "zout",
+          "specerijen (bevat mosterd)",
+          "conserveermiddelen: E202 en E211",
+          "voedingszuren: E330 en E270",
+          "natuurlijk aroma (bevat vis)",
+          "verdikkingsmiddelen: E412 en E415",
+          "gistpoeder",
+          "dextrose",
+          "zuurteregelaar: E262",
+          "vispoeder",
+          "tarwezetmeel",
+          "rijstwijn",
+          "Surimi 35% (AlASKA KOOLVIS en PACIFISCHE HEEK [VIS] in wisselende verhoudingen, suiker)",
+          "zetmeel (TARWE)",
+          "gerehydrateerd vrije uitloop EI-EIWITPOEDER 7%",
+          "raapzaadolie",
+          "SOJA-eiwit",
+          "natuurlijk aroma (SCHAALDIEREN)",
+          "kleurstof: E160d"
+        ],
+        "allergens": [
+          "Gluten",
+          "Schaaldieren",
+          "Ei",
+          "Vis",
+          "Soja",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Noorse garnalen",
+        "resolvedName": "Noorse garnalen",
+        "dbFound": true,
+        "ingredients": [
+          "Garnalen (Penaeidea)",
+          "zout",
+          "zuurteregelaars: E260, E270, E330",
+          "kleurstoffen: E160e, E162"
+        ],
+        "allergens": [
+          "Schaaldieren"
+        ]
+      },
+      {
+        "name": "Sriracha mayonaise",
+        "resolvedName": "Sriracha mayonaise",
+        "dbFound": true,
+        "ingredients": [
+          "mayonaise (46%) (raapzaadolie, scharrel EIgeel, water, suiker, azijn, MOSTERD, zout, conserveermiddel (E202), voedingszuur (E330), verdikkingsmiddel (E415), kleurstof (E160a), antioxidant(E385))",
+          "chilipeper (9%)",
+          "raapzaadolie",
+          "suiker",
+          "gemodificeerd maïszetmeel",
+          "zout",
+          "knoflook",
+          "voedingszuur (E260, E330)",
+          "verdikkingsmiddel (E415)",
+          "conserveermiddel (E202)"
+        ],
+        "allergens": [
+          "Ei",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Little gem sla",
+        "resolvedName": "Little gem sla",
+        "dbFound": true,
+        "ingredients": [
+          "Sla",
+          "Little gem"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Groentechips",
+        "resolvedName": "Groentechips",
+        "dbFound": true,
+        "ingredients": [
+          "wortel",
+          "zoete aardappel",
+          "rode biet",
+          "pastinaak",
+          "zonnebloemolie"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Appelblokjes",
+        "resolvedName": "Appelblokjes",
+        "dbFound": true,
+        "ingredients": [
+          "Appel"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Schaaldieren",
+      "Ei",
+      "Vis",
+      "Soja",
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "03. Tartaar van rode biet",
+    "components": [
+      {
+        "name": "Rode biet",
+        "resolvedName": "Rode biet",
+        "dbFound": true,
+        "ingredients": [
+          "Rode biet"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Vijgenjam",
+        "resolvedName": "Vijgenjam",
+        "dbFound": true,
+        "ingredients": [
+          "Vijg",
+          "suiker",
+          "pectine",
+          "citroenzuur"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Geitenkaasrolletje",
+        "resolvedName": "Geitenkaasrolletje",
+        "dbFound": true,
+        "ingredients": [
+          "Gepasteuriseerde geitenMELK (EU oorsprong)",
+          "zout",
+          "witschimmel",
+          "zuursel",
+          "microbieel stremsel",
+          "rietsuiker"
+        ],
+        "allergens": [
+          "Melk"
+        ]
+      },
+      {
+        "name": "Kruidensla",
+        "resolvedName": "Kruidensla",
+        "dbFound": true,
+        "ingredients": [
+          "rode biet",
+          "kool",
+          "bieslook",
+          "tuinkers",
+          "kervel"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Sladressing (vinaigrette)",
+        "resolvedName": "Sladressing (vinaigrette)",
+        "dbFound": true,
+        "ingredients": [
+          "raapzaadolie (53%)",
+          "water",
+          "azijn (11%)",
+          "mosterd (7%) (water, MOSTERDzaad, natuurazijn, zout, kurkuma, natuurlijk kruidenaroma)",
+          "honing",
+          "citroensap van concentraat (1%)",
+          "zout",
+          "knoflook",
+          "verdikkingsmiddel (E415)",
+          "kruiden en specerijen"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      }
+    ],
+    "allergens": [
+      "Melk",
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "05. Gerookte zalm",
+    "components": [
+      {
+        "name": "Gerookte zalmsnippers",
+        "resolvedName": "Gerookte zalmsnippers",
+        "dbFound": true,
+        "ingredients": [
+          "ZALM 97%",
+          "zout",
+          "suiker",
+          "zuurteregelaar: natriumacetaat en rook",
+          "vis"
+        ],
+        "allergens": [
+          "Vis"
+        ]
+      },
+      {
+        "name": "Zoete aardappel spread",
+        "resolvedName": "Zoete aardappel spread",
+        "dbFound": true,
+        "ingredients": [
+          "zoete aardappel",
+          "raapzaadolie",
+          "citroensap",
+          "curry madras (kurkuma, komijn, fenegriek, zout, chili, MOSTERD, venkel zaad, knoflook, paprika"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Kruidensla",
+        "resolvedName": "Kruidensla",
+        "dbFound": true,
+        "ingredients": [
+          "rode biet",
+          "kool",
+          "bieslook",
+          "tuinkers",
+          "kervel"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Kruidenolie",
+        "resolvedName": "Kruidenolie",
+        "dbFound": true,
+        "ingredients": [
+          "Zonnebloemolie",
+          "kruiden (25%) (bieslook, peterselie, kervel, basilicum, lavas, dille, rozemarijn, oregano)",
+          "zout",
+          "ui",
+          "smaakversterker (E621)",
+          "suiker",
+          "knoflook",
+          "volledig geharde raapzaadolie",
+          "specerijen (kurkuma, sinaasappelschil, peper, nootmuskaat, MOSTERDZAAD, gember, piment, kruidnagel)",
+          "stabilisator (E509)",
+          "geraffineerde zonnebloemolie 80%",
+          "extra vergine olijfolie 20%",
+          "peterselie"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Viking bread",
+        "resolvedName": "Viking bread",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEbloem",
+          "water",
+          "gezeefde ROGGEbloem",
+          "siroop",
+          "suiker",
+          "gist",
+          "koolzaadolie",
+          "TARWEgluten",
+          "emulgator (E471, E472e)",
+          "rijsmiddel (E503(i))",
+          "zout",
+          "TARWEzuurdesem (TARWEbloem, water, gist, startercultuur)",
+          "gemouten GERSTEbloem",
+          "meelverbeteraar (E300)",
+          "Zonnebloemolie",
+          "kruiden (25%) (bieslook, peterselie, kervel, basilicum, lavas, dille, rozemarijn, oregano)",
+          "ui",
+          "smaakversterker (E621)",
+          "knoflook",
+          "volledig geharde raapzaadolie",
+          "specerijen (kurkuma, sinaasappelschil, peper, nootmuskaat, MOSTERDZAAD, gember, piment, kruidnagel)",
+          "stabilisator (E509)",
+          "geraffineerde zonnebloemolie 80%",
+          "extra vergine olijfolie 20%",
+          "peterselie"
+        ],
+        "allergens": [
+          "Gluten",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Pappadums",
+        "resolvedName": "Pappadums",
+        "dbFound": true,
+        "ingredients": [
+          "Zwarte mung bonen meel",
+          "rijstebloem",
+          "plantaardige olie (zonnebloem)",
+          "zuurteregelaar (E529)"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Sladressing (vinaigrette)",
+        "resolvedName": "Sladressing (vinaigrette)",
+        "dbFound": true,
+        "ingredients": [
+          "raapzaadolie (53%)",
+          "water",
+          "azijn (11%)",
+          "mosterd (7%) (water, MOSTERDzaad, natuurazijn, zout, kurkuma, natuurlijk kruidenaroma)",
+          "honing",
+          "citroensap van concentraat (1%)",
+          "zout",
+          "knoflook",
+          "verdikkingsmiddel (E415)",
+          "kruiden en specerijen"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      }
+    ],
+    "allergens": [
+      "Vis",
+      "Mosterd",
+      "Gluten"
+    ]
+  },
+  {
+    "title": "06. Geitenkaasje in spek",
+    "components": [
+      {
+        "name": "Zusje honing tijmsaus",
+        "resolvedName": "honing tijmsaus",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "honing (6%)",
+          "suiker",
+          "ROOMboter (5%)",
+          "rode wijn (SULFIET)",
+          "gemodificeerd maïszetmeel",
+          "runderfond (rundercollageen, rundvlees, water, zout)",
+          "gebrande suikerstroop",
+          "rundvleesextract",
+          "TARWEbloem",
+          "zout",
+          "tijm (0,4%)",
+          "kruiden en specerijen",
+          "natuurlijk aroma"
+        ],
+        "allergens": [
+          "Gluten",
+          "Sulfieten"
+        ]
+      },
+      {
+        "name": "Peterselie",
+        "resolvedName": "Peterselie",
+        "dbFound": true,
+        "ingredients": [
+          "Peterselie"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Brioche toast",
+        "resolvedName": "Brioche toast",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEBLOEM",
+          "water",
+          "ROOMBOTER (LACTOSE) 17%",
+          "EIEREN 6%",
+          "suiker",
+          "bakkerszout",
+          "gist"
+        ],
+        "allergens": [
+          "Gluten",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Geitenkaasje in spek",
+        "resolvedName": "Geitenkaasje in spek",
+        "dbFound": true,
+        "ingredients": [
+          "varkensvlees",
+          "zout",
+          "voedingszuur: E326",
+          "antioxidanten: E301",
+          "E331",
+          "conserveermiddelen: E250",
+          "E262",
+          "specerijextracten",
+          "rook",
+          "Gepasteuriseerde geitenMELK",
+          "conserveermiddel : E202",
+          "zuursel",
+          "microbieel stremsel",
+          "Lactose",
+          "Melk"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Groene kruidencrumble",
+        "resolvedName": "Groene kruidencrumble",
+        "dbFound": true,
+        "ingredients": [
+          "Broodkruim (garbanzo meel, rijstbloem, maisbloem, maiszetmeel, zout, dextrose)",
+          "zonnebloemolie",
+          "gedroogde groene kruiden (basilicum, peterselie)",
+          "kruiden"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Rucola mix (nieuw)",
+        "resolvedName": "Rucola mix (nieuw)",
+        "dbFound": true,
+        "ingredients": [
+          "Rucola",
+          "Sla",
+          "Frisee"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Sladressing (vinaigrette)",
+        "resolvedName": "Sladressing (vinaigrette)",
+        "dbFound": true,
+        "ingredients": [
+          "raapzaadolie (53%)",
+          "water",
+          "azijn (11%)",
+          "mosterd (7%) (water, MOSTERDzaad, natuurazijn, zout, kurkuma, natuurlijk kruidenaroma)",
+          "honing",
+          "citroensap van concentraat (1%)",
+          "zout",
+          "knoflook",
+          "verdikkingsmiddel (E415)",
+          "kruiden en specerijen"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Sulfieten",
+      "Lactose",
+      "Melk",
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "07. Bloemkool bites",
+    "components": [
+      {
+        "name": "Boekweitsalade",
+        "resolvedName": "Boekweitsalade",
+        "dbFound": true,
+        "ingredients": [
+          "Groenten 57% (spinazie, erwten, gepelde tuinbonen 13%, broccolirijst, lente-ui)",
+          "boekweit 27% (water, boekweit)",
+          "saus 16% (mosterd 3.7% (water, mosterdzaad, kurkuma, azijn, zout), agavesiroop 2.5%, witte wijnazijn, zout, peper, zonnebloemolie, Rozemarijn extract, Basilicum aroma)"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Little gem sla",
+        "resolvedName": "Little gem sla",
+        "dbFound": true,
+        "ingredients": [
+          "Sla",
+          "Little gem"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Groene kruidencrumble",
+        "resolvedName": "Groene kruidencrumble",
+        "dbFound": true,
+        "ingredients": [
+          "Broodkruim (garbanzo meel, rijstbloem, maisbloem, maiszetmeel, zout, dextrose)",
+          "zonnebloemolie",
+          "gedroogde groene kruiden (basilicum, peterselie)",
+          "kruiden"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Doperwten crème",
+        "resolvedName": "Doperwten crème",
+        "dbFound": true,
+        "ingredients": [
+          "Doperwt",
+          "water",
+          "linzeneiwit",
+          "natuurlijke aroma",
+          "kruiden (peterselie, bieslook)",
+          "specerijen (kurkuma, wortelpeterselie, nootmuskaat)",
+          "maltodextrine",
+          "aroma’s",
+          "zetmeel",
+          "palmvet",
+          "suiker",
+          "plantaardige vetten (kokos)",
+          "smaakversterkers: E 627 (natriumguanylaat)",
+          "aardappelzetmeel gemodificeerd",
+          "plantaardige vetten (koolzaad)",
+          "smaakversterkers: E 621 (mononatriumglutamaat)",
+          "smaakversterkers: E 631 (dinatriuminosinaat)",
+          "zout"
+        ],
+        "allergens": [
+          "Selderij"
+        ]
+      },
+      {
+        "name": "Gepaneerde bloemkool",
+        "resolvedName": "Gepaneerde bloemkool",
+        "dbFound": true,
+        "ingredients": [
+          "bloemkool",
+          "paneermeel (tarwebloem, gerstvlokken, quinoazaad, gist, lijnzaad, rijstmeel, zout, rijsmiddelen (E450, E452), zonnebloemolie, gistextract)",
+          "zonnebloemolie",
+          "tarwebloem",
+          "aardappelzetmeel",
+          "maïsmeel",
+          "tarwegluten",
+          "rijstmeel",
+          "zout",
+          "gistextract",
+          "rijsmiddelen: dinatriumdifosfaat",
+          "rijsmiddelen: natriumwaterstofcarbonaat",
+          "zwarte peper",
+          "specerijen en kruiden",
+          "water"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      }
+    ],
+    "allergens": [
+      "Mosterd",
+      "Selderij",
+      "Gluten"
+    ]
+  },
+  {
+    "title": "08. Steak tartaar sandwich",
+    "components": [
+      {
+        "name": "Steak tartaar",
+        "resolvedName": "Steak tartaar",
+        "dbFound": true,
+        "ingredients": [
+          "rundvlees",
+          "water",
+          "raapzaadolie",
+          "fruit- en kruidenextract (antioxiderend ingrediënt)",
+          "zout",
+          "antioxidant: E300",
+          "dextrose",
+          "Zonnebloemolie",
+          "kruiden (25%) (bieslook, peterselie, kervel, basilicum, lavas, dille, rozemarijn, oregano)",
+          "ui",
+          "smaakversterker (E621)",
+          "suiker",
+          "knoflook",
+          "volledig geharde raapzaadolie",
+          "specerijen (kurkuma, sinaasappelschil, peper, nootmuskaat, MOSTERDZAAD, gember, piment, kruidnagel)",
+          "stabilisator (E509)",
+          "geraffineerde zonnebloemolie 80%",
+          "extra vergine olijfolie 20%",
+          "peterselie",
+          "Cornichons",
+          "kappertjes",
+          "tabasco",
+          "worchester",
+          "olijfolie",
+          "specerijen",
+          "komkommer",
+          "Halal"
+        ],
+        "allergens": [
+          "Mosterd",
+          "Soja"
+        ]
+      },
+      {
+        "name": "Brioche toast",
+        "resolvedName": "Brioche toast",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEBLOEM",
+          "water",
+          "ROOMBOTER (LACTOSE) 17%",
+          "EIEREN 6%",
+          "suiker",
+          "bakkerszout",
+          "gist"
+        ],
+        "allergens": [
+          "Gluten",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Kruidensla",
+        "resolvedName": "Kruidensla",
+        "dbFound": true,
+        "ingredients": [
+          "rode biet",
+          "kool",
+          "bieslook",
+          "tuinkers",
+          "kervel"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Zusje truffelmayonaise",
+        "resolvedName": "Zusje truffelmayonaise",
+        "dbFound": true,
+        "ingredients": [
+          "mayonaise (70%)(raapzaadolie, scharrel EIgeel, water, suiker, azijn, MOSTERD, zout, conserveermiddel (E202), voedingszuur (E330), verdikkingsmiddel (E415), kleurstof (E160a), antioxidant (E385))",
+          "water",
+          "truffeltapenade (10%) (paddenstoelen, zonnebloemolie, truffelstukjes, zout, witte truffel aroma, kruiden en specerijen)",
+          "gemodificeerd maïszetmeel",
+          "azijn",
+          "olijfolie",
+          "zout",
+          "zwarte peper",
+          "witte truffel aroma",
+          "Champignons"
+        ],
+        "allergens": [
+          "Ei",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Gesneden cornichons",
+        "resolvedName": "Gesneden cornichons",
+        "dbFound": true,
+        "ingredients": [
+          "augurken",
+          "water",
+          "suiker",
+          "zout",
+          "voedingszuur: azijnzuur",
+          "natuurazijn",
+          "verstevigingsmiddel: E509",
+          "conserveermiddel: E223 (sulfiet)"
+        ],
+        "allergens": [
+          "Sulfieten"
+        ]
+      },
+      {
+        "name": "Sladressing (vinaigrette)",
+        "resolvedName": "Sladressing (vinaigrette)",
+        "dbFound": true,
+        "ingredients": [
+          "raapzaadolie (53%)",
+          "water",
+          "azijn (11%)",
+          "mosterd (7%) (water, MOSTERDzaad, natuurazijn, zout, kurkuma, natuurlijk kruidenaroma)",
+          "honing",
+          "citroensap van concentraat (1%)",
+          "zout",
+          "knoflook",
+          "verdikkingsmiddel (E415)",
+          "kruiden en specerijen"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      }
+    ],
+    "allergens": [
+      "Ei",
+      "Gluten",
+      "Melk",
+      "Lactose",
+      "Mosterd",
+      "Soja",
+      "Sulfieten"
+    ]
+  },
+  {
+    "title": "09. Beef tataki",
+    "components": [
+      {
+        "name": "Zoetzure witte koolsalade",
+        "resolvedName": "Zoetzure witte koolsalade",
+        "dbFound": true,
+        "ingredients": [
+          "witte kool (68%)",
+          "bundelzwam (17%)",
+          "ui (12%)",
+          "water",
+          "raapzaadolie",
+          "zonnebloemolie",
+          "suiker (0,1%)",
+          "azijn (0,1%)",
+          "zout",
+          "kruiden en specerijen"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Thai-dressing",
+        "resolvedName": "Thai-dressing",
+        "dbFound": true,
+        "ingredients": [
+          "raapzaadolie (38%)",
+          "sojasaus (23%) (water, zout, SOJAbonen, TARWE)",
+          "suiker",
+          "water",
+          "gebrande suikerstroop",
+          "Spaanse peper (3%)",
+          "SESAMolie",
+          "citroensap van concentraat",
+          "koriander",
+          "knoflook",
+          "verdikkingsmiddel (E415)"
+        ],
+        "allergens": [
+          "Gluten",
+          "Soja",
+          "Sesam"
+        ]
+      },
+      {
+        "name": "Hoisin mayonaise",
+        "resolvedName": "Hoisin mayonaise",
+        "dbFound": true,
+        "ingredients": [
+          "Suiker",
+          "water",
+          "gefermenteerde sojapasta (water, zout, SOJA, TARWEbloem)",
+          "zout",
+          "zoeteaardappelpoeder",
+          "kleurstof (karamel)",
+          "gemodificeerd maïszetmeel",
+          "gedehydrateerde knoflook",
+          "SESAMZAADpasta",
+          "specerijen",
+          "gezouten chilipepers (chilipepers, zout)",
+          "voedingszuur (azijnzuur)",
+          "raapolie",
+          "azijn",
+          "scharreleigeel",
+          "glucose-fructosestroop",
+          "mosterd (water, mosterdzaden, natuurazijn, specerijen)",
+          "voedingszuur: citroenzuur",
+          "conserveermiddel: kaliumsorbaat",
+          "verdikkingsmiddel: guarpitmeel",
+          "natuurlijk aroma",
+          "antioxidant: E385",
+          "kleurstof: betacaroteen"
+        ],
+        "allergens": [
+          "Gluten",
+          "Ei",
+          "Soja",
+          "Mosterd",
+          "Sesam"
+        ]
+      },
+      {
+        "name": "Gefrituurde ui",
+        "resolvedName": "Gefrituurde ui",
+        "dbFound": true,
+        "ingredients": [
+          "uien",
+          "palmolie",
+          "tarwe",
+          "zout"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      },
+      {
+        "name": "Gesneden beef tataki",
+        "resolvedName": "Gesneden beef tataki",
+        "dbFound": true,
+        "ingredients": [
+          "Rundvlees",
+          "Hoisin",
+          "Halal"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Bosui gesneden",
+        "resolvedName": "Bosui gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Bosui"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Soja",
+      "Sesam",
+      "Ei",
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "10. Tonijntartaar",
+    "components": [
+      {
+        "name": "Sriracha mayonaise",
+        "resolvedName": "Sriracha mayonaise",
+        "dbFound": true,
+        "ingredients": [
+          "mayonaise (46%) (raapzaadolie, scharrel EIgeel, water, suiker, azijn, MOSTERD, zout, conserveermiddel (E202), voedingszuur (E330), verdikkingsmiddel (E415), kleurstof (E160a), antioxidant(E385))",
+          "chilipeper (9%)",
+          "raapzaadolie",
+          "suiker",
+          "gemodificeerd maïszetmeel",
+          "zout",
+          "knoflook",
+          "voedingszuur (E260, E330)",
+          "verdikkingsmiddel (E415)",
+          "conserveermiddel (E202)"
+        ],
+        "allergens": [
+          "Ei",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Nori cracker",
+        "resolvedName": "Nori cracker",
+        "dbFound": true,
+        "ingredients": [
+          "tarwebloem",
+          "plantaardige olie (rijstolie, palmolie, sesamolie)",
+          "geroosterd zeewier",
+          "aardappelzetmeel",
+          "suiker",
+          "wasabikruiding (sojasauspoeder (sojabonen, tarwe, zout), suiker, zout, dextrine, gehydrolyseerd plantaardig eiwit [soja], groene thee poeder, rijstolie, smaakversterkers (E621, E635, E363), aroma)",
+          "zout",
+          "smaakversterker (E621)",
+          "gistextract",
+          "ei-eiwit",
+          "zee-sla",
+          "smaakversterker (E635)",
+          "chili peper-extract"
+        ],
+        "allergens": [
+          "Gluten",
+          "Ei",
+          "Soja",
+          "Sesam"
+        ]
+      },
+      {
+        "name": "Soja knoflook dressing",
+        "resolvedName": "Soja knoflook dressing",
+        "dbFound": true,
+        "ingredients": [
+          "suiker",
+          "sojasaus (18%) (water, zout, SOJAbonen, TARWE)",
+          "water",
+          "glucosestroop",
+          "gebrande suikerstroop",
+          "knoflook (3%)",
+          "gemodificeerd maïszetmeel",
+          "citroensap",
+          "gekarameliseerde suiker"
+        ],
+        "allergens": [
+          "Gluten",
+          "Soja"
+        ]
+      },
+      {
+        "name": "Tonijntartaar torentje",
+        "resolvedName": "Tonijntartaar torentje",
+        "dbFound": true,
+        "ingredients": [
+          "zeewier",
+          "kruiden: maissiroop met hoog fructosegehalte",
+          "zwarte champignon",
+          "verdikkingsmiddel agar",
+          "water",
+          "SESAMOLIE",
+          "suiker",
+          "SESAM",
+          "azijn",
+          "zout",
+          "peper",
+          "vulstof E420",
+          "kleurstoffen E102",
+          "E133",
+          "E102: kan de activiteit of oplettendheid van kinderen nadelig beïnvloeden",
+          "Tonijn",
+          "Vis",
+          "raapzaadolie (38%)",
+          "sojasaus (23%) (water, zout, SOJAbonen, TARWE)",
+          "gebrande suikerstroop",
+          "Spaanse peper (3%)",
+          "citroensap van concentraat",
+          "koriander",
+          "knoflook",
+          "verdikkingsmiddel (E415)",
+          "limoen"
+        ],
+        "allergens": [
+          "Gluten",
+          "Vis",
+          "Soja",
+          "Sesam"
+        ]
+      },
+      {
+        "name": "Crazy pea",
+        "resolvedName": "Crazy pea",
+        "dbFound": true,
+        "ingredients": [
+          "Erwten"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Ei",
+      "Mosterd",
+      "Gluten",
+      "Soja",
+      "Sesam",
+      "Vis"
+    ]
+  },
+  {
+    "title": "11. Tomaten-crèmesoepje",
+    "components": [
+      {
+        "name": "Tomatensoep",
+        "resolvedName": "Tomatensoep",
+        "dbFound": true,
+        "ingredients": [
+          "tomaten (33%)",
+          "tomatenpuree (25%)",
+          "vegan kookroom (17%) (gepelde SOJABONEN, water, zonnebloemolie, suiker, emulgator (E473 E473), verdikkingsmiddel (xanthaangom, carrageen, guarpitmeel), zeezout)",
+          "water",
+          "gemodificeerd maïszetmeel",
+          "TARWEBLOEM",
+          "zout",
+          "KNOLSELDERIJ",
+          "wortel",
+          "prei",
+          "ui",
+          "kruiden en specerijen"
+        ],
+        "allergens": [
+          "Gluten",
+          "Soja",
+          "Selderij"
+        ]
+      },
+      {
+        "name": "Parmezaanschuim",
+        "resolvedName": "Parmezaanschuim",
+        "dbFound": true,
+        "ingredients": [
+          "kaas (waarvan 80% Parmigiano Reggiano D.O.P.)",
+          "water",
+          "boter",
+          "smeltzouten (E452, E339)",
+          "zout",
+          "Room (melk)",
+          "verdikkingsmiddel: gemodificeerd maïszetmeel",
+          "emulgator: E471",
+          "stabilisatoren: E407 en E466",
+          "Lactose",
+          "Melk",
+          "EIwit",
+          "maltodextrine",
+          "glucosepoeder",
+          "palmvet",
+          "E472b",
+          "E472e",
+          "MELKeiwitten",
+          "verdikkingsmiddel: E410",
+          "E412",
+          "E415",
+          "E407",
+          "stabilisator: E340ii"
+        ],
+        "allergens": [
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Bosui gesneden",
+        "resolvedName": "Bosui gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Bosui"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Soja",
+      "Selderij",
+      "Ei",
+      "Melk",
+      "Lactose"
+    ]
+  },
+  {
+    "title": "12. Carpaccio",
+    "components": [
+      {
+        "name": "Carpaccio",
+        "resolvedName": "Carpaccio",
+        "dbFound": true,
+        "ingredients": [
+          "Rundvlees",
+          "Halal"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Zusje truffelmayonaise",
+        "resolvedName": "Zusje truffelmayonaise",
+        "dbFound": true,
+        "ingredients": [
+          "mayonaise (70%)(raapzaadolie, scharrel EIgeel, water, suiker, azijn, MOSTERD, zout, conserveermiddel (E202), voedingszuur (E330), verdikkingsmiddel (E415), kleurstof (E160a), antioxidant (E385))",
+          "water",
+          "truffeltapenade (10%) (paddenstoelen, zonnebloemolie, truffelstukjes, zout, witte truffel aroma, kruiden en specerijen)",
+          "gemodificeerd maïszetmeel",
+          "azijn",
+          "olijfolie",
+          "zout",
+          "zwarte peper",
+          "witte truffel aroma",
+          "Champignons"
+        ],
+        "allergens": [
+          "Ei",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Balsamicodressing",
+        "resolvedName": "Balsamicodressing",
+        "dbFound": true,
+        "ingredients": [
+          "Water",
+          "suiker",
+          "balsamico azijn 19% (bevat SULFIET)",
+          "rode wijnazijn (bevat SULFIET)",
+          "olijfolie",
+          "zout",
+          "gemodificeerd zetmeel (bevat SULFIET)",
+          "verdikkingsmiddel (xanthaangom)",
+          "aroma",
+          "kleurstof (E150d (bevat SULFIET))",
+          "conserveermiddel (kaliumsorbaat)",
+          "knoflookpoeder"
+        ],
+        "allergens": [
+          "Sulfieten"
+        ]
+      },
+      {
+        "name": "Geroosterde pittenmix",
+        "resolvedName": "Geroosterde pittenmix",
+        "dbFound": true,
+        "ingredients": [
+          "pompoenpitten",
+          "zonnebloempitten",
+          "pijnboompitten"
+        ],
+        "allergens": [
+          "Noten"
+        ]
+      },
+      {
+        "name": "Parmezaanse kaas gecutterd",
+        "resolvedName": "Parmezaanse kaas gecutterd",
+        "dbFound": true,
+        "ingredients": [
+          "Gepasteuriseerde MELK",
+          "zetmeel",
+          "zout",
+          "zuursel",
+          "microbieel stremsel"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Rucola mix (nieuw)",
+        "resolvedName": "Rucola mix (nieuw)",
+        "dbFound": true,
+        "ingredients": [
+          "Rucola",
+          "Sla",
+          "Frisee"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Sladressing (vinaigrette)",
+        "resolvedName": "Sladressing (vinaigrette)",
+        "dbFound": true,
+        "ingredients": [
+          "raapzaadolie (53%)",
+          "water",
+          "azijn (11%)",
+          "mosterd (7%) (water, MOSTERDzaad, natuurazijn, zout, kurkuma, natuurlijk kruidenaroma)",
+          "honing",
+          "citroensap van concentraat (1%)",
+          "zout",
+          "knoflook",
+          "verdikkingsmiddel (E415)",
+          "kruiden en specerijen"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      }
+    ],
+    "allergens": [
+      "Ei",
+      "Mosterd",
+      "Sulfieten",
+      "Noten",
+      "Melk",
+      "Lactose"
+    ]
+  },
+  {
+    "title": "13. Falafelballetjes",
+    "components": [
+      {
+        "name": "Falafel (Aviko)",
+        "resolvedName": "Falafel (Aviko)",
+        "dbFound": true,
+        "ingredients": [
+          "suikerbietenpulp",
+          "gerehydrateerde aardappelvlokken (water, aardappelvlokken, emulgator (E471), zuurteregelaar (E330), kruiden)",
+          "broodkruimels (TARWEbloem, gepelde zaden (pompoen, zonnebloem), witte quinoa, water, gist, zout, dextrose)",
+          "kikkererwten (16%)",
+          "koolzaadolie",
+          "ui",
+          "water",
+          "kruiden (peterselie, komijn, koriander, knoflook, cayennepeper, fenegriek, kruidnagel, kurkuma, witte peper)",
+          "zetmeel",
+          "bloem (TARWE, maïs)",
+          "zout",
+          "verdikkingsmiddelen (E461, E412)"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      },
+      {
+        "name": "Mini naanta",
+        "resolvedName": "Mini naanta",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEbloem",
+          "water",
+          "suiker",
+          "gist",
+          "zout",
+          "enzyme (TARWE)"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      },
+      {
+        "name": "Zoetzure rode kool",
+        "resolvedName": "Zoetzure rode kool",
+        "dbFound": true,
+        "ingredients": [
+          "rode kool (98%)",
+          "water",
+          "suiker",
+          "azijn",
+          "witte wijn",
+          "zout",
+          "kruiden en specerijen"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Labneh",
+        "resolvedName": "Labneh",
+        "dbFound": true,
+        "ingredients": [
+          "Yoghurt (koemelk, Lactose)",
+          "gemodificeerd maïszetmeel",
+          "zout",
+          "oregano",
+          "tijm",
+          "bacilium",
+          "conserveermiddel: kaliumsorbaat",
+          "peper",
+          "komijn",
+          "paprikapoeder",
+          "cayennepeper"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Za’atar",
+        "resolvedName": "Za’atar",
+        "dbFound": true,
+        "ingredients": [
+          "Kruiden (hysop, oregano, tijm)",
+          "sesam",
+          "sumak",
+          "plantaardige olie",
+          "zout",
+          "citroenzuur"
+        ],
+        "allergens": [
+          "Sesam"
+        ]
+      },
+      {
+        "name": "Bosui",
+        "resolvedName": "Bosui gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Bosui"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Melk",
+      "Lactose",
+      "Sesam"
+    ]
+  },
+  {
+    "title": "14. Caesarsalade",
+    "components": [
+      {
+        "name": "Little gem sla",
+        "resolvedName": "Little gem sla",
+        "dbFound": true,
+        "ingredients": [
+          "Sla",
+          "Little gem"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Pappadums",
+        "resolvedName": "Pappadums",
+        "dbFound": true,
+        "ingredients": [
+          "Zwarte mung bonen meel",
+          "rijstebloem",
+          "plantaardige olie (zonnebloem)",
+          "zuurteregelaar (E529)"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Zusje knoflookmayonaise",
+        "resolvedName": "Zusje knoflookmayonaise",
+        "dbFound": true,
+        "ingredients": [
+          "mayonaise (64%) (raapzaadolie, scharrel EIgeel, water, suiker, azijn, MOSTERD, zout, conserveermiddel (E202), voedingszuur (E330), verdikkingsmiddel (E415), kleurstof (E160a), antioxidant (E385))",
+          "water",
+          "YOGHURT",
+          "citroensap",
+          "knoflook (3%)",
+          "gemodificeerd maïszetmeel",
+          "zout"
+        ],
+        "allergens": [
+          "Ei",
+          "Melk",
+          "Lactose",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Krokante kippenhaas",
+        "resolvedName": "Krokante kippenhaas",
+        "dbFound": true,
+        "ingredients": [
+          "Kiphaasjes 58%",
+          "tarwebloem",
+          "volledig geraffineerde sojaolie",
+          "maïsmeel",
+          "gemodificeerd tapiocazetmeel",
+          "tarwezetmeel",
+          "tarwegluten",
+          "tapiocazetmeel",
+          "zout",
+          "zwarte peper",
+          "witte peper",
+          "knoflookpoeder",
+          "zuurteregelaars: E331 en E500",
+          "gist",
+          "suiker",
+          "rijsmiddelen: E450 en E500",
+          "selderijzaad",
+          "uienpoeder",
+          "venkelzaad",
+          "oregano",
+          "gistextract",
+          "kleurstoffen: E100 en E160c",
+          "natuurlijk aroma",
+          "Halal"
+        ],
+        "allergens": [
+          "Gluten",
+          "Soja",
+          "Selderij"
+        ]
+      },
+      {
+        "name": "Parmezaanse kaas gecutterd",
+        "resolvedName": "Parmezaanse kaas gecutterd",
+        "dbFound": true,
+        "ingredients": [
+          "Gepasteuriseerde MELK",
+          "zetmeel",
+          "zout",
+          "zuursel",
+          "microbieel stremsel"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Rucola mix (nieuw)",
+        "resolvedName": "Rucola mix (nieuw)",
+        "dbFound": true,
+        "ingredients": [
+          "Rucola",
+          "Sla",
+          "Frisee"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Sladressing (vinaigrette)",
+        "resolvedName": "Sladressing (vinaigrette)",
+        "dbFound": true,
+        "ingredients": [
+          "raapzaadolie (53%)",
+          "water",
+          "azijn (11%)",
+          "mosterd (7%) (water, MOSTERDzaad, natuurazijn, zout, kurkuma, natuurlijk kruidenaroma)",
+          "honing",
+          "citroensap van concentraat (1%)",
+          "zout",
+          "knoflook",
+          "verdikkingsmiddel (E415)",
+          "kruiden en specerijen"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Knoflook croutons",
+        "resolvedName": "Knoflook croutons",
+        "dbFound": true,
+        "ingredients": [
+          "Tarwebloem (74%)",
+          "palmvet",
+          "zout",
+          "uien (0,8%)",
+          "gistextract",
+          "knoflook (0,3%)",
+          "peterselie",
+          "aroma",
+          "suiker",
+          "gist"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      }
+    ],
+    "allergens": [
+      "Selderij",
+      "Ei",
+      "Gluten",
+      "Melk",
+      "Lactose",
+      "Mosterd",
+      "Soja"
+    ]
+  },
+  {
+    "title": "15. Gegrilde courgette",
+    "components": [
+      {
+        "name": "Viking bread",
+        "resolvedName": "Viking bread",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEbloem",
+          "water",
+          "gezeefde ROGGEbloem",
+          "siroop",
+          "suiker",
+          "gist",
+          "koolzaadolie",
+          "TARWEgluten",
+          "emulgator (E471, E472e)",
+          "rijsmiddel (E503(i))",
+          "zout",
+          "TARWEzuurdesem (TARWEbloem, water, gist, startercultuur)",
+          "gemouten GERSTEbloem",
+          "meelverbeteraar (E300)",
+          "Zonnebloemolie",
+          "kruiden (25%) (bieslook, peterselie, kervel, basilicum, lavas, dille, rozemarijn, oregano)",
+          "ui",
+          "smaakversterker (E621)",
+          "knoflook",
+          "volledig geharde raapzaadolie",
+          "specerijen (kurkuma, sinaasappelschil, peper, nootmuskaat, MOSTERDZAAD, gember, piment, kruidnagel)",
+          "stabilisator (E509)",
+          "geraffineerde zonnebloemolie 80%",
+          "extra vergine olijfolie 20%",
+          "peterselie"
+        ],
+        "allergens": [
+          "Gluten",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Ricotta",
+        "resolvedName": "Ricotta (250gr)",
+        "dbFound": true,
+        "ingredients": [
+          "Wei",
+          "melk",
+          "lactose",
+          "zout",
+          "citroenzuur",
+          "kaas"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Gegrilde courgette",
+        "resolvedName": "Gegrilde courgette",
+        "dbFound": true,
+        "ingredients": [
+          "Gegrilde courgette",
+          "Raapzaadolie",
+          "witte wijnazijn",
+          "water",
+          "suiker",
+          "honing",
+          "extra olijfolie verkregen bij de eerste persing",
+          "geconcentreerd citroensap 2",
+          "geconcentreerd mandarijnsap 1",
+          "citroenschil 1",
+          "natuurlijke aroma's",
+          "verdikkingsmiddel (carrageen, xanthaangom)",
+          "jalapeno"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Groene kruidencrumble",
+        "resolvedName": "Groene kruidencrumble",
+        "dbFound": true,
+        "ingredients": [
+          "Broodkruim (garbanzo meel, rijstbloem, maisbloem, maiszetmeel, zout, dextrose)",
+          "zonnebloemolie",
+          "gedroogde groene kruiden (basilicum, peterselie)",
+          "kruiden"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Parmezaanse kaas gecutterd",
+        "resolvedName": "Parmezaanse kaas gecutterd",
+        "dbFound": true,
+        "ingredients": [
+          "Gepasteuriseerde MELK",
+          "zetmeel",
+          "zout",
+          "zuursel",
+          "microbieel stremsel"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Rucola mix (nieuw)",
+        "resolvedName": "Rucola mix (nieuw)",
+        "dbFound": true,
+        "ingredients": [
+          "Rucola",
+          "Sla",
+          "Frisee"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Sladressing (vinaigrette)",
+        "resolvedName": "Sladressing (vinaigrette)",
+        "dbFound": true,
+        "ingredients": [
+          "raapzaadolie (53%)",
+          "water",
+          "azijn (11%)",
+          "mosterd (7%) (water, MOSTERDzaad, natuurazijn, zout, kurkuma, natuurlijk kruidenaroma)",
+          "honing",
+          "citroensap van concentraat (1%)",
+          "zout",
+          "knoflook",
+          "verdikkingsmiddel (E415)",
+          "kruiden en specerijen"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Mosterd",
+      "Melk",
+      "Lactose"
+    ]
+  },
+  {
+    "title": "16. Tuna sandwich",
+    "components": [
+      {
+        "name": "Viking bread",
+        "resolvedName": "Viking bread",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEbloem",
+          "water",
+          "gezeefde ROGGEbloem",
+          "siroop",
+          "suiker",
+          "gist",
+          "koolzaadolie",
+          "TARWEgluten",
+          "emulgator (E471, E472e)",
+          "rijsmiddel (E503(i))",
+          "zout",
+          "TARWEzuurdesem (TARWEbloem, water, gist, startercultuur)",
+          "gemouten GERSTEbloem",
+          "meelverbeteraar (E300)",
+          "Zonnebloemolie",
+          "kruiden (25%) (bieslook, peterselie, kervel, basilicum, lavas, dille, rozemarijn, oregano)",
+          "ui",
+          "smaakversterker (E621)",
+          "knoflook",
+          "volledig geharde raapzaadolie",
+          "specerijen (kurkuma, sinaasappelschil, peper, nootmuskaat, MOSTERDZAAD, gember, piment, kruidnagel)",
+          "stabilisator (E509)",
+          "geraffineerde zonnebloemolie 80%",
+          "extra vergine olijfolie 20%",
+          "peterselie"
+        ],
+        "allergens": [
+          "Gluten",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Tonijnsalade",
+        "resolvedName": "Tonijnsalade",
+        "dbFound": true,
+        "ingredients": [
+          "gekookte tonijn (Katsuwonus pelamis) (vis) 51%",
+          "water",
+          "koolzaadolie",
+          "suiker",
+          "tomatenpuree",
+          "natuurazijn",
+          "gemodificeerd zetmeel (aardappel, maïs)",
+          "zout",
+          "gepasteuriseerd scharreleigeel",
+          "wortelextract",
+          "doperwtenextract",
+          "zuurteregelaar: E262",
+          "conserveermiddelen: E202, E211",
+          "natuurlijke aroma’s",
+          "specerijen (mosterd)",
+          "invertsuiker",
+          "voedingszuur: E270",
+          "verdikkingsmiddelen: E412, E415",
+          "kleurstof: E160c"
+        ],
+        "allergens": [
+          "Ei",
+          "Vis",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Zoete aardappel spread",
+        "resolvedName": "Zoete aardappel spread",
+        "dbFound": true,
+        "ingredients": [
+          "zoete aardappel",
+          "raapzaadolie",
+          "citroensap",
+          "curry madras (kurkuma, komijn, fenegriek, zout, chili, MOSTERD, venkel zaad, knoflook, paprika"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Kruidenolie",
+        "resolvedName": "Kruidenolie",
+        "dbFound": true,
+        "ingredients": [
+          "Zonnebloemolie",
+          "kruiden (25%) (bieslook, peterselie, kervel, basilicum, lavas, dille, rozemarijn, oregano)",
+          "zout",
+          "ui",
+          "smaakversterker (E621)",
+          "suiker",
+          "knoflook",
+          "volledig geharde raapzaadolie",
+          "specerijen (kurkuma, sinaasappelschil, peper, nootmuskaat, MOSTERDZAAD, gember, piment, kruidnagel)",
+          "stabilisator (E509)",
+          "geraffineerde zonnebloemolie 80%",
+          "extra vergine olijfolie 20%",
+          "peterselie"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Kruidensla",
+        "resolvedName": "Kruidensla",
+        "dbFound": true,
+        "ingredients": [
+          "rode biet",
+          "kool",
+          "bieslook",
+          "tuinkers",
+          "kervel"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Sladressing (vinaigrette)",
+        "resolvedName": "Sladressing (vinaigrette)",
+        "dbFound": true,
+        "ingredients": [
+          "raapzaadolie (53%)",
+          "water",
+          "azijn (11%)",
+          "mosterd (7%) (water, MOSTERDzaad, natuurazijn, zout, kurkuma, natuurlijk kruidenaroma)",
+          "honing",
+          "citroensap van concentraat (1%)",
+          "zout",
+          "knoflook",
+          "verdikkingsmiddel (E415)",
+          "kruiden en specerijen"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      }
+    ],
+    "allergens": [
+      "Ei",
+      "Vis",
+      "Gluten",
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "17. Oma's draadjesvlees",
+    "components": [
+      {
+        "name": "Bloemkoolsalade 2.0",
+        "resolvedName": "Bloemkoolsalade 2.0",
+        "dbFound": true,
+        "ingredients": [
+          "Bloemkool",
+          "kool",
+          "water",
+          "augurk (30%)",
+          "suiker",
+          "natuurazijn",
+          "zout",
+          "knoflookpoeder",
+          "specerijen (kurkuma poeder)",
+          "invertsuikerstroop",
+          "verdikkingsmiddelen (E412, E415)",
+          "conserveermiddel: E202",
+          "spirulina-extract",
+          "saffloerextract",
+          "rode paprika gedroogd",
+          "maltodextrine",
+          "zoetstof: E954",
+          "zuurteregelaar: E331",
+          "zilveruien",
+          "natuurlijk aroma",
+          "antioxidant: natriumdisulfiet",
+          "zoetstof: E954(iv)",
+          "ui",
+          "raapzaadolie (53%)",
+          "azijn (11%)",
+          "mosterd (7%) (water, MOSTERDzaad, natuurazijn, zout, kurkuma, natuurlijk kruidenaroma)",
+          "honing",
+          "citroensap van concentraat (1%)",
+          "knoflook",
+          "verdikkingsmiddel (E415)",
+          "kruiden en specerijen"
+        ],
+        "allergens": [
+          "Mosterd",
+          "Sulfieten"
+        ]
+      },
+      {
+        "name": "Shortrib geplukt",
+        "resolvedName": "Shortrib",
+        "dbFound": true,
+        "ingredients": [
+          "Varkensvlees",
+          "zout",
+          "zuurteregelaar (E326)",
+          "antioxidant (E301)",
+          "conserveermiddelen (E250, E262)",
+          "specerijextracten",
+          "rook",
+          "Water",
+          "Suiker",
+          "Verse rode pepers",
+          "zuurteregelaar: E260",
+          "voedingszuur: E330",
+          "Knoflook",
+          "Verdikkingsmiddel E412",
+          "Conserveermiddel E211",
+          "Kruiden en specerijen"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      },
+      {
+        "name": "Piccalilly saus",
+        "resolvedName": "Piccalilly saus",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "augurk",
+          "wortel",
+          "tarwebloem",
+          "uien",
+          "bloemkool",
+          "mosterdmeel",
+          "azijn",
+          "kleurstof: geelwortelextract",
+          "zout",
+          "verdikkingsmiddel: guarpitmeel",
+          "soja-eiwit",
+          "kleurstof: curcumine",
+          "zoetstof: sacharine",
+          "saffloer"
+        ],
+        "allergens": [
+          "Gluten",
+          "Mosterd",
+          "Soja"
+        ]
+      },
+      {
+        "name": "Crazy pea",
+        "resolvedName": "Crazy pea",
+        "dbFound": true,
+        "ingredients": [
+          "Erwten"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Mosterd",
+      "Soja",
+      "Sulfieten"
+    ]
+  },
+  {
+    "title": "18. Chicken en Waffles",
+    "components": [
+      {
+        "name": "Suikerwafel",
+        "resolvedName": "Suikerwafel",
+        "dbFound": true,
+        "ingredients": [
+          "tarwebloem",
+          "parelsuiker (21%)",
+          "plantaardige margarine (koolzaadolie, water, zout, emulgator: mono- en diglyceriden van vetzuren, zuurteregelaar: citroenzuur, aroma, kleurstof: betacaroteen)",
+          "eieren",
+          "invertsuiker",
+          "zout",
+          "aroma: natuurlijke vanille"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      },
+      {
+        "name": "Krokante kippenhaas",
+        "resolvedName": "Krokante kippenhaas",
+        "dbFound": true,
+        "ingredients": [
+          "Kiphaasjes 58%",
+          "tarwebloem",
+          "volledig geraffineerde sojaolie",
+          "maïsmeel",
+          "gemodificeerd tapiocazetmeel",
+          "tarwezetmeel",
+          "tarwegluten",
+          "tapiocazetmeel",
+          "zout",
+          "zwarte peper",
+          "witte peper",
+          "knoflookpoeder",
+          "zuurteregelaars: E331 en E500",
+          "gist",
+          "suiker",
+          "rijsmiddelen: E450 en E500",
+          "selderijzaad",
+          "uienpoeder",
+          "venkelzaad",
+          "oregano",
+          "gistextract",
+          "kleurstoffen: E100 en E160c",
+          "natuurlijk aroma",
+          "Halal"
+        ],
+        "allergens": [
+          "Gluten",
+          "Soja",
+          "Selderij"
+        ]
+      },
+      {
+        "name": "Maple syrup",
+        "resolvedName": "Maple syrup",
+        "dbFound": true,
+        "ingredients": [
+          "Esdoornsiroop"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Afgebakken bacon strip",
+        "resolvedName": "Afgebakken bacon strip",
+        "dbFound": true,
+        "ingredients": [
+          "Varkensvlees",
+          "zout",
+          "zuurteregelaar (E326)",
+          "antioxidant (E301)",
+          "conserveermiddelen (E250, E262)",
+          "specerijextracten",
+          "rook"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Bosui gesneden",
+        "resolvedName": "Bosui gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Bosui"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Soja",
+      "Selderij"
+    ]
+  },
+  {
+    "title": "19. Knoflookgamba's",
+    "components": [
+      {
+        "name": "Knoflook orzo",
+        "resolvedName": "Knoflook orzo",
+        "dbFound": true,
+        "ingredients": [
+          "water (58,8%)",
+          "tarwegriesmeel (41,2%)",
+          "Water",
+          "uien",
+          "knoflook",
+          "plantaardige oliën (zonnebloem)",
+          "wijn (zwaveldioxide en sulfiet)",
+          "zout",
+          "plantaardige oliën (raap)",
+          "linzeneiwit",
+          "plantaardige vetten (kokos)",
+          "peterselie",
+          "gemodificeerd maïszetmeel",
+          "natuurlijke aroma",
+          "plantaardige oliën (zonnebloemolie, palmolie, geheel geharde raapolie, raapolie)",
+          "ui",
+          "plantaardige vetten (koolzaad)",
+          "suiker",
+          "aardappelzetmeel gemodificeerd",
+          "bieslook",
+          "dille",
+          "dragon",
+          "rozemarijn",
+          "plantaardige vetten (gedeeltelijk gehard) (palm)",
+          "peper",
+          "verdikkingsmiddelen: E412 (guarpitmeel)",
+          "kurkuma extract",
+          "witte peper",
+          "emulgatoren: E322 (lecithinen) (soja)"
+        ],
+        "allergens": [
+          "Gluten",
+          "Soja",
+          "Sulfieten"
+        ]
+      },
+      {
+        "name": "Gemarineerde gamba's",
+        "resolvedName": "Gemarineerde gamba's",
+        "dbFound": true,
+        "ingredients": [
+          "Witpootgarnaal 75% (schaaldieren)",
+          "water",
+          "zout",
+          "stabilisatoren: E451 en E452",
+          "plantaardige oliën (raapzaad, zonnebloem)",
+          "groenten (knoflook, ui)",
+          "natuurlijke aroma's",
+          "peper",
+          "kruiden (bieslook, dille, peterselie, dragon, rozemarijn)",
+          "kurkuma extract"
+        ],
+        "allergens": [
+          "Schaaldieren"
+        ]
+      },
+      {
+        "name": "Kruidensla",
+        "resolvedName": "Kruidensla",
+        "dbFound": true,
+        "ingredients": [
+          "rode biet",
+          "kool",
+          "bieslook",
+          "tuinkers",
+          "kervel"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Gebrande citroen",
+        "resolvedName": "Gebrande citroen",
+        "dbFound": true,
+        "ingredients": [
+          "Citroen",
+          "Fruit"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Sladressing (vinaigrette)",
+        "resolvedName": "Sladressing (vinaigrette)",
+        "dbFound": true,
+        "ingredients": [
+          "raapzaadolie (53%)",
+          "water",
+          "azijn (11%)",
+          "mosterd (7%) (water, MOSTERDzaad, natuurazijn, zout, kurkuma, natuurlijk kruidenaroma)",
+          "honing",
+          "citroensap van concentraat (1%)",
+          "zout",
+          "knoflook",
+          "verdikkingsmiddel (E415)",
+          "kruiden en specerijen"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Soja",
+      "Sulfieten",
+      "Schaaldieren",
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "20. Groene curry",
+    "components": [
+      {
+        "name": "Groente curry",
+        "resolvedName": "Groente curry",
+        "dbFound": true,
+        "ingredients": [
+          "Water",
+          "paprika",
+          "haricots verts (sperziebonen)",
+          "kokosextract",
+          "wortel",
+          "knolselderij (selderij)",
+          "doperwten",
+          "bloemkool",
+          "edamame (soja)",
+          "water",
+          "plantaardige oliën (zonnebloem)",
+          "gemodificeerd maïszetmeel",
+          "kokos",
+          "groentebouillon (49%) (water, ui, wortel, prei, selderij, venkel, zout, tijm, lavas, laurier, zwarte peper)",
+          "zout",
+          "gedehydrateerd groentepoeder (18,5%) (ui, pastinaak, peterseliewortel, prei, champignon, wortel, tomaat, knoflook)",
+          "verdikkingsmiddel: E412 (guarpitmeel)",
+          "groene chilipeper",
+          "citroengras",
+          "knoflook",
+          "sjalot",
+          "suiker",
+          "aroma’s",
+          "gemodificeerd maïszetmeel",
+          "gember (djahe)",
+          "komijn",
+          "korianderzaad",
+          "azijn",
+          "knoflookpoeder",
+          "vers limoensap",
+          "stabilisatoren: E412 (guarpitmeel), xanthaangom",
+          "peterselie-extract",
+          "kurkuma",
+          "kruidnagel",
+          "laurierblad",
+          "fenegriek",
+          "mosterdzaad (mosterd)",
+          "venkelzaad",
+          "zwart zout",
+          "rijstzetmeel",
+          "curryblaadjes",
+          "glucosestroop",
+          "koriander",
+          "limoenblad",
+          "natuurlijk aroma",
+          "melasse",
+          "conserveermiddel: E202 (kaliumsorbaat)"
+        ],
+        "allergens": [
+          "Selderij",
+          "Soja",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Gesneden limoen",
+        "resolvedName": "Gesneden limoen",
+        "dbFound": true,
+        "ingredients": [
+          "Limoen"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Witte rijst",
+        "resolvedName": "Witte rijst",
+        "dbFound": true,
+        "ingredients": [
+          "rijst"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Rode peper gesneden",
+        "resolvedName": "Rode peper gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Rode peper"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Bosui gesneden",
+        "resolvedName": "Bosui gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Bosui"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Selderij",
+      "Soja",
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "21. Frietje stoofvlees",
+    "components": [
+      {
+        "name": "Stoofvlees",
+        "resolvedName": "Stoofvlees",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "gegaard rundvlees 26%",
+          "ui 12%",
+          "suiker",
+          "tomatenpuree 6%",
+          "gemodificeerd aardappel- en maïszetmeel",
+          "azijn",
+          "raapolie",
+          "zout",
+          "suikerbietstroop",
+          "kruiden en specerijen",
+          "appelstroop",
+          "dextrose",
+          "maltodextrine",
+          "kleurstof: E150c",
+          "gistextract",
+          "raap- en maïseiwithydrolysaat",
+          "citroensap",
+          "karamelsuiker",
+          "zonnebloemolie",
+          "emulgator: zonnebloemlecithine",
+          "zuurteregelaar: E640",
+          "aroma",
+          "melk",
+          "lactose",
+          "soja",
+          "gluten",
+          "tarwe",
+          "rogge",
+          "sulfiet",
+          "E220",
+          "E221",
+          "E222",
+          "E223",
+          "E224",
+          "E225",
+          "E226",
+          "E227",
+          "E228",
+          "Selderij",
+          "Rundvlees"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose",
+          "Soja",
+          "Gluten",
+          "Sulfieten",
+          "Selderij"
+        ]
+      },
+      {
+        "name": "Peterselie",
+        "resolvedName": "Peterselie",
+        "dbFound": true,
+        "ingredients": [
+          "Peterselie"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Piccalilly saus",
+        "resolvedName": "Piccalilly saus",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "augurk",
+          "wortel",
+          "tarwebloem",
+          "uien",
+          "bloemkool",
+          "mosterdmeel",
+          "azijn",
+          "kleurstof: geelwortelextract",
+          "zout",
+          "verdikkingsmiddel: guarpitmeel",
+          "soja-eiwit",
+          "kleurstof: curcumine",
+          "zoetstof: sacharine",
+          "saffloer"
+        ],
+        "allergens": [
+          "Gluten",
+          "Mosterd",
+          "Soja"
+        ]
+      },
+      {
+        "name": "Friet",
+        "resolvedName": "Friet",
+        "dbFound": true,
+        "ingredients": [
+          "Aardappelen (EU Origin)",
+          "zonnebloemolie",
+          "gemodificeerd aardappelzetmeel",
+          "rijstebloem",
+          "zout",
+          "dextrine",
+          "rijsmiddel (E450, E500)",
+          "maltodextrine",
+          "verdikkingsmiddel (E415)"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Melk",
+      "Lactose",
+      "Soja",
+      "Mosterd",
+      "Selderij",
+      "Sulfieten"
+    ]
+  },
+  {
+    "title": "22. Gegrild varkenshaasje",
+    "components": [
+      {
+        "name": "Varkenshaas",
+        "resolvedName": "Varkenshaas",
+        "dbFound": true,
+        "ingredients": [
+          "Varken",
+          "Varkensvlees"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Bacon jam",
+        "resolvedName": "Bacon jam",
+        "dbFound": true,
+        "ingredients": [
+          "Rode ui",
+          "suiker",
+          "gerookt bacon (22%)",
+          "vijgen (19%)",
+          "rode wijnazijn",
+          "olijfolie",
+          "muscovadosuiker",
+          "balsamicoazijn",
+          "zout",
+          "oregano",
+          "rozemarijn",
+          "tijm"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Saliejus",
+        "resolvedName": "Vleesjus",
+        "dbFound": true,
+        "ingredients": [
+          "Gemodificeerd zetmeel",
+          "zout",
+          "aroma's",
+          "ui",
+          "gistextract",
+          "suiker",
+          "tomatenpuree",
+          "maltodextrine",
+          "karamelstroop",
+          "specerijen (paprikapoeder, fenegriek, kruidnagel, nootmuskaat)",
+          "runderbotbouillonpoeder 0",
+          "rode biet"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Gefrituurde salie",
+        "resolvedName": "Gefrituurde salie",
+        "dbFound": true,
+        "ingredients": [
+          "Salie",
+          "Gemodificeerd zetmeel",
+          "zout",
+          "aroma's",
+          "ui",
+          "gistextract",
+          "suiker",
+          "tomatenpuree",
+          "maltodextrine",
+          "karamelstroop",
+          "specerijen (paprikapoeder, fenegriek, kruidnagel, nootmuskaat)",
+          "runderbotbouillonpoeder 0",
+          "rode biet"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Aardappelgratin taartje",
+        "resolvedName": "Aardappelgratin taartje",
+        "dbFound": true,
+        "ingredients": [
+          "aardappelen",
+          "saus (3.8% kaas (melk), 3.7% slagroom (melk), boter (melk), scharrelei, magere melk, scharrelei-eiwit, zout, melkvet, gemodificeerd aardappelzetmeel, gemodificeerd maïszetmeel, melkeiwitten, weipermeaat (melk), knoflookpoeder, dextrose, stabilisatoren: difosfaten en guarpitmeel, natuurlijk aroma (melk), peperextract)",
+          "Gepasteuriseerde MELK",
+          "aardappelzetmeel",
+          "zout",
+          "zuursel (bevat MELK)",
+          "microbieel stremsel",
+          "conserveermiddel: natriumnitraat E251",
+          "kleurstof: carotenen",
+          "kleurstof: annatto norbixine"
+        ],
+        "allergens": [
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Bospeen geschild",
+        "resolvedName": "Bospeen geschild",
+        "dbFound": true,
+        "ingredients": [
+          "Bospeen",
+          "wortel"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Ei",
+      "Melk",
+      "Lactose"
+    ]
+  },
+  {
+    "title": "23. Kaaskroketje",
+    "components": [
+      {
+        "name": "Little gem sla",
+        "resolvedName": "Little gem sla",
+        "dbFound": true,
+        "ingredients": [
+          "Sla",
+          "Little gem"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Kaaskroketje",
+        "resolvedName": "Kaaskroketje",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "TARWEbloem",
+          "TARWEmoutmeel",
+          "kaas (gepasteuriseerde MELK, aardappelzetmeel, zout, zuursel (bevat MELK), microbieel stremsel, conserveermiddel: natriumnitraat E251, kleurstof: carotenen, kleurstof: annatto norbixine)",
+          "paneermeel (TARWEbloem, zout, gist, curcumapoeder, kleurstof: E100)",
+          "spinazie",
+          "room (MELK, stabilisator: E407)",
+          "plantaardige oliën en vetten ((palm, kokos, koolzaad), water, geconcentreerd citroensap)",
+          "gorgonzola (MELK, zout, dierlijke stremsel, penicillium roquefort)",
+          "(battermix (gedroogde glucose siroop (TARWE), suiker, dextrose (TARWE), verdikkingsmiddel (E466), bloem (TARWE), zout, plantaardig eiwit (erwt)), groente bouillonpoeder, maïszetmeel, ui, zout, knoflook, verdikkingsmiddel (E460), kruiden en specerijen"
+        ],
+        "allergens": [
+          "Gluten",
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Hollandaisesaus",
+        "resolvedName": "Hollandaisesaus",
+        "dbFound": true,
+        "ingredients": [
+          "Plantaardige oliën (palm, raapzaad)",
+          "water",
+          "EIGEEL 5%",
+          "magere MELKPOEDER",
+          "zout",
+          "suiker",
+          "zuurteregelaar (melkzuur)",
+          "verdikkingsmiddelen (xanthaangom, guargom, johannesbroodpitmeel)",
+          "aroma's (bevat SELDERIJ, MELK)"
+        ],
+        "allergens": [
+          "Ei",
+          "Melk",
+          "Lactose",
+          "Selderij"
+        ]
+      },
+      {
+        "name": "Brioche toast",
+        "resolvedName": "Brioche toast",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEBLOEM",
+          "water",
+          "ROOMBOTER (LACTOSE) 17%",
+          "EIEREN 6%",
+          "suiker",
+          "bakkerszout",
+          "gist"
+        ],
+        "allergens": [
+          "Gluten",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Augurken relish",
+        "resolvedName": "Augurken relish",
+        "dbFound": true,
+        "ingredients": [
+          "Water",
+          "augurk",
+          "suiker",
+          "natuurazijn",
+          "zout",
+          "knoflookpoeder",
+          "specerijen (kurkuma poeder)",
+          "invertsuikerstroop",
+          "verdikkingsmiddelen (E412, E415)",
+          "conserveermiddel: E202",
+          "spirulina-extract",
+          "saffloerextract",
+          "rode paprika gedroogd",
+          "maltodextrine",
+          "zoetstof: E954",
+          "zuurteregelaar: E331"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Ei",
+      "Melk",
+      "Lactose",
+      "Selderij"
+    ]
+  },
+  {
+    "title": "24. Pepersteak",
+    "components": [
+      {
+        "name": "Pepersteak",
+        "resolvedName": "Pepersteak",
+        "dbFound": true,
+        "ingredients": [
+          "Rundvlees",
+          "Peper",
+          "paprika"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Zusje pepersaus",
+        "resolvedName": "Zusje pepersaus",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "ROOM (7%)",
+          "gemodificeerd maïszetmeel",
+          "volle MELK concentraat (4%)",
+          "brandy (3%)",
+          "runderfond (rundercollageen, rundvlees, water, zout)",
+          "raapzaadolie",
+          "zout",
+          "kruiden en specerijen (peperkorrels (0,6%), peper (0,2%))",
+          "TARWEbloem",
+          "rundvleesextract",
+          "natuurlijk aroma",
+          "azijn"
+        ],
+        "allergens": [
+          "Gluten",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Mayonaise",
+        "resolvedName": "Mayonaise",
+        "dbFound": true,
+        "ingredients": [
+          "raapolie",
+          "water",
+          "azijn",
+          "scharreleigeel",
+          "glucose-fructosestroop",
+          "mosterd (water, mosterdzaden, natuurazijn, specerijen)",
+          "zout",
+          "suiker",
+          "gemodificeerd maïszetmeel",
+          "voedingszuur: citroenzuur",
+          "conserveermiddel: kaliumsorbaat",
+          "verdikkingsmiddel: guarpitmeel",
+          "natuurlijk aroma",
+          "antioxidant: E385",
+          "kleurstof: betacaroteen"
+        ],
+        "allergens": [
+          "Ei",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Aardappelgratin taartje",
+        "resolvedName": "Aardappelgratin taartje",
+        "dbFound": true,
+        "ingredients": [
+          "aardappelen",
+          "saus (3.8% kaas (melk), 3.7% slagroom (melk), boter (melk), scharrelei, magere melk, scharrelei-eiwit, zout, melkvet, gemodificeerd aardappelzetmeel, gemodificeerd maïszetmeel, melkeiwitten, weipermeaat (melk), knoflookpoeder, dextrose, stabilisatoren: difosfaten en guarpitmeel, natuurlijk aroma (melk), peperextract)",
+          "Gepasteuriseerde MELK",
+          "aardappelzetmeel",
+          "zout",
+          "zuursel (bevat MELK)",
+          "microbieel stremsel",
+          "conserveermiddel: natriumnitraat E251",
+          "kleurstof: carotenen",
+          "kleurstof: annatto norbixine"
+        ],
+        "allergens": [
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Crazy pea",
+        "resolvedName": "Crazy pea",
+        "dbFound": true,
+        "ingredients": [
+          "Erwten"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Ei",
+      "Gluten",
+      "Melk",
+      "Lactose",
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "25. Groentequiche",
+    "components": [
+      {
+        "name": "Quiche",
+        "resolvedName": "Quiche",
+        "dbFound": true,
+        "ingredients": [
+          "INGREDIENTEN : TARWEBLOEM (GLUTEN) (EU)",
+          "margarine (palmvet SG, water, raapzaadolie,zout, emulgator: E471, voedingszuur: E330)",
+          "zout",
+          "water",
+          "gegrilde aubergine",
+          "gegrilde courgette",
+          "gegrilde gele paprika",
+          "gegrilde rode paprika",
+          "Scharrelheelei",
+          "conserveermiddel: E202",
+          "voedingszuur: E330",
+          "Room (melk)",
+          "verdikkingsmiddel: gemodificeerd maïszetmeel",
+          "emulgator: E471",
+          "stabilisatoren: E407 en E466",
+          "Lactose",
+          "knoflook",
+          "witte peper",
+          "KOE(MELK)",
+          "microbieel stremsel",
+          "zuursel"
+        ],
+        "allergens": [
+          "Gluten",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Kruidensla",
+        "resolvedName": "Kruidensla",
+        "dbFound": true,
+        "ingredients": [
+          "rode biet",
+          "kool",
+          "bieslook",
+          "tuinkers",
+          "kervel"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Gepofte tomaat",
+        "resolvedName": "Gepofte tomaat",
+        "dbFound": true,
+        "ingredients": [
+          "Tomaat",
+          "tomaten"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Kruidenolie",
+        "resolvedName": "Kruidenolie",
+        "dbFound": true,
+        "ingredients": [
+          "Zonnebloemolie",
+          "kruiden (25%) (bieslook, peterselie, kervel, basilicum, lavas, dille, rozemarijn, oregano)",
+          "zout",
+          "ui",
+          "smaakversterker (E621)",
+          "suiker",
+          "knoflook",
+          "volledig geharde raapzaadolie",
+          "specerijen (kurkuma, sinaasappelschil, peper, nootmuskaat, MOSTERDZAAD, gember, piment, kruidnagel)",
+          "stabilisator (E509)",
+          "geraffineerde zonnebloemolie 80%",
+          "extra vergine olijfolie 20%",
+          "peterselie"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Sladressing (vinaigrette)",
+        "resolvedName": "Sladressing (vinaigrette)",
+        "dbFound": true,
+        "ingredients": [
+          "raapzaadolie (53%)",
+          "water",
+          "azijn (11%)",
+          "mosterd (7%) (water, MOSTERDzaad, natuurazijn, zout, kurkuma, natuurlijk kruidenaroma)",
+          "honing",
+          "citroensap van concentraat (1%)",
+          "zout",
+          "knoflook",
+          "verdikkingsmiddel (E415)",
+          "kruiden en specerijen"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Melk",
+      "Lactose",
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "26. Kipsateetje",
+    "components": [
+      {
+        "name": "Kipsaté",
+        "resolvedName": "Kipsaté",
+        "dbFound": true,
+        "ingredients": [
+          "kippendijvlees",
+          "suiker",
+          "water",
+          "sojabonen",
+          "zout",
+          "karamel",
+          "invertsuikerstroop",
+          "chilipepers",
+          "mais",
+          "tarwe",
+          "gehydrolyseerd soja-eiwit",
+          "gember",
+          "paprika",
+          "knoflook",
+          "natuurlijk gemberaroma",
+          "Halal"
+        ],
+        "allergens": [
+          "Gluten",
+          "Ei",
+          "Soja"
+        ]
+      },
+      {
+        "name": "Atjar tjampoer",
+        "resolvedName": "Atjar tjampoer",
+        "dbFound": true,
+        "ingredients": [
+          "Witte kool",
+          "wortel",
+          "natuurazijn",
+          "suiker",
+          "zout",
+          "kurkuma",
+          "komkommer"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Kentang",
+        "resolvedName": "Kentang",
+        "dbFound": true,
+        "ingredients": [
+          "Aardappel",
+          "witte en bruine basterdsuiker suiker",
+          "karamel",
+          "invertsuikerstroop",
+          "ui",
+          "pinda's Pinda",
+          "tarwebloem Glutenbevattende granen",
+          "Tarwe",
+          "paprikapoeder",
+          "zout",
+          "kruiden",
+          "specerijen",
+          "zonnebloemolie",
+          "sojaolie Soja",
+          "palmolie",
+          "koolzaadolie"
+        ],
+        "allergens": [
+          "Gluten",
+          "Pinda",
+          "Soja"
+        ]
+      },
+      {
+        "name": "Pindasaus",
+        "resolvedName": "Pindasaus",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "pinda",
+          "suiker",
+          "gember",
+          "azijn",
+          "raapzaadolie",
+          "aroma's (soja)",
+          "gemodificeerd maïszetmeel",
+          "weipoeder (melk)",
+          "sojasaus (water, sojabonen, tarwe, zout)",
+          "sambal (rode peper, zout, zuurteregelaar: azijnzuur, conserveermiddel: E211)",
+          "conserveermiddel: kaliumsorbaat",
+          "emulgator: E471",
+          "voedingszuur: melkzuur",
+          "zout",
+          "verdikkingsmiddelen: guarpitmeel en xanthaangom",
+          "kleurstoffen: E150d en paprika-extract",
+          "specerijen",
+          "antioxidant: E385",
+          "knoflookpoeder",
+          "uienpoeder"
+        ],
+        "allergens": [
+          "Gluten",
+          "Pinda",
+          "Soja",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Afgebakken cassava kroepoek",
+        "resolvedName": "Afgebakken cassave kroepoek",
+        "dbFound": true,
+        "ingredients": [
+          "Tapioca",
+          "Cassavemeel",
+          "Suiker",
+          "chilipeper",
+          "Prei",
+          "Witte peper",
+          "Zout",
+          "Galanga",
+          "Selderij"
+        ],
+        "allergens": [
+          "Selderij"
+        ]
+      },
+      {
+        "name": "Mihoen",
+        "resolvedName": "Mihoen",
+        "dbFound": true,
+        "ingredients": [
+          "Kool",
+          "water",
+          "durumgriesmeel (TARWE) (21%)",
+          "witte kool (6%)",
+          "prei (6%)",
+          "wortel (6%)",
+          "ui (6%)",
+          "Spaanse peper",
+          "sojasaus (3%) (water, zout, SOJAbonen, TARWE)",
+          "raapzaadolie",
+          "suiker",
+          "zout",
+          "gebrande suikerstroop",
+          "kruiden en specerijen",
+          "gistextract",
+          "SESAMolie",
+          "azijn",
+          "knoflook",
+          "rijstazijn",
+          "sherry",
+          "gekarameliseerde suiker",
+          "rode peper pasta (water, tapioca siroop, rijst, rode peper poeder, zout, alcohol, ui, knoflook)",
+          "sojasaus (18%) (water, zout, SOJAbonen, TARWE)",
+          "glucosestroop",
+          "knoflook (3%)",
+          "gemodificeerd maïszetmeel",
+          "citroensap"
+        ],
+        "allergens": [
+          "Gluten",
+          "Soja",
+          "Sesam"
+        ]
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Ei",
+      "Soja",
+      "Pinda",
+      "Melk",
+      "Lactose",
+      "Selderij",
+      "Sesam"
+    ]
+  },
+  {
+    "title": "27. Grillburger vega",
+    "components": [
+      {
+        "name": "Vega burger",
+        "resolvedName": "Vega burger",
+        "dbFound": true,
+        "ingredients": [
+          "Water",
+          "getextureerd eiwit (tarwe)",
+          "zonnebloemolie",
+          "TARWEbloem",
+          "plantaardige vezels (suikerriet, citrus, psyllium)",
+          "paprika",
+          "azijn (natuur)",
+          "ui",
+          "suiker",
+          "zout",
+          "kruiden en specerijen",
+          "erwteneiwitisolaat",
+          "maïszetmeel",
+          "rode bietenconcentraat",
+          "gist",
+          "extract (gist, appel)",
+          "verdikkingsmiddel E461",
+          "natuurlijke aroma's (bevat tarwe)",
+          "mineraal: ijzer(II)fumaraat",
+          "vitamine B12"
+        ],
+        "allergens": [
+          "Gluten",
+          "Ei"
+        ]
+      },
+      {
+        "name": "Cheddar kaas",
+        "resolvedName": "Cheddar kaas",
+        "dbFound": true,
+        "ingredients": [
+          "Cheddarkaas 60% (gepasteuriseerde MELK, zout, startcultuur, microbieel stremsel)",
+          "water",
+          "kaas (gepasteuriseerde MELK, zout, startcultuur, microbieel stremsel)",
+          "boter",
+          "magere MELKpoeder",
+          "smeltzout: E331",
+          "zout",
+          "MELKeiwit",
+          "weipoeder (MELK)",
+          "zuurteregelaar: E330",
+          "conserveermiddel: E200",
+          "kleurstoffen: E160a en E160c",
+          "antiklontermiddel: zonnebloemlecithinen"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Remouladesaus",
+        "resolvedName": "Remouladesaus",
+        "dbFound": true,
+        "ingredients": [
+          "Mayonaise (Plantaardige olie (SOJA), EIGEEL, water, MOSTERD (water, MOSTERDZAAD, azijn, zout, specerijen), azijn, suiker, zout, conserveermiddel (kaliumsorbaat), aroma, verdikkingsmiddel (xanthaangom), antioxidanten (calciumdinatrium‐EDTA))",
+          "augurken (augurken, water, natuurazijn, suiker, zout, natuurlijk aroma, zoetstof: E954(iv), kleurstof: E101))",
+          "ui",
+          "peterselie"
+        ],
+        "allergens": [
+          "Ei",
+          "Soja",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Bruschetta salsa (Pico del gallo)",
+        "resolvedName": "Bruschetta salsa (Pico del gallo)",
+        "dbFound": true,
+        "ingredients": [
+          "Tomaten (75%)",
+          "rode ui (14%)",
+          "saus (10%) (zonnebloemolie, citroensap, knoflook, koriander, gemodificeerd zetmeel, zout, rode chili, emulgator: zonnebloemlecithine, natuurlijk basilicumaroma, rozemarijnextract)"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Gegrild brioche bolletje",
+        "resolvedName": "Gegrild brioche bolletje",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEBLOEM",
+          "water",
+          "gist",
+          "raapzaadolie",
+          "suiker",
+          "weipoeder (MELK)",
+          "gejodeerd zout (zout, kaliumjodaat)",
+          "magere MELKPOEDER",
+          "gekristalli seerde invertsuikerstroop",
+          "gluten (TARWE)",
+          "emulgator (calciumstearoyl-2-lactylaat)",
+          "verdikkingsmiddel (guarpitmeel)",
+          "LACTOSE",
+          "MELKEI WIT",
+          "plantaardig eiwit (erwt)",
+          "antioxidant (ascorbinezuur)",
+          "dextrose",
+          "kleurstof (carotenen)",
+          "aroma (bevat: MELK)",
+          "maïszetmeel"
+        ],
+        "allergens": [
+          "Gluten",
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Ei",
+      "Melk",
+      "Lactose",
+      "Soja",
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "28. Klassiek schnitzeltje",
+    "components": [
+      {
+        "name": "Schnitzel",
+        "resolvedName": "Schnitzel (nieuwe)",
+        "dbFound": true,
+        "ingredients": [
+          "varkensvlees 70%",
+          "TARWEBLOEM",
+          "water",
+          "gemodificeerd zetmeel (TARWE)",
+          "raapzaadolie",
+          "gejodeerd zout (zout, kaliumjodaat)",
+          "maïsbloem",
+          "EIPOEDER",
+          "rijstzetmeel",
+          "dextrose",
+          "specerijen",
+          "gist"
+        ],
+        "allergens": [
+          "Gluten",
+          "Ei"
+        ]
+      },
+      {
+        "name": "Cranberry compote",
+        "resolvedName": "Cranberry compote",
+        "dbFound": true,
+        "ingredients": [
+          "cranberries (48%)",
+          "suiker",
+          "glucose-fructose siroop",
+          "verdikkingsmiddel pectine",
+          "johannesbroodpitmeel",
+          "voedingszuur: E330"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Aardappelflensje",
+        "resolvedName": "Aardappelflensje",
+        "dbFound": true,
+        "ingredients": [
+          "Aardappelen (85,3%)",
+          "uien (7,6%)",
+          "plantaardige olie (raapzaad, zonnebloem)",
+          "gemodificeerd rijstzetmeel",
+          "zout",
+          "aardappelzetmeel"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Gesneden partje citroen",
+        "resolvedName": "Gesneden partje citroen",
+        "dbFound": true,
+        "ingredients": [
+          "Citroen"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Crazy pea",
+        "resolvedName": "Crazy pea",
+        "dbFound": true,
+        "ingredients": [
+          "Erwten"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Ei"
+    ]
+  },
+  {
+    "title": "29. Groentelasagne",
+    "components": [
+      {
+        "name": "Spinazielasagne",
+        "resolvedName": "Spinazielasagne",
+        "dbFound": true,
+        "ingredients": [
+          "Water",
+          "durum TARWE griesmeel",
+          "spinazie 14%",
+          "ricotta (WEI-eiwit, KAAS) 5%",
+          "zoete WEIpoeder",
+          "TARWEbloem",
+          "raapzaadolie",
+          "KAAS 3",
+          "uien",
+          "zure ROOM (10% melkvet)",
+          "zout",
+          "ROOM (30% melkvet)",
+          "zetmeel",
+          "gemodificeerd zetmeel",
+          "knoflook",
+          "kruiden",
+          "spinaziepoeder 0"
+        ],
+        "allergens": [
+          "Gluten",
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Gepofte tomaat",
+        "resolvedName": "Gepofte tomaat",
+        "dbFound": true,
+        "ingredients": [
+          "Tomaat",
+          "tomaten"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Kruidensla",
+        "resolvedName": "Kruidensla",
+        "dbFound": true,
+        "ingredients": [
+          "rode biet",
+          "kool",
+          "bieslook",
+          "tuinkers",
+          "kervel"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Parmezaanschuim",
+        "resolvedName": "Parmezaanschuim",
+        "dbFound": true,
+        "ingredients": [
+          "kaas (waarvan 80% Parmigiano Reggiano D.O.P.)",
+          "water",
+          "boter",
+          "smeltzouten (E452, E339)",
+          "zout",
+          "Room (melk)",
+          "verdikkingsmiddel: gemodificeerd maïszetmeel",
+          "emulgator: E471",
+          "stabilisatoren: E407 en E466",
+          "Lactose",
+          "Melk",
+          "EIwit",
+          "maltodextrine",
+          "glucosepoeder",
+          "palmvet",
+          "E472b",
+          "E472e",
+          "MELKeiwitten",
+          "verdikkingsmiddel: E410",
+          "E412",
+          "E415",
+          "E407",
+          "stabilisator: E340ii"
+        ],
+        "allergens": [
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Sladressing (vinaigrette)",
+        "resolvedName": "Sladressing (vinaigrette)",
+        "dbFound": true,
+        "ingredients": [
+          "raapzaadolie (53%)",
+          "water",
+          "azijn (11%)",
+          "mosterd (7%) (water, MOSTERDzaad, natuurazijn, zout, kurkuma, natuurlijk kruidenaroma)",
+          "honing",
+          "citroensap van concentraat (1%)",
+          "zout",
+          "knoflook",
+          "verdikkingsmiddel (E415)",
+          "kruiden en specerijen"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Ei",
+      "Melk",
+      "Lactose",
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "30. Bao bun",
+    "components": [
+      {
+        "name": "Bao bun.",
+        "resolvedName": "Bao bun.",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEbloem 55%",
+          "water",
+          "rietsuiker",
+          "plantaardige vetstof (gehydrogeneerde palmstearine)",
+          "gist"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      },
+      {
+        "name": "Zoetzure komkommer-ui",
+        "resolvedName": "Zoetzure komkommer-ui",
+        "dbFound": true,
+        "ingredients": [
+          "ui (99%)",
+          "water",
+          "azijn (0,1%)",
+          "suiker (0,02%)",
+          "zout",
+          "kruiden en specerijen",
+          "komkommer"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Sriracha mayonaise",
+        "resolvedName": "Sriracha mayonaise",
+        "dbFound": true,
+        "ingredients": [
+          "mayonaise (46%) (raapzaadolie, scharrel EIgeel, water, suiker, azijn, MOSTERD, zout, conserveermiddel (E202), voedingszuur (E330), verdikkingsmiddel (E415), kleurstof (E160a), antioxidant(E385))",
+          "chilipeper (9%)",
+          "raapzaadolie",
+          "suiker",
+          "gemodificeerd maïszetmeel",
+          "zout",
+          "knoflook",
+          "voedingszuur (E260, E330)",
+          "verdikkingsmiddel (E415)",
+          "conserveermiddel (E202)"
+        ],
+        "allergens": [
+          "Ei",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Gamba ringen",
+        "resolvedName": "Gamba ringen",
+        "dbFound": true,
+        "ingredients": [
+          "Garnalen (Litopenaeus vannamei) 43%",
+          "water 14%",
+          "sulfiet",
+          "broodkruimels (wit) 13% (tarwemeel 12,26%, bakvet (palmolie non-TBHQ), suiker, gist (Saccharomyces cerevisiae), geraffineerd zout, broodverbeteraar (maïszetmeel, INS170i, E516, E300, INS11001))",
+          "broodkruimels (oranje) 13% (tarwemeel 12,27%, bakvet (palmolie non-TBHQ), gist (Saccharomyces cerevisiae), suiker, geraffineerd zout, voedingskleurstof (INS160bii, ethanol, E415, water), broodverbeteraar (maïszetmeel, INS170i, E516, E300, INS11001))",
+          "bakvet 7% (gemodificeerd tapiocazetmeel INS1414, gehakte wortel, geraffineerd zout, suiker, gist, uienpoeder, knoflookpoeder, peperpoeder, azijnpoeder, zeevruchtensmaakstof (maltodextrine, zout, natuuridentieke smaakstof – inktvis, garnaal, krab, zeeoor – E551), predust 6% (INS1420, zout, plantaardige vet), beslag 4% (tarwemeel, maïsmeel, geraffineerd zout, suiker, E412)"
+        ],
+        "allergens": [
+          "Gluten",
+          "Schaaldieren",
+          "Sulfieten",
+          "Weekdieren"
+        ]
+      },
+      {
+        "name": "Bosui gesneden",
+        "resolvedName": "Bosui gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Bosui"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Ei",
+      "Mosterd",
+      "Schaaldieren",
+      "Sulfieten",
+      "Weekdieren"
+    ]
+  },
+  {
+    "title": "31. Shortrib",
+    "components": [
+      {
+        "name": "Aardappelflensje",
+        "resolvedName": "Aardappelflensje",
+        "dbFound": true,
+        "ingredients": [
+          "Aardappelen (85,3%)",
+          "uien (7,6%)",
+          "plantaardige olie (raapzaad, zonnebloem)",
+          "gemodificeerd rijstzetmeel",
+          "zout",
+          "aardappelzetmeel"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Rendang witte kool",
+        "resolvedName": "Rendang witte kool",
+        "dbFound": true,
+        "ingredients": [
+          "witte kool (49%)",
+          "ui (16%)",
+          "water",
+          "kokosnootextract (12%)",
+          "kruiden en specerijen",
+          "tapiocazetmeel",
+          "citroensap",
+          "knoflook (1%)",
+          "laos",
+          "zout",
+          "raapzaadolie",
+          "suiker",
+          "limoenblad",
+          "gistextract"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Sriracha mayonaise",
+        "resolvedName": "Sriracha mayonaise",
+        "dbFound": true,
+        "ingredients": [
+          "mayonaise (46%) (raapzaadolie, scharrel EIgeel, water, suiker, azijn, MOSTERD, zout, conserveermiddel (E202), voedingszuur (E330), verdikkingsmiddel (E415), kleurstof (E160a), antioxidant(E385))",
+          "chilipeper (9%)",
+          "raapzaadolie",
+          "suiker",
+          "gemodificeerd maïszetmeel",
+          "zout",
+          "knoflook",
+          "voedingszuur (E260, E330)",
+          "verdikkingsmiddel (E415)",
+          "conserveermiddel (E202)"
+        ],
+        "allergens": [
+          "Ei",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Pittige crumble",
+        "resolvedName": "Pittige crumble",
+        "dbFound": true,
+        "ingredients": [
+          "Sesam",
+          "uien",
+          "palmolie",
+          "tarwe",
+          "zout",
+          "water",
+          "Mirin",
+          "Wasabipoeder",
+          "Suiker",
+          "Kleurstof E102",
+          "Kleurstof E133",
+          "rijst"
+        ],
+        "allergens": [
+          "Gluten",
+          "Sesam"
+        ]
+      },
+      {
+        "name": "Shortrib geplukt",
+        "resolvedName": "Shortrib",
+        "dbFound": true,
+        "ingredients": [
+          "Varkensvlees",
+          "zout",
+          "zuurteregelaar (E326)",
+          "antioxidant (E301)",
+          "conserveermiddelen (E250, E262)",
+          "specerijextracten",
+          "rook",
+          "Water",
+          "Suiker",
+          "Verse rode pepers",
+          "zuurteregelaar: E260",
+          "voedingszuur: E330",
+          "Knoflook",
+          "Verdikkingsmiddel E412",
+          "Conserveermiddel E211",
+          "Kruiden en specerijen"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      }
+    ],
+    "allergens": [
+      "Ei",
+      "Gluten",
+      "Mosterd",
+      "Sesam"
+    ]
+  },
+  {
+    "title": "32. Ossenhaasspiesje",
+    "components": [
+      {
+        "name": "Ossenhaasspiesje",
+        "resolvedName": "Ossenhaasspiesje",
+        "dbFound": true,
+        "ingredients": [
+          "Soja – Selderij – Zwaveldioxide – Sulfieten - E621 - Paprika - Gember - Ui - Knoflook - Koriander",
+          "Halal"
+        ],
+        "allergens": [
+          "Soja",
+          "Selderij",
+          "Sulfieten"
+        ]
+      },
+      {
+        "name": "Thai-dressing",
+        "resolvedName": "Thai-dressing",
+        "dbFound": true,
+        "ingredients": [
+          "raapzaadolie (38%)",
+          "sojasaus (23%) (water, zout, SOJAbonen, TARWE)",
+          "suiker",
+          "water",
+          "gebrande suikerstroop",
+          "Spaanse peper (3%)",
+          "SESAMolie",
+          "citroensap van concentraat",
+          "koriander",
+          "knoflook",
+          "verdikkingsmiddel (E415)"
+        ],
+        "allergens": [
+          "Gluten",
+          "Soja",
+          "Sesam"
+        ]
+      },
+      {
+        "name": "Mihoen",
+        "resolvedName": "Mihoen",
+        "dbFound": true,
+        "ingredients": [
+          "Kool",
+          "water",
+          "durumgriesmeel (TARWE) (21%)",
+          "witte kool (6%)",
+          "prei (6%)",
+          "wortel (6%)",
+          "ui (6%)",
+          "Spaanse peper",
+          "sojasaus (3%) (water, zout, SOJAbonen, TARWE)",
+          "raapzaadolie",
+          "suiker",
+          "zout",
+          "gebrande suikerstroop",
+          "kruiden en specerijen",
+          "gistextract",
+          "SESAMolie",
+          "azijn",
+          "knoflook",
+          "rijstazijn",
+          "sherry",
+          "gekarameliseerde suiker",
+          "rode peper pasta (water, tapioca siroop, rijst, rode peper poeder, zout, alcohol, ui, knoflook)",
+          "sojasaus (18%) (water, zout, SOJAbonen, TARWE)",
+          "glucosestroop",
+          "knoflook (3%)",
+          "gemodificeerd maïszetmeel",
+          "citroensap"
+        ],
+        "allergens": [
+          "Gluten",
+          "Soja",
+          "Sesam"
+        ]
+      },
+      {
+        "name": "Rode peper gesneden",
+        "resolvedName": "Rode peper gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Rode peper"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Bosui gesneden",
+        "resolvedName": "Bosui gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Bosui"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Soja",
+      "Selderij",
+      "Sulfieten",
+      "Gluten",
+      "Sesam"
+    ]
+  },
+  {
+    "title": "33. Fish and chips",
+    "components": [
+      {
+        "name": "Kibbeling (DV)",
+        "resolvedName": "Kibbeling (DV)",
+        "dbFound": true,
+        "ingredients": [
+          "Kabeljauw (VIS) meel:TARWEbloem",
+          "aardappelzetmeel",
+          "zout",
+          "weipoeder (MELK)",
+          "rijsmiddel E500 mix (zout, smaakversterker E621, dextrose, TARWEzetmeel, specerijen(paprikapoeder, gember, koriander, kurkuma, witte peper, zwarte peper, komijn, chilipeper, fenegriek, nootmuskaat, piment, kruidnagel, kardemon, knoflookpoeder), SOJA-eiwithydrolysaat, aroma, gistextract, magere MELKpoeder)",
+          "plantaardige olie (SOJA, raapzaad, Palm) Antischuimmiddel E900"
+        ],
+        "allergens": [
+          "Gluten",
+          "Vis",
+          "Soja",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Remouladesaus",
+        "resolvedName": "Remouladesaus",
+        "dbFound": true,
+        "ingredients": [
+          "Mayonaise (Plantaardige olie (SOJA), EIGEEL, water, MOSTERD (water, MOSTERDZAAD, azijn, zout, specerijen), azijn, suiker, zout, conserveermiddel (kaliumsorbaat), aroma, verdikkingsmiddel (xanthaangom), antioxidanten (calciumdinatrium‐EDTA))",
+          "augurken (augurken, water, natuurazijn, suiker, zout, natuurlijk aroma, zoetstof: E954(iv), kleurstof: E101))",
+          "ui",
+          "peterselie"
+        ],
+        "allergens": [
+          "Ei",
+          "Soja",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Gebrande citroen",
+        "resolvedName": "Gebrande citroen",
+        "dbFound": true,
+        "ingredients": [
+          "Citroen",
+          "Fruit"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Peterselie",
+        "resolvedName": "Peterselie",
+        "dbFound": true,
+        "ingredients": [
+          "Peterselie"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Friet",
+        "resolvedName": "Friet",
+        "dbFound": true,
+        "ingredients": [
+          "Aardappelen (EU Origin)",
+          "zonnebloemolie",
+          "gemodificeerd aardappelzetmeel",
+          "rijstebloem",
+          "zout",
+          "dextrine",
+          "rijsmiddel (E450, E500)",
+          "maltodextrine",
+          "verdikkingsmiddel (E415)"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Vis",
+      "Soja",
+      "Melk",
+      "Lactose",
+      "Ei",
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "34. Rendang van shiitake",
+    "components": [
+      {
+        "name": "Atjar tjampoer",
+        "resolvedName": "Atjar tjampoer",
+        "dbFound": true,
+        "ingredients": [
+          "Witte kool",
+          "wortel",
+          "natuurazijn",
+          "suiker",
+          "zout",
+          "kurkuma",
+          "komkommer"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Rendang shiitake",
+        "resolvedName": "Rendang shiitake",
+        "dbFound": true,
+        "ingredients": [
+          "Pulled shiitake paddenstoel",
+          "SOJAsaus",
+          "kokosmelk (water, kokosextract)",
+          "boemboe (water, suiker, ui, zout, paprika, gemalen rode chilipepers, gember, knoflook, kurkuma, citroengras, koriander, komijn, knoflookpulp, water, laurierblaadjes, kaffir limoenblaadjes, citroengraspoeder, zout)"
+        ],
+        "allergens": [
+          "Soja"
+        ]
+      },
+      {
+        "name": "Kentang",
+        "resolvedName": "Kentang",
+        "dbFound": true,
+        "ingredients": [
+          "Aardappel",
+          "witte en bruine basterdsuiker suiker",
+          "karamel",
+          "invertsuikerstroop",
+          "ui",
+          "pinda's Pinda",
+          "tarwebloem Glutenbevattende granen",
+          "Tarwe",
+          "paprikapoeder",
+          "zout",
+          "kruiden",
+          "specerijen",
+          "zonnebloemolie",
+          "sojaolie Soja",
+          "palmolie",
+          "koolzaadolie"
+        ],
+        "allergens": [
+          "Gluten",
+          "Pinda",
+          "Soja"
+        ]
+      },
+      {
+        "name": "Witte rijst",
+        "resolvedName": "Witte rijst",
+        "dbFound": true,
+        "ingredients": [
+          "rijst"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Afgebakken cassave kroepoek",
+        "resolvedName": "Afgebakken cassave kroepoek",
+        "dbFound": true,
+        "ingredients": [
+          "Tapioca",
+          "Cassavemeel",
+          "Suiker",
+          "chilipeper",
+          "Prei",
+          "Witte peper",
+          "Zout",
+          "Galanga",
+          "Selderij"
+        ],
+        "allergens": [
+          "Selderij"
+        ]
+      },
+      {
+        "name": "Bosui gesneden",
+        "resolvedName": "Bosui gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Bosui"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Soja",
+      "Gluten",
+      "Pinda",
+      "Selderij"
+    ]
+  },
+  {
+    "title": "35. Wrap pollo",
+    "components": [
+      {
+        "name": "Jalapeño cheddar bitterbal",
+        "resolvedName": "Jalapeño cheddar bitterbal",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "TARWEbloem",
+          "TARWEmoutmeel",
+          "kaas (gepasteuriseerde MELK, aardappelzetmeel, zout, zuursel (bevat MELK), microbieel stremsel, conserveermiddel: natriumnitraat E251, kleurstof: carotenen, kleurstof: annatto norbixine)",
+          "paneermeel (TARWEbloem, zout gist, curcumapoeder, kleurstof: E100)",
+          "jalapeño (groene jalapeño pepers, water, alcoholazijn, zout, verstevigingsmiddel: E509)",
+          "plantaardige room (water: palmpitolie (volledig gehydrogeneerd) (25%): bevochtigingsmiddel: sorbitol: glucosesiroop: emulgatoren: polysorbaat 60, mono- en diglyceriden van vetzuren veresterd met mono en diacetylwijnsteenzuur: stabilisatoren: hydroxypropylmethylcellulose: zout: aroma)",
+          "plantaardige oliën en vetten ((palm, kokos, koolzaad), water, geconcentreerd citroensap)",
+          "battermix (gedroogde glucose siroop (TARWE), suiker, dextrose (TARWE), verdikkingsmiddel (E466), bloem (TARWE), zout, plantaardig eiwit (erwt))",
+          "groente bouillonpoeder",
+          "maïszetmeel",
+          "ui",
+          "zout",
+          "knoflook",
+          "verdikkingsmiddel: (E460)",
+          "kruiden en specerijen"
+        ],
+        "allergens": [
+          "Gluten",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "BBQ-saus",
+        "resolvedName": "BBQ-saus",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "ui (24%)",
+          "tomatenpuree (18%)",
+          "suiker (16%)",
+          "azijn",
+          "olijfolie",
+          "kruiden en specerijen",
+          "gemodificeerd maïszetmeel",
+          "zout"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Kruidensla",
+        "resolvedName": "Kruidensla",
+        "dbFound": true,
+        "ingredients": [
+          "rode biet",
+          "kool",
+          "bieslook",
+          "tuinkers",
+          "kervel"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Sladressing (vinaigrette)",
+        "resolvedName": "Sladressing (vinaigrette)",
+        "dbFound": true,
+        "ingredients": [
+          "raapzaadolie (53%)",
+          "water",
+          "azijn (11%)",
+          "mosterd (7%) (water, MOSTERDzaad, natuurazijn, zout, kurkuma, natuurlijk kruidenaroma)",
+          "honing",
+          "citroensap van concentraat (1%)",
+          "zout",
+          "knoflook",
+          "verdikkingsmiddel (E415)",
+          "kruiden en specerijen"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Gegrilde wrap pollo",
+        "resolvedName": "Gegrilde wrap pollo",
+        "dbFound": true,
+        "ingredients": [
+          "Tarwebloem",
+          "verrijkte tarwebloem (tarwebloem, calciumcarbonaat, ijzer, niacine, thiamine)",
+          "water",
+          "duurzame palmolie",
+          "raapzaadolie",
+          "suiker",
+          "rijsmiddelen: dinatriumdifosfaat, natriumbicarbonaat",
+          "appelzuur",
+          "zout",
+          "emulgator: mono- en diglyceriden van vetzuren",
+          "meelverbeteraar: L-cysteïne",
+          "kip (19%) [kippenborst, zout]",
+          "BBQ-saus (9%) [suiker, water, tomatenpuree, alcoholazijn, melasse (suikerrietmelasse, gedeeltelijk geïnverteerde suikersiroop), gemodificeerd zetmeel (maïs, tapioca), uienpoeder, zout, koriander, knoflookpoeder, chili, peper, rookaroma, conserveermiddel: kaliumsorbaat, specerijen]",
+          "marinarasaus (9%) [pruimtomaten (tomaten, tomatensap), tomatenpuree, ui, raapzaadolie, knoflookpuree, zeezout, olijfolie, zwarte peper, basilicum]",
+          "cheddar (6%) [melk]",
+          "mozzarella (8%) [melk]",
+          "gegrilde paprika (5%)",
+          "rode ui (3%)",
+          "bloem (verrijkte tarwebloem (tarwebloem, calciumcarbonaat, ijzer, niacine, thiamine))",
+          "zwarte peper"
+        ],
+        "allergens": [
+          "Gluten",
+          "Melk",
+          "Lactose"
+        ]
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Melk",
+      "Lactose",
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "36. Hotdog deluxe",
+    "components": [
+      {
+        "name": "Zuurkool",
+        "resolvedName": "Zuurkool",
+        "dbFound": true,
+        "ingredients": [
+          "witte kool",
+          "zout",
+          "voedingszuur (citroenzuur)",
+          "antioxidant (ascorbinezuur)"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Gefrituurde ui",
+        "resolvedName": "Gefrituurde ui",
+        "dbFound": true,
+        "ingredients": [
+          "uien",
+          "palmolie",
+          "tarwe",
+          "zout"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      },
+      {
+        "name": "Peterselie",
+        "resolvedName": "Peterselie",
+        "dbFound": true,
+        "ingredients": [
+          "Peterselie"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Zachte mosterd",
+        "resolvedName": "Zachte mosterd",
+        "dbFound": true,
+        "ingredients": [
+          "Water",
+          "natuurazijn",
+          "plantaardige olie (raapzaad)",
+          "specerijen (8% MOSTERDZAAD poeder, kurkuma poeder)",
+          "suiker",
+          "vloeibare suiker",
+          "zout",
+          "verdikkingsmiddel: E415",
+          "natuurlijk aroma",
+          "carthamus concentraat",
+          "conserveermiddel: E202",
+          "kurkuma-extract"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Ingesneden hotdogbroodje",
+        "resolvedName": "Ingesneden hotdogbroodje",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEBLOEM",
+          "water",
+          "gist",
+          "suiker",
+          "boter (MELK)",
+          "raapzaadolie",
+          "gejodeerd zout (zout, kaliumjodaat)",
+          "magere MELKPOEDER",
+          "plantaardig eiwit (erwt)",
+          "emulgator (natriumstearoyl-2-lactylaat)",
+          "bonenmeel",
+          "vezels (TARWE)",
+          "antioxidant (ascorbinezuur)",
+          "dextrose",
+          "maïszetmeel",
+          "LACTOSE",
+          "aroma"
+        ],
+        "allergens": [
+          "Gluten",
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Ingesneden Jalapeño cheddar worst",
+        "resolvedName": "Ingesneden Jalapeño cheddar worst",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "TARWEbloem",
+          "TARWEmoutmeel",
+          "kaas (gepasteuriseerde MELK, aardappelzetmeel, zout, zuursel (bevat MELK), microbieel stremsel, conserveermiddel: natriumnitraat E251, kleurstof: carotenen, kleurstof: annatto norbixine)",
+          "paneermeel (TARWEbloem, zout gist, curcumapoeder, kleurstof: E100)",
+          "jalapeño (groene jalapeño pepers, water, alcoholazijn, zout, verstevigingsmiddel: E509)",
+          "plantaardige room (water: palmpitolie (volledig gehydrogeneerd) (25%): bevochtigingsmiddel: sorbitol: glucosesiroop: emulgatoren: polysorbaat 60, mono- en diglyceriden van vetzuren veresterd met mono en diacetylwijnsteenzuur: stabilisatoren: hydroxypropylmethylcellulose: zout: aroma)",
+          "plantaardige oliën en vetten ((palm, kokos, koolzaad), water, geconcentreerd citroensap)",
+          "battermix (gedroogde glucose siroop (TARWE), suiker, dextrose (TARWE), verdikkingsmiddel (E466), bloem (TARWE), zout, plantaardig eiwit (erwt))",
+          "groente bouillonpoeder",
+          "maïszetmeel",
+          "ui",
+          "zout",
+          "knoflook",
+          "verdikkingsmiddel: (E460)",
+          "kruiden en specerijen",
+          "Halal",
+          "kippenvlees"
+        ],
+        "allergens": [
+          "Gluten",
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Mosterd",
+      "Ei",
+      "Melk",
+      "Lactose"
+    ]
+  },
+  {
+    "title": "37. Wellington",
+    "components": [
+      {
+        "name": "Afgebakken vega wellington",
+        "resolvedName": "Afgebakken vega wellington",
+        "dbFound": true,
+        "ingredients": [
+          "Knoflook",
+          "ui",
+          "champignons",
+          "champignon",
+          "tarwe",
+          "gluten",
+          "lactose",
+          "room",
+          "ei",
+          "paddenstoelen",
+          "tijm",
+          "rozemarijn"
+        ],
+        "allergens": [
+          "Gluten",
+          "Lactose",
+          "Melk",
+          "Ei"
+        ]
+      },
+      {
+        "name": "Aardappel puree",
+        "resolvedName": "Aardappel puree",
+        "dbFound": true,
+        "ingredients": [
+          "Aardappelen (62%)",
+          "water",
+          "volle melk (6%)",
+          "maïszetmeel",
+          "raapzaadolie",
+          "zout",
+          "melkeiwitten",
+          "natuurlijk aroma (melk)",
+          "nootmuskaat",
+          "specerij",
+          "peperextract"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Gemarineerde bundelzwammen",
+        "resolvedName": "Bundelzwammen",
+        "dbFound": true,
+        "ingredients": [
+          "Bundelzwammen",
+          "Paddestoelen",
+          "Champignons",
+          "knoflook",
+          "peterselie",
+          "Raapzaadolie",
+          "witte wijnazijn",
+          "water",
+          "suiker",
+          "honing",
+          "extra olijfolie verkregen bij de eerste persing",
+          "geconcentreerd citroensap 2",
+          "geconcentreerd mandarijnsap 1",
+          "citroenschil 1",
+          "natuurlijke aroma's",
+          "verdikkingsmiddel (carrageen, xanthaangom)",
+          "jalapeno"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Parmezaanschuim",
+        "resolvedName": "Parmezaanschuim",
+        "dbFound": true,
+        "ingredients": [
+          "kaas (waarvan 80% Parmigiano Reggiano D.O.P.)",
+          "water",
+          "boter",
+          "smeltzouten (E452, E339)",
+          "zout",
+          "Room (melk)",
+          "verdikkingsmiddel: gemodificeerd maïszetmeel",
+          "emulgator: E471",
+          "stabilisatoren: E407 en E466",
+          "Lactose",
+          "Melk",
+          "EIwit",
+          "maltodextrine",
+          "glucosepoeder",
+          "palmvet",
+          "E472b",
+          "E472e",
+          "MELKeiwitten",
+          "verdikkingsmiddel: E410",
+          "E412",
+          "E415",
+          "E407",
+          "stabilisator: E340ii"
+        ],
+        "allergens": [
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Peterselie",
+        "resolvedName": "Peterselie",
+        "dbFound": true,
+        "ingredients": [
+          "Peterselie"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Ei",
+      "Gluten",
+      "Melk",
+      "Lactose"
+    ]
+  },
+  {
+    "title": "38. Rib bites",
+    "components": [
+      {
+        "name": "Ribfingers",
+        "resolvedName": "Ribfingers",
+        "dbFound": true,
+        "ingredients": [
+          "varkensvlees",
+          "water",
+          "suiker",
+          "melasse",
+          "zout",
+          "aardappelzetmeel",
+          "zeezout",
+          "erwtenmeel",
+          "azijn",
+          "SOJABONEN",
+          "maltodextrine",
+          "gemberpuree",
+          "chilipeper",
+          "TARWE",
+          "gemodificeerd maiszetmeel",
+          "knoflookpuree",
+          "gebrande suiker",
+          "citrusvezel",
+          "glucosestroop",
+          "natuurlijk aroma",
+          "melado",
+          "conserveermiddel: E202",
+          "sojasaus (18%) (water, zout, SOJAbonen, TARWE)",
+          "gebrande suikerstroop",
+          "knoflook (3%)",
+          "gemodificeerd maïszetmeel",
+          "citroensap",
+          "gekarameliseerde suiker",
+          "Limoen",
+          "suikerstroop"
+        ],
+        "allergens": [
+          "Gluten",
+          "Soja"
+        ]
+      },
+      {
+        "name": "Bao bun.",
+        "resolvedName": "Bao bun.",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEbloem 55%",
+          "water",
+          "rietsuiker",
+          "plantaardige vetstof (gehydrogeneerde palmstearine)",
+          "gist"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      },
+      {
+        "name": "Kimchi",
+        "resolvedName": "Kimchi",
+        "dbFound": true,
+        "ingredients": [
+          "Chinese kool",
+          "wortel",
+          "rettich",
+          "kruidenpasta (water, zout, gochugaru, gember, VISSAUS, knoflook, suiker)"
+        ],
+        "allergens": [
+          "Vis"
+        ]
+      },
+      {
+        "name": "Sriracha mayonaise",
+        "resolvedName": "Sriracha mayonaise",
+        "dbFound": true,
+        "ingredients": [
+          "mayonaise (46%) (raapzaadolie, scharrel EIgeel, water, suiker, azijn, MOSTERD, zout, conserveermiddel (E202), voedingszuur (E330), verdikkingsmiddel (E415), kleurstof (E160a), antioxidant(E385))",
+          "chilipeper (9%)",
+          "raapzaadolie",
+          "suiker",
+          "gemodificeerd maïszetmeel",
+          "zout",
+          "knoflook",
+          "voedingszuur (E260, E330)",
+          "verdikkingsmiddel (E415)",
+          "conserveermiddel (E202)"
+        ],
+        "allergens": [
+          "Ei",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Gefrituurde ui",
+        "resolvedName": "Gefrituurde ui",
+        "dbFound": true,
+        "ingredients": [
+          "uien",
+          "palmolie",
+          "tarwe",
+          "zout"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      },
+      {
+        "name": "Bosui gesneden",
+        "resolvedName": "Bosui gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Bosui"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Soja",
+      "Vis",
+      "Ei",
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "39. Crunchy gamba rings",
+    "components": [
+      {
+        "name": "Gamba ringen",
+        "resolvedName": "Gamba ringen",
+        "dbFound": true,
+        "ingredients": [
+          "Garnalen (Litopenaeus vannamei) 43%",
+          "water 14%",
+          "sulfiet",
+          "broodkruimels (wit) 13% (tarwemeel 12,26%, bakvet (palmolie non-TBHQ), suiker, gist (Saccharomyces cerevisiae), geraffineerd zout, broodverbeteraar (maïszetmeel, INS170i, E516, E300, INS11001))",
+          "broodkruimels (oranje) 13% (tarwemeel 12,27%, bakvet (palmolie non-TBHQ), gist (Saccharomyces cerevisiae), suiker, geraffineerd zout, voedingskleurstof (INS160bii, ethanol, E415, water), broodverbeteraar (maïszetmeel, INS170i, E516, E300, INS11001))",
+          "bakvet 7% (gemodificeerd tapiocazetmeel INS1414, gehakte wortel, geraffineerd zout, suiker, gist, uienpoeder, knoflookpoeder, peperpoeder, azijnpoeder, zeevruchtensmaakstof (maltodextrine, zout, natuuridentieke smaakstof – inktvis, garnaal, krab, zeeoor – E551), predust 6% (INS1420, zout, plantaardige vet), beslag 4% (tarwemeel, maïsmeel, geraffineerd zout, suiker, E412)"
+        ],
+        "allergens": [
+          "Gluten",
+          "Schaaldieren",
+          "Sulfieten",
+          "Weekdieren"
+        ]
+      },
+      {
+        "name": "BBQ-saus",
+        "resolvedName": "BBQ-saus",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "ui (24%)",
+          "tomatenpuree (18%)",
+          "suiker (16%)",
+          "azijn",
+          "olijfolie",
+          "kruiden en specerijen",
+          "gemodificeerd maïszetmeel",
+          "zout"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Zusje knoflookmayonaise",
+        "resolvedName": "Zusje knoflookmayonaise",
+        "dbFound": true,
+        "ingredients": [
+          "mayonaise (64%) (raapzaadolie, scharrel EIgeel, water, suiker, azijn, MOSTERD, zout, conserveermiddel (E202), voedingszuur (E330), verdikkingsmiddel (E415), kleurstof (E160a), antioxidant (E385))",
+          "water",
+          "YOGHURT",
+          "citroensap",
+          "knoflook (3%)",
+          "gemodificeerd maïszetmeel",
+          "zout"
+        ],
+        "allergens": [
+          "Ei",
+          "Melk",
+          "Lactose",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Gefrituurde ui",
+        "resolvedName": "Gefrituurde ui",
+        "dbFound": true,
+        "ingredients": [
+          "uien",
+          "palmolie",
+          "tarwe",
+          "zout"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      },
+      {
+        "name": "Bosui gesneden",
+        "resolvedName": "Bosui gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Bosui"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Schaaldieren",
+      "Sulfieten",
+      "Weekdieren",
+      "Ei",
+      "Melk",
+      "Lactose",
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "41. Pastrami New York Style",
+    "components": [
+      {
+        "name": "Runderpastrami New York Style",
+        "resolvedName": "Runderpastrami New York Style",
+        "dbFound": true,
+        "ingredients": [
+          "Halal rundvlees",
+          "zwarte peper",
+          "dextrose",
+          "zout",
+          "aardappelzetmeel",
+          "stabilisatoren (E450, E451)",
+          "antioxidant (E301)",
+          "conserveermiddel (E250)"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Cheddarsaus",
+        "resolvedName": "Cheddarsaus",
+        "dbFound": true,
+        "ingredients": [
+          "Water",
+          "WEI (MELK)",
+          "gemodificeerd zetmeel",
+          "palmolie",
+          "cheddarKAAS (MELK) (2,2%)",
+          "maltodextrine",
+          "zout",
+          "zuurteregelaar (E331(iii))",
+          "magere MELK",
+          "complexvormer (E339(ii))",
+          "smeltzouten (E481, E450(i), E452(i))",
+          "emulgatoren (E415, E471)",
+          "aroma (bevat MELK en SOJA)",
+          "zuren (E338, E270)",
+          "room (MELK)",
+          "watervrij MELKVET",
+          "kleurstoffen (E160c, E160a(i), E160b(i))",
+          "zuursel",
+          "Lactose",
+          "druiven",
+          "sulfieten",
+          "knoflook"
+        ],
+        "allergens": [
+          "Soja",
+          "Melk",
+          "Lactose",
+          "Sulfieten"
+        ]
+      },
+      {
+        "name": "Augurken relish",
+        "resolvedName": "Augurken relish",
+        "dbFound": true,
+        "ingredients": [
+          "Water",
+          "augurk",
+          "suiker",
+          "natuurazijn",
+          "zout",
+          "knoflookpoeder",
+          "specerijen (kurkuma poeder)",
+          "invertsuikerstroop",
+          "verdikkingsmiddelen (E412, E415)",
+          "conserveermiddel: E202",
+          "spirulina-extract",
+          "saffloerextract",
+          "rode paprika gedroogd",
+          "maltodextrine",
+          "zoetstof: E954",
+          "zuurteregelaar: E331"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Zoetzure rode kool",
+        "resolvedName": "Zoetzure rode kool",
+        "dbFound": true,
+        "ingredients": [
+          "rode kool (98%)",
+          "water",
+          "suiker",
+          "azijn",
+          "witte wijn",
+          "zout",
+          "kruiden en specerijen"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Gegrild brioche bolletje",
+        "resolvedName": "Gegrild brioche bolletje",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEBLOEM",
+          "water",
+          "gist",
+          "raapzaadolie",
+          "suiker",
+          "weipoeder (MELK)",
+          "gejodeerd zout (zout, kaliumjodaat)",
+          "magere MELKPOEDER",
+          "gekristalli seerde invertsuikerstroop",
+          "gluten (TARWE)",
+          "emulgator (calciumstearoyl-2-lactylaat)",
+          "verdikkingsmiddel (guarpitmeel)",
+          "LACTOSE",
+          "MELKEI WIT",
+          "plantaardig eiwit (erwt)",
+          "antioxidant (ascorbinezuur)",
+          "dextrose",
+          "kleurstof (carotenen)",
+          "aroma (bevat: MELK)",
+          "maïszetmeel"
+        ],
+        "allergens": [
+          "Gluten",
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      }
+    ],
+    "allergens": [
+      "Ei",
+      "Gluten",
+      "Melk",
+      "Lactose",
+      "Soja",
+      "Sulfieten"
+    ]
+  },
+  {
+    "title": "42. Gepocheerd eitje",
+    "components": [
+      {
+        "name": "Knoflook orzo",
+        "resolvedName": "Knoflook orzo",
+        "dbFound": true,
+        "ingredients": [
+          "water (58,8%)",
+          "tarwegriesmeel (41,2%)",
+          "Water",
+          "uien",
+          "knoflook",
+          "plantaardige oliën (zonnebloem)",
+          "wijn (zwaveldioxide en sulfiet)",
+          "zout",
+          "plantaardige oliën (raap)",
+          "linzeneiwit",
+          "plantaardige vetten (kokos)",
+          "peterselie",
+          "gemodificeerd maïszetmeel",
+          "natuurlijke aroma",
+          "plantaardige oliën (zonnebloemolie, palmolie, geheel geharde raapolie, raapolie)",
+          "ui",
+          "plantaardige vetten (koolzaad)",
+          "suiker",
+          "aardappelzetmeel gemodificeerd",
+          "bieslook",
+          "dille",
+          "dragon",
+          "rozemarijn",
+          "plantaardige vetten (gedeeltelijk gehard) (palm)",
+          "peper",
+          "verdikkingsmiddelen: E412 (guarpitmeel)",
+          "kurkuma extract",
+          "witte peper",
+          "emulgatoren: E322 (lecithinen) (soja)"
+        ],
+        "allergens": [
+          "Gluten",
+          "Soja",
+          "Sulfieten"
+        ]
+      },
+      {
+        "name": "Gepocheerd ei",
+        "resolvedName": "Gepocheerd ei",
+        "dbFound": true,
+        "ingredients": [
+          "Scharrelei",
+          "coatingmiddelen: triglyceriden en zonnebloemlecithine"
+        ],
+        "allergens": [
+          "Ei"
+        ]
+      },
+      {
+        "name": "Peterselie",
+        "resolvedName": "Peterselie",
+        "dbFound": true,
+        "ingredients": [
+          "Peterselie"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Hollandaisesaus",
+        "resolvedName": "Hollandaisesaus",
+        "dbFound": true,
+        "ingredients": [
+          "Plantaardige oliën (palm, raapzaad)",
+          "water",
+          "EIGEEL 5%",
+          "magere MELKPOEDER",
+          "zout",
+          "suiker",
+          "zuurteregelaar (melkzuur)",
+          "verdikkingsmiddelen (xanthaangom, guargom, johannesbroodpitmeel)",
+          "aroma's (bevat SELDERIJ, MELK)"
+        ],
+        "allergens": [
+          "Ei",
+          "Melk",
+          "Lactose",
+          "Selderij"
+        ]
+      },
+      {
+        "name": "Parmezaanse kaas gecutterd",
+        "resolvedName": "Parmezaanse kaas gecutterd",
+        "dbFound": true,
+        "ingredients": [
+          "Gepasteuriseerde MELK",
+          "zetmeel",
+          "zout",
+          "zuursel",
+          "microbieel stremsel"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      }
+    ],
+    "allergens": [
+      "Selderij",
+      "Ei",
+      "Gluten",
+      "Melk",
+      "Lactose",
+      "Soja",
+      "Sulfieten"
+    ]
+  },
+  {
+    "title": "43. Butter chicken",
+    "components": [
+      {
+        "name": "Butter chicken",
+        "resolvedName": "Butter chicken (nieuw)",
+        "dbFound": true,
+        "ingredients": [
+          "tomaat (30%)",
+          "water",
+          "ROOM (17%)",
+          "ROOMboter (8%)",
+          "zure ROOM (6%)",
+          "gemodificeerd maïszetmeel",
+          "knoflook (3%)",
+          "gember (2%)",
+          "raapzaadolie",
+          "zout",
+          "tomatenpuree",
+          "suiker",
+          "kruiden en specerijen (SELDERIJ)",
+          "natuurlijk aroma",
+          "gistextract",
+          "Kippenvlees",
+          "Rijstzetmeel",
+          "dextrose",
+          "Antioxidant: E331",
+          "Xylose",
+          "zuurteregelaar: E500",
+          "Halal"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose",
+          "Selderij"
+        ]
+      },
+      {
+        "name": "Pittige crumble",
+        "resolvedName": "Pittige crumble",
+        "dbFound": true,
+        "ingredients": [
+          "Sesam",
+          "uien",
+          "palmolie",
+          "tarwe",
+          "zout",
+          "water",
+          "Mirin",
+          "Wasabipoeder",
+          "Suiker",
+          "Kleurstof E102",
+          "Kleurstof E133",
+          "rijst"
+        ],
+        "allergens": [
+          "Gluten",
+          "Sesam"
+        ]
+      },
+      {
+        "name": "Mini naanta",
+        "resolvedName": "Mini naanta",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEbloem",
+          "water",
+          "suiker",
+          "gist",
+          "zout",
+          "enzyme (TARWE)"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      },
+      {
+        "name": "Bosui gesneden",
+        "resolvedName": "Bosui gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Bosui"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Melk",
+      "Lactose",
+      "Selderij",
+      "Gluten",
+      "Sesam"
+    ]
+  },
+  {
+    "title": "44. Gyoza",
+    "components": [
+      {
+        "name": "Gyoza vega",
+        "resolvedName": "Gyoza vega",
+        "dbFound": true,
+        "ingredients": [
+          "Groente 40% (kool, ui, wortel, bieslook, knoflook)",
+          "TARWEbloem",
+          "water",
+          "tofu (SOJAbonen, water)",
+          "sojasaus (water, zout, SOJAbonen, TARWEbloem, suiker, maltodextrine)",
+          "zoete aardappelnoedels (zoete aardappelzetmeel, water)",
+          "getextureerd SOJA-eiwit",
+          "kruidenmix (suiker, zout, maltodextrine, dextrose, gistextract, natuurlijke smaakstof, knoflook, ui, rode paprika, glucose stroop, peterselie, chili, zwarte peper, witte peper, lavas, laurierblad)",
+          "SESAMolie",
+          "zout",
+          "plantaardige vezels (bamboe, psyllium, aardappel)",
+          "koolzaadolie",
+          "suiker",
+          "gember",
+          "spinaziepoeder",
+          "gedroogde peterselie"
+        ],
+        "allergens": [
+          "Gluten",
+          "Ei",
+          "Soja",
+          "Sesam"
+        ]
+      },
+      {
+        "name": "Gefrituurde ui",
+        "resolvedName": "Gefrituurde ui",
+        "dbFound": true,
+        "ingredients": [
+          "uien",
+          "palmolie",
+          "tarwe",
+          "zout"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      },
+      {
+        "name": "Zoetzure witte koolsalade",
+        "resolvedName": "Zoetzure witte koolsalade",
+        "dbFound": true,
+        "ingredients": [
+          "witte kool (68%)",
+          "bundelzwam (17%)",
+          "ui (12%)",
+          "water",
+          "raapzaadolie",
+          "zonnebloemolie",
+          "suiker (0,1%)",
+          "azijn (0,1%)",
+          "zout",
+          "kruiden en specerijen"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Hoisin saus.",
+        "resolvedName": "Hoisin saus.",
+        "dbFound": true,
+        "ingredients": [
+          "Suiker",
+          "water",
+          "gefermenteerde sojapasta (water, zout, SOJA, TARWEbloem)",
+          "zout",
+          "zoeteaardappelpoeder",
+          "kleurstof (karamel)",
+          "gemodificeerd maïszetmeel",
+          "gedehydrateerde knoflook",
+          "SESAMZAADpasta",
+          "specerijen",
+          "gezouten chilipepers (chilipepers, zout)",
+          "voedingszuur (azijnzuur)"
+        ],
+        "allergens": [
+          "Gluten",
+          "Soja",
+          "Sesam"
+        ]
+      },
+      {
+        "name": "Bosui gesneden",
+        "resolvedName": "Bosui gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Bosui"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Ei",
+      "Soja",
+      "Sesam"
+    ]
+  },
+  {
+    "title": "45. Kleintje classic USA",
+    "components": [
+      {
+        "name": "Cheddar kaas",
+        "resolvedName": "Cheddar kaas",
+        "dbFound": true,
+        "ingredients": [
+          "Cheddarkaas 60% (gepasteuriseerde MELK, zout, startcultuur, microbieel stremsel)",
+          "water",
+          "kaas (gepasteuriseerde MELK, zout, startcultuur, microbieel stremsel)",
+          "boter",
+          "magere MELKpoeder",
+          "smeltzout: E331",
+          "zout",
+          "MELKeiwit",
+          "weipoeder (MELK)",
+          "zuurteregelaar: E330",
+          "conserveermiddel: E200",
+          "kleurstoffen: E160a en E160c",
+          "antiklontermiddel: zonnebloemlecithinen"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "BBQ-saus",
+        "resolvedName": "BBQ-saus",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "ui (24%)",
+          "tomatenpuree (18%)",
+          "suiker (16%)",
+          "azijn",
+          "olijfolie",
+          "kruiden en specerijen",
+          "gemodificeerd maïszetmeel",
+          "zout"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Uienchutney",
+        "resolvedName": "Uienchutney",
+        "dbFound": true,
+        "ingredients": [
+          "ui (82%)",
+          "gebrande suikerstroop",
+          "water",
+          "suiker",
+          "raapzaadolie",
+          "gemodificeerd maïszetmeel",
+          "witte wijn azijn"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Runderhamburgertje",
+        "resolvedName": "Runderhamburgertje",
+        "dbFound": true,
+        "ingredients": [
+          "Rundvlees"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Naturel chips",
+        "resolvedName": "Naturel chips",
+        "dbFound": true,
+        "ingredients": [
+          "Aardappelen",
+          "plantaardige oliën (zonnebloem, koolzaad, in wisselende hoeveelheden)",
+          "zout",
+          "antioxidanten (extracten van rozemarijn, ascorbinezuur, tocoferolrijk extract, citroenzuur)"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Gegrild brioche bolletje",
+        "resolvedName": "Gegrild brioche bolletje",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEBLOEM",
+          "water",
+          "gist",
+          "raapzaadolie",
+          "suiker",
+          "weipoeder (MELK)",
+          "gejodeerd zout (zout, kaliumjodaat)",
+          "magere MELKPOEDER",
+          "gekristalli seerde invertsuikerstroop",
+          "gluten (TARWE)",
+          "emulgator (calciumstearoyl-2-lactylaat)",
+          "verdikkingsmiddel (guarpitmeel)",
+          "LACTOSE",
+          "MELKEI WIT",
+          "plantaardig eiwit (erwt)",
+          "antioxidant (ascorbinezuur)",
+          "dextrose",
+          "kleurstof (carotenen)",
+          "aroma (bevat: MELK)",
+          "maïszetmeel"
+        ],
+        "allergens": [
+          "Gluten",
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      }
+    ],
+    "allergens": [
+      "Melk",
+      "Lactose",
+      "Gluten",
+      "Ei"
+    ]
+  },
+  {
+    "title": "46. Gegrilde zalm",
+    "components": [
+      {
+        "name": "Verse zalm",
+        "resolvedName": "Verse zalm",
+        "dbFound": true,
+        "ingredients": [
+          "Zalm",
+          "vis"
+        ],
+        "allergens": [
+          "Vis"
+        ]
+      },
+      {
+        "name": "Antiboise",
+        "resolvedName": "Antiboise",
+        "dbFound": true,
+        "ingredients": [
+          "Tomaat (52%)",
+          "water",
+          "ui (5%)",
+          "olijfolie",
+          "olijven (5%)",
+          "rode wijnazijn",
+          "kappertjes (1%)",
+          "citroensap",
+          "druivenmost",
+          "zout",
+          "knoflook",
+          "natuurlijk aroma",
+          "kruiden en specerijen",
+          "gistextract",
+          "verdikkingsmiddel (E415)",
+          "azijn"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Puree met doperwten",
+        "resolvedName": "Puree met doperwten",
+        "dbFound": true,
+        "ingredients": [
+          "Aardappelen (62%)",
+          "water",
+          "volle melk (6%)",
+          "maïszetmeel",
+          "raapzaadolie",
+          "zout",
+          "melkeiwitten",
+          "natuurlijk aroma (melk)",
+          "nootmuskaat",
+          "specerij",
+          "peperextract",
+          "doperwt",
+          "linzeneiwit",
+          "kruiden (peterselie, bieslook)",
+          "specerijen (kurkuma, wortelpeterselie, nootmuskaat)",
+          "maltodextrine",
+          "aroma's",
+          "zetmeel",
+          "palmvet",
+          "suiker",
+          "plantaardige vetten (kokos)",
+          "smaakversterker: E627",
+          "gemodificeerd aardappelzetmeel",
+          "plantaardige vetten (koolzaad)",
+          "smaakversterker: E621",
+          "smaakversterker: E631"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Bosui gesneden",
+        "resolvedName": "Bosui gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Bosui"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Vis",
+      "Melk",
+      "Lactose"
+    ]
+  },
+  {
+    "title": "47. Loaded nacho's",
+    "components": [
+      {
+        "name": "Tortillachips",
+        "resolvedName": "Tortillachips",
+        "dbFound": true,
+        "ingredients": [
+          "maïs",
+          "zonnebloemolie",
+          "zout"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Pulled paddo's",
+        "resolvedName": "Pulled paddo's",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "shiitake paddenstoel",
+          "plantaardige olie",
+          "USA kruidenmix (zout, groenten (tomaat, knoflook, ui), suiker, aroma (soja), kruiden (oregano, basilicum), smaakversterker: mononatriumglutamaat, specerijen (paprika, peper, chili, selderijzaad))",
+          "gerookte paprika",
+          "zout"
+        ],
+        "allergens": [
+          "Soja",
+          "Selderij"
+        ]
+      },
+      {
+        "name": "BBQ-saus",
+        "resolvedName": "BBQ-saus",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "ui (24%)",
+          "tomatenpuree (18%)",
+          "suiker (16%)",
+          "azijn",
+          "olijfolie",
+          "kruiden en specerijen",
+          "gemodificeerd maïszetmeel",
+          "zout"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Zoetzure rode ui",
+        "resolvedName": "Zoetzure rode ui",
+        "dbFound": true,
+        "ingredients": [
+          "ui (99%)",
+          "water",
+          "azijn (0,1%)",
+          "suiker (0,02%)",
+          "zout",
+          "kruiden en specerijen",
+          "komkommer"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Cheddarsaus",
+        "resolvedName": "Cheddarsaus",
+        "dbFound": true,
+        "ingredients": [
+          "Water",
+          "WEI (MELK)",
+          "gemodificeerd zetmeel",
+          "palmolie",
+          "cheddarKAAS (MELK) (2,2%)",
+          "maltodextrine",
+          "zout",
+          "zuurteregelaar (E331(iii))",
+          "magere MELK",
+          "complexvormer (E339(ii))",
+          "smeltzouten (E481, E450(i), E452(i))",
+          "emulgatoren (E415, E471)",
+          "aroma (bevat MELK en SOJA)",
+          "zuren (E338, E270)",
+          "room (MELK)",
+          "watervrij MELKVET",
+          "kleurstoffen (E160c, E160a(i), E160b(i))",
+          "zuursel",
+          "Lactose",
+          "druiven",
+          "sulfieten",
+          "knoflook"
+        ],
+        "allergens": [
+          "Soja",
+          "Melk",
+          "Lactose",
+          "Sulfieten"
+        ]
+      },
+      {
+        "name": "Bosui gesneden",
+        "resolvedName": "Bosui gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Bosui"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Soja",
+      "Selderij",
+      "Melk",
+      "Lactose",
+      "Sulfieten"
+    ]
+  },
+  {
+    "title": "48. Sticky pork belly",
+    "components": [
+      {
+        "name": "Kimchi",
+        "resolvedName": "Kimchi",
+        "dbFound": true,
+        "ingredients": [
+          "Chinese kool",
+          "wortel",
+          "rettich",
+          "kruidenpasta (water, zout, gochugaru, gember, VISSAUS, knoflook, suiker)"
+        ],
+        "allergens": [
+          "Vis"
+        ]
+      },
+      {
+        "name": "Pittige crumble",
+        "resolvedName": "Pittige crumble",
+        "dbFound": true,
+        "ingredients": [
+          "Sesam",
+          "uien",
+          "palmolie",
+          "tarwe",
+          "zout",
+          "water",
+          "Mirin",
+          "Wasabipoeder",
+          "Suiker",
+          "Kleurstof E102",
+          "Kleurstof E133",
+          "rijst"
+        ],
+        "allergens": [
+          "Gluten",
+          "Sesam"
+        ]
+      },
+      {
+        "name": "Sticky pork belly dressing",
+        "resolvedName": "Sticky pork belly dressing",
+        "dbFound": true,
+        "ingredients": [
+          "Suiker",
+          "water",
+          "glucosestroop",
+          "natuurlijk aroma",
+          "melado",
+          "conserveermiddel: E202",
+          "sojasaus (18%) (water, zout, SOJAbonen, TARWE)",
+          "gebrande suikerstroop",
+          "knoflook (3%)",
+          "gemodificeerd maïszetmeel",
+          "citroensap",
+          "gekarameliseerde suiker",
+          "Limoen",
+          "suikerstroop",
+          "aardappelzetmeel"
+        ],
+        "allergens": [
+          "Gluten",
+          "Soja"
+        ]
+      },
+      {
+        "name": "Gesneden Oosterse buikspek",
+        "resolvedName": "Gesneden Oosterse buikspek",
+        "dbFound": true,
+        "ingredients": [
+          "Varkensvlees – Mosterd - Soja - Knoflook"
+        ],
+        "allergens": [
+          "Soja",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Rode peper gesneden",
+        "resolvedName": "Rode peper gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Rode peper"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Bosui gesneden",
+        "resolvedName": "Bosui gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Bosui"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Vis",
+      "Gluten",
+      "Sesam",
+      "Soja",
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "49. Bastogneparfait",
+    "components": [
+      {
+        "name": "Toffee caramel topping sauce",
+        "resolvedName": "Toffee caramel topping sauce",
+        "dbFound": true,
+        "ingredients": [
+          "Glucose-fructosestroop",
+          "gezoete gecondenseerde MELK (koeMELK , sacharose)",
+          "sacharose",
+          "water",
+          "voedingszuur E331",
+          "verdikkingsmiddel E407",
+          "zout",
+          "conserveermiddel E202"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Slagroom",
+        "resolvedName": "Slagroom",
+        "dbFound": true,
+        "ingredients": [
+          "ROOM",
+          "vloeibare suiker (suiker 10%)",
+          "drijfgassen: N₂O",
+          "N₂",
+          "emulgator: E471",
+          "stabilisator: carrageen"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Bastogne crumble",
+        "resolvedName": "Bastogne crumble",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEBLOEM 45 %",
+          "suiker",
+          "palmolie",
+          "kandijpoeder 9",
+          "fructose-glucosestroop",
+          "EIEREN",
+          "kandijstroop",
+          "rijsmiddel (natriumcarbonaten)",
+          "kleurstof (karamel)",
+          "glucosestroop",
+          "kaneel 0",
+          "zout",
+          "aroma"
+        ],
+        "allergens": [
+          "Gluten"
+        ]
+      },
+      {
+        "name": "Gesneden Bastogne parfait",
+        "resolvedName": "Gesneden Bastogne parfait",
+        "dbFound": true,
+        "ingredients": [
+          "ROOM",
+          "magere MELK",
+          "suiker",
+          "palmpitolie",
+          "dextrose",
+          "magere MELKpoeder",
+          "EIGEEL",
+          "emulgatoren: E435",
+          "E471",
+          "stabilisator: carrageen",
+          "vanillearoma",
+          "kleurstof: betacaroteen",
+          "TARWEBLOEM 45 %",
+          "palmolie",
+          "kandijpoeder 9",
+          "fructose-glucosestroop",
+          "EIEREN",
+          "kandijstroop",
+          "rijsmiddel (natriumcarbonaten)",
+          "kleurstof (karamel)",
+          "glucosestroop",
+          "kaneel 0",
+          "zout",
+          "aroma"
+        ],
+        "allergens": [
+          "Gluten",
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      }
+    ],
+    "allergens": [
+      "Melk",
+      "Lactose",
+      "Gluten",
+      "Ei"
+    ]
+  },
+  {
+    "title": "50. Citroensorbetje",
+    "components": [
+      {
+        "name": "Citroensorbetijs",
+        "resolvedName": "Citroensorbetijs",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "citroenpuree",
+          "suiker",
+          "glucosestroop",
+          "dextrose",
+          "invertsuikersiroop",
+          "(<1%)geconcentreerd citroensap",
+          "voedingszuur (citroenzuur)",
+          "maiszetmeel",
+          "natuurlijk aroma",
+          "wortel concentraat",
+          "emulgator (mono- en diglyceriden van vetzuren)",
+          "verdikkingsmiddelen (natriumalginaat, pectinen, xanthaangom)",
+          "stabilisatoren (guarpitmeel, johannesbroodpitmeel)"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Citroenschijfje",
+        "resolvedName": "Citroenschijfje",
+        "dbFound": true,
+        "ingredients": [
+          "Citroen",
+          "Fruit"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Rood fruit crumble",
+        "resolvedName": "Rood fruit crumble",
+        "dbFound": true,
+        "ingredients": [
+          "koek [TARWEbloem, suiker, zonnebloemolie, glucosestroop, zout, rijsmiddel: E500, E503]",
+          "rode bes 4%",
+          "framboos 4%",
+          "suiker",
+          "MELK proteïne",
+          "kokosvet",
+          "glucose",
+          "MELKpoeder",
+          "voedingszuur: E330",
+          "aroma: “yoghurt” 0"
+        ],
+        "allergens": [
+          "Gluten",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Citroenschuim (NEW)",
+        "resolvedName": "Citroenschuim",
+        "dbFound": true,
+        "ingredients": [
+          "Suiker",
+          "water",
+          "voedingszuur: citroenzuur",
+          "geconcentreerd limoen- en citroensap",
+          "natuurlijk citroen-limoen aroma",
+          "emulgatoren: arabische gom",
+          "E445",
+          "kleuren: E161b",
+          "E133",
+          "Vruchtensapgehalte: 20 %",
+          "waarvan 12 % limoensap",
+          "Mascarpone (ROOM 40% vet, zuurteregelaar: E330) (55%)",
+          "magere MELK",
+          "plantaardige olie (palmpit, palm)",
+          "EIGEEL",
+          "suiker zoete karneMELKpoeder",
+          "gemodificeerd zetmeel",
+          "emulgatoren: E471",
+          "E472b",
+          "stabilisatoren: E450",
+          "natuurlijk vanillearoma",
+          "kleurstof: kurkuma-extract",
+          "eiwit",
+          "Scharreleiwit",
+          "stabilisatoren: E415",
+          "E412",
+          "voedingszuur: E330",
+          "conserveermiddel: E202"
+        ],
+        "allergens": [
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Munt",
+        "resolvedName": "Munt",
+        "dbFound": true,
+        "ingredients": [
+          "Munt"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Melk",
+      "Lactose",
+      "Ei"
+    ]
+  },
+  {
+    "title": "51. Torentje van yoghurtijs",
+    "components": [
+      {
+        "name": "Yoghurtijs",
+        "resolvedName": "Yoghurtijs",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "glucosestroop",
+          "suiker",
+          "magere melkpoeder, roomboterconcentraat",
+          "dextrose",
+          "magere yoghurtpoeder",
+          "aroma",
+          "voedingszuur (citroenzuur)",
+          "zuurteregelaar ((L+-)wijnsteenzuur)",
+          "emulgator (mono- en diglyceriden van vetzuren)",
+          "stabilisatoren (johannesbroodpitmeel, guarpitmeel)",
+          "verdikkingsmiddelen (natriumalginaat, carrageen)"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Amandel crumble",
+        "resolvedName": "Amandel crumble",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEBLOEM",
+          "BOTER",
+          "suiker",
+          "AMANDEL 5%",
+          "EIEREN",
+          "invertsuikersiroop",
+          "rijsmiddel:'E450(i)'",
+          "rijsmiddel:'E500(ii)'",
+          "TARWEZETMEEL",
+          "zout",
+          "vanilline"
+        ],
+        "allergens": [
+          "Gluten",
+          "Melk",
+          "Lactose",
+          "Noten"
+        ]
+      },
+      {
+        "name": "Gesneden ananas",
+        "resolvedName": "Gesneden ananas",
+        "dbFound": true,
+        "ingredients": [
+          "Ananas"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Kletskop",
+        "resolvedName": "Kletskop",
+        "dbFound": true,
+        "ingredients": [
+          "suiker",
+          "PINDA",
+          "TARWEbloem",
+          "plantaardige oliën: palm/ raapzaad",
+          "glucosestroop",
+          "SOJAbloem",
+          "zout",
+          "kaneel",
+          "scharrelkip EIWITpoeder",
+          "emulgator: E471/ SOJAlecithine",
+          "natuurlijk aroma",
+          "magere MELKpoeder",
+          "verdikkingsmiddel: xanthaangom/ E466",
+          "rijsmiddel: E500",
+          "zuurteregelaar: citroenzuur"
+        ],
+        "allergens": [
+          "Gluten",
+          "Pinda",
+          "Soja",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Munt",
+        "resolvedName": "Munt",
+        "dbFound": true,
+        "ingredients": [
+          "Munt"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Citroenschuim (NEW)",
+        "resolvedName": "Citroenschuim",
+        "dbFound": true,
+        "ingredients": [
+          "Suiker",
+          "water",
+          "voedingszuur: citroenzuur",
+          "geconcentreerd limoen- en citroensap",
+          "natuurlijk citroen-limoen aroma",
+          "emulgatoren: arabische gom",
+          "E445",
+          "kleuren: E161b",
+          "E133",
+          "Vruchtensapgehalte: 20 %",
+          "waarvan 12 % limoensap",
+          "Mascarpone (ROOM 40% vet, zuurteregelaar: E330) (55%)",
+          "magere MELK",
+          "plantaardige olie (palmpit, palm)",
+          "EIGEEL",
+          "suiker zoete karneMELKpoeder",
+          "gemodificeerd zetmeel",
+          "emulgatoren: E471",
+          "E472b",
+          "stabilisatoren: E450",
+          "natuurlijk vanillearoma",
+          "kleurstof: kurkuma-extract",
+          "eiwit",
+          "Scharreleiwit",
+          "stabilisatoren: E415",
+          "E412",
+          "voedingszuur: E330",
+          "conserveermiddel: E202"
+        ],
+        "allergens": [
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      }
+    ],
+    "allergens": [
+      "Melk",
+      "Lactose",
+      "Gluten",
+      "Noten",
+      "Pinda",
+      "Soja",
+      "Ei"
+    ]
+  },
+  {
+    "title": "52. Crème brûlée",
+    "components": [
+      {
+        "name": "Crème brûlée",
+        "resolvedName": "Crème brûlée (nieuwe)",
+        "dbFound": true,
+        "ingredients": [
+          "lactosevrije ROOM (ROOM, lactase)",
+          "suiker",
+          "EIGEEL",
+          "gemodificeerd zetmeel",
+          "stabilisatoren: methylcellulose",
+          "carrageen",
+          "emulgator: mono-en diglyceriden van vetzuren",
+          "kleurend wortelextract",
+          "bourbon vanille-extract",
+          "geëxtraheerde vanillezaadjes"
+        ],
+        "allergens": [
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Rietsuiker",
+        "resolvedName": "Rietsuiker",
+        "dbFound": true,
+        "ingredients": [
+          "Rietsuiker"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Munt",
+        "resolvedName": "Munt",
+        "dbFound": true,
+        "ingredients": [
+          "Munt"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Rode besjes",
+        "resolvedName": "Rode besjes",
+        "dbFound": true,
+        "ingredients": [
+          "Rode bessen",
+          "Rood fruit"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Ei",
+      "Melk",
+      "Lactose"
+    ]
+  },
+  {
+    "title": "53. Pornstar Martini dessert",
+    "components": [
+      {
+        "name": "Meringue schuimpje",
+        "resolvedName": "Meringue schuimpje",
+        "dbFound": true,
+        "ingredients": [
+          "Eiwit",
+          "suiker"
+        ],
+        "allergens": [
+          "Ei"
+        ]
+      },
+      {
+        "name": "Passievrucht sorbertijs",
+        "resolvedName": "Passievrucht sorbertijs",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "passiefruit",
+          "suiker",
+          "glucosestroop",
+          "dextrose",
+          "kleurstof (annatto)",
+          "emulgator (mono- en diglyceriden van vetzuren)",
+          "verdikkingsmiddelen (natriumalginaat, pectine, xanthaangom)",
+          "stabilisatoren (guarpitmeel, johannesbroodpitmeel)"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Pornstar Martini dessert inspuiten",
+        "resolvedName": "Pornstar Martini mousse",
+        "dbFound": true,
+        "ingredients": [
+          "Mascarpone (ROOM 40% vet, zuurteregelaar: E330) (55%)",
+          "magere MELK",
+          "plantaardige olie (palmpit, palm)",
+          "suiker",
+          "EIGEEL",
+          "zoete karneMELKpoeder",
+          "gemodificeerd zetmeel",
+          "emulgatoren: E471",
+          "E472b",
+          "stabilisatoren: E450",
+          "natuurlijk vanillearoma",
+          "kleurstof: kurkuma-extract",
+          "passievruchten"
+        ],
+        "allergens": [
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      }
+    ],
+    "allergens": [
+      "Ei",
+      "Melk",
+      "Lactose"
+    ]
+  },
+  {
+    "title": "55. Chocoblondie",
+    "components": [
+      {
+        "name": "Blondie",
+        "resolvedName": "Blondie",
+        "dbFound": true,
+        "ingredients": [
+          "Boter",
+          "Lactose",
+          "Gluten",
+          "suiker",
+          "ei",
+          "bloem",
+          "vanille",
+          "bakpoeder",
+          "zout",
+          "cranberries",
+          "witte chocolade",
+          "bessen",
+          "fruit",
+          "noten"
+        ],
+        "allergens": [
+          "Gluten",
+          "Ei",
+          "Melk",
+          "Lactose",
+          "Noten"
+        ]
+      },
+      {
+        "name": "Pindakaas-chocolademousse",
+        "resolvedName": "Pindakaas-chocolademousse",
+        "dbFound": true,
+        "ingredients": [
+          "PINDA 85%",
+          "plantaardige olie (raapzaad, soja, volledig geharde palm¹)",
+          "zout",
+          "¹Palmolie",
+          "Magere MELK",
+          "MELKchocolade (18%) (droge cacaobestanddelen; droge MELKbestanddelen; suiker; emulgator: SOJAlecithine)",
+          "plantaardige olie (palmpit, palm)",
+          "suiker",
+          "emulgatoren: E471",
+          "E472b",
+          "wortelextract"
+        ],
+        "allergens": [
+          "Pinda",
+          "Soja",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Krokante pinda",
+        "resolvedName": "Krokante pinda",
+        "dbFound": true,
+        "ingredients": [
+          "Suiker",
+          "pinda",
+          "gemodificeerd maïszetmeel",
+          "kleurstof: E150a",
+          "water"
+        ],
+        "allergens": [
+          "Pinda"
+        ]
+      },
+      {
+        "name": "Zoute karamel parels",
+        "resolvedName": "Zoute karamel parels",
+        "dbFound": true,
+        "ingredients": [
+          "Suiker",
+          "glucosesiroop",
+          "zonnebloemolie",
+          "BOTER",
+          "invertsuikerstroop",
+          "zeezout",
+          "magere MELKpoeder",
+          "Gecarameliseerde suiker",
+          "emulgator E322 (zonebloemlecitine)",
+          "natuurlijk aroma",
+          "glansmiddel E901 (bijenwas)"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Toffee caramel topping sauce",
+        "resolvedName": "Toffee caramel topping sauce",
+        "dbFound": true,
+        "ingredients": [
+          "Glucose-fructosestroop",
+          "gezoete gecondenseerde MELK (koeMELK , sacharose)",
+          "sacharose",
+          "water",
+          "voedingszuur E331",
+          "verdikkingsmiddel E407",
+          "zout",
+          "conserveermiddel E202"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Ei",
+      "Melk",
+      "Lactose",
+      "Noten",
+      "Pinda",
+      "Soja"
+    ]
+  },
+  {
+    "title": "56. Mislukte appelcake",
+    "components": [
+      {
+        "name": "Mislukte appelcake",
+        "resolvedName": "Mislukte appelcake",
+        "dbFound": true,
+        "ingredients": [
+          "Suiker",
+          "tarwebloem",
+          "water",
+          "raapzaadolie",
+          "roomboter (melk)",
+          "Tarwezetmeel",
+          "eipoeder",
+          "weipoeder (melk)",
+          "wortelconcentraat",
+          "emulgator E481",
+          "natuurlijk aroma (vanille, citroen)",
+          "zout",
+          "aroma vanille"
+        ],
+        "allergens": [
+          "Gluten",
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Appelpartjes aangemaakt",
+        "resolvedName": "Appelpartjes aangemaakt",
+        "dbFound": true,
+        "ingredients": [
+          "Appel",
+          "kaneel",
+          "suiker"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Amandel crumble",
+        "resolvedName": "Amandel crumble",
+        "dbFound": true,
+        "ingredients": [
+          "TARWEBLOEM",
+          "BOTER",
+          "suiker",
+          "AMANDEL 5%",
+          "EIEREN",
+          "invertsuikersiroop",
+          "rijsmiddel:'E450(i)'",
+          "rijsmiddel:'E500(ii)'",
+          "TARWEZETMEEL",
+          "zout",
+          "vanilline"
+        ],
+        "allergens": [
+          "Gluten",
+          "Melk",
+          "Lactose",
+          "Noten"
+        ]
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Ei",
+      "Melk",
+      "Lactose",
+      "Noten"
+    ]
+  },
+  {
+    "title": "57. Sjoom",
+    "components": [
+      {
+        "name": "Sinaasappelsap",
+        "resolvedName": "Sinaasappelsap",
+        "dbFound": true,
+        "ingredients": [
+          "sinaasappel"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Roomijs vanilla",
+        "resolvedName": "Roomijs vanille",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "suiker",
+          "magere melkpoeder, roomboterconcentraat",
+          "dextrose",
+          "glucosestroop",
+          "invertsuikersiroop",
+          "fructosestroop",
+          "aroma",
+          "emulgator (mono- en diglyceriden van vetzuren)",
+          "stabilisatoren (johannesbroodpitmeel, guarpitmeel)",
+          "wortel concentraat",
+          "verdikkingsmiddelen (natriumalginaat, carrageen)",
+          "gemodificeerd maiszetmeel",
+          "(<1%)vanille extract",
+          "(<1%)natuurlijk vanille aroma",
+          "saffloer concentraat",
+          "(<1%)bourbon vanille extract",
+          "kleurstof (beta-caroteen)"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Yoghurtijs",
+        "resolvedName": "Yoghurtijs",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "glucosestroop",
+          "suiker",
+          "magere melkpoeder, roomboterconcentraat",
+          "dextrose",
+          "magere yoghurtpoeder",
+          "aroma",
+          "voedingszuur (citroenzuur)",
+          "zuurteregelaar ((L+-)wijnsteenzuur)",
+          "emulgator (mono- en diglyceriden van vetzuren)",
+          "stabilisatoren (johannesbroodpitmeel, guarpitmeel)",
+          "verdikkingsmiddelen (natriumalginaat, carrageen)"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Mandarijnschuim (new)",
+        "resolvedName": "Mandarijnschuim (new)",
+        "dbFound": true,
+        "ingredients": [
+          "Mandarijn",
+          "Mascarpone (ROOM 40% vet, zuurteregelaar: E330) (55%)",
+          "magere MELK",
+          "plantaardige olie (palmpit, palm)",
+          "suiker",
+          "EIGEEL",
+          "zoete karneMELKpoeder",
+          "gemodificeerd zetmeel",
+          "emulgatoren: E471",
+          "E472b",
+          "stabilisatoren: E450",
+          "natuurlijk vanillearoma",
+          "eiwit",
+          "poedersuiker"
+        ],
+        "allergens": [
+          "Ei",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Handsinaasap. 70/72 (10st)",
+        "resolvedName": "Handsinaasap. 70/72 (10st)",
+        "dbFound": true,
+        "ingredients": [
+          "sinaasappel"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Melk",
+      "Lactose",
+      "Ei"
+    ]
+  },
+  {
+    "title": "58. Marsmousse Deluxe",
+    "components": [
+      {
+        "name": "Chocolade sorbetijs",
+        "resolvedName": "Chocolade sorbetijs",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "suiker",
+          "cacaomassa (13%)",
+          "cacaoboter (melk) (4%)",
+          "glucosestroop",
+          "dextrose",
+          "cacaopoeder",
+          "emulgator (soja-lecithine, mono- en diglyceriden van vetzuren)",
+          "aroma vanille",
+          "verdikkingsmiddelen (natriumalginaat, pectine, xanthaangom)",
+          "stabilisatoren (guarpitmeel, johannesbroodpitmeel)"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose",
+          "Soja"
+        ]
+      },
+      {
+        "name": "Karamelblokjes",
+        "resolvedName": "Karamelblokjes",
+        "dbFound": true,
+        "ingredients": [
+          "suiker",
+          "glucosestroop",
+          "gezoete gecondenseerde melk (melk, suiker)",
+          "palmolie",
+          "gezouten boter (melk, zout)",
+          "emulgator: sojalecithine",
+          "natuurlijk aroma",
+          "zout"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose",
+          "Soja"
+        ]
+      },
+      {
+        "name": "Toffee caramel topping sauce",
+        "resolvedName": "Toffee caramel topping sauce",
+        "dbFound": true,
+        "ingredients": [
+          "Glucose-fructosestroop",
+          "gezoete gecondenseerde MELK (koeMELK , sacharose)",
+          "sacharose",
+          "water",
+          "voedingszuur E331",
+          "verdikkingsmiddel E407",
+          "zout",
+          "conserveermiddel E202"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Marsmousse",
+        "resolvedName": "Marsmousse",
+        "dbFound": true,
+        "ingredients": [
+          "slagroom",
+          "lactose",
+          "melk",
+          "koemelk",
+          "suiker",
+          "glucosestroop",
+          "magere MELKPOEDER",
+          "cacaoboter",
+          "cacaomassa",
+          "zonnebloemolie",
+          "weipermeaat (MELK)",
+          "botervet (MELK)",
+          "palmvet",
+          "magere cacaopoeder",
+          "GERSTEMOUTEXTRACT",
+          "zout",
+          "emulgator (SOJALECITHINE)",
+          "KIPPENEI-EIWITPOEDER"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose",
+          "Gluten",
+          "Soja",
+          "Ei"
+        ]
+      }
+    ],
+    "allergens": [
+      "Ei",
+      "Gluten",
+      "Melk",
+      "Lactose",
+      "Soja"
+    ]
+  },
+  {
+    "title": "Extra: Frisse salade",
+    "components": [
+      {
+        "name": "Little gem sla",
+        "resolvedName": "Little gem sla",
+        "dbFound": true,
+        "ingredients": [
+          "Sla",
+          "Little gem"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Bruschetta salsa (Pico del gallo)",
+        "resolvedName": "Bruschetta salsa (Pico del gallo)",
+        "dbFound": true,
+        "ingredients": [
+          "Tomaten (75%)",
+          "rode ui (14%)",
+          "saus (10%) (zonnebloemolie, citroensap, knoflook, koriander, gemodificeerd zetmeel, zout, rode chili, emulgator: zonnebloemlecithine, natuurlijk basilicumaroma, rozemarijnextract)"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Komkommer julienne",
+        "resolvedName": "Komkommer julienne",
+        "dbFound": true,
+        "ingredients": [
+          "Komkommer"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Sladressing (vinaigrette)",
+        "resolvedName": "Sladressing (vinaigrette)",
+        "dbFound": true,
+        "ingredients": [
+          "raapzaadolie (53%)",
+          "water",
+          "azijn (11%)",
+          "mosterd (7%) (water, MOSTERDzaad, natuurazijn, zout, kurkuma, natuurlijk kruidenaroma)",
+          "honing",
+          "citroensap van concentraat (1%)",
+          "zout",
+          "knoflook",
+          "verdikkingsmiddel (E415)",
+          "kruiden en specerijen"
+        ],
+        "allergens": [
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Rucola mix (nieuw)",
+        "resolvedName": "Rucola mix (nieuw)",
+        "dbFound": true,
+        "ingredients": [
+          "Rucola",
+          "Sla",
+          "Frisee"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Mosterd"
+    ]
+  },
+  {
+    "title": "Extra: Truffelfrietje",
+    "components": [
+      {
+        "name": "Zusje truffelmayonaise",
+        "resolvedName": "Zusje truffelmayonaise",
+        "dbFound": true,
+        "ingredients": [
+          "mayonaise (70%)(raapzaadolie, scharrel EIgeel, water, suiker, azijn, MOSTERD, zout, conserveermiddel (E202), voedingszuur (E330), verdikkingsmiddel (E415), kleurstof (E160a), antioxidant (E385))",
+          "water",
+          "truffeltapenade (10%) (paddenstoelen, zonnebloemolie, truffelstukjes, zout, witte truffel aroma, kruiden en specerijen)",
+          "gemodificeerd maïszetmeel",
+          "azijn",
+          "olijfolie",
+          "zout",
+          "zwarte peper",
+          "witte truffel aroma",
+          "Champignons"
+        ],
+        "allergens": [
+          "Ei",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Parmezaanse kaas gecutterd",
+        "resolvedName": "Parmezaanse kaas gecutterd",
+        "dbFound": true,
+        "ingredients": [
+          "Gepasteuriseerde MELK",
+          "zetmeel",
+          "zout",
+          "zuursel",
+          "microbieel stremsel"
+        ],
+        "allergens": [
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Friet",
+        "resolvedName": "Friet",
+        "dbFound": true,
+        "ingredients": [
+          "Aardappelen (EU Origin)",
+          "zonnebloemolie",
+          "gemodificeerd aardappelzetmeel",
+          "rijstebloem",
+          "zout",
+          "dextrine",
+          "rijsmiddel (E450, E500)",
+          "maltodextrine",
+          "verdikkingsmiddel (E415)"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Ei",
+      "Mosterd",
+      "Melk",
+      "Lactose"
+    ]
+  },
+  {
+    "title": "Extra: Frietje pindasaus",
+    "components": [
+      {
+        "name": "Kentang",
+        "resolvedName": "Kentang",
+        "dbFound": true,
+        "ingredients": [
+          "Aardappel",
+          "witte en bruine basterdsuiker suiker",
+          "karamel",
+          "invertsuikerstroop",
+          "ui",
+          "pinda's Pinda",
+          "tarwebloem Glutenbevattende granen",
+          "Tarwe",
+          "paprikapoeder",
+          "zout",
+          "kruiden",
+          "specerijen",
+          "zonnebloemolie",
+          "sojaolie Soja",
+          "palmolie",
+          "koolzaadolie"
+        ],
+        "allergens": [
+          "Gluten",
+          "Pinda",
+          "Soja"
+        ]
+      },
+      {
+        "name": "Pindasaus",
+        "resolvedName": "Pindasaus",
+        "dbFound": true,
+        "ingredients": [
+          "water",
+          "pinda",
+          "suiker",
+          "gember",
+          "azijn",
+          "raapzaadolie",
+          "aroma's (soja)",
+          "gemodificeerd maïszetmeel",
+          "weipoeder (melk)",
+          "sojasaus (water, sojabonen, tarwe, zout)",
+          "sambal (rode peper, zout, zuurteregelaar: azijnzuur, conserveermiddel: E211)",
+          "conserveermiddel: kaliumsorbaat",
+          "emulgator: E471",
+          "voedingszuur: melkzuur",
+          "zout",
+          "verdikkingsmiddelen: guarpitmeel en xanthaangom",
+          "kleurstoffen: E150d en paprika-extract",
+          "specerijen",
+          "antioxidant: E385",
+          "knoflookpoeder",
+          "uienpoeder"
+        ],
+        "allergens": [
+          "Gluten",
+          "Pinda",
+          "Soja",
+          "Melk",
+          "Lactose"
+        ]
+      },
+      {
+        "name": "Friet",
+        "resolvedName": "Friet",
+        "dbFound": true,
+        "ingredients": [
+          "Aardappelen (EU Origin)",
+          "zonnebloemolie",
+          "gemodificeerd aardappelzetmeel",
+          "rijstebloem",
+          "zout",
+          "dextrine",
+          "rijsmiddel (E450, E500)",
+          "maltodextrine",
+          "verdikkingsmiddel (E415)"
+        ],
+        "allergens": []
+      },
+      {
+        "name": "Bosui gesneden",
+        "resolvedName": "Bosui gesneden",
+        "dbFound": true,
+        "ingredients": [
+          "Bosui"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Gluten",
+      "Pinda",
+      "Soja",
+      "Melk",
+      "Lactose"
+    ]
+  },
+  {
+    "title": "Extra: Klassiek frietje mayo",
+    "components": [
+      {
+        "name": "Mayonaise",
+        "resolvedName": "Mayonaise",
+        "dbFound": true,
+        "ingredients": [
+          "raapolie",
+          "water",
+          "azijn",
+          "scharreleigeel",
+          "glucose-fructosestroop",
+          "mosterd (water, mosterdzaden, natuurazijn, specerijen)",
+          "zout",
+          "suiker",
+          "gemodificeerd maïszetmeel",
+          "voedingszuur: citroenzuur",
+          "conserveermiddel: kaliumsorbaat",
+          "verdikkingsmiddel: guarpitmeel",
+          "natuurlijk aroma",
+          "antioxidant: E385",
+          "kleurstof: betacaroteen"
+        ],
+        "allergens": [
+          "Ei",
+          "Mosterd"
+        ]
+      },
+      {
+        "name": "Friet",
+        "resolvedName": "Friet",
+        "dbFound": true,
+        "ingredients": [
+          "Aardappelen (EU Origin)",
+          "zonnebloemolie",
+          "gemodificeerd aardappelzetmeel",
+          "rijstebloem",
+          "zout",
+          "dextrine",
+          "rijsmiddel (E450, E500)",
+          "maltodextrine",
+          "verdikkingsmiddel (E415)"
+        ],
+        "allergens": []
+      }
+    ],
+    "allergens": [
+      "Ei",
+      "Mosterd"
+    ]
+  }
+]

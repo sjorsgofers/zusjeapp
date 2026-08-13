@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>Allergenenzoeker</title>
+
+<meta name="theme-color" content="#0b0b0b">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Allergenen">
+<meta name="application-name" content="Allergenen">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="shortcut icon" href="favicon.png">
+<link rel="manifest" href="manifest.json">
+
+<style>
+html,body{margin:0;padding:0;background:#111111;color:#fffffffff}
+#aj-app,#aj-app *,#aj-app *::before,#aj-app *::after{
+  box-sizing:border-box !important;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif !important;
+  letter-spacing:normal !important;
+  line-height:1.45 !important;
+  color:#ffffff !important;
+}
+#aj-app{min-height:100dvh;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}
+.wrap{max-width:860px;margin:0 auto;padding:28px 16px 48px}
+.hero{min-height:38dvh;display:flex;align-items:center;justify-content:center}
+.hero-inner{width:100%;max-width:720px}
+.title{margin:0 0 18px;text-align:center;font-size:28px;font-weight:600;color:#fffffffff}
+.search-row{display:flex;gap:10px;align-items:center}
+.search{flex:1;min-height:56px;border:1px solid #c8a45b;border-radius:28px;padding:0 20px;font-size:16px;outline:none;background:#111111;color:#fffffffff}
+.search::placeholder{color:#ffffff !important;opacity:.7}
+.search:focus{border-color:#c8a45b;box-shadow:0 0 0 3px rgba(200,164,91,.18), 0 8px 24px rgba(200,164,91,.18)}
+.btn{min-height:56px;padding:0 18px;border:1px solid #c8a45b;border-radius:28px;background:#0b0b0b;color:#ffffff !important;font-size:15px;font-weight:600;cursor:pointer}
+.btn:hover{filter:brightness(.96)}
+.results-shell{margin-top:10px}
+.results-meta{margin:0 0 14px;font-size:13px;color:#fffffffff}
+.results{display:grid;gap:10px}
+.card{border:1px solid #c8a45b;border-radius:18px;background:#111111;overflow:hidden}
+.card-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px}
+.card-title{margin:0;font-size:17px;font-weight:600;color:#fffffffff}
+.card-main{padding:0 16px 14px}
+.label{margin:0 0 6px;font-size:12px;color:#fffffffff}
+.hit-list{margin:0;padding-left:18px}
+.hit-list li{margin:4px 0;color:#fffffffff}
+.toggle{width:34px;height:34px;border:1px solid #c8a45b;background:#c8a45b;border-radius:999px;display:grid;place-items:center;cursor:pointer;flex:0 0 auto}
+.toggle:hover{background:#1a1a1a}
+.chev{display:inline-block;font-size:14px;color:#fffffffff;transition:transform .16s ease}
+details[open] .chev{transform:rotate(90deg)}
+details{border-top:1px solid #c8a45b;background:#111111}
+summary{list-style:none;cursor:pointer;padding:10px 16px;font-size:13px;color:#fffffffff}
+summary::-webkit-details-marker{display:none}
+.detail-wrap{padding:0 16px 14px;display:grid;gap:8px}
+.comp{border:1px solid #c8a45b;border-radius:12px;padding:10px 12px;background:#111111}
+.comp-name{margin:0 0 6px;font-size:14px;font-weight:600;color:#fffffffff}
+.comp ul{margin:0;padding-left:18px}
+.comp li{margin:4px 0;font-size:13px;color:#fffffffff}
+.empty{border:1px dashed #c8a45b;border-radius:18px;padding:28px 16px;text-align:center;color:#fffffffff}
+.hidden{display:none !important}
+@media (max-width:640px){
+  .wrap{padding:20px 12px 32px}
+  .hero{min-height:34vh}
+  .title{font-size:24px}
+  .search-row{gap:8px}
+  .search{min-height:52px;font-size:15px;padding:0 16px}
+  .btn{min-height:52px;padding:0 16px}
+  .card-head{padding:12px 14px}
+  .card-main{padding:0 14px 12px}
+  summary{padding:10px 14px}
+  .detail-wrap{padding:0 14px 12px}
+}
+
+.hidden{display:none !important}
+#loginGate{
+  min-height:100vh;
+  background:#0b0b0b;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.login-shell{
+  width:100%;
+  max-width:520px;
+}
+.login-card{
+  border:1px solid #c8a45b;
+  background:#0b0b0b;
+  border-radius:24px;
+  padding:28px 24px;
+  box-shadow:0 14px 42px rgba(200,164,91,.12);
+  text-align:center;
+}
+.login-logo{
+  width:140px;
+  max-width:42vw;
+  display:block;
+  margin:0 auto 18px;
+}
+.login-title{
+  margin:0 0 18px;
+  color:#ffffff !important;
+  font-size:28px;
+  font-weight:600;
+}
+.login-row{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.login-input{
+  flex:1;
+  min-height:56px;
+  border:1px solid #c8a45b;
+  border-radius:28px;
+  padding:0 20px;
+  font-size:16px;
+  outline:none;
+  background:#111111;
+  color:#ffffff !important;
+  box-shadow:0 8px 24px rgba(200,164,91,.12);
+}
+.login-input::placeholder{
+  color:#ffffff !important;
+  opacity:.7;
+}
+.login-input:focus{
+  border-color:#c8a45b;
+  box-shadow:0 0 0 3px rgba(200,164,91,.18), 0 8px 24px rgba(200,164,91,.18);
+}
+.login-btn{
+  min-height:56px;
+  padding:0 18px;
+  border:1px solid #c8a45b;
+  border-radius:28px;
+  background:#0b0b0b;
+  color:#ffffff !important;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+}
+.login-error{
+  margin:12px 0 0;
+  color:#ffffff !important;
+  font-size:13px;
+}
+@media (max-width:640px){
+  .login-card{padding:22px 18px;border-radius:20px}
+  .login-title{font-size:24px}
+  .login-row{flex-direction:column}
+  .login-input,.login-btn{width:100%}
+}
+
+</style>
+</head>
+
+<body>
+<div id="protectedApp">
+
+<div id="aj-app">
+  <div class="wrap">
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <h1 class="title">Vul allergieën in</h1>
+        <div class="search-row">
+          <input id="q" class="search" type="text" aria-label="Zoekveld allergieën">
+          <button id="searchBtn" class="btn" type="button">Zoek</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="resultsShell" class="results-shell hidden">
+      <p id="resultsMeta" class="results-meta"></p>
+      <div id="results" class="results"></div>
+    </section>
+  </div>
+</div>
+
+<script>
+let DATA = [];
+fetch("data.json").then(r => r.json()).then(d => { DATA = d; }).catch(e => { console.error("Kon data.json niet laden:", e); });
+
+function normalize(str) {
+  return (str || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9% ]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;');
+}
+
+function parseTerms(input) {
+  return input.split(",").map(s => normalize(s)).filter(Boolean);
+}
+
+function escapeRegex(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function containsWholeTerm(bag, term) {
+  const pattern = new RegExp("(^|\\s)" + escapeRegex(term) + "(?=$|\\s)");
+  return pattern.test(bag);
+}
+
+function ingredientBag(c) {
+  return normalize([c.name, c.resolvedName, ...(c.ingredients || [])].join(" "));
+}
+
+function allergenBag(c) {
+  return normalize((c.allergens || []).join(" "));
+}
+
+const ALLERGEN_GROUPS = {
+  "gluten":["gluten","tarwe","tarwebloem","tarwemeel","tarwezetmeel","tarwegriesmeel","tarwevezel","tarwegluten","tarwemoutmeel","tarwezuurdesem","durum","durumtarwe","durumgriesmeel","rogge","roggebloem","gerst","gerstemout","gerstemoutextract","gerstevlokken","spelt","kamut","haver","havermout","mout","moutextract","couscous","bulgur","seitan","paneermeel","broodkruim","broodkruimels","panko","orzo","grissini","croutons","naan","naanta"],
+  "melk":["melk","koemelk","volle melk","magere melk","halfvolle melk","melkpoeder","melkeiwit","melkeiwitten","melkvet","melkbestanddelen","melkchocolade","room","slagroom","zure room","kookroom","roomboter","boter","botervet","karnemelk","karnemelkpoeder","karne","wei","weipoeder","weipermeaat","wei eiwit","yoghurt","labneh","kaas","cheddar","mozzarella","parmezaan","parmezaanse","parmigiano","manchego","gorgonzola","geitenkaas","geitenmelk","brie","camembert","feta","ricotta","mascarpone","gouda","gecondenseerde melk","condens"],
+  "lactose":["lactose","melk","koemelk","volle melk","magere melk","melkpoeder","melkeiwit","melkeiwitten","room","slagroom","zure room","kookroom","roomboter","boter","botervet","karnemelk","wei","weipoeder","weipermeaat","yoghurt","labneh","kaas","cheddar","mozzarella","parmezaan","manchego","gorgonzola","geitenkaas","brie","feta","ricotta","mascarpone","gouda","gecondenseerde melk"],
+  "ei":["ei","eieren","eigeel","eidooier","eiwit","eipoeder","ei eiwit","ei eiwitpoeder","kippenei","kippenei eiwitpoeder","scharrelei","scharreleigeel","scharrel eigeel","scharreleiwit","heelei","scharrelheelei","meringue"],
+  "vis":["vis","zalm","tonijn","kabeljauw","koolvis","pollak","heek","pangasius","schol","pladijs","haring","ansjovis","sardine","makreel","forel","vissaus","vispoeder","visextract","surimi","kibbeling","wijting"],
+  "schaaldieren":["schaaldieren","schelpdieren","garnaal","garnalen","gamba","gambas","gamba s","scampi","kreeft","rivierkreeft","rivierkreeftjes","krab","langoustine","witpootgarnaal","noorse garnalen","noorse garnaal","penaeidea"],
+  "weekdieren":["weekdieren","inktvis","mossel","mosselen","oester","oesters","octopus","calamari","zeeoor","sint jakobsschelp","slak","escargot"],
+  "pinda":["pinda","pindas","pinda s","pindakaas","aardnoot","arachide"],
+  "noten":["noten","amandel","amandelen","hazelnoot","walnoot","cashew","cashewnoot","pecan","pistache","macadamia","paranoot","notenmix","pijnboompitten"],
+  "soja":["soja","sojabonen","sojaboon","sojasaus","soja eiwit","sojaeiwit","soja lecithine","sojalecithine","sojabloem","sojaolie","sojapasta","edamame","tofu","tempeh","miso"],
+  "sesam":["sesam","sesamzaad","sesamolie","sesampasta","sesamzaadpasta","tahin","tahini","za atar","gomasio"],
+  "mosterd":["mosterd","mosterdzaad","mosterdmeel","mosterdzaadpoeder","dijon"],
+  "selderij":["selderij","knolselderij","bleekselderij","selderijzaad","selderijblad"],
+  "sulfieten":["sulfieten","sulfiet","zwaveldioxide","natriumdisulfiet","natriummetabisulfiet","kaliumdisulfiet","disulfiet","e220","e221","e222","e223","e224","e225","e226","e227","e228","wijn","rode wijn","witte wijn","sherry","balsamico"],
+  "lupine":["lupine","lupinemeel"]
+};
+
+const INGREDIENT_VARIANTS = {
+  "ui":["ui","uien","bosui","zilverui","zilveruien","rode ui","lente ui","lenteui","sjalot","sjalotten","uienpoeder","ui poeder","gefrituurde ui","amsterdamse uien relish","zoetzure komkommer ui","zoetzure rode ui","uienchutney","bieslook","bieslooksaus"],
+  "knoflook":["knoflook","knoflookpoeder","knoflookpuree","knoflooksaus","knoflookmayonaise","knoflook croutons","knoflook olie","knoflook orzo","look","aioli"],
+  "kaas":["kaas","cheddar","cheddarsaus","mozzarella","parmezaan","parmezaanse kaas","parmezaanschuim","parmigiano","grana padano","gouda","brie","camembert","roomkaas","mascarpone","ricotta","gorgonzola","manchego","feta","geitenkaas","geitenkaasrolletje","kaassaus","kaaskroketje"],
+  "peper":["peper","zwarte peper","witte peper","rode peper","peperkorrels","chili","chilipoeder","chilipeper","jalapeno","jalapeño","paprika","cayennepeper","spaanse peper","pepersteak","pepersaus"],
+  "tomaat":["tomaat","tomaten","tomatenpuree","tomatensap","pruimtomaten","tomatensoep","tomatensaus","marinarasaus","bruschetta salsa","pico del gallo","antiboise","tomatenketchup","gepofte tomaat"],
+  "citroen":["citroen","citroensap","citroenschil","citroenschuim","citroenpuree","citroensorbet","citroensorbetijs","gebrande citroen","citroenschijfje","gesneden partje citroen"],
+  "limoen":["limoen","limoensap","limoenblad","gesneden limoen"],
+  "aardappel":["aardappel","aardappelen","aardappelzetmeel","aardappelgratin","aardappelgratin taartje","aardappelflensje","aardappelpuree","aardappel puree","puree","puree met doperwten","friet","frietje","aardappelvlokken","kentang","tator tots"],
+  "kip":["kip","kippenvlees","kippenborst","kiphaas","kiphaasjes","kippendij","kippendijvlees","krokante kippenhaas","kipsate","kipsaté","butter chicken","wrap pollo","pollo","kippenhaasje"],
+  "rund":["rund","rundvlees","rundervlees","runderfond","runderhamburger","runderhamburgertje","runderpastrami","beef","beef tataki","carpaccio","steak","steak tartaar","pepersteak","ossenhaas","ossenhaasspiesje","stoofvlees","draadjesvlees","sucade","pastrami","kalfsvlees","kalfsmuis","tataki"],
+  "varken":["varken","varkensvlees","varkenshaas","bacon","baconstrip","bacon jam","spek","buikspek","oosterse buikspek","fuet","serranoham","serrano","ham","chorizo","ribfinger","ribfingers","shortrib","hotdog","knakworst","worst","schnitzel","saucijs"],
+  "vis":["vis","zalm","gerookte zalm","verse zalm","zalmsnippers","tonijn","tonijnsalade","tonijntartaar","kabeljauw","kabeljauwsalade","koolvis","heek","vissaus","vispoeder","surimi","kibbeling","ansjovis"],
+  "garnaal":["garnaal","garnalen","gamba","gambas","gamba s","gamba ringen","noorse garnalen","witpootgarnaal","rivierkreeft","rivierkreeftjes","krab","scampi"],
+  "brood":["brood","broodje","toast","brioche","brioche toast","brioche bolletje","viking bread","bao bun","hotdogbroodje","grissini","croutons","knoflook croutons","naan","naanta","mini naanta","wrap","tortilla","tortillachips","cracker","nori cracker","pappadum","pappadums","suikerwafel","wafel"],
+  "rijst":["rijst","witte rijst","rijstebloem","rijstmeel","rijstzetmeel","mihoen","risotto"],
+  "pasta":["pasta","orzo","knoflook orzo","truffel orzo","lasagne","spinazielasagne","gnocchi","noedels","spaghetti"],
+  "paddenstoel":["paddenstoel","paddenstoelen","champignon","champignons","bundelzwam","bundelzwammen","shiitake","oesterzwam","kastanjechampignon","pulled paddo","pulled paddos","portobello","truffel","truffeltapenade"],
+  "sla":["sla","little gem","littlegem","rucola","frisee","kruidensla","ijsbergsla","veldsla","salade"],
+  "saus":["saus","dressing","vinaigrette","sladressing","mayonaise","mayo","jus","saliejus","vleesjus","relish","compote","ketchup","bbq","bbq saus","hoisin","hoisin saus","hoisin mayonaise","sriracha","sriracha mayonaise","pepersaus","hollandaise","hollandaisesaus","pindasaus","cheddarsaus","remouladesaus","antiboise","piccalilly","piccalilly saus","tonnato","tonijnmayonaise","truffelmayonaise","knoflookmayonaise","thai dressing","soja knoflook dressing","balsamicodressing","honing tijmsaus","bieslooksaus","rode wijnsaus","bacon jam","dip"],
+  "kruiden":["kruiden","peterselie","bieslook","kervel","basilicum","oregano","tijm","rozemarijn","koriander","dille","tuinkers","munt","salie","dragon","lavas","za atar","kruidensla","kruidenolie","groene kruidencrumble","kruidencrumble"],
+  "fruit":["fruit","appel","appelblokjes","appelpartjes","ananas","citroen","limoen","sinaasappel","mandarijn","vijg","vijgenjam","cranberry","kersen","kers","rode bes","rode bessen","framboos","passievrucht","druiven","bes","bessen","rood fruit"]
+};
+
+function matchesSmartTerm(component, term) {
+  term = normalize(term);
+  if (!term) return true;
+  const bag = ingredientBag(component) + " " + allergenBag(component);
+  const targets = new Set([term]);
+  const collect = (key, list) => {
+    if (normalize(key) === term || list.some(a => normalize(a) === term)) {
+      targets.add(normalize(key));
+      list.forEach(a => targets.add(normalize(a)));
+    }
+  };
+  for (const key in ALLERGEN_GROUPS) collect(key, ALLERGEN_GROUPS[key]);
+  for (const key in INGREDIENT_VARIANTS) collect(key, INGREDIENT_VARIANTS[key]);
+  if (term === "vlees" || term === "vleeswaren") {
+    ["vlees","rundvlees","varkensvlees","kippenvlees","kalfsvlees","gehakt","rund","varken","kip","kalfsmuis","bacon","spek","buikspek","ham","serranoham","fuet","worst","knakworst","hotdog","pastrami","runderpastrami","shortrib","stoofvlees","draadjesvlees","steak","pepersteak","schnitzel","kipsate","kippenhaasje","carpaccio","beef","ossenhaas","sucade","ribfingers"].forEach(m => targets.add(normalize(m)));
+  }
+  for (const t of targets) {
+    if (t && containsWholeTerm(bag, t)) return true;
+  }
+  return false;
+}
+
+function render() {
+  const terms = parseTerms(document.getElementById("q").value.trim());
+  const resultsEl = document.getElementById("results");
+  const statsEl = document.getElementById("stats");
+
+  const filtered = DATA.map(dish => {
+    const matchingComponents = terms.length
+      ? dish.components.filter(c => terms.every(t => matchesSmartTerm(c, t)))
+      : dish.components.slice();
+
+    return {
+      ...dish,
+      matchingComponents,
+      otherComponents: dish.components.filter(c => !matchingComponents.includes(c))
+    };
+  }).filter(dish => !terms.length || dish.matchingComponents.length > 0);
+
+  statsEl.textContent = terms.length
+    ? `${filtered.length} gerecht(en) gevonden`
+    : `${DATA.length} gerecht(en) in totaal`;
+
+  if (!filtered.length) {
+    resultsEl.innerHTML = '<div class="empty">Geen matches gevonden.</div>';
+    return;
+  }
+
+  resultsEl.innerHTML = filtered.map(dish => {
+    const dishTags = (dish.allergens || []).length
+      ? dish.allergens.map(a => `<span class="tag alert">${escapeHtml(a)}</span>`).join("")
+      : `<span class="tag">Geen allergenen herkend</span>`;
+
+    const left = dish.matchingComponents.length
+      ? `<ul>${dish.matchingComponents.map(c => `<li><strong>${escapeHtml(c.name)}</strong></li>`).join("")}</ul>`
+      : `<div class="small">Geen specifieke onderdelen gevonden.</div>`;
+
+    const right = dish.otherComponents.length
+      ? `<ul>${dish.otherComponents.map(c => `<li>${escapeHtml(c.name)}</li>`).join("")}</ul>`
+      : `<div class="small">Geen overige onderdelen.</div>`;
+
+    const details = dish.components.map(c => {
+      const ctags = (c.allergens || []).length
+        ? c.allergens.map(a => `<span class="tag alert">${escapeHtml(a)}</span>`).join("")
+        : `<span class="tag">Geen allergenen herkend</span>`;
+      const ingList = (c.ingredients || []).length
+        ? `<ul>${c.ingredients.map(i => `<li>${escapeHtml(i)}</li>`).join("")}</ul>`
+        : `<div class="small">Geen detail beschikbaar.</div>`;
+      const linked = c.dbFound ? 'Database gekoppeld' : 'Nog geen uitgewerkte productentry';
+
+      return `
+        <div class="comp">
+          <div class="compname">${escapeHtml(c.name)}</div>
+          <div class="small">${linked}</div>
+          <div class="tags" style="margin:8px 0">${ctags}</div>
+          ${ingList}
+        </div>
+      `;
+    }).join("");
+
+    return `
+      <div class="card">
+        <div class="head">
+          <h2 class="title">${escapeHtml(dish.title)}</h2>
+          <div class="tags">${dishTags}</div>
+        </div>
+        <div class="body">
+          <div class="grid">
+            <div class="box">
+              <h3>producten waar dit in zit</h3>
+              ${left}
+            </div>
+            <div class="box">
+              <h3>overige producten van dit gerecht</h3>
+              ${right}
+            </div>
+          </div>
+          <details>
+            <summary>toon alle onderdelen + ingrediënten</summary>
+            <div class="compwrap">${details}</div>
+          </details>
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+
+
+function renderMinimal() {
+  const raw = document.getElementById("q").value.trim();
+  const terms = parseTerms(raw);
+  const resultsEl = document.getElementById("results");
+  const metaEl = document.getElementById("resultsMeta");
+  const shellEl = document.getElementById("resultsShell");
+
+  if (!terms.length) {
+    shellEl.classList.add("hidden");
+    resultsEl.innerHTML = "";
+    metaEl.textContent = "";
+    return;
+  }
+
+  // Bij "halal" tonen we juist het niet-halal vlees dat je NIET mag serveren.
+  const isHalal = terms.includes("halal");
+  const filtered = DATA.map(dish => {
+    const matchingComponents = isHalal
+      ? dish.components.filter(c => matchesSmartTerm(c, "vlees") && !matchesSmartTerm(c, "halal"))
+      : dish.components.filter(c => terms.every(t => matchesSmartTerm(c, t)));
+    return {...dish, matchingComponents};
+  }).filter(dish => dish.matchingComponents.length > 0);
+
+  shellEl.classList.remove("hidden");
+  metaEl.textContent = `${filtered.length} gerecht(en) gevonden`;
+
+  if (!filtered.length) {
+    resultsEl.innerHTML = '<div class="empty">Geen resultaten gevonden.</div>';
+    return;
+  }
+
+  resultsEl.innerHTML = filtered.map((dish, idx) => {
+    const hitList = `<ul class="hit-list">${dish.matchingComponents.map(c => `<li><strong>${escapeHtml(c.name)}</strong>${matchesSmartTerm(c, "halal") ? ' <span style="color:#c8a45b;font-weight:600">(halal)</span>' : ''}</li>`).join("")}</ul>`;
+    const detailHtml = dish.matchingComponents.map(c => {
+      const ingList = (c.ingredients || []).length
+        ? `<ul>${c.ingredients.map(i => `<li>${escapeHtml(i)}</li>`).join("")}</ul>`
+        : `<ul><li>${escapeHtml(c.name)}</li></ul>`;
+      return `<div class="comp"><p class="comp-name">${escapeHtml(c.name)}</p>${ingList}</div>`;
+    }).join("");
+
+    return `
+      <div class="card">
+        <div class="card-head">
+          <h2 class="card-title">${escapeHtml(dish.title)}</h2>
+          <button class="toggle" type="button" aria-label="Toon details" onclick="toggleDetail('detail-${idx}')">
+            <span class="chev">›</span>
+          </button>
+        </div>
+        <div class="card-main">
+          <p class="label">Niet serveren:</p>
+          ${hitList}
+        </div>
+        <details id="detail-${idx}">
+          <summary>Details</summary>
+          <div class="detail-wrap">${detailHtml}</div>
+        </details>
+      </div>
+    `;
+  }).join("");
+
+  document.querySelectorAll("details").forEach(d => d.open = false);
+}
+
+function toggleDetail(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.open = !el.open;
+}
+
+document.getElementById("searchBtn").addEventListener("click", () => {
+  renderMinimal();
+  if (document.activeElement) document.activeElement.blur();
+});
+document.getElementById("q").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    renderMinimal();
+    if (document.activeElement) document.activeElement.blur();
+  }
+});
+</script>
+
+</div>
+</body>
+
+</html>
