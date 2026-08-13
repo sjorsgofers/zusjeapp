@@ -58,7 +58,7 @@ html,body{margin:0;padding:0;background:var(--bg);color:#ffffff}
 .tile-cat{margin:0;font-size:9.5px;color:var(--gold) !important;text-transform:uppercase;letter-spacing:.5px !important;font-weight:600}
 .tile-name{margin:0;font-size:13px;font-weight:600;line-height:1.2 !important;min-height:2.4em;
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.tile-meta{margin:0;font-size:11px;color:#ffffff !important;opacity:.5}
+.tile-meta{margin:0;font-size:11px;color:#ffffff !important;opacity:.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tile-meta.wine{color:var(--gold) !important;opacity:.85;font-weight:600}
 
 .empty{grid-column:1/-1;border:1px dashed var(--gold);border-radius:16px;padding:32px 16px;text-align:center;color:#ffffff !important;opacity:.8}
@@ -336,12 +336,17 @@ function fitGrid(){
   if (availH <= 0 || availW <= 0) return;   // hidden / not laid out yet
   const gap = parseFloat(getComputedStyle(grid).columnGap) || 8;
   const border = 2;                         // tile border top+bottom
-  // Choose the fewest columns (largest tiles) whose grid still fits vertically.
-  // The tile image is square, so tile height ≈ column width + text body height.
-  // The body height is MEASURED at each candidate width, because long titles
-  // wrap to 2 lines on narrow tiles — estimating it clips the titles.
-  let chosen = n;
-  for (let c = 1; c <= n; c++){
+  // Enforce a minimum readable tile width, so we never cram tiny columns on a
+  // phone (which would cut the titles). This caps the column count; when all
+  // tiles don't fit at that size the grid simply scrolls vertically.
+  const minCol = availW < 480 ? 108 : 155;
+  const maxCols = Math.max(1, Math.min(n, Math.floor((availW + gap) / (minCol + gap))));
+  // Within that cap, choose the fewest columns (largest tiles) that still fit
+  // the height. The tile image is square, so tile height ≈ column width + text
+  // body height; body height is MEASURED per candidate (long titles wrap to 2
+  // lines on narrow tiles, so estimating it would clip them).
+  let chosen = maxCols;
+  for (let c = 1; c <= maxCols; c++){
     grid.style.gridTemplateColumns = `repeat(${c},minmax(0,1fr))`;
     const colW = (availW - (c - 1) * gap) / c;
     let bodyH = 0;
