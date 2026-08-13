@@ -49,14 +49,14 @@ html,body{margin:0;padding:0;background:var(--bg);color:#ffffff}
 .tab.active *{color:#0b0b0b !important}
 
 /* Tiles — grid fills remaining height; JS sets column count so all tiles fit on screen */
-.grid{display:grid;gap:8px;flex:1 1 auto;min-height:0;align-content:start;overflow:hidden;grid-template-columns:repeat(4,minmax(0,1fr))}
+.grid{display:grid;gap:8px;flex:1 1 auto;min-height:0;align-content:start;overflow-y:auto;overflow-x:hidden;grid-template-columns:repeat(4,minmax(0,1fr))}
 .tile{border:1px solid var(--gold);border-radius:14px;background:var(--bg);overflow:hidden;cursor:pointer;text-align:left;display:flex;flex-direction:column;min-height:0;transition:transform .12s ease, box-shadow .15s ease}
 .tile:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(200,164,91,.16)}
 .tile:active{transform:translateY(0)}
 .tile-img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#0b0b0b;display:block;flex:0 0 auto}
 .tile-body{padding:7px 10px 9px;display:flex;flex-direction:column;gap:2px;min-height:0}
 .tile-cat{margin:0;font-size:9.5px;color:var(--gold) !important;text-transform:uppercase;letter-spacing:.5px !important;font-weight:600}
-.tile-name{margin:0;font-size:13px;font-weight:600;line-height:1.2 !important;
+.tile-name{margin:0;font-size:13px;font-weight:600;line-height:1.2 !important;min-height:2.4em;
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .tile-meta{margin:0;font-size:11px;color:#ffffff !important;opacity:.5}
 .tile-meta.wine{color:var(--gold) !important;opacity:.85;font-weight:600}
@@ -323,20 +323,23 @@ function fitGrid(){
   const availH = grid.clientHeight;
   const availW = grid.clientWidth;
   if (availH <= 0 || availW <= 0) return;   // hidden / not laid out yet
-  const gap = 8;
+  const gap = parseFloat(getComputedStyle(grid).columnGap) || 8;
   const border = 2;                         // tile border top+bottom
-  // Tallest text body (reliable to measure — no image involved). Tiles use a
-  // square image, so a tile's height ≈ column width + body height + border.
-  let bodyH = 0;
-  tiles.forEach(t => {
-    const b = t.querySelector(".tile-body");
-    if (b) bodyH = Math.max(bodyH, b.getBoundingClientRect().height);
-  });
-  if (!bodyH || bodyH < 20) bodyH = 46;
+  // Choose the fewest columns (largest tiles) whose grid still fits vertically.
+  // The tile image is square, so tile height ≈ column width + text body height.
+  // The body height is MEASURED at each candidate width, because long titles
+  // wrap to 2 lines on narrow tiles — estimating it clips the titles.
   let chosen = n;
   for (let c = 1; c <= n; c++){
+    grid.style.gridTemplateColumns = `repeat(${c},minmax(0,1fr))`;
     const colW = (availW - (c - 1) * gap) / c;
-    const tileH = colW + bodyH + border;    // square image + text + border
+    let bodyH = 0;
+    tiles.forEach(t => {
+      const b = t.querySelector(".tile-body");
+      if (b) bodyH = Math.max(bodyH, b.getBoundingClientRect().height);
+    });
+    if (!bodyH || bodyH < 20) bodyH = 52;
+    const tileH = colW + bodyH + border;    // square image + text body
     const rows = Math.ceil(n / c);
     const totalH = rows * tileH + (rows - 1) * gap;
     if (totalH <= availH){ chosen = c; break; }
