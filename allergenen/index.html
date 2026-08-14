@@ -37,6 +37,12 @@ html,body{margin:0;padding:0;background:#111111;color:#fffffffff}
 .search:focus{border-color:#c8a45b;box-shadow:0 0 0 3px rgba(200,164,91,.18), 0 8px 24px rgba(200,164,91,.18)}
 .btn{min-height:56px;padding:0 18px;border:1px solid #c8a45b;border-radius:28px;background:#0b0b0b;color:#ffffff !important;font-size:15px;font-weight:600;cursor:pointer}
 .btn:hover{filter:brightness(.96)}
+/* Multi-allergie zoekvelden */
+.search-fields{display:flex;flex-direction:column;gap:10px;margin-bottom:12px}
+.field-row{display:flex;gap:10px;align-items:center}
+.fieldbtn{flex:0 0 auto;width:56px;height:56px;border:1px solid #c8a45b;border-radius:999px;background:#0b0b0b;color:#ffffff !important;font-size:26px;line-height:1 !important;font-weight:400;cursor:pointer;display:grid;place-items:center}
+.fieldbtn:hover{background:#1a1a1a}
+.btn-search{width:100%}
 .results-shell{margin-top:10px}
 .results-meta{margin:0 0 14px;font-size:13px;color:#fffffffff}
 .results{display:grid;gap:10px}
@@ -68,6 +74,8 @@ summary::-webkit-details-marker{display:none}
   .search-row{gap:8px}
   .search{min-height:52px;font-size:15px;padding:0 16px}
   .btn{min-height:52px;padding:0 16px}
+  .fieldbtn{width:52px;height:52px;font-size:24px}
+  .field-row{gap:8px}
   .card-head{padding:12px 14px}
   .card-main{padding:0 14px 12px}
   summary{padding:10px 14px}
@@ -166,10 +174,13 @@ summary::-webkit-details-marker{display:none}
     <section id="hero" class="hero">
       <div class="hero-inner">
         <h1 class="title">Vul allergieën in</h1>
-        <div class="search-row">
-          <input id="q" class="search" type="text" aria-label="Zoekveld allergieën">
-          <button id="searchBtn" class="btn" type="button">Zoek</button>
+        <div id="searchFields" class="search-fields">
+          <div class="field-row">
+            <input id="q" class="search allergy-input" type="text" aria-label="Allergie 1" placeholder="Allergie…">
+            <button id="addField" class="fieldbtn addbtn" type="button" aria-label="Extra allergie toevoegen" title="Extra allergie toevoegen">+</button>
+          </div>
         </div>
+        <button id="searchBtn" class="btn btn-search" type="button">Zoek</button>
       </div>
     </section>
 
@@ -375,7 +386,8 @@ function render() {
 
 
 function renderMinimal() {
-  const raw = document.getElementById("q").value.trim();
+  const inputs = document.querySelectorAll(".allergy-input");
+  const raw = [...inputs].map(i => i.value.trim()).filter(Boolean).join(",");
   const terms = parseTerms(raw);
   const resultsEl = document.getElementById("results");
   const metaEl = document.getElementById("resultsMeta");
@@ -388,12 +400,15 @@ function renderMinimal() {
     return;
   }
 
+  // OF-logica: een gerecht verschijnt zodra het minstens één van de ingevoerde
+  // allergieën bevat, zodat je álles ziet wat je niet mag serveren.
   // Bij "halal" tonen we juist het niet-halal vlees dat je NIET mag serveren.
-  const isHalal = terms.includes("halal");
+  function componentMatchesTerm(c, t){
+    if (t === "halal") return matchesSmartTerm(c, "vlees") && !matchesSmartTerm(c, "halal");
+    return matchesSmartTerm(c, t);
+  }
   const filtered = DATA.map(dish => {
-    const matchingComponents = isHalal
-      ? dish.components.filter(c => matchesSmartTerm(c, "vlees") && !matchesSmartTerm(c, "halal"))
-      : dish.components.filter(c => terms.every(t => matchesSmartTerm(c, t)));
+    const matchingComponents = dish.components.filter(c => terms.some(t => componentMatchesTerm(c, t)));
     return {...dish, matchingComponents};
   }).filter(dish => dish.matchingComponents.length > 0);
 
@@ -443,17 +458,49 @@ function toggleDetail(id) {
   el.open = !el.open;
 }
 
-document.getElementById("searchBtn").addEventListener("click", () => {
-  renderMinimal();
-  if (document.activeElement) document.activeElement.blur();
-});
-document.getElementById("q").addEventListener("keydown", (e) => {
+function onInputKeydown(e){
   if (e.key === "Enter") {
     e.preventDefault();
     renderMinimal();
     if (document.activeElement) document.activeElement.blur();
   }
+}
+// Search live while typing, across all fields.
+function wireInput(input){
+  input.addEventListener("input", renderMinimal);
+  input.addEventListener("keydown", onInputKeydown);
+}
+
+function addField(){
+  const wrap = document.getElementById("searchFields");
+  const row = document.createElement("div");
+  row.className = "field-row";
+  const idx = wrap.querySelectorAll(".allergy-input").length + 1;
+  const input = document.createElement("input");
+  input.type = "text";
+  input.className = "search allergy-input";
+  input.setAttribute("aria-label", "Allergie " + idx);
+  input.placeholder = "Allergie…";
+  const rm = document.createElement("button");
+  rm.type = "button";
+  rm.className = "fieldbtn rmbtn";
+  rm.setAttribute("aria-label", "Verwijder dit veld");
+  rm.title = "Verwijder";
+  rm.textContent = "−";
+  rm.addEventListener("click", () => { row.remove(); renderMinimal(); });
+  row.appendChild(input);
+  row.appendChild(rm);
+  wrap.appendChild(row);
+  wireInput(input);
+  input.focus();
+}
+
+document.getElementById("addField").addEventListener("click", addField);
+document.getElementById("searchBtn").addEventListener("click", () => {
+  renderMinimal();
+  if (document.activeElement) document.activeElement.blur();
 });
+wireInput(document.getElementById("q"));
 </script>
 
 </div>
