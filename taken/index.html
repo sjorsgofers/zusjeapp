@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taken & agenda</title>
+<style>
+:root{--gold:#c8a45b;--bg:#111;--bg2:#0b0b0b;--line:rgba(200,164,91,.35);--muted:rgba(255,255,255,.55)}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:#fff;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:18px 14px calc(28px + env(safe-area-inset-bottom))}
+h1{font-size:22px;font-weight:600;margin:0 0 2px}
+.sub{color:var(--muted);font-size:13px;margin:0 0 18px}
+
+.card{border:1px solid var(--line);border-radius:16px;background:var(--bg2);padding:16px;margin-bottom:16px}
+.card h2{font-size:14px;font-weight:600;margin:0 0 12px;color:var(--gold);text-transform:uppercase;letter-spacing:.5px}
+
+label{display:block;font-size:12px;color:var(--muted);margin:0 0 5px}
+.field{margin-bottom:12px}
+input[type=text],input[type=date],input[type=time],textarea,select{
+  width:100%;min-height:46px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:#fff;
+  font-size:15px;padding:0 14px;outline:none}
+textarea{min-height:64px;padding:10px 14px;resize:vertical}
+input:focus,textarea:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,164,91,.16)}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.row>.field{flex:1;min-width:140px}
+
+.check{display:flex;align-items:center;gap:8px;min-height:46px}
+.check input{width:20px;height:20px;accent-color:var(--gold)}
+
+.weekdays{display:flex;gap:6px;flex-wrap:wrap}
+.wd{flex:1;min-width:38px;text-align:center;border:1px solid var(--line);border-radius:10px;padding:9px 0;font-size:13px;font-weight:600;cursor:pointer;user-select:none}
+.wd.on{background:var(--gold);color:#0b0b0b;border-color:var(--gold)}
+
+.btn{min-height:48px;padding:0 20px;border:1px solid var(--gold);border-radius:24px;font-size:15px;font-weight:600;cursor:pointer}
+.btn-primary{background:var(--gold);color:#0b0b0b}
+.btn-ghost{background:transparent;color:#fff}
+.btn-row{display:flex;gap:10px;margin-top:4px}
+
+.item{border:1px solid var(--line);border-radius:14px;background:var(--bg2);padding:13px 14px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start}
+.item-main{flex:1;min-width:0}
+.item-title{font-size:15px;font-weight:600;margin:0}
+.item-meta{font-size:12px;color:var(--gold);margin:4px 0 0}
+.item-notes{font-size:13px;color:var(--muted);margin:4px 0 0;white-space:pre-wrap}
+.item-today{border-color:var(--gold);box-shadow:0 0 0 1px rgba(200,164,91,.25)}
+.badge-today{display:inline-block;font-size:10px;font-weight:700;color:#0b0b0b;background:var(--gold);border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:middle}
+.iconbtn{flex:0 0 auto;width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:transparent;color:#fff;cursor:pointer;font-size:16px}
+.iconbtn:hover{background:#1a1a1a}
+.item-actions{display:flex;gap:6px;flex:0 0 auto}
+
+.section-title{font-size:13px;color:var(--muted);margin:18px 0 8px;font-weight:600}
+.empty{color:var(--muted);font-size:14px;padding:18px;text-align:center;border:1px dashed var(--line);border-radius:14px}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--gold);color:#0b0b0b;font-weight:600;font-size:14px;padding:11px 18px;border-radius:999px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:50}
+.toast.show{opacity:1}
+.hidden{display:none !important}
+.err{color:#ff9b9b;font-size:13px;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Taken &amp; agenda</h1>
+  <p class="sub">Extra taken en dagnotities voor het dashboard. Losse of herhalende punten.</p>
+
+  <div class="card">
+    <h2 id="formTitle">Nieuw punt</h2>
+    <div class="field">
+      <label for="f-title">Titel</label>
+      <input id="f-title" type="text" placeholder="Bijv. Koelcel schoonmaken">
+    </div>
+    <div class="field">
+      <label for="f-notes">Notitie (optioneel)</label>
+      <textarea id="f-notes" placeholder="Extra toelichting…"></textarea>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label for="f-date">Datum</label>
+        <input id="f-date" type="date">
+      </div>
+      <div class="field">
+        <label for="f-recur">Herhaling</label>
+        <select id="f-recur">
+          <option value="none">Eenmalig</option>
+          <option value="daily">Dagelijks</option>
+          <option value="weekly">Wekelijks</option>
+          <option value="monthly">Maandelijks</option>
+          <option value="yearly">Jaarlijks</option>
+        </select>
+      </div>
+    </div>
+    <div class="field hidden" id="weekdaysField">
+      <label>Op welke dagen?</label>
+      <div class="weekdays" id="weekdays"></div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <div class="check">
+          <input id="f-allday" type="checkbox" checked>
+          <label for="f-allday" style="margin:0">Hele dag</label>
+        </div>
+      </div>
+      <div class="field hidden" id="timeField">
+        <label for="f-time">Tijd</label>
+        <input id="f-time" type="time">
+      </div>
+      <div class="field hidden" id="untilField">
+        <label for="f-until">Herhalen tot (optioneel)</label>
+        <input id="f-until" type="date">
+      </div>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-primary" id="saveBtn" type="button">Opslaan</button>
+      <button class="btn btn-ghost hidden" id="cancelBtn" type="button">Annuleren</button>
+    </div>
+    <p class="err hidden" id="formErr"></p>
+  </div>
+
+  <div id="listWrap"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL  = "https://xiwdbvxnjcrdwjhmpjnf.supabase.co";
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhpd2RidnhuamNyZHdqaG1wam5mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ2NjE1NzAsImV4cCI6MjA3MDIzNzU3MH0.d14QNY5Pof9j3zmlbs-5gBTs25s6xo_XYhyVbWE2P1k";
+const sb = (window.supabase && window.supabase.createClient) ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON) : null;
+
+const WD = [["Ma",1],["Di",2],["Wo",3],["Do",4],["Vr",5],["Za",6],["Zo",0]];
+const RECUR_LABEL = {none:"Eenmalig", daily:"Dagelijks", weekly:"Wekelijks", monthly:"Maandelijks", yearly:"Jaarlijks"};
+const MONTHS = ["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"];
+let items = [];
+let editId = null;
+let selectedWeekdays = new Set();
+
+function $(id){ return document.getElementById(id); }
+function esc(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function toast(msg){ const t=$("toast"); t.textContent=msg; t.classList.add("show"); setTimeout(()=>t.classList.remove("show"),1800); }
+function todayISO(){ const d=new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`; }
+function parseYMD(s){ if(!s) return null; const [y,m,d]=s.split("-").map(Number); return new Date(y,m-1,d); }
+function fmtDate(s){ const d=parseYMD(s); if(!d) return ""; return `${d.getDate()} ${MONTHS[d.getMonth()]} ${d.getFullYear()}`; }
+
+// Does an item occur on the given local date?
+function occursOn(item, date){
+  const start = parseYMD(item.start_date);
+  if(!start) return false;
+  const t = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  if(t < start) return false;
+  if(item.until_date){ const u=parseYMD(item.until_date); if(u && t>u) return false; }
+  switch(item.recurrence){
+    case "daily": return true;
+    case "weekly": {
+      const wd = (item.weekdays && item.weekdays.length) ? item.weekdays : [start.getDay()];
+      return wd.includes(t.getDay());
+    }
+    case "monthly": return t.getDate() === start.getDate();
+    case "yearly": return t.getDate() === start.getDate() && t.getMonth() === start.getMonth();
+    default: return t.getTime() === start.getTime();
+  }
+}
+function recurText(item){
+  if(item.recurrence === "none") return "Eenmalig · " + fmtDate(item.start_date);
+  let base = RECUR_LABEL[item.recurrence];
+  if(item.recurrence === "weekly"){
+    const wd = (item.weekdays && item.weekdays.length) ? item.weekdays : [parseYMD(item.start_date).getDay()];
+    const names = WD.filter(([n,v])=>wd.includes(v)).map(([n])=>n);
+    base += " (" + names.join(", ") + ")";
+  } else if(item.recurrence === "monthly"){
+    base += " op dag " + parseYMD(item.start_date).getDate();
+  } else if(item.recurrence === "yearly"){
+    const d=parseYMD(item.start_date); base += " op " + d.getDate() + " " + MONTHS[d.getMonth()];
+  }
+  base += " · vanaf " + fmtDate(item.start_date);
+  if(item.until_date) base += " t/m " + fmtDate(item.until_date);
+  return base;
+}
+
+/* ---- weekday chips ---- */
+function buildWeekdays(){
+  const c = $("weekdays"); c.innerHTML = "";
+  WD.forEach(([name,val])=>{
+    const b = document.createElement("div");
+    b.className = "wd" + (selectedWeekdays.has(val)?" on":"");
+    b.textContent = name;
+    b.addEventListener("click", ()=>{
+      if(selectedWeekdays.has(val)) selectedWeekdays.delete(val); else selectedWeekdays.add(val);
+      buildWeekdays();
+    });
+    c.appendChild(b);
+  });
+}
+function syncFormVisibility(){
+  const recur = $("f-recur").value;
+  $("weekdaysField").classList.toggle("hidden", recur !== "weekly");
+  $("untilField").classList.toggle("hidden", recur === "none");
+  $("timeField").classList.toggle("hidden", $("f-allday").checked);
+}
+
+/* ---- CRUD ---- */
+async function load(){
+  if(!sb){ renderList(); return; }
+  const { data, error } = await sb.from("agenda_items").select("*").order("start_date",{ascending:true});
+  if(error){ console.warn(error); $("listWrap").innerHTML = `<div class="empty">Kon niet laden: ${esc(error.message)}<br>Is de tabel al aangemaakt?</div>`; return; }
+  items = data || [];
+  renderList();
+}
+function resetForm(){
+  editId = null;
+  $("formTitle").textContent = "Nieuw punt";
+  $("f-title").value = ""; $("f-notes").value = "";
+  $("f-date").value = todayISO(); $("f-recur").value = "none";
+  $("f-allday").checked = true; $("f-time").value = ""; $("f-until").value = "";
+  selectedWeekdays = new Set();
+  $("cancelBtn").classList.add("hidden");
+  $("formErr").classList.add("hidden");
+  buildWeekdays(); syncFormVisibility();
+}
+async function save(){
+  const title = $("f-title").value.trim();
+  const err = $("formErr");
+  if(!title){ err.textContent="Vul een titel in."; err.classList.remove("hidden"); return; }
+  if(!$("f-date").value){ err.textContent="Kies een datum."; err.classList.remove("hidden"); return; }
+  err.classList.add("hidden");
+  const recur = $("f-recur").value;
+  const rec = {
+    title,
+    notes: $("f-notes").value.trim(),
+    start_date: $("f-date").value,
+    all_day: $("f-allday").checked,
+    start_time: $("f-allday").checked ? "" : ($("f-time").value || ""),
+    recurrence: recur,
+    weekdays: recur === "weekly" ? [...selectedWeekdays].sort((a,b)=>a-b) : [],
+    until_date: (recur !== "none" && $("f-until").value) ? $("f-until").value : null
+  };
+  if(!sb){ toast("Geen verbinding"); return; }
+  let res;
+  if(editId){ res = await sb.from("agenda_items").update(rec).eq("id", editId); }
+  else { res = await sb.from("agenda_items").insert(rec); }
+  if(res.error){ err.textContent = "Opslaan mislukt: " + res.error.message; err.classList.remove("hidden"); return; }
+  toast(editId ? "Bijgewerkt" : "Toegevoegd");
+  resetForm();
+  load();
+}
+function startEdit(id){
+  const it = items.find(x=>String(x.id)===String(id)); if(!it) return;
+  editId = it.id;
+  $("formTitle").textContent = "Punt bewerken";
+  $("f-title").value = it.title || "";
+  $("f-notes").value = it.notes || "";
+  $("f-date").value = it.start_date || todayISO();
+  $("f-recur").value = it.recurrence || "none";
+  $("f-allday").checked = !!it.all_day;
+  $("f-time").value = it.start_time || "";
+  $("f-until").value = it.until_date || "";
+  selectedWeekdays = new Set(it.weekdays || []);
+  $("cancelBtn").classList.remove("hidden");
+  buildWeekdays(); syncFormVisibility();
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+async function del(id){
+  const it = items.find(x=>String(x.id)===String(id));
+  if(!confirm(`"${it?it.title:"dit punt"}" verwijderen?`)) return;
+  if(!sb) return;
+  const { error } = await sb.from("agenda_items").delete().eq("id", id);
+  if(error){ toast("Verwijderen mislukt"); return; }
+  toast("Verwijderd");
+  if(String(editId)===String(id)) resetForm();
+  load();
+}
+window.startEdit = startEdit; window.del = del;
+
+function itemRow(it){
+  const today = occursOn(it, new Date());
+  const timeStr = (!it.all_day && it.start_time) ? it.start_time + " · " : "";
+  return `<div class="item ${today?"item-today":""}">
+    <div class="item-main">
+      <p class="item-title">${esc(it.title)}${today?'<span class="badge-today">vandaag</span>':''}</p>
+      <p class="item-meta">${timeStr}${esc(recurText(it))}</p>
+      ${it.notes?`<p class="item-notes">${esc(it.notes)}</p>`:""}
+    </div>
+    <div class="item-actions">
+      <button class="iconbtn" title="Bewerken" onclick="startEdit('${it.id}')">✎</button>
+      <button class="iconbtn" title="Verwijderen" onclick="del('${it.id}')">🗑</button>
+    </div>
+  </div>`;
+}
+function renderList(){
+  const wrap = $("listWrap");
+  if(!items.length){ wrap.innerHTML = `<div class="empty">Nog geen punten. Voeg er hierboven een toe.</div>`; return; }
+  const now = new Date();
+  const todays = items.filter(it=>occursOn(it, now));
+  const rest = items.filter(it=>!occursOn(it, now));
+  let html = "";
+  if(todays.length){ html += `<div class="section-title">Vandaag</div>` + todays.map(itemRow).join(""); }
+  html += `<div class="section-title">Alle punten</div>` + rest.map(itemRow).join("");
+  wrap.innerHTML = html;
+}
+
+$("f-recur").addEventListener("change", syncFormVisibility);
+$("f-allday").addEventListener("change", syncFormVisibility);
+$("saveBtn").addEventListener("click", save);
+$("cancelBtn").addEventListener("click", resetForm);
+resetForm();
+load();
+</script>
+</body>
+</html>

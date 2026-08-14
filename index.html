@@ -119,6 +119,7 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
       <button class="tab active" type="button" role="tab" data-tab="dranken">Dranken</button>
       <button class="tab" type="button" role="tab" data-tab="allergenen">Allergenen</button>
       <button class="tab" type="button" role="tab" data-tab="checklists">Checklists</button>
+      <button class="tab" type="button" role="tab" data-tab="taken">Taken &amp; agenda</button>
       <button class="tab" type="button" role="tab" data-tab="table">Tafeloverzicht</button>
       <button class="tab" type="button" role="tab" data-tab="reserveringen">Reserveringen</button>
       <button class="tab" type="button" role="tab" data-tab="kiosk">Kiosk</button>
@@ -134,6 +135,7 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
     <iframe id="f-dranken"    class="frame active" title="Dranken"    data-src="dranken/index.html"></iframe>
     <iframe id="f-allergenen" class="frame"        title="Allergenen" data-src="allergenen/index.html"></iframe>
     <iframe id="f-checklists" class="frame"        title="Checklists" data-src="checklists/index.html"></iframe>
+    <iframe id="f-taken"      class="frame"        title="Taken & agenda" data-src="taken/index.html"></iframe>
     <iframe id="f-table"      class="frame"        title="Table"      data-src="table/index.html"></iframe>
     <iframe id="f-kiosk"      class="frame"        title="Kiosk"      data-src="https://kiosk.shiftbase.com/"
             allow="camera; microphone; fullscreen; geolocation; clipboard-write" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -148,7 +150,7 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
 
 <script>
 (function(){
-  const TABS = ["dranken","allergenen","checklists","table","kiosk"];
+  const TABS = ["dranken","allergenen","checklists","taken","table","kiosk"];
   const RESERVERINGEN_URL = "https://zusje.reserveersysteem.eu/contao?do=restaurant_dashboard&restaurant=1009";
   let currentTab = "dranken";
   const shell = document.getElementById("shell");
@@ -242,7 +244,7 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
     bindActivity(document);
     bindActivity(screensaver);           // moving over the dashboard dismisses it
     // frames already loaded before init get bound too
-    ["dranken","allergenen","checklists","table","kiosk"].forEach(n => {
+    ["dranken","allergenen","checklists","taken","table","kiosk"].forEach(n => {
       const f = frame(n); if (f && f.src) attachFrameActivity(f);
     });
     idleTimer = setTimeout(autoShow, IDLE_MS);
