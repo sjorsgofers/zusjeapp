@@ -59,10 +59,11 @@ html,body{margin:0;padding:0;background:var(--bg);color:#ffffff}
 /* Square image via padding-hack (robust on iOS Safari, where aspect-ratio on <img> is unreliable) */
 .tile-imgwrap{position:relative;width:100%;padding-top:100%;height:0;overflow:hidden;background:#0b0b0b;flex:0 0 auto}
 .tile-img{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;object-fit:cover;display:block}
-.tile-body{padding:7px 10px 9px;display:flex;flex-direction:column;gap:2px;flex:0 0 auto}
-.tile-cat{margin:0;font-size:9.5px;color:var(--gold) !important;text-transform:uppercase;letter-spacing:.5px !important;font-weight:600}
-.tile-name{margin:0;font-size:13px;font-weight:600;line-height:1.2 !important;min-height:2.4em;
-  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tile-body{padding:7px 10px 9px;display:block}
+.tile-cat{margin:0 0 2px;font-size:9.5px;color:var(--gold) !important;text-transform:uppercase;letter-spacing:.5px !important;font-weight:600}
+/* Plain block + max-height clamp — NOT -webkit-line-clamp, which collapses to
+   zero height inside a flex context on Safari/WebKit and hid the titles. */
+.tile-name{margin:0;font-size:13px;font-weight:600;line-height:1.25 !important;max-height:2.5em;overflow:hidden;color:#ffffff !important}
 .tile-meta{margin:0;font-size:11px;color:#ffffff !important;opacity:.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tile-meta.wine{color:var(--gold) !important;opacity:.85;font-weight:600}
 
