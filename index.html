@@ -289,30 +289,16 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
   if (unlocked) startApp();
 })();
 
-// Register service worker so the app is installable and works offline.
-// Auto-reload once when a new version takes over, so updates always apply.
+// Geen service worker meer: de SW-cachelaag hield op sommige apparaten oude
+// versies vast. Bestaande registraties worden opgeruimd door sw.js (self-destruct)
+// en hieronder, zodat er altijd rechtstreeks van het netwerk wordt geladen.
 if ("serviceWorker" in navigator){
-  let refreshing = false;
-  navigator.serviceWorker.addEventListener("controllerchange", () => {
-    if (refreshing) return;
-    refreshing = true;
-    location.reload();
-  });
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("sw.js")
-      .then(reg => {
-        reg.update();
-        // If an updated worker is waiting, activate it immediately.
-        if (reg.waiting) reg.waiting.postMessage("skipWaiting");
-        reg.addEventListener("updatefound", () => {
-          const nw = reg.installing;
-          if (nw) nw.addEventListener("statechange", () => {
-            if (nw.state === "installed" && navigator.serviceWorker.controller) nw.postMessage("skipWaiting");
-          });
-        });
-      })
-      .catch(err => console.warn("SW registratie mislukt:", err));
-  });
+  navigator.serviceWorker.getRegistrations()
+    .then(regs => regs.forEach(r => r.unregister()))
+    .catch(() => {});
+  if (window.caches && caches.keys){
+    caches.keys().then(keys => keys.forEach(k => caches.delete(k))).catch(() => {});
+  }
 }
 </script>
 </body>

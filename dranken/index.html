@@ -63,7 +63,7 @@ html,body{margin:0;padding:0;background:var(--bg);color:#ffffff}
 .tile-cat{margin:0 0 2px;font-size:9.5px;color:var(--gold) !important;text-transform:uppercase;letter-spacing:.5px !important;font-weight:600}
 /* Plain block + max-height clamp — NOT -webkit-line-clamp, which collapses to
    zero height inside a flex context on Safari/WebKit and hid the titles. */
-.tile-name{margin:0;font-size:13px;font-weight:600;line-height:1.25 !important;max-height:2.5em;overflow:hidden;color:#ffffff !important}
+.tile-name{margin:0;font-size:13px;font-weight:600;line-height:1.25 !important;color:#ffffff !important;overflow-wrap:anywhere}
 .tile-meta{margin:0;font-size:11px;color:#ffffff !important;opacity:.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tile-meta.wine{color:var(--gold) !important;opacity:.85;font-weight:600}
 
@@ -345,7 +345,7 @@ function fitGrid(){
   // Enforce a minimum readable tile width, so we never cram tiny columns on a
   // phone (which would cut the titles). This caps the column count; when all
   // tiles don't fit at that size the grid simply scrolls vertically.
-  const minCol = availW < 480 ? 108 : 155;
+  const minCol = availW < 480 ? 132 : 170;
   const maxCols = Math.max(1, Math.min(n, Math.floor((availW + gap) / (minCol + gap))));
   // Within that cap, choose the fewest columns (largest tiles) that still fit
   // the height. The tile image is square, so tile height ≈ column width + text
