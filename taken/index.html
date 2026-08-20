@@ -95,6 +95,7 @@ input:focus,textarea:focus,select:focus{border-color:var(--gold);box-shadow:0 0 
           <option value="none">Eenmalig</option>
           <option value="daily">Dagelijks</option>
           <option value="weekly">Wekelijks</option>
+          <option value="biweekly">Tweewekelijks (om de week)</option>
           <option value="monthly">Maandelijks</option>
           <option value="yearly">Jaarlijks</option>
         </select>
@@ -138,7 +139,7 @@ const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFz
 const sb = (window.supabase && window.supabase.createClient) ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON) : null;
 
 const WD = [["Ma",1],["Di",2],["Wo",3],["Do",4],["Vr",5],["Za",6],["Zo",0]];
-const RECUR_LABEL = {none:"Eenmalig", daily:"Dagelijks", weekly:"Wekelijks", monthly:"Maandelijks", yearly:"Jaarlijks"};
+const RECUR_LABEL = {none:"Eenmalig", daily:"Dagelijks", weekly:"Wekelijks", biweekly:"Tweewekelijks (om de week)", monthly:"Maandelijks", yearly:"Jaarlijks"};
 const CATEGORIES = ["Containers & Bidfood", "Bestellen", "Keuken", "Bediening"];
 const MONTHS = ["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"];
 let items = [];
@@ -165,6 +166,12 @@ function occursOn(item, date){
       const wd = (item.weekdays && item.weekdays.length) ? item.weekdays : [start.getDay()];
       return wd.includes(t.getDay());
     }
+    case "biweekly": {
+      const wd = (item.weekdays && item.weekdays.length) ? item.weekdays : [start.getDay()];
+      if(!wd.includes(t.getDay())) return false;
+      const diffDays = Math.round((t - start) / 86400000);
+      return Math.floor(diffDays / 7) % 2 === 0;
+    }
     case "monthly": return t.getDate() === start.getDate();
     case "yearly": return t.getDate() === start.getDate() && t.getMonth() === start.getMonth();
     default: return t.getTime() === start.getTime();
@@ -173,7 +180,7 @@ function occursOn(item, date){
 function recurText(item){
   if(item.recurrence === "none") return "Eenmalig · " + fmtDate(item.start_date);
   let base = RECUR_LABEL[item.recurrence];
-  if(item.recurrence === "weekly"){
+  if(item.recurrence === "weekly" || item.recurrence === "biweekly"){
     const wd = (item.weekdays && item.weekdays.length) ? item.weekdays : [parseYMD(item.start_date).getDay()];
     const names = WD.filter(([n,v])=>wd.includes(v)).map(([n])=>n);
     base += " (" + names.join(", ") + ")";
@@ -203,7 +210,7 @@ function buildWeekdays(){
 }
 function syncFormVisibility(){
   const recur = $("f-recur").value;
-  $("weekdaysField").classList.toggle("hidden", recur !== "weekly");
+  $("weekdaysField").classList.toggle("hidden", recur !== "weekly" && recur !== "biweekly");
   $("untilField").classList.toggle("hidden", recur === "none");
   $("timeField").classList.toggle("hidden", $("f-allday").checked);
 }
@@ -243,7 +250,7 @@ async function save(){
     all_day: $("f-allday").checked,
     start_time: $("f-allday").checked ? "" : ($("f-time").value || ""),
     recurrence: recur,
-    weekdays: recur === "weekly" ? [...selectedWeekdays].sort((a,b)=>a-b) : [],
+    weekdays: (recur === "weekly" || recur === "biweekly") ? [...selectedWeekdays].sort((a,b)=>a-b) : [],
     until_date: (recur !== "none" && $("f-until").value) ? $("f-until").value : null
   };
   if(!sb){ toast("Geen verbinding"); return; }
