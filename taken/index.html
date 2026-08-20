@@ -58,9 +58,33 @@ input:focus,textarea:focus,select:focus{border-color:var(--gold);box-shadow:0 0 
 .toast.show{opacity:1}
 .hidden{display:none !important}
 .err{color:#ff9b9b;font-size:13px;margin-top:8px}
+/* Wachtwoordscherm */
+#lockScreen{position:fixed;inset:0;background:var(--bg2);display:flex;align-items:center;justify-content:center;padding:24px;z-index:100}
+.lock-card{width:100%;max-width:400px;border:1px solid var(--line);background:var(--bg2);border-radius:20px;padding:28px 24px;text-align:center;
+  box-shadow:0 14px 42px rgba(200,164,91,.12)}
+.lock-icon{font-size:32px;margin-bottom:10px}
+.lock-card h2{margin:0 0 6px;font-size:20px;font-weight:600;color:#fff}
+.lock-card p{margin:0 0 18px;font-size:13px;color:var(--muted)}
+.lock-card input{width:100%;min-height:50px;border:1px solid var(--line);border-radius:14px;background:var(--bg);color:#fff;
+  font-size:16px;padding:0 16px;outline:none;text-align:center;margin-bottom:12px}
+.lock-card input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,164,91,.16)}
+.lock-card button{width:100%;min-height:48px;border:1px solid var(--gold);background:var(--gold);color:#0b0b0b;
+  border-radius:24px;font-size:15px;font-weight:700;cursor:pointer}
+.lock-err{color:#ff9b9b;font-size:13px;margin-top:10px;min-height:18px}
 </style>
 </head>
 <body>
+<div id="lockScreen">
+  <div class="lock-card">
+    <div class="lock-icon">🔒</div>
+    <h2>Taken &amp; agenda</h2>
+    <p>Voer het wachtwoord in om taken te beheren.</p>
+    <input id="lockInput" type="password" placeholder="Wachtwoord" aria-label="Wachtwoord" autocomplete="off">
+    <button id="lockBtn" type="button">Ontgrendelen</button>
+    <p class="lock-err" id="lockErr"></p>
+  </div>
+</div>
+
 <div class="wrap">
   <h1>Taken &amp; agenda</h1>
   <p class="sub">Extra taken en dagnotities voor het dashboard. Losse of herhalende punten.</p>
@@ -331,7 +355,26 @@ $("f-allday").addEventListener("change", syncFormVisibility);
 $("saveBtn").addEventListener("click", save);
 $("cancelBtn").addEventListener("click", resetForm);
 resetForm();
-load();
+
+/* ---- Wachtwoordslot: pas laden zodra ontgrendeld ---- */
+(function(){
+  const PASSWORD = "kikker";
+  const gate = $("lockScreen"), input = $("lockInput"), err = $("lockErr");
+  function unlock(){
+    gate.style.display = "none";
+    try{ sessionStorage.setItem("zusje_taken_unlocked","1"); }catch(e){}
+    load();
+  }
+  function tryUnlock(){
+    if((input.value||"").trim().toLowerCase() === PASSWORD){ err.textContent=""; unlock(); }
+    else { err.textContent = "Onjuist wachtwoord."; input.value=""; input.focus(); }
+  }
+  $("lockBtn").addEventListener("click", tryUnlock);
+  input.addEventListener("keydown", e=>{ if(e.key==="Enter") tryUnlock(); });
+  let already=false;
+  try{ already = sessionStorage.getItem("zusje_taken_unlocked")==="1"; }catch(e){}
+  if(already) unlock(); else setTimeout(()=>input.focus(), 100);
+})();
 </script>
 </body>
 </html>
