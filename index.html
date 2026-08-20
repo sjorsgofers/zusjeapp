@@ -121,6 +121,7 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
       <button class="tab" type="button" role="tab" data-tab="checklists">Checklists</button>
       <button class="tab" type="button" role="tab" data-tab="taken">Taken &amp; agenda</button>
       <button class="tab" type="button" role="tab" data-tab="table">Tafeloverzicht</button>
+      <button class="tab" type="button" role="tab" data-tab="labels">Labels</button>
       <button class="tab" type="button" role="tab" data-tab="reserveringen">Reserveringen</button>
       <button class="tab" type="button" role="tab" data-tab="kiosk">Kiosk</button>
     </nav>
@@ -137,6 +138,7 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
     <iframe id="f-checklists" class="frame"        title="Checklists" data-src="checklists/index.html"></iframe>
     <iframe id="f-taken"      class="frame"        title="Taken & agenda" data-src="taken/index.html"></iframe>
     <iframe id="f-table"      class="frame"        title="Table"      data-src="table/index.html"></iframe>
+    <iframe id="f-labels"     class="frame"        title="Labels"     data-src="labels/index.html"></iframe>
     <iframe id="f-kiosk"      class="frame"        title="Kiosk"      data-src="https://kiosk.shiftbase.com/"
             allow="camera; microphone; fullscreen; geolocation; clipboard-write" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </main>
@@ -150,7 +152,7 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
 
 <script>
 (function(){
-  const TABS = ["dranken","allergenen","checklists","taken","table","kiosk"];
+  const TABS = ["dranken","allergenen","checklists","taken","table","labels","kiosk"];
   const RESERVERINGEN_URL = "https://zusje.reserveersysteem.eu/contao?do=restaurant_dashboard&restaurant=1009";
   let currentTab = "dranken";
   const shell = document.getElementById("shell");
@@ -244,7 +246,7 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
     bindActivity(document);
     bindActivity(screensaver);           // moving over the dashboard dismisses it
     // frames already loaded before init get bound too
-    ["dranken","allergenen","checklists","taken","table","kiosk"].forEach(n => {
+    ["dranken","allergenen","checklists","taken","table","labels","kiosk"].forEach(n => {
       const f = frame(n); if (f && f.src) attachFrameActivity(f);
     });
     idleTimer = setTimeout(autoShow, IDLE_MS);

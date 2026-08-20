@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Labels" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <title>Keuken Labels</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-wrap">
+      <button id="brand-btn" class="brand" aria-label="Wissel tussen Print en Beheer" aria-haspopup="menu" aria-expanded="false">
+        <img src="logo.png" alt="Keuken Labels" class="brand-logo"
+             onerror="this.outerHTML='<span class=&quot;brand-text&quot;>Keuken Labels</span>'">
+        <svg class="brand-caret" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+      <div id="view-dropdown" class="view-dropdown hidden" role="menu">
+        <button class="view-option active" data-view="print" role="menuitem">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          <span class="view-option-text">
+            <span class="view-option-name">Print labels</span>
+            <span class="view-option-sub">Producten en datum-stickers</span>
+          </span>
+        </button>
+        <button class="view-option" data-view="manage" role="menuitem">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 20h9"></path>
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"></path>
+          </svg>
+          <span class="view-option-text">
+            <span class="view-option-name">Producten beheren</span>
+            <span class="view-option-sub">Toevoegen, bewerken, allergenen</span>
+          </span>
+        </button>
+        <button class="view-option" data-view="check" role="menuitem">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 11l3 3L22 4"></path>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+          </svg>
+          <span class="view-option-text">
+            <span class="view-option-name">Controle-lijst</span>
+            <span class="view-option-sub">Wat is X dagen geleden geprint?</span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div id="printer-pill" class="printer-pill checking" title="Printerstatus">
+      <span class="dot"></span><span class="label">Printer…</span>
+    </div>
+
+    <div class="date-cluster">
+      <button id="btn-geopend" class="date-side date-side-geopend" title="Print sticker: Geopend op vandaag">
+        <span class="side-top">GEOPEND</span>
+        <span class="side-bot">op</span>
+      </button>
+
+      <button id="btn-uitgehaald" class="date-side date-side-left" title="Print sticker: Uitgehaald op vandaag (uit vriezer)">
+        <span class="side-top">UITGEHAALD</span>
+        <span class="side-bot">op</span>
+      </button>
+
+      <button id="date-hero" class="date-hero" aria-label="Print sticker met datum vandaag" title="Tik om sticker te printen">
+        <div class="date-hero-content">
+          <div class="date-hero-label">VANDAAG</div>
+          <div class="date-hero-date" id="hero-date-main">—</div>
+          <div class="date-hero-sub">
+            <span id="hero-date-day">—</span>
+          </div>
+        </div>
+        <div class="date-hero-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+        </div>
+      </button>
+
+      <button id="btn-multi" class="date-side date-side-right" title="Print meerdere datum-stickers achter elkaar">
+        <span class="multi-x">×</span>
+        <span class="multi-label">aantal</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- VIEW: PRINT -->
+  <section id="view-print" class="view active">
+    <div class="toolbar">
+      <input
+        id="search"
+        class="search"
+        type="search"
+        placeholder="Zoek product…"
+        autocomplete="off"
+      />
+      <div id="alphabet" class="alphabet"></div>
+    </div>
+    <div id="product-grid" class="grid"></div>
+    <p id="empty-print" class="empty hidden">Geen producten gevonden.</p>
+  </section>
+
+  <!-- VIEW: CONTROLE-LIJST -->
+  <section id="view-check" class="view">
+    <div class="check-head">
+      <h2>Controle-lijst</h2>
+      <p class="check-sub">Welke producten zijn op die dag van een sticker voorzien?</p>
+    </div>
+    <div class="qty-quick check-days" id="check-days">
+      <button type="button" data-days="0">Vandaag</button>
+      <button type="button" data-days="1">Gisteren</button>
+      <button type="button" data-days="2" class="active">2 dagen<br><span class="quick-sub">geleden</span></button>
+      <button type="button" data-days="3">3 dagen<br><span class="quick-sub">geleden</span></button>
+      <button type="button" data-days="5">5 dagen<br><span class="quick-sub">geleden</span></button>
+      <button type="button" data-days="7">7 dagen<br><span class="quick-sub">geleden</span></button>
+    </div>
+    <p id="check-date-info" class="check-date-info">—</p>
+    <div id="check-list" class="list"></div>
+    <p id="check-empty" class="empty hidden">Geen producten op deze dag geprint.</p>
+  </section>
+
+  <!-- VIEW: MANAGE -->
+  <section id="view-manage" class="view">
+    <div class="manage-section">
+      <div class="section-head">
+        <h2>Producten <span id="product-count" class="count-pill"></span></h2>
+        <button class="btn btn-primary" id="btn-new-product">+ Nieuw product</button>
+      </div>
+      <div id="product-list" class="list"></div>
+    </div>
+  </section>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <!-- MULTIPLIER BANNER (verschijnt als aantal "geladen" is) -->
+  <div id="multi-banner" class="multi-banner hidden">
+    <span class="multi-banner-count" id="multi-banner-count">5×</span>
+    <span class="multi-banner-text">Tik een knop om <strong id="multi-banner-num">5</strong>× te printen</span>
+    <button class="multi-banner-cancel" id="multi-banner-cancel" aria-label="Annuleren">×</button>
+  </div>
+
+  <!-- MODAL: aantal kiezen (armeert volgende knop-tik) -->
+  <div id="modal-multi" class="modal hidden">
+    <div class="modal-card">
+      <h3>Hoeveel labels?</h3>
+      <p class="modal-sub">Kies een aantal, daarna tik je de gewenste knop (product, Geopend op, Uitgehaald op of Vandaag). Die print dan dat aantal keer.</p>
+      <div class="qty-quick" id="mf-quick">
+        <button type="button" data-qty="1">1</button>
+        <button type="button" data-qty="3">3</button>
+        <button type="button" data-qty="5" class="active">5</button>
+        <button type="button" data-qty="10">10</button>
+        <button type="button" data-qty="25">25</button>
+      </div>
+      <label>Of zelf invoeren <span class="label-hint">(max 50)</span>
+        <input id="mf-qty" type="number" min="1" max="50" value="5" inputmode="numeric" />
+      </label>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="mf-cancel">Annuleren</button>
+        <button class="btn btn-primary" id="mf-print">Klaar →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: product -->
+  <div id="modal-product" class="modal hidden">
+    <div class="modal-card modal-card-lg">
+      <h3 id="modal-product-title">Nieuw product</h3>
+      <label>Naam<input id="pf-name" type="text" autocomplete="off" /></label>
+      <label>Houdbaarheid (dagen) <span class="label-hint">0 = geen datum op label</span>
+        <input id="pf-days" type="number" min="0" max="365" value="3" inputmode="numeric" />
+      </label>
+      <label>Allergenen <span class="label-hint">(tik om te wisselen: Niet → Bevat → Sporen)</span>
+        <div id="pf-allergens" class="allergen-grid"></div>
+      </label>
+      <label>Aangepast <span class="label-hint">(eigen tekst op label, bv. extra info)</span>
+        <input id="pf-custom" type="text" maxlength="80" placeholder="bv. 'glutenvrij' of 'speciaal van de chef'" autocomplete="off" />
+      </label>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="pf-cancel">Annuleren</button>
+        <button class="btn btn-primary" id="pf-save">Opslaan</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Backend draait op de werk-PC, bereikbaar via Tailscale Funnel. Vul hier de tunnel-URL in (zonder / aan het eind). -->
+  <script>window.LABELS_API_BASE = "https://desktop-o25ac4v.tail7db321.ts.net";</script>
+  <script src="app.js"></script>
+</body>
+</html>
