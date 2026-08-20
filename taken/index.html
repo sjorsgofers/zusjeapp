@@ -49,6 +49,10 @@ input:focus,textarea:focus,select:focus{border-color:var(--gold);box-shadow:0 0 
 .item-actions{display:flex;gap:6px;flex:0 0 auto}
 
 .section-title{font-size:13px;color:var(--muted);margin:18px 0 8px;font-weight:600}
+.cat-header{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:var(--gold);
+  margin:22px 0 10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.cat-header:first-child{margin-top:6px}
+.cat-count{font-size:12px;font-weight:600;color:#0b0b0b;background:var(--gold);border-radius:999px;padding:1px 9px}
 .empty{color:var(--muted);font-size:14px;padding:18px;text-align:center;border:1px dashed var(--line);border-radius:14px}
 .toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--gold);color:#0b0b0b;font-weight:600;font-size:14px;padding:11px 18px;border-radius:999px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:50}
 .toast.show{opacity:1}
@@ -66,6 +70,15 @@ input:focus,textarea:focus,select:focus{border-color:var(--gold);box-shadow:0 0 
     <div class="field">
       <label for="f-title">Titel</label>
       <input id="f-title" type="text" placeholder="Bijv. Koelcel schoonmaken">
+    </div>
+    <div class="field">
+      <label for="f-category">Categorie</label>
+      <select id="f-category">
+        <option value="Containers &amp; Bidfood">Containers &amp; Bidfood</option>
+        <option value="Bestellen">Bestellen</option>
+        <option value="Keuken">Keuken</option>
+        <option value="Bediening">Bediening</option>
+      </select>
     </div>
     <div class="field">
       <label for="f-notes">Notitie (optioneel)</label>
@@ -126,6 +139,7 @@ const sb = (window.supabase && window.supabase.createClient) ? window.supabase.c
 
 const WD = [["Ma",1],["Di",2],["Wo",3],["Do",4],["Vr",5],["Za",6],["Zo",0]];
 const RECUR_LABEL = {none:"Eenmalig", daily:"Dagelijks", weekly:"Wekelijks", monthly:"Maandelijks", yearly:"Jaarlijks"};
+const CATEGORIES = ["Containers & Bidfood", "Bestellen", "Keuken", "Bediening"];
 const MONTHS = ["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"];
 let items = [];
 let editId = null;
@@ -206,6 +220,7 @@ function resetForm(){
   editId = null;
   $("formTitle").textContent = "Nieuw punt";
   $("f-title").value = ""; $("f-notes").value = "";
+  $("f-category").value = "Keuken";
   $("f-date").value = todayISO(); $("f-recur").value = "none";
   $("f-allday").checked = true; $("f-time").value = ""; $("f-until").value = "";
   selectedWeekdays = new Set();
@@ -222,6 +237,7 @@ async function save(){
   const recur = $("f-recur").value;
   const rec = {
     title,
+    category: $("f-category").value,
     notes: $("f-notes").value.trim(),
     start_date: $("f-date").value,
     all_day: $("f-allday").checked,
@@ -244,6 +260,7 @@ function startEdit(id){
   editId = it.id;
   $("formTitle").textContent = "Punt bewerken";
   $("f-title").value = it.title || "";
+  $("f-category").value = CATEGORIES.includes(it.category) ? it.category : "Keuken";
   $("f-notes").value = it.notes || "";
   $("f-date").value = it.start_date || todayISO();
   $("f-recur").value = it.recurrence || "none";
@@ -286,11 +303,19 @@ function renderList(){
   const wrap = $("listWrap");
   if(!items.length){ wrap.innerHTML = `<div class="empty">Nog geen punten. Voeg er hierboven een toe.</div>`; return; }
   const now = new Date();
-  const todays = items.filter(it=>occursOn(it, now));
-  const rest = items.filter(it=>!occursOn(it, now));
   let html = "";
-  if(todays.length){ html += `<div class="section-title">Vandaag</div>` + todays.map(itemRow).join(""); }
-  html += `<div class="section-title">Alle punten</div>` + rest.map(itemRow).join("");
+  const render = (list) => {
+    // vandaag eerst binnen de categorie
+    list.sort((a,b)=> (occursOn(b,now)?1:0) - (occursOn(a,now)?1:0));
+    return list.map(itemRow).join("");
+  };
+  CATEGORIES.forEach(cat => {
+    const inCat = items.filter(it => (it.category || "") === cat);
+    if(!inCat.length) return;
+    html += `<div class="cat-header">${esc(cat)} <span class="cat-count">${inCat.length}</span></div>` + render(inCat);
+  });
+  const other = items.filter(it => !CATEGORIES.includes(it.category || ""));
+  if(other.length){ html += `<div class="cat-header">Overig <span class="cat-count">${other.length}</span></div>` + render(other); }
   wrap.innerHTML = html;
 }
 
