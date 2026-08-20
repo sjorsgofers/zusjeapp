@@ -1,5 +1,5 @@
 /* Zusje App service worker — installable PWA + offline shell */
-const CACHE = "zusje-app-v12";
+const CACHE = "zusje-app-v13";
 
 // Allow the page to tell a waiting worker to activate immediately.
 self.addEventListener("message", event => {
