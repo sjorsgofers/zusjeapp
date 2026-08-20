@@ -3,43 +3,44 @@
    ======================================================================== */
 
 :root {
-  --bg: #f6f7fb;
-  --bg-elev: #ffffff;
+  /* Zusje huisstijl: donker + goud */
+  --bg: #111111;
+  --bg-elev: #171717;
 
-  --surface: rgba(255, 255, 255, 0.75);
-  --surface-hi: #ffffff;
-  --border: #e5e7ee;
-  --border-hi: #d4d8e2;
+  --surface: #161616;
+  --surface-hi: #1d1d1d;
+  --border: rgba(200, 164, 91, 0.35);
+  --border-hi: rgba(200, 164, 91, 0.60);
 
-  /* Primaire kleur: diepblauw → helder blauw */
-  --blue: #2563eb;            /* blue-600 */
-  --blue-hi: #3b82f6;          /* blue-500 */
-  --blue-sky: #0ea5e9;         /* sky-500 */
-  --blue-deep: #1e40af;        /* blue-800 */
+  /* Primaire kleur: goud (voorheen blauw) */
+  --blue: #c8a45b;
+  --blue-hi: #d8b774;
+  --blue-sky: #c8a45b;
+  --blue-deep: #a8863f;
 
-  /* Oranje accent */
-  --orange: #f97316;           /* orange-500 */
-  --orange-hi: #fb923c;        /* orange-400 */
-  --orange-deep: #c2410c;      /* orange-700 */
+  /* Semantische accenten (datum-sticker knoppen) */
+  --orange: #f0902f;
+  --orange-hi: #f7a94e;
+  --orange-deep: #b4611b;
 
-  --emerald: #059669;
-  --rose: #e11d48;
+  --emerald: #2fb37a;
+  --rose: #f0556e;
 
-  --grad-primary: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #0ea5e9 100%);
-  --grad-primary-hi: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #38bdf8 100%);
-  --grad-warm: linear-gradient(135deg, #2563eb 0%, #f97316 100%);
+  --grad-primary: linear-gradient(135deg, #a8863f 0%, #c8a45b 50%, #dcc084 100%);
+  --grad-primary-hi: linear-gradient(135deg, #c8a45b 0%, #d8b774 50%, #e6cf98 100%);
+  --grad-warm: linear-gradient(135deg, #c8a45b 0%, #f0902f 100%);
 
-  --text: #0f172a;
-  --text-dim: #475569;
-  --text-faint: #94a3b8;
+  --text: #ffffff;
+  --text-dim: rgba(255, 255, 255, 0.66);
+  --text-faint: rgba(255, 255, 255, 0.42);
 
-  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
-  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07), 0 2px 4px rgba(15, 23, 42, 0.04);
-  --shadow-lg: 0 20px 40px -12px rgba(15, 23, 42, 0.12), 0 4px 12px rgba(15, 23, 42, 0.06);
-  --shadow-glow-primary: 0 18px 40px -14px rgba(37, 99, 235, 0.5),
-                         0 6px 18px -8px rgba(14, 165, 233, 0.35);
-  --shadow-glow-orange: 0 12px 28px -8px rgba(249, 115, 22, 0.4);
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.45), 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 22px 44px -12px rgba(0, 0, 0, 0.65), 0 4px 14px rgba(0, 0, 0, 0.5);
+  --shadow-glow-primary: 0 18px 40px -14px rgba(200, 164, 91, 0.45),
+                         0 6px 18px -8px rgba(200, 164, 91, 0.30);
+  --shadow-glow-orange: 0 12px 28px -8px rgba(240, 144, 47, 0.40);
 
   --radius-sm: 10px;
   --radius: 16px;
@@ -68,9 +69,9 @@ body::before {
   content: '';
   position: fixed; inset: 0;
   background:
-    radial-gradient(ellipse 700px 500px at 12% 5%, rgba(37, 99, 235, 0.10), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 12% 5%, rgba(200, 164, 91, 0.10), transparent 60%),
     radial-gradient(ellipse 600px 450px at 88% 12%, rgba(249, 115, 22, 0.07), transparent 60%),
-    radial-gradient(ellipse 800px 500px at 50% 100%, rgba(14, 165, 233, 0.08), transparent 60%);
+    radial-gradient(ellipse 800px 500px at 50% 100%, rgba(200,164,91, 0.08), transparent 60%);
   pointer-events: none;
   z-index: 0;
   animation: orbDrift 26s ease-in-out infinite alternate;
@@ -91,7 +92,7 @@ body::before {
   flex-wrap: wrap;
   row-gap: 12px;
   padding: 14px 24px;
-  background: rgba(246, 247, 251, 0.75);
+  background: rgba(17, 17, 17, 0.78);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid var(--border);
@@ -180,7 +181,7 @@ body::before {
 .view-option.active {
   background: var(--grad-primary);
   color: white;
-  box-shadow: 0 8px 20px -8px rgba(37, 99, 235, 0.55);
+  box-shadow: 0 8px 20px -8px rgba(200, 164, 91, 0.55);
 }
 .view-option.active svg { color: white; }
 .view-option-text { display: flex; flex-direction: column; gap: 2px; }
@@ -316,19 +317,20 @@ body::before {
   letter-spacing: clamp(0.6px, 0.15vw, 1.4px);
 }
 
-/* Rechts: × multi — donker glasgrijs met blue accent */
+/* Rechts: × multi — donker met goud accent */
 .date-side-right {
-  background: #0f172a;
+  background: #242424;
+  border: 1px solid var(--border);
   color: white;
   min-width: 64px;
   padding: 8px 14px;
-  box-shadow: 0 10px 24px -12px rgba(15, 23, 42, 0.5),
+  box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.6),
               inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 .date-side-right:hover {
-  background: #1e293b;
+  background: #2e2e2e;
   box-shadow: 0 14px 30px -12px rgba(15, 23, 42, 0.6),
-              0 0 0 3px rgba(37, 99, 235, 0.2);
+              0 0 0 3px rgba(200, 164, 91, 0.2);
 }
 .date-side-right .multi-x {
   font-size: 28px;
@@ -346,7 +348,7 @@ body::before {
 }
 /* "Armed" state: aantal geladen, wacht op volgende knop-tik */
 .date-side-right.armed {
-  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+  background: var(--grad-primary);
   animation: armedPulse 1.6s ease-in-out infinite;
 }
 .date-side-right.armed .multi-x {
@@ -358,10 +360,10 @@ body::before {
   color: var(--blue-sky);
 }
 @keyframes armedPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6),
-                          0 14px 30px -12px rgba(37, 99, 235, 0.6); }
-  50% { box-shadow: 0 0 0 8px rgba(37, 99, 235, 0),
-                    0 14px 30px -12px rgba(37, 99, 235, 0.8); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200, 164, 91, 0.6),
+                          0 14px 30px -12px rgba(200, 164, 91, 0.6); }
+  50% { box-shadow: 0 0 0 8px rgba(200, 164, 91, 0),
+                    0 14px 30px -12px rgba(200, 164, 91, 0.8); }
 }
 
 /* Multiplier banner (verschijnt onder topbar als modus actief is) */
@@ -373,10 +375,10 @@ body::before {
   align-items: center;
   gap: 12px;
   padding: 10px 18px;
-  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+  background: var(--grad-primary);
   color: white;
   border-bottom: 1px solid rgba(255,255,255,0.15);
-  box-shadow: 0 6px 18px -8px rgba(37, 99, 235, 0.6);
+  box-shadow: 0 6px 18px -8px rgba(200, 164, 91, 0.6);
   font-weight: 600;
   animation: bannerSlide .2s ease;
 }
@@ -461,8 +463,8 @@ body::before {
   transform: translateY(-2px);
   background: var(--grad-primary-hi);
   box-shadow:
-    0 26px 50px -16px rgba(37, 99, 235, 0.6),
-    0 12px 28px -10px rgba(14, 165, 233, 0.5),
+    0 26px 50px -16px rgba(200, 164, 91, 0.6),
+    0 12px 28px -10px rgba(200,164,91, 0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 .date-hero:hover::after { transform: translateX(110%); }
@@ -473,8 +475,8 @@ body::before {
   0%   { transform: scale(1); }
   35%  { transform: scale(1.04);
          box-shadow: 0 0 0 8px rgba(99,102,241,0.18),
-                     0 26px 50px -16px rgba(37, 99, 235, 0.65),
-                     0 12px 28px -10px rgba(14, 165, 233, 0.5); }
+                     0 26px 50px -16px rgba(200, 164, 91, 0.65),
+                     0 12px 28px -10px rgba(200,164,91, 0.5); }
   100% { transform: scale(1); }
 }
 
@@ -563,7 +565,7 @@ body::before {
 }
 .search:focus {
   border-color: var(--blue);
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15), var(--shadow-sm);
+  box-shadow: 0 0 0 4px rgba(200, 164, 91, 0.15), var(--shadow-sm);
 }
 .search::placeholder { color: var(--text-faint); }
 
@@ -596,7 +598,7 @@ body::before {
   background: var(--grad-primary);
   color: white;
   border-color: transparent;
-  box-shadow: 0 6px 16px -4px rgba(37, 99, 235, 0.5);
+  box-shadow: 0 6px 16px -4px rgba(200, 164, 91, 0.5);
 }
 .alpha:disabled { opacity: 0.3; cursor: not-allowed; }
 .alpha.all { padding: 0 16px; min-width: auto; }
@@ -693,7 +695,7 @@ body::before {
   background: var(--grad-primary);
   border-color: transparent;
   color: white;
-  box-shadow: 0 18px 45px -14px rgba(37, 99, 235, 0.55);
+  box-shadow: 0 18px 45px -14px rgba(200, 164, 91, 0.55);
 }
 .card.flash .name { color: white; }
 .card.flash .meta, .card.flash .cat {
@@ -779,12 +781,12 @@ body::before {
 .btn-primary {
   background: var(--grad-primary);
   color: white;
-  box-shadow: 0 8px 20px -6px rgba(37, 99, 235, 0.45);
+  box-shadow: 0 8px 20px -6px rgba(200, 164, 91, 0.45);
 }
 .btn-primary:hover {
   background: var(--grad-primary-hi);
   transform: translateY(-1px);
-  box-shadow: 0 12px 26px -6px rgba(37, 99, 235, 0.55);
+  box-shadow: 0 12px 26px -6px rgba(200, 164, 91, 0.55);
 }
 .btn-primary:active { transform: scale(0.97); }
 .btn-ghost {
@@ -898,9 +900,9 @@ body::before {
 .allergen-toggle[data-state="0"] .state { display: none; }
 /* state-3: bevat — oranje */
 .allergen-toggle[data-state="3"] {
-  background: rgba(249, 115, 22, 0.12);
+  background: rgba(240, 144, 47, 0.16);
   border-color: var(--orange);
-  color: var(--orange-deep);
+  color: var(--orange-hi);
 }
 .allergen-toggle[data-state="3"] .state {
   background: var(--orange);
@@ -908,9 +910,9 @@ body::before {
 }
 /* state-2: sporen — geel/amber */
 .allergen-toggle[data-state="2"] {
-  background: rgba(251, 191, 36, 0.15);
+  background: rgba(245, 158, 11, 0.16);
   border-color: #f59e0b;
-  color: #92400e;
+  color: #f7c765;
 }
 .allergen-toggle[data-state="2"] .state {
   background: #f59e0b;
@@ -918,9 +920,9 @@ body::before {
 }
 /* state-1: onbekend — grijs */
 .allergen-toggle[data-state="1"] {
-  background: #f3f4f6;
+  background: rgba(156, 163, 175, 0.16);
   border-color: #9ca3af;
-  color: var(--text-dim);
+  color: rgba(255, 255, 255, 0.75);
 }
 .allergen-toggle[data-state="1"] .state {
   background: #9ca3af;
@@ -958,7 +960,7 @@ body::before {
   background: var(--grad-primary);
   color: white;
   border-color: transparent;
-  box-shadow: 0 8px 22px -6px rgba(37, 99, 235, 0.55);
+  box-shadow: 0 8px 22px -6px rgba(200, 164, 91, 0.55);
   transform: translateY(-1px);
 }
 
@@ -996,8 +998,8 @@ body::before {
 .check-date-info {
   margin: 0 0 16px;
   padding: 12px 16px;
-  background: rgba(37, 99, 235, 0.06);
-  border: 1px solid rgba(37, 99, 235, 0.2);
+  background: rgba(200, 164, 91, 0.06);
+  border: 1px solid rgba(200, 164, 91, 0.2);
   border-radius: 12px;
   font-size: 13px;
   color: var(--text);
@@ -1093,8 +1095,8 @@ body::before {
 }
 .modal-card input:focus, .modal-card select:focus {
   border-color: var(--blue);
-  background: white;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+  background: var(--surface-hi);
+  box-shadow: 0 0 0 4px rgba(200, 164, 91, 0.15);
 }
 .modal-actions {
   display: flex; gap: 10px; justify-content: flex-end;
