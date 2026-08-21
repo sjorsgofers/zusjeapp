@@ -101,10 +101,14 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
 
 @media (max-width:560px){
   .tab{font-size:13.5px;padding:9px 13px}
-  .tabbar{gap:7px}
   .tabbar .logo{height:28px}
-  .tabs{justify-content:flex-start}
   .tablink{width:38px;height:38px}
+  /* Op mobiel swipet de héle balk mee: Dashboard, categorieën, Kiosk én
+     Management staan in één horizontale rij i.p.v. vastgezet aan de randen. */
+  .tabbar{gap:7px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex-wrap:nowrap}
+  .tabbar::-webkit-scrollbar{display:none}
+  .tabs{flex:0 0 auto;justify-content:flex-start;overflow:visible;padding:0}
+  .logobtn,.minibtn,.tablink{flex:0 0 auto}
 }
 
 /* Login gate */
@@ -224,8 +228,21 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
     }
   }
 
+  // Beveiligde pagina's altijd opnieuw op slot bij een tabwissel, zodat een
+  // openstaande pc niet toegankelijk blijft.
+  const LOCKED_TABS = ["management","taken"];
+  function lockSecureTabs(){
+    LOCKED_TABS.forEach(t => {
+      const f = frame(t);
+      if (f && f.src && f.contentWindow){
+        try { f.contentWindow.postMessage({ type:"zusjeLock" }, "*"); } catch(e){}
+      }
+    });
+  }
+
   function activate(name){
     if (!TABS.includes(name)) name = "table";
+    lockSecureTabs();
     currentTab = name;
     ensureLoaded(name);
     TABS.forEach(t => {

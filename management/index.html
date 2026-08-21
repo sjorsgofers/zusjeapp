@@ -14,12 +14,11 @@ h1{font-size:24px;font-weight:600;margin:0 0 4px}
 .sub{color:var(--muted);font-size:14px;margin:0 0 26px}
 
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
-.card{display:flex;flex-direction:column;gap:6px;text-align:left;text-decoration:none;
+.card{display:flex;flex-direction:column;gap:7px;text-align:left;text-decoration:none;
   border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,#171717,#111);
   padding:20px 20px 18px;cursor:pointer;transition:transform .12s ease,border-color .15s ease,box-shadow .15s ease;
   font-family:inherit;color:#fff}
 .card:hover{transform:translateY(-3px);border-color:var(--gold);box-shadow:0 12px 28px rgba(200,164,91,.16)}
-.card .ico{font-size:26px;line-height:1;margin-bottom:6px}
 .card .title{font-size:17px;font-weight:700;color:var(--gold)}
 .card .desc{font-size:13px;color:var(--muted);line-height:1.45}
 .card .ext{font-size:11px;color:var(--muted);opacity:.75;margin-top:4px}
@@ -57,39 +56,33 @@ h1{font-size:24px;font-weight:600;margin:0 0 4px}
 
   <div class="grid">
     <button class="card" type="button" data-go="taken">
-      <span class="ico">📋</span>
       <span class="title">Taken &amp; agenda</span>
       <span class="desc">Dagtaken en herhalende punten beheren die op het dashboard verschijnen.</span>
     </button>
 
     <a class="card" href="nieuwe-medewerker.html">
-      <span class="ico">🧑‍🍳</span>
       <span class="title">Nieuwe medewerker</span>
       <span class="desc">Aanmeldformulier invullen — gegevens en documenten gaan direct per mail naar de administratie.</span>
     </a>
 
     <button class="card" type="button" data-go="checklists">
-      <span class="ico">✅</span>
       <span class="title">Checklists bewerken</span>
       <span class="desc">Categorieën en punten van de checklists aanpassen.</span>
     </button>
 
     <a class="card" href="https://sjorsgofers.github.io/monitor-dashboard/" target="_blank" rel="noopener">
-      <span class="ico">📺</span>
       <span class="title">Dashboard</span>
       <span class="desc">Het TV-dashboard met checklists en dagtaken bekijken.</span>
       <span class="ext">Opent in nieuw venster ↗</span>
     </a>
 
     <a class="card" href="https://zusje.reserveersysteem.eu/contao?do=restaurant_dashboard&restaurant=1009" target="_blank" rel="noopener">
-      <span class="ico">📅</span>
       <span class="title">Reserveringen</span>
       <span class="desc">Het reserveringssysteem openen.</span>
       <span class="ext">Opent in nieuw venster ↗</span>
     </a>
 
     <a class="card" href="https://app.shiftbase.com/" target="_blank" rel="noopener">
-      <span class="ico">🕐</span>
       <span class="title">Shiftbase</span>
       <span class="desc">Roosters en gewerkte uren beheren.</span>
       <span class="ext">Opent in nieuw venster ↗</span>
@@ -100,12 +93,20 @@ h1{font-size:24px;font-weight:600;margin:0 0 4px}
 <script>
 (function(){
   const PASSWORD = "kikker";
+  // Restanten van de eerdere "onthouden"-versie opruimen
+  try{ ["zusje_mgmt_unlocked","zusje_taken_unlocked","zusje_cl_unlocked"].forEach(k=>{
+    localStorage.removeItem(k); sessionStorage.removeItem(k);
+  }); }catch(e){}
+
+  function markUnlocked(key){
+    try{ localStorage.setItem(key, String(Date.now())); }catch(e){}
+  }
+
   const $ = id => document.getElementById(id);
   const gate = $("lockScreen"), input = $("lockInput"), err = $("lockErr");
 
   function unlock(){
     gate.style.display = "none";
-    try{ sessionStorage.setItem("zusje_mgmt_unlocked","1"); }catch(e){}
   }
   function tryUnlock(){
     if((input.value||"").trim().toLowerCase() === PASSWORD){ err.textContent=""; unlock(); }
@@ -113,9 +114,18 @@ h1{font-size:24px;font-weight:600;margin:0 0 4px}
   }
   $("lockBtn").addEventListener("click", tryUnlock);
   input.addEventListener("keydown", e=>{ if(e.key==="Enter") tryUnlock(); });
-  let already=false;
-  try{ already = sessionStorage.getItem("zusje_mgmt_unlocked")==="1"; }catch(e){}
-  if(already) unlock(); else setTimeout(()=>input.focus(), 100);
+  setTimeout(()=>input.focus(), 100);
+
+  // Altijd opnieuw vragen: de shell stuurt "vergrendel" zodra je dit tabblad verlaat
+  // of opnieuw opent. Zo blijft een openstaande pc niet toegankelijk.
+  function lock(){
+    gate.style.display = "";
+    input.value = "";
+    err.textContent = "";
+  }
+  window.addEventListener("message", e=>{
+    if(e.data && e.data.type === "zusjeLock") lock();
+  });
 
   // Interne knoppen: laat de app-shell naar het juiste tabblad springen.
   document.querySelectorAll("[data-go]").forEach(btn=>{

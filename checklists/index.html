@@ -800,7 +800,8 @@
 
   let ITEMS = [];
   let editMode = {};                       // per pagina aan/uit
-  let unlocked = sessionStorage.getItem("zusje_cl_unlocked") === "1";
+  let unlocked = false;   // elke keer opnieuw invoeren
+  try{ localStorage.removeItem("zusje_cl_unlocked"); sessionStorage.removeItem("zusje_cl_unlocked"); }catch(e){}  // Restanten van de eerdere onthoud-versie
 
   const esc = s => String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 
@@ -908,7 +909,6 @@
     if(v === null) return false;
     if(v.trim().toLowerCase() === PASSWORD){
       unlocked = true;
-      sessionStorage.setItem("zusje_cl_unlocked","1");
       return true;
     }
     alert("Onjuist wachtwoord.");
@@ -928,6 +928,7 @@
     if(act === "toggle-edit"){
       if(!editMode[page] && !askPassword()) return;
       editMode[page] = !editMode[page];
+      if(!editMode[page]) unlocked = false;   // sluiten = weer op slot
       btn.classList.toggle("on", editMode[page]);
       btn.textContent = editMode[page] ? "✓ Klaar met bewerken" : "✎ Lijst bewerken";
       renderPage(page);
