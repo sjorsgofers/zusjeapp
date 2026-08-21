@@ -33,6 +33,12 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
   background:var(--bg2);border-bottom:1px solid rgba(200,164,91,.35);position:relative;z-index:2}
 .tabbar .logo{height:34px;width:auto;display:block;flex:0 0 auto;margin-right:2px;cursor:pointer}
 .tabbar .logo:hover{opacity:.85}
+.logobtn{display:inline-flex;align-items:center;gap:6px;flex:0 0 auto;margin-right:2px;padding:3px 9px 3px 3px;
+  background:transparent;border:1px solid rgba(200,164,91,.45);border-radius:999px;cursor:pointer;
+  transition:background .15s ease,border-color .15s ease}
+.logobtn:hover{background:#1a1a1a;border-color:var(--gold)}
+.logobtn-ico{font-size:15px;line-height:1}
+@media (max-width:560px){ .logobtn{padding:2px 7px 2px 2px;gap:4px} .logobtn-ico{font-size:13px} }
 .tabs{display:flex;gap:8px;flex:1;justify-content:center;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:2px 0}
 .tabs::-webkit-scrollbar{display:none}
 .tab{appearance:none;flex:0 0 auto;border:1px solid var(--gold);background:transparent;color:#fff;
@@ -136,7 +142,10 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
 <!-- App shell -->
 <div id="shell">
   <header class="tabbar">
-    <img id="ssTrigger" class="logo" src="logo.png" alt="Zusje" title="Screensaver starten" role="button" tabindex="0">
+    <button id="ssTrigger" class="logobtn" type="button" title="Dashboard tonen" aria-label="Dashboard tonen">
+      <img class="logo" src="logo.png" alt="Zusje">
+      <span class="logobtn-ico" aria-hidden="true">📅</span>
+    </button>
     <nav class="tabs" role="tablist" aria-label="Onderdelen">
       <button class="tab active" type="button" data-group="bediening">🍷 Bediening</button>
       <button class="tab" type="button" data-group="keuken">🍴 Keuken</button>
