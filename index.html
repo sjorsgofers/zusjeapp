@@ -111,6 +111,21 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
   .logobtn,.minibtn,.tablink{flex:0 0 auto}
 }
 
+/* Vestigingskeuze */
+#siteGate{position:fixed;inset:0;background:var(--bg2);display:flex;align-items:center;justify-content:center;padding:24px;z-index:12}
+#siteGate.hidden{display:none}
+.site-list{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.site-btn{width:100%;min-height:58px;border:1px solid var(--gold);background:transparent;color:#fff;
+  border-radius:28px;font-size:17px;font-weight:600;cursor:pointer;font-family:inherit;
+  transition:background .15s ease}
+.site-btn:hover{background:#1a1a1a}
+.site-note{margin:16px 0 0;font-size:12.5px;color:rgba(255,255,255,.5)}
+.login-site{margin:-8px 0 16px;font-size:14px;color:var(--gold);font-weight:600}
+.sitebtn{flex:0 0 auto;border:1px solid rgba(200,164,91,.45);background:transparent;color:var(--gold);
+  font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:999px;cursor:pointer;white-space:nowrap;
+  font-family:inherit;transition:background .15s ease,border-color .15s ease}
+.sitebtn:hover{background:#1a1a1a;border-color:var(--gold)}
+
 /* Login gate */
 #loginGate{position:fixed;inset:0;background:var(--bg2);display:flex;align-items:center;justify-content:center;padding:24px;z-index:10}
 #loginGate.hidden{display:none}
@@ -135,12 +150,25 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
 </head>
 <body>
 
+<!-- Vestigingskeuze -->
+<div id="siteGate">
+  <div class="login-shell">
+    <div class="login-card">
+      <img class="login-logo" src="logo.png" alt="Zusje logo">
+      <h1 class="login-title">Kies je vestiging</h1>
+      <div id="siteList" class="site-list"></div>
+      <p class="site-note">Je keuze wordt op dit apparaat onthouden.</p>
+    </div>
+  </div>
+</div>
+
 <!-- Login -->
 <div id="loginGate">
   <div class="login-shell">
     <div class="login-card">
       <img class="login-logo" src="logo.png" alt="Zusje logo">
-      <h1 class="login-title">Inloggen</h1>
+      <h1 class="login-title" id="loginTitle">Inloggen</h1>
+      <p class="login-site" id="loginSite"></p>
       <div class="login-row">
         <input id="passwordInput" class="login-input" type="password" placeholder="Wachtwoord" aria-label="Wachtwoord">
         <button id="loginBtn" class="login-btn" type="button">Open</button>
@@ -164,6 +192,7 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
         <img src="shiftbase-logo.webp" alt="" class="tab-logo"><span>Kiosk</span>
       </button>
     </nav>
+    <button id="siteBtn" class="sitebtn" type="button" title="Van vestiging wisselen">Roermond</button>
     <button id="mgmtBtn" class="minibtn minibtn-ico" type="button" data-tab="management" title="Management" aria-label="Management"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></button>
     <a id="kioskOpen" class="tablink hidden" href="https://kiosk.shiftbase.com/" target="_blank" rel="noopener" title="Kiosk in nieuw tabblad openen" aria-label="Kiosk in nieuw tabblad openen">↗</a>
   </header>
@@ -224,7 +253,7 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
     const f = frame(name);
     if (f && f.dataset.src && !f.src){
       f.addEventListener("load", () => attachFrameActivity(f), { once:true });
-      f.src = f.dataset.src;
+      f.src = withSite(f.dataset.src);
     }
   }
 
@@ -370,6 +399,7 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
   }
 
   function startApp(){
+    document.getElementById("siteGate").classList.add("hidden");
     document.getElementById("loginGate").classList.add("hidden");
     shell.classList.add("show");
     let tab = "table";
@@ -378,14 +408,81 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
     initIdle();
   }
 
-  // Login
-  const PASSWORD = "zusje2026";
+  /* ===== Vestigingen =====
+     Elke vestiging heeft eigen checklists en agenda (via ?loc= naar de sub-apps)
+     en een eigen wachtwoord. De keuze wordt op het apparaat onthouden. */
+  const SITES = {
+    roermond:   { naam:"Roermond",   wachtwoord:"Roerkade123" },
+    maastricht: { naam:"Maastricht", wachtwoord:"Vrijthof123" }
+  };
+  const SITE_KEY = "zusje_site", AUTH_KEY = "zusje_auth";
+
+  function savedSite(){
+    try { const s = localStorage.getItem(SITE_KEY); return SITES[s] ? s : null; } catch(e){ return null; }
+  }
+  function currentSite(){ return savedSite() || "roermond"; }
+  function siteName(){ return SITES[currentSite()].naam; }
+
+  // Sub-apps krijgen de vestiging mee als ?loc=<vestiging>
+  const APP_VERSION = "2026-08-21c";   // ophogen bij elke deploy => verse sub-apps, nooit uit cache
+  function withSite(src){
+    if (!src || /^https?:\/\//.test(src)) return src;   // externe pagina's ongemoeid
+    const sep = src.includes("?") ? "&" : "?";
+    return src + sep + "loc=" + currentSite() + "&v=" + APP_VERSION;
+  }
+
+  const siteGate = document.getElementById("siteGate");
+  const loginGate = document.getElementById("loginGate");
+
+  function toonVestigingskeuze(){
+    const lijst = document.getElementById("siteList");
+    lijst.innerHTML = "";
+    Object.keys(SITES).forEach(key=>{
+      const b = document.createElement("button");
+      b.className = "site-btn"; b.type = "button";
+      b.textContent = SITES[key].naam;
+      b.addEventListener("click", ()=> kiesVestiging(key));
+      lijst.appendChild(b);
+    });
+    siteGate.classList.remove("hidden");
+    loginGate.classList.add("hidden");
+    shell.classList.remove("show");
+  }
+
+  function kiesVestiging(key){
+    const gewisseld = savedSite() !== key;
+    try { localStorage.setItem(SITE_KEY, key); } catch(e){}
+    // Bij het wisselen van vestiging opnieuw inloggen
+    try { localStorage.removeItem(AUTH_KEY); } catch(e){}
+    // Alle sub-apps leegmaken zodat ze straks met de NIEUWE vestiging laden
+    if (gewisseld){
+      TABS.forEach(t => {
+        const f = frame(t);
+        if (f && f.dataset.src) { f.removeAttribute("src"); }
+      });
+      try { localStorage.removeItem("zusje_hub_tab"); } catch(e){}
+      currentTab = "table";
+    }
+    siteGate.classList.add("hidden");
+    toonLogin();
+  }
+
+  function toonLogin(){
+    document.getElementById("loginSite").textContent = siteName();
+    const b = document.getElementById("siteBtn");
+    if (b) b.textContent = siteName();
+    loginGate.classList.remove("hidden");
+    setTimeout(()=>{ try{ input.focus(); }catch(e){} }, 100);
+  }
+
+  // Login (wachtwoord per vestiging)
   const input = document.getElementById("passwordInput");
   const errEl = document.getElementById("loginError");
   function unlock(){
-    if (input.value === PASSWORD){
+    if (input.value === SITES[currentSite()].wachtwoord){
       errEl.classList.add("hidden");
-      try { sessionStorage.setItem("zusje_hub_unlocked","1"); } catch(e){}
+      input.value = "";
+      try { localStorage.setItem(AUTH_KEY, currentSite()); } catch(e){}
       startApp();
     } else {
       errEl.classList.remove("hidden");
@@ -394,9 +491,20 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
   document.getElementById("loginBtn").addEventListener("click", unlock);
   input.addEventListener("keydown", e => { if (e.key === "Enter") unlock(); });
 
-  let unlocked = false;
-  try { unlocked = sessionStorage.getItem("zusje_hub_unlocked") === "1"; } catch(e){}
-  if (unlocked) startApp();
+  // Klik op de vestigingsnaam in de balk => opnieuw kiezen
+  const siteBtn = document.getElementById("siteBtn");
+  if (siteBtn) siteBtn.addEventListener("click", toonVestigingskeuze);
+
+  // Opstart: eerst vestiging, dan wachtwoord (beide worden onthouden)
+  (function start(){
+    const site = savedSite();
+    if (!site){ toonVestigingskeuze(); return; }
+    document.getElementById("siteBtn").textContent = siteName();
+    let ingelogd = false;
+    try { ingelogd = localStorage.getItem(AUTH_KEY) === site; } catch(e){}
+    siteGate.classList.add("hidden");
+    if (ingelogd) startApp(); else toonLogin();
+  })();
 })();
 
 // Geen service worker meer: de SW-cachelaag hield op sommige apparaten oude

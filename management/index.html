@@ -14,14 +14,12 @@ h1{font-size:24px;font-weight:600;margin:0 0 4px}
 .sub{color:var(--muted);font-size:14px;margin:0 0 26px}
 
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
-.card{display:flex;flex-direction:column;gap:7px;text-align:left;text-decoration:none;
-  border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,#171717,#111);
-  padding:20px 20px 18px;cursor:pointer;transition:transform .12s ease,border-color .15s ease,box-shadow .15s ease;
+.card{display:flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;
+  min-height:92px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,#171717,#111);
+  padding:18px;cursor:pointer;transition:transform .12s ease,border-color .15s ease,box-shadow .15s ease;
   font-family:inherit;color:#fff}
 .card:hover{transform:translateY(-3px);border-color:var(--gold);box-shadow:0 12px 28px rgba(200,164,91,.16)}
-.card .title{font-size:17px;font-weight:700;color:var(--gold)}
-.card .desc{font-size:13px;color:var(--muted);line-height:1.45}
-.card .ext{font-size:11px;color:var(--muted);opacity:.75;margin-top:4px}
+.card .title{font-size:17px;font-weight:700;color:var(--gold);line-height:1.3}
 
 /* Wachtwoordslot */
 #lockScreen{position:fixed;inset:0;background:var(--bg2);display:flex;align-items:center;justify-content:center;padding:24px;z-index:100}
@@ -57,35 +55,26 @@ h1{font-size:24px;font-weight:600;margin:0 0 4px}
   <div class="grid">
     <button class="card" type="button" data-go="taken">
       <span class="title">Taken &amp; agenda</span>
-      <span class="desc">Dagtaken en herhalende punten beheren die op het dashboard verschijnen.</span>
     </button>
 
     <a class="card" href="nieuwe-medewerker.html">
       <span class="title">Nieuwe medewerker</span>
-      <span class="desc">Aanmeldformulier invullen — gegevens en documenten gaan direct per mail naar de administratie.</span>
     </a>
 
     <button class="card" type="button" data-go="checklists">
       <span class="title">Checklists bewerken</span>
-      <span class="desc">Categorieën en punten van de checklists aanpassen.</span>
     </button>
 
     <a class="card" href="https://sjorsgofers.github.io/monitor-dashboard/" target="_blank" rel="noopener">
       <span class="title">Dashboard</span>
-      <span class="desc">Het TV-dashboard met checklists en dagtaken bekijken.</span>
-      <span class="ext">Opent in nieuw venster ↗</span>
     </a>
 
     <a class="card" href="https://zusje.reserveersysteem.eu/contao?do=restaurant_dashboard&restaurant=1009" target="_blank" rel="noopener">
       <span class="title">Reserveringen</span>
-      <span class="desc">Het reserveringssysteem openen.</span>
-      <span class="ext">Opent in nieuw venster ↗</span>
     </a>
 
     <a class="card" href="https://app.shiftbase.com/" target="_blank" rel="noopener">
       <span class="title">Shiftbase</span>
-      <span class="desc">Roosters en gewerkte uren beheren.</span>
-      <span class="ext">Opent in nieuw venster ↗</span>
     </a>
   </div>
 </div>

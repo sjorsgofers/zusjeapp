@@ -794,6 +794,11 @@
 (function(){
   const SB_URL  = "https://xiwdbvxnjcrdwjhmpjnf.supabase.co";
   const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhpd2RidnhuamNyZHdqaG1wam5mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ2NjE1NzAsImV4cCI6MjA3MDIzNzU3MH0.d14QNY5Pof9j3zmlbs-5gBTs25s6xo_XYhyVbWE2P1k";
+  // Actieve vestiging komt via ?loc= uit de app-shell
+  const LOC = (function(){
+    try{ const v = new URLSearchParams(location.search).get("loc"); return v || "roermond"; }
+    catch(e){ return "roermond"; }
+  })();
   const PASSWORD = "kikker";
   const H = { apikey:SB_ANON, Authorization:"Bearer "+SB_ANON, "Content-Type":"application/json" };
 
@@ -820,7 +825,12 @@
 
   async function load(){
     try{
-      ITEMS = await api("checklist_items?select=*&order=page,section_order,sort_order") || [];
+      try{
+        ITEMS = await api("checklist_items?select=*&location=eq."+encodeURIComponent(LOC)+"&order=page,section_order,sort_order") || [];
+      }catch(err){
+        // Vestigingskolom bestaat nog niet: toon dan gewoon alles
+        ITEMS = await api("checklist_items?select=*&order=page,section_order,sort_order") || [];
+      }
     }catch(e){ console.warn("Checklist-items laden mislukt:", e); ITEMS = []; }
     renderAll();
   }
@@ -958,21 +968,21 @@
         const secOrder = inSec.length ? inSec[0].section_order : 1;
         const maxSort  = inSec.reduce((m,x)=>Math.max(m,x.sort_order||0),0);
         await api("checklist_items", {method:"POST", body:JSON.stringify({
-          page, section:sec, section_order:secOrder, label:v.trim(), sort_order:maxSort+1
+          page, section:sec, section_order:secOrder, label:v.trim(), sort_order:maxSort+1, location:LOC
         })});
         await refresh();
       }
       else if(act === "edit-sec"){
         const v = prompt("Categorie hernoemen:", sec);
         if(v===null || !v.trim() || v.trim()===sec) return;
-        await api(`checklist_items?page=eq.${encodeURIComponent(page)}&section=eq.${encodeURIComponent(sec)}`,
+        await api(`checklist_items?page=eq.${encodeURIComponent(page)}&section=eq.${encodeURIComponent(sec)}&location=eq.${encodeURIComponent(LOC)}`,
           {method:"PATCH", body:JSON.stringify({section:v.trim()})});
         await refresh();
       }
       else if(act === "del-sec"){
         const n = ITEMS.filter(x=>x.page===page && x.section===sec).length;
         if(!confirm(`Categorie "${sec}" en alle ${n} punten erin verwijderen?`)) return;
-        await api(`checklist_items?page=eq.${encodeURIComponent(page)}&section=eq.${encodeURIComponent(sec)}`, {method:"DELETE"});
+        await api(`checklist_items?page=eq.${encodeURIComponent(page)}&section=eq.${encodeURIComponent(sec)}&location=eq.${encodeURIComponent(LOC)}`, {method:"DELETE"});
         await refresh();
       }
       else if(act === "add-sec"){
@@ -982,7 +992,7 @@
         if(first===null || !first.trim()) return;
         const maxSec = ITEMS.filter(x=>x.page===page).reduce((m,x)=>Math.max(m,x.section_order||0),0);
         await api("checklist_items", {method:"POST", body:JSON.stringify({
-          page, section:name.trim(), section_order:maxSec+1, label:first.trim(), sort_order:1
+          page, section:name.trim(), section_order:maxSec+1, label:first.trim(), sort_order:1, location:LOC
         })});
         await refresh();
       }

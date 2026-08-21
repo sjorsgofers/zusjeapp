@@ -162,6 +162,11 @@ const SUPABASE_URL  = "https://xiwdbvxnjcrdwjhmpjnf.supabase.co";
 const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhpd2RidnhuamNyZHdqaG1wam5mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ2NjE1NzAsImV4cCI6MjA3MDIzNzU3MH0.d14QNY5Pof9j3zmlbs-5gBTs25s6xo_XYhyVbWE2P1k";
 const sb = (window.supabase && window.supabase.createClient) ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON) : null;
 
+  // Actieve vestiging komt via ?loc= uit de app-shell
+  const LOC = (function(){
+    try{ const v = new URLSearchParams(location.search).get("loc"); return v || "roermond"; }
+    catch(e){ return "roermond"; }
+  })();
 const WD = [["Ma",1],["Di",2],["Wo",3],["Do",4],["Vr",5],["Za",6],["Zo",0]];
 const RECUR_LABEL = {none:"Eenmalig", daily:"Dagelijks", weekly:"Wekelijks", biweekly:"Tweewekelijks (om de week)", monthly:"Maandelijks", yearly:"Jaarlijks"};
 const CATEGORIES = ["Containers & Bidfood", "Bestellen", "Keuken", "Bediening"];
@@ -242,7 +247,11 @@ function syncFormVisibility(){
 /* ---- CRUD ---- */
 async function load(){
   if(!sb){ renderList(); return; }
-  const { data, error } = await sb.from("agenda_items").select("*").order("start_date",{ascending:true});
+  let { data, error } = await sb.from("agenda_items").select("*").eq("location", LOC).order("start_date",{ascending:true});
+  if(error){
+    // Vestigingskolom bestaat nog niet: val terug op alles
+    ({ data, error } = await sb.from("agenda_items").select("*").order("start_date",{ascending:true}));
+  }
   if(error){ console.warn(error); $("listWrap").innerHTML = `<div class="empty">Kon niet laden: ${esc(error.message)}<br>Is de tabel al aangemaakt?</div>`; return; }
   items = data || [];
   renderList();
@@ -268,6 +277,7 @@ async function save(){
   const recur = $("f-recur").value;
   const rec = {
     title,
+    location: LOC,
     category: $("f-category").value,
     notes: $("f-notes").value.trim(),
     start_date: $("f-date").value,
