@@ -37,8 +37,8 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
   background:transparent;border:1px solid rgba(200,164,91,.45);border-radius:999px;cursor:pointer;
   transition:background .15s ease,border-color .15s ease}
 .logobtn:hover{background:#1a1a1a;border-color:var(--gold)}
-.logobtn-ico{font-size:15px;line-height:1}
-@media (max-width:560px){ .logobtn{padding:2px 7px 2px 2px;gap:4px} .logobtn-ico{font-size:13px} }
+.logobtn-txt{font-size:13.5px;font-weight:600;color:var(--gold);line-height:1;white-space:nowrap;padding-right:2px}
+@media (max-width:560px){ .logobtn{padding:2px 8px 2px 2px;gap:5px} .logobtn-txt{font-size:12px} }
 .tabs{display:flex;gap:8px;flex:1;justify-content:center;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:2px 0}
 .tabs::-webkit-scrollbar{display:none}
 .tab{appearance:none;flex:0 0 auto;border:1px solid var(--gold);background:transparent;color:#fff;
@@ -144,13 +144,13 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
   <header class="tabbar">
     <button id="ssTrigger" class="logobtn" type="button" title="Dashboard tonen" aria-label="Dashboard tonen">
       <img class="logo" src="logo.png" alt="Zusje">
-      <span class="logobtn-ico" aria-hidden="true">📅</span>
+      <span class="logobtn-txt">Dashboard</span>
     </button>
     <nav class="tabs" role="tablist" aria-label="Onderdelen">
-      <button class="tab active" type="button" data-group="bediening">🍷 Bediening</button>
-      <button class="tab" type="button" data-group="keuken">🍴 Keuken</button>
+      <button class="tab active" type="button" data-group="bediening">Bediening</button>
+      <button class="tab" type="button" data-group="keuken">Keuken</button>
       <button class="tab" type="button" role="tab" data-tab="taken">Taken &amp; agenda</button>
-      <button class="tab" type="button" role="tab" data-tab="management">Management 💼</button>
+      <button class="tab" type="button" role="tab" data-tab="management">Management</button>
       <button class="tab tab-kiosk" type="button" role="tab" data-tab="kiosk" title="Kiosk">
         <img src="shiftbase-logo.webp" alt="" class="tab-logo"><span>Kiosk</span>
       </button>
