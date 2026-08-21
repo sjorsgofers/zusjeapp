@@ -160,9 +160,9 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
 
   <nav class="subtabs" id="subtabs" aria-label="Onderdelen binnen categorie">
     <div class="subrow" data-subrow="bediening">
-      <button class="subtab active" type="button" data-tab="dranken">Dranken</button>
+      <button class="subtab active" type="button" data-tab="table">Tafeloverzicht</button>
       <button class="subtab" type="button" data-tab="checklists">Checklists</button>
-      <button class="subtab" type="button" data-tab="table">Tafeloverzicht</button>
+      <button class="subtab" type="button" data-tab="dranken">Dranken</button>
       <button class="subtab" type="button" data-tab="reserveringen">Reserveringen ↗</button>
     </div>
     <div class="subrow hidden" data-subrow="keuken">
@@ -200,13 +200,13 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
 (function(){
   const TABS = ["dranken","allergenen","checklists","keukenchecklists","taken","table","labels","management","kiosk"];
   // Welke pagina's onder welke hoofdcategorie vallen (eerste = standaard)
-  const GROUPS = { bediening:["dranken","checklists","table","reserveringen"], keuken:["allergenen","keukenchecklists","labels"] };
+  const GROUPS = { bediening:["table","checklists","dranken","reserveringen"], keuken:["allergenen","keukenchecklists","labels"] };
   function groupOf(tab){
     for (const g in GROUPS) if (GROUPS[g].includes(tab)) return g;
     return null;
   }
   const RESERVERINGEN_URL = "https://zusje.reserveersysteem.eu/contao?do=restaurant_dashboard&restaurant=1009";
-  let currentTab = "dranken";
+  let currentTab = "table";
   const shell = document.getElementById("shell");
 
   function frame(name){ return document.getElementById("f-"+name); }
@@ -219,7 +219,7 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
   }
 
   function activate(name){
-    if (!TABS.includes(name)) name = "dranken";
+    if (!TABS.includes(name)) name = "table";
     currentTab = name;
     ensureLoaded(name);
     TABS.forEach(t => {
@@ -342,8 +342,8 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
   function startApp(){
     document.getElementById("loginGate").classList.add("hidden");
     shell.classList.add("show");
-    let tab = "dranken";
-    try { tab = localStorage.getItem("zusje_hub_tab") || "dranken"; } catch(e){}
+    let tab = "table";
+    try { tab = localStorage.getItem("zusje_hub_tab") || "table"; } catch(e){}
     activate(tab);
     initIdle();
   }
