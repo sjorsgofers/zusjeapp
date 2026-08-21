@@ -37,8 +37,13 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
   background:transparent;border:1px solid rgba(200,164,91,.45);border-radius:999px;cursor:pointer;
   transition:background .15s ease,border-color .15s ease}
 .logobtn:hover{background:#1a1a1a;border-color:var(--gold)}
+.minibtn{flex:0 0 auto;border:1px solid rgba(200,164,91,.45);background:transparent;color:var(--gold);
+  font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer;white-space:nowrap;
+  transition:background .15s ease,border-color .15s ease}
+.minibtn:hover{background:#1a1a1a;border-color:var(--gold)}
+.minibtn.active{background:var(--gold);color:#0b0b0b;border-color:var(--gold)}
 .logobtn-txt{font-size:13.5px;font-weight:600;color:var(--gold);line-height:1;white-space:nowrap;padding-right:2px}
-@media (max-width:560px){ .logobtn{padding:2px 8px 2px 2px;gap:5px} .logobtn-txt{font-size:12px} }
+@media (max-width:560px){ .logobtn{padding:2px 8px 2px 2px;gap:5px} .logobtn-txt{font-size:12px} .minibtn{font-size:11.5px;padding:6px 10px} }
 .tabs{display:flex;gap:8px;flex:1;justify-content:center;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:2px 0}
 .tabs::-webkit-scrollbar{display:none}
 .tab{appearance:none;flex:0 0 auto;border:1px solid var(--gold);background:transparent;color:#fff;
@@ -149,12 +154,11 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
     <nav class="tabs" role="tablist" aria-label="Onderdelen">
       <button class="tab active" type="button" data-group="bediening">Bediening</button>
       <button class="tab" type="button" data-group="keuken">Keuken</button>
-      <button class="tab" type="button" role="tab" data-tab="taken">Taken &amp; agenda</button>
-      <button class="tab" type="button" role="tab" data-tab="management">Management</button>
       <button class="tab tab-kiosk" type="button" role="tab" data-tab="kiosk" title="Kiosk">
         <img src="shiftbase-logo.webp" alt="" class="tab-logo"><span>Kiosk</span>
       </button>
     </nav>
+    <button id="mgmtBtn" class="minibtn" type="button" data-tab="management" title="Management">Management</button>
     <a id="kioskOpen" class="tablink hidden" href="https://kiosk.shiftbase.com/" target="_blank" rel="noopener" title="Kiosk in nieuw tabblad openen" aria-label="Kiosk in nieuw tabblad openen">↗</a>
   </header>
 
@@ -227,6 +231,8 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
       if (f) f.classList.toggle("active", t===name);
       const tb = document.querySelector('.tab[data-tab="'+t+'"]');
       if (tb) tb.classList.toggle("active", t===name);
+      const mb = document.querySelector('.minibtn[data-tab="'+t+'"]');
+      if (mb) mb.classList.toggle("active", t===name);
     });
     // Hoofdcategorie + subtabs bijwerken
     const g = groupOf(name);
@@ -238,6 +244,11 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
     updateKioskHint(name);
     try { localStorage.setItem("zusje_hub_tab", name); } catch(e){}
   }
+
+  // Kleine knop naast het logo (Taken & agenda)
+  document.querySelectorAll(".minibtn").forEach(b => {
+    b.addEventListener("click", () => openTab(b.dataset.tab));
+  });
 
   // Subtabs binnen een categorie
   document.querySelectorAll(".subtab").forEach(b => {

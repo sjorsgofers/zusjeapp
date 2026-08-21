@@ -535,7 +535,7 @@
     </section>
 
     <section class="screen" id="screen-algemeen">
-      <div class="checklist-wrapper checklist-page" data-page="keuken-algemeen" data-dash="Keuken — Algemeen">
+      <div class="checklist-wrapper checklist-page" data-page="keuken-algemeen" data-dash="Keuken — Algemeen" data-gate="1">
         <div class="topbar">
           <button class="back-btn" data-back-menu>← Terug naar menu</button>
           <div class="checklist-title">Keuken — Algemene checklist</div>
@@ -545,6 +545,12 @@
           <div class="checklist-subtitle"></div>
         </div>
 
+        <div class="section">
+          <div class="section-heading">□ Afdelingen</div>
+          <div class="dept-list" id="deptList"></div>
+          <div class="hint">Deze status komt automatisch uit de 5 afdelings-checklisten.</div>
+        </div>
+
         <div class="sections-host" data-host="keuken-algemeen"></div>
 
         <div class="form-panel">
@@ -552,6 +558,7 @@
             <input type="text" class="naam-input" placeholder="Je naam…" />
             <button class="submit-btn">Checklist verzenden</button>
           </div>
+          <div class="gate-hint" id="gateHint">Rond eerst alles af om te kunnen indienen.</div>
           <div class="hint">Tip: het dashboard vinkt <em>Algemeen</em> af zodra je indient.</div>
           <div class="success-message ok-msg">✔️ Dank je — checklist ontvangen!</div>
           <div class="error-message err-msg">❌ Verzenden mislukt — probeer het opnieuw.</div>
@@ -646,6 +653,103 @@
         });
       });
 
+      /* ===== Afdelingen-status + indien-slot (Algemeen) ===== */
+      const DEPARTMENTS = [
+        { key:"Keuken — Koude kant", label:"Koude kant" },
+        { key:"Keuken — Bakjeskant", label:"Bakjeskant" },
+        { key:"Keuken — Frituur",    label:"Frituur"    },
+        { key:"Keuken — Warme kant", label:"Warme kant" },
+        { key:"Keuken — Uitgifte",   label:"Uitgifte"   }
+      ];
+      let deptDone = new Map();
+
+      function norm(s){
+        return String(s||"").trim()
+          .replace(/\u2014/g,'-').replace(/\u2013/g,'-')
+          .replace(/-+/g,'-').replace(/\s+/g,' ')
+          .replace(/\s*-\s*/g,' - ').trim().toLowerCase();
+      }
+
+      const algPage   = document.querySelector('.checklist-page[data-gate="1"]');
+      const deptListEl= document.getElementById('deptList');
+      const gateHint  = document.getElementById('gateHint');
+
+      function buildDeptList(){
+        if(!deptListEl) return;
+        deptListEl.innerHTML = "";
+        DEPARTMENTS.forEach(dep=>{
+          const row = document.createElement('div');
+          row.className = "dept-item";
+          row.dataset.dept = dep.key;
+          row.innerHTML = '<div class="dept-name">'+dep.label+'</div>' +
+                          '<div class="dept-chip"><span class="chip chip-open">Open</span></div>';
+          deptListEl.appendChild(row);
+        });
+      }
+
+      function updateDeptUI(){
+        document.querySelectorAll('.dept-item').forEach(el=>{
+          const done = !!deptDone.get(el.dataset.dept);
+          el.querySelector('.dept-chip').innerHTML = done
+            ? '<span class="chip chip-ok">Klaar</span>'
+            : '<span class="chip chip-open">Open</span>';
+        });
+      }
+
+      function allDepartmentsDone(){ return DEPARTMENTS.every(d => !!deptDone.get(d.key)); }
+      function allPointsChecked(){
+        if(!algPage) return true;
+        const boxes = algPage.querySelectorAll('.sections-host input[type="checkbox"]');
+        return boxes.length > 0 && Array.from(boxes).every(x => x.checked);
+      }
+
+      function computeGate(){
+        if(!algPage) return;
+        const btn = algPage.querySelector('.submit-btn');
+        const naamEl = algPage.querySelector('.naam-input');
+        if(!btn) return;
+        const nameOk   = !naamEl || (naamEl.value||"").trim().length > 0;
+        const depsOk   = allDepartmentsDone();
+        const pointsOk = allPointsChecked();
+        btn.disabled = !(nameOk && depsOk && pointsOk);
+        if(!gateHint) return;
+        if(!depsOk){        gateHint.textContent = "Nog niet alle 5 afdelingen zijn klaar."; }
+        else if(!pointsOk){ gateHint.textContent = "Vink eerst alle punten hieronder af."; }
+        else if(!nameOk){   gateHint.textContent = "Vul je naam in om te kunnen indienen."; }
+        else {              gateHint.textContent = "Alles is klaar — je kunt indienen."; }
+      }
+      window.clComputeGate = computeGate;   // aanroepen na (her)render van de punten
+
+      async function fetchStatuses(){
+        try{
+          const r = await fetch(SCRIPT_URL + "?tz=Europe/Amsterdam", { cache:"no-store" });
+          const j = await r.json();
+          if(!j || j.ok !== true || !Array.isArray(j.items)) return;
+          const got = new Map();
+          j.items.forEach(it => got.set(norm(it.name), !!it.done));
+          deptDone = new Map();
+          DEPARTMENTS.forEach(d => deptDone.set(d.key, !!got.get(norm(d.key))));
+          updateDeptUI();
+          computeGate();
+        }catch(e){ console.warn("status ophalen mislukt", e); }
+      }
+
+      if(algPage){
+        buildDeptList();
+        computeGate();
+        const naamEl = algPage.querySelector('.naam-input');
+        if(naamEl) naamEl.addEventListener('input', computeGate);
+        algPage.addEventListener('change', e=>{
+          if(e.target && e.target.type === 'checkbox') computeGate();
+        });
+        // status verversen bij openen van de Algemeen-pagina en periodiek
+        document.querySelectorAll('[data-open-screen="screen-algemeen"]').forEach(b=>{
+          b.addEventListener('click', fetchStatuses);
+        });
+        fetchStatuses();
+        setInterval(()=>{ if(document.getElementById('screen-algemeen').classList.contains('active')) fetchStatuses(); }, 30000);
+      }
+
       function requestResize(){
         const active = document.querySelector('.screen.active');
         const h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, active ? active.scrollHeight : 0);
@@ -673,6 +777,17 @@
     padding:9px 14px;border-radius:10px;cursor:pointer;font:600 13px/1 Inter,system-ui,sans-serif}
   .cl-add:hover{background:rgba(200,164,91,.1)}
   .cl-editing .checklist-card{border-style:dashed}
+  .dept-list{display:flex;flex-direction:column;gap:10px;margin-bottom:6px}
+  .dept-item{display:flex;align-items:center;justify-content:space-between;gap:12px;
+    background:linear-gradient(180deg,#151515 0%,#111111 100%);border:1px solid var(--gold-line,rgba(200,164,91,.35));
+    border-radius:14px;padding:12px 14px}
+  .dept-name{font-size:15px;font-weight:900;color:var(--text,#fff)}
+  .chip{font-weight:900;font-size:12px;line-height:1;padding:8px 12px;border-radius:999px;border:1px solid transparent;
+    white-space:nowrap;text-transform:uppercase;letter-spacing:.4px}
+  .chip-ok{color:#0b0b0b;background:var(--gold,#c8a45b);border-color:var(--gold,#c8a45b)}
+  .chip-open{color:var(--muted,#9a9a9a);background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12)}
+  .gate-hint{font-size:13px;color:var(--muted,#9a9a9a);text-align:center;margin-top:8px;line-height:1.45}
+  .submit-btn:disabled{opacity:.45;cursor:not-allowed;filter:grayscale(.4)}
   .cl-daily-tag{font-size:11px;font-weight:700;color:var(--gold,#c8a45b);opacity:.8;margin-left:6px}
 </style>
 <script>
@@ -784,6 +899,7 @@
   function renderAll(){
     ["keuken-koude","keuken-bakjes","keuken-frituur","keuken-warme","keuken-uitgifte","keuken-algemeen"].forEach(p=>{ renderPage(p); ensureEditBar(p); });
     if(typeof window.clApplyLang === "function") window.clApplyLang();
+    if(typeof window.clComputeGate === "function") window.clComputeGate();
   }
 
   function askPassword(){
