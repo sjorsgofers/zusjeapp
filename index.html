@@ -41,6 +41,8 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
   font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer;white-space:nowrap;
   transition:background .15s ease,border-color .15s ease}
 .minibtn:hover{background:#1a1a1a;border-color:var(--gold)}
+.minibtn-ico{display:inline-flex;align-items:center;justify-content:center;padding:0;width:40px;height:40px;border-radius:999px}
+.minibtn-ico svg{display:block}
 .minibtn.active{background:var(--gold);color:#0b0b0b;border-color:var(--gold)}
 .logobtn-txt{font-size:13.5px;font-weight:600;color:var(--gold);line-height:1;white-space:nowrap;padding-right:2px}
 @media (max-width:560px){ .logobtn{padding:2px 8px 2px 2px;gap:5px} .logobtn-txt{font-size:12px} .minibtn{font-size:11.5px;padding:6px 10px} }
@@ -158,7 +160,7 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
         <img src="shiftbase-logo.webp" alt="" class="tab-logo"><span>Kiosk</span>
       </button>
     </nav>
-    <button id="mgmtBtn" class="minibtn" type="button" data-tab="management" title="Management">Management</button>
+    <button id="mgmtBtn" class="minibtn minibtn-ico" type="button" data-tab="management" title="Management" aria-label="Management"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></button>
     <a id="kioskOpen" class="tablink hidden" href="https://kiosk.shiftbase.com/" target="_blank" rel="noopener" title="Kiosk in nieuw tabblad openen" aria-label="Kiosk in nieuw tabblad openen">↗</a>
   </header>
 
