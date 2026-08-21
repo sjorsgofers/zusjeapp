@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Keuken checklists</title>
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --bg-2:#101010;
+      --card:#121212;
+      --card-2:#161616;
+      --text:#ffffff;
+      --muted:#b8b8b8;
+      --gold:#c8a45b;
+      --gold-line:rgba(200,164,91,.55);
+      --gold-soft:rgba(200,164,91,.14);
+      --success:#22c55e;
+      --danger:#ef4444;
+    }
+
+    *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+    html,body{ min-height:100%; }
+
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at top, rgba(200,164,91,.08), transparent 30%),
+        linear-gradient(180deg, #0e0e0e 0%, #0b0b0b 100%);
+      color:var(--text);
+      font-family:'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+    }
+
+    .app-shell{
+      width:100%;
+      min-height:100vh;
+    }
+
+    .screen{
+      display:none;
+      width:100%;
+      min-height:100vh;
+    }
+    .screen.active{ display:block; }
+
+    .menu-wrap,
+    .checklist-wrapper{
+      max-width:1100px;
+      margin:0 auto;
+      padding:20px 18px 72px;
+    }
+
+    .hero{
+      background:linear-gradient(180deg, #171717 0%, #101010 100%);
+      border:1px solid var(--gold-line);
+      border-radius:22px;
+      padding:20px 18px 18px;
+      box-shadow:
+        0 10px 30px rgba(0,0,0,.35),
+        inset 0 0 0 1px rgba(255,255,255,.02);
+      margin-bottom:18px;
+    }
+
+    .hero-title{
+      font-size:clamp(26px,3.5vw,40px);
+      font-weight:900;
+      color:var(--gold);
+      text-align:center;
+      margin:0;
+      letter-spacing:.35px;
+    }
+
+    .hero-subtitle{
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+      margin-top:8px;
+      line-height:1.45;
+    }
+
+    .menu-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .menu-card{
+      border:1px solid var(--gold-line);
+      border-radius:18px;
+      background:linear-gradient(180deg, #151515 0%, #111111 100%);
+      padding:18px;
+      min-height:100px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:var(--text);
+      cursor:pointer;
+      box-shadow:
+        0 8px 20px rgba(0,0,0,.22),
+        inset 0 0 0 1px rgba(255,255,255,.015);
+      transition:transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+    }
+
+    .menu-card:hover{
+      transform:translateY(-1px);
+      border-color:var(--gold);
+      box-shadow:
+        0 10px 24px rgba(0,0,0,.26),
+        0 0 0 1px rgba(200,164,91,.12),
+        0 0 24px rgba(200,164,91,.08);
+    }
+
+    .menu-card-title{
+      font-size:22px;
+      font-weight:900;
+      color:var(--gold);
+      margin:0;
+    }
+
+    .menu-card-text{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.5;
+      margin:0;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:14px;
+      flex-wrap:wrap;
+    }
+
+    .back-btn{
+      appearance:none;
+      border:none;
+      background:var(--gold);
+      color:#0b0b0b;
+      border-radius:12px;
+      padding:11px 14px;
+      font-weight:900;
+      font-size:14px;
+      cursor:pointer;
+      box-shadow:0 8px 18px rgba(0,0,0,.24);
+    }
+
+    .back-btn:hover{ filter:brightness(1.03); }
+
+    .checklist-title{
+      font-size:clamp(24px,3.2vw,34px);
+      font-weight:900;
+      color:var(--gold);
+      text-align:center;
+      margin:0;
+      letter-spacing:.3px;
+      flex:1;
+    }
+
+    .checklist-subtitle{
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+      margin-top:8px;
+    }
+
+    .notice-banner{
+      background:linear-gradient(180deg, rgba(200,164,91,.16), rgba(200,164,91,.08));
+      color:#f3dfb2;
+      border:1px solid var(--gold);
+      border-radius:16px;
+      font-weight:900;
+      font-size:clamp(14px,2vw,19px);
+      padding:14px 16px;
+      text-align:center;
+      line-height:1.4;
+      margin-bottom:18px;
+      text-transform:uppercase;
+      box-shadow:0 0 0 1px rgba(200,164,91,.08), 0 8px 24px rgba(0,0,0,.22);
+    }
+
+    .section{ margin-top:22px; }
+
+    .section-heading{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size:18px;
+      font-weight:900;
+      color:var(--gold);
+      margin:0 0 14px;
+      padding:12px 14px;
+      border:1px solid var(--gold-line);
+      border-radius:14px;
+      background:linear-gradient(180deg, #151515, #101010);
+      box-shadow:0 8px 20px rgba(0,0,0,.2);
+    }
+
+    .checklist-grid{
+      display:grid;
+      gap:12px;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .checklist-card{
+      background:linear-gradient(180deg, #151515 0%, #111111 100%);
+      border:1px solid var(--gold-line);
+      border-radius:16px;
+      padding:14px;
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+      box-shadow:
+        0 8px 20px rgba(0,0,0,.22),
+        inset 0 0 0 1px rgba(255,255,255,.015);
+      transition:transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+    }
+
+    .checklist-card:hover{
+      transform:translateY(-1px);
+      border-color:var(--gold);
+      box-shadow:
+        0 10px 24px rgba(0,0,0,.26),
+        0 0 0 1px rgba(200,164,91,.12);
+    }
+
+    .checklist-card input[type="checkbox"]{
+      width:21px;
+      height:21px;
+      min-width:21px;
+      margin-top:2px;
+      cursor:pointer;
+      accent-color:var(--gold);
+    }
+
+    .checklist-card label{
+      font-size:15px;
+      line-height:1.45;
+      cursor:pointer;
+      color:var(--text);
+    }
+
+    .checklist-card.important{
+      border:1px solid var(--gold);
+      background:
+        linear-gradient(180deg, rgba(200,164,91,.16), rgba(200,164,91,.08)),
+        linear-gradient(180deg, #171717 0%, #101010 100%);
+      box-shadow:
+        0 10px 24px rgba(0,0,0,.26),
+        0 0 22px rgba(200,164,91,.08);
+    }
+
+    .important-badge{
+      display:inline-block;
+      margin-right:8px;
+      padding:3px 9px;
+      border-radius:999px;
+      background:var(--gold);
+      color:#0b0b0b;
+      font-weight:900;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.5px;
+      vertical-align:middle;
+    }
+
+    .important-text{
+      display:block;
+      margin-top:8px;
+      color:#f3dfb2;
+      font-weight:800;
+      font-size:13px;
+    }
+
+    .form-panel{
+      margin-top:26px;
+      background:linear-gradient(180deg, #151515 0%, #101010 100%);
+      border:1px solid var(--gold-line);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 10px 26px rgba(0,0,0,.25);
+    }
+
+    .form-footer{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .form-footer input[type="text"]{
+      padding:12px 14px;
+      width:340px;
+      max-width:100%;
+      border-radius:12px;
+      border:1px solid var(--gold-line);
+      background:var(--card);
+      color:var(--text);
+      outline:none;
+      font-size:15px;
+    }
+
+    .form-footer input[type="text"]::placeholder{
+      color:var(--muted);
+    }
+
+    .form-footer input[type="text"]:focus{
+      border-color:var(--gold);
+      box-shadow:0 0 0 3px var(--gold-soft);
+    }
+
+    .form-footer button{
+      padding:12px 18px;
+      background:var(--gold);
+      color:#0b0b0b;
+      border:none;
+      border-radius:12px;
+      cursor:pointer;
+      font-size:15px;
+      font-weight:900;
+      box-shadow:0 8px 18px rgba(0,0,0,.24);
+      transition:transform .15s ease, filter .15s ease;
+    }
+
+    .form-footer button:hover{
+      transform:translateY(-1px);
+      filter:brightness(1.03);
+    }
+
+    .form-footer button:disabled{
+      opacity:.72;
+      cursor:wait;
+      transform:none;
+    }
+
+    .success-message,
+    .error-message{
+      margin-top:12px;
+      font-weight:800;
+      text-align:center;
+      display:none;
+      white-space:pre-wrap;
+      padding:10px 12px;
+      border-radius:12px;
+    }
+
+    .success-message{
+      color:#d8ffe6;
+      background:rgba(34,197,94,.14);
+      border:1px solid rgba(34,197,94,.4);
+    }
+
+    .error-message{
+      color:#ffdada;
+      background:rgba(239,68,68,.12);
+      border:1px solid rgba(239,68,68,.35);
+    }
+
+    .hint{
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:10px;
+      line-height:1.45;
+    }
+
+    @media (max-width:860px){
+      .menu-grid,
+      .checklist-grid{ grid-template-columns:1fr; }
+      .menu-wrap,
+      .checklist-wrapper{ padding:16px 14px 56px; }
+      .hero{ padding:16px 14px; border-radius:18px; }
+      .topbar{ justify-content:center; }
+      .checklist-title{ width:100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- MENU -->
+    <section class="screen active" id="screen-menu">
+      <div class="menu-wrap">
+        <div class="menu-grid">
+          <button class="menu-card" data-open-screen="screen-koude">
+            <div class="menu-card-title">Koude kant</div>
+          </button>
+
+          <button class="menu-card" data-open-screen="screen-bakjes">
+            <div class="menu-card-title">Bakjeskant</div>
+          </button>
+
+          <button class="menu-card" data-open-screen="screen-frituur">
+            <div class="menu-card-title">Frituur</div>
+          </button>
+
+          <button class="menu-card" data-open-screen="screen-warme">
+            <div class="menu-card-title">Warme kant</div>
+          </button>
+
+          <button class="menu-card" data-open-screen="screen-uitgifte">
+            <div class="menu-card-title">Uitgifte</div>
+          </button>
+
+          <button class="menu-card" data-open-screen="screen-algemeen">
+            <div class="menu-card-title">Algemeen</div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-koude">
+      <div class="checklist-wrapper checklist-page" data-page="keuken-koude" data-dash="Keuken — Koude kant">
+        <div class="topbar">
+          <button class="back-btn" data-back-menu>← Terug naar menu</button>
+          <div class="checklist-title">Poetslijst — Koude kant</div>
+        </div>
+
+        <div class="hero">
+          <div class="checklist-subtitle"></div>
+        </div>
+
+        <div class="sections-host" data-host="keuken-koude"></div>
+
+        <div class="form-panel">
+          <div class="form-footer">
+            <input type="text" class="naam-input" placeholder="Je naam…" />
+            <button class="submit-btn">Checklist verzenden</button>
+          </div>
+          <div class="hint">Tip: het dashboard vinkt <em>Koude kant</em> af zodra je indient.</div>
+          <div class="success-message ok-msg">✔️ Dank je — checklist ontvangen!</div>
+          <div class="error-message err-msg">❌ Verzenden mislukt — probeer het opnieuw.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-bakjes">
+      <div class="checklist-wrapper checklist-page" data-page="keuken-bakjes" data-dash="Keuken — Bakjeskant">
+        <div class="topbar">
+          <button class="back-btn" data-back-menu>← Terug naar menu</button>
+          <div class="checklist-title">Poetslijst — Bakjeskant</div>
+        </div>
+
+        <div class="hero">
+          <div class="checklist-subtitle"></div>
+        </div>
+
+        <div class="sections-host" data-host="keuken-bakjes"></div>
+
+        <div class="form-panel">
+          <div class="form-footer">
+            <button class="submit-btn">Markeer als gedaan</button>
+          </div>
+          <div class="hint">Tip: het dashboard vinkt <em>Bakjeskant</em> af zodra je indient.</div>
+          <div class="success-message ok-msg">✔️ Dank je — checklist ontvangen!</div>
+          <div class="error-message err-msg">❌ Verzenden mislukt — probeer het opnieuw.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-frituur">
+      <div class="checklist-wrapper checklist-page" data-page="keuken-frituur" data-dash="Keuken — Frituur">
+        <div class="topbar">
+          <button class="back-btn" data-back-menu>← Terug naar menu</button>
+          <div class="checklist-title">Poetslijst — Frituur</div>
+        </div>
+
+        <div class="hero">
+          <div class="checklist-subtitle"></div>
+        </div>
+
+        <div class="sections-host" data-host="keuken-frituur"></div>
+
+        <div class="form-panel">
+          <div class="form-footer">
+            <button class="submit-btn">Markeer als gedaan</button>
+          </div>
+          <div class="hint">Tip: het dashboard vinkt <em>Frituur</em> af zodra je indient.</div>
+          <div class="success-message ok-msg">✔️ Dank je — checklist ontvangen!</div>
+          <div class="error-message err-msg">❌ Verzenden mislukt — probeer het opnieuw.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-warme">
+      <div class="checklist-wrapper checklist-page" data-page="keuken-warme" data-dash="Keuken — Warme kant">
+        <div class="topbar">
+          <button class="back-btn" data-back-menu>← Terug naar menu</button>
+          <div class="checklist-title">Poetslijst — Warme kant</div>
+        </div>
+
+        <div class="hero">
+          <div class="checklist-subtitle"></div>
+        </div>
+
+        <div class="sections-host" data-host="keuken-warme"></div>
+
+        <div class="form-panel">
+          <div class="form-footer">
+            <button class="submit-btn">Markeer als gedaan</button>
+          </div>
+          <div class="hint">Tip: het dashboard vinkt <em>Warme kant</em> af zodra je indient.</div>
+          <div class="success-message ok-msg">✔️ Dank je — checklist ontvangen!</div>
+          <div class="error-message err-msg">❌ Verzenden mislukt — probeer het opnieuw.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-uitgifte">
+      <div class="checklist-wrapper checklist-page" data-page="keuken-uitgifte" data-dash="Keuken — Uitgifte">
+        <div class="topbar">
+          <button class="back-btn" data-back-menu>← Terug naar menu</button>
+          <div class="checklist-title">Poetslijst — Uitgifte</div>
+        </div>
+
+        <div class="hero">
+          <div class="checklist-subtitle"></div>
+        </div>
+
+        <div class="sections-host" data-host="keuken-uitgifte"></div>
+
+        <div class="form-panel">
+          <div class="form-footer">
+            <button class="submit-btn">Markeer als gedaan</button>
+          </div>
+          <div class="hint">Tip: het dashboard vinkt <em>Uitgifte</em> af zodra je indient.</div>
+          <div class="success-message ok-msg">✔️ Dank je — checklist ontvangen!</div>
+          <div class="error-message err-msg">❌ Verzenden mislukt — probeer het opnieuw.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-algemeen">
+      <div class="checklist-wrapper checklist-page" data-page="keuken-algemeen" data-dash="Keuken — Algemeen">
+        <div class="topbar">
+          <button class="back-btn" data-back-menu>← Terug naar menu</button>
+          <div class="checklist-title">Keuken — Algemene checklist</div>
+        </div>
+
+        <div class="hero">
+          <div class="checklist-subtitle"></div>
+        </div>
+
+        <div class="sections-host" data-host="keuken-algemeen"></div>
+
+        <div class="form-panel">
+          <div class="form-footer">
+            <input type="text" class="naam-input" placeholder="Je naam…" />
+            <button class="submit-btn">Checklist verzenden</button>
+          </div>
+          <div class="hint">Tip: het dashboard vinkt <em>Algemeen</em> af zodra je indient.</div>
+          <div class="success-message ok-msg">✔️ Dank je — checklist ontvangen!</div>
+          <div class="error-message err-msg">❌ Verzenden mislukt — probeer het opnieuw.</div>
+        </div>
+      </div>
+    </section>
+
+  <script>
+    (function(){
+      const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw_Tn0z0s3AJ7CARzHt9sFy8CGhrCe_HzS9ao0KKDtgzq9TR_H-28WBss316I6PDcr7/exec";
+      const AUTO_BY = "Keuken";   // lijsten zonder naamveld worden op 'Keuken' gezet
+
+      const screens = Array.from(document.querySelectorAll('.screen'));
+      function showScreen(id){
+        screens.forEach(s => s.classList.toggle('active', s.id === id));
+        window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+        requestResize();
+      }
+      document.querySelectorAll('[data-open-screen]').forEach(btn=>{
+        btn.addEventListener('click', ()=> showScreen(btn.dataset.openScreen));
+      });
+      document.querySelectorAll('[data-back-menu]').forEach(btn=>{
+        btn.addEventListener('click', ()=> showScreen('screen-menu'));
+      });
+
+      function show(el){
+        el.style.display='block';
+        clearTimeout(el._t);
+        el._t=setTimeout(()=>el.style.display='none',3000);
+      }
+      function resetPageForm(page){
+        const naamEl = page.querySelector('.naam-input');
+        if(naamEl) naamEl.value = '';
+        page.querySelectorAll('input[type="checkbox"]').forEach(chk => chk.checked = false);
+      }
+
+      // Eén generieke verzendknop voor alle keukenlijsten
+      document.querySelectorAll('.checklist-page').forEach(page=>{
+        const btn    = page.querySelector('.submit-btn');
+        const naamEl = page.querySelector('.naam-input');
+        const okMsg  = page.querySelector('.ok-msg');
+        const errMsg = page.querySelector('.err-msg');
+        const CHECKLIST = page.dataset.dash || '';
+        if(!btn) return;
+
+        btn.addEventListener('click', async function(){
+          errMsg.style.display='none'; okMsg.style.display='none';
+          let by = AUTO_BY;
+          if(naamEl){
+            by = (naamEl.value||'').trim();
+            if(!by){ alert('Vul alsjeblieft je naam in.'); naamEl.focus(); return; }
+          }
+
+          const fields = Array.from(page.querySelectorAll('input[type="checkbox"]')).map(chk=>{
+            const lbl = page.querySelector('label[for="'+chk.id+'"]');
+            return { id: chk.id, label: (lbl?lbl.textContent:'').trim(), checked: chk.checked };
+          });
+
+          const params = new URLSearchParams();
+          params.set('checklist', CHECKLIST);
+          params.set('by', by);
+          params.set('fields', JSON.stringify({
+            total: fields.length,
+            checked: fields.filter(i=>i.checked).length,
+            items: fields
+          }));
+
+          btn.disabled = true;
+          const orig = btn.textContent;
+          btn.textContent = 'Verzenden…';
+          try{
+            const r = await fetch(SCRIPT_URL, {
+              method:'POST',
+              headers:{'Content-Type':'application/x-www-form-urlencoded'},
+              body:params.toString()
+            });
+            if(!r.ok) throw new Error('HTTP '+r.status);
+            resetPageForm(page);
+            show(okMsg);
+          }catch(e){
+            try{
+              const blob = new Blob([params.toString()],{type:'application/x-www-form-urlencoded'});
+              if(navigator.sendBeacon && navigator.sendBeacon(SCRIPT_URL, blob)){
+                resetPageForm(page); show(okMsg);
+              } else { show(errMsg); }
+            }catch(_){ show(errMsg); }
+          }finally{
+            btn.disabled = false;
+            btn.textContent = orig;
+            requestResize();
+          }
+        });
+      });
+
+      function requestResize(){
+        const active = document.querySelector('.screen.active');
+        const h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, active ? active.scrollHeight : 0);
+        if(window.parent){ window.parent.postMessage({ type:"resizeChecklist", height:h }, "*"); }
+      }
+      window.addEventListener('load', requestResize);
+      window.addEventListener('resize', requestResize);
+      try{ new ResizeObserver(requestResize).observe(document.body); }catch(_){ setInterval(requestResize, 800); }
+    })();
+  </script>
+
+<!-- ===== Checklist-inhoud uit Supabase + bewerkmodus ===== -->
+<style>
+  .cl-editbar{display:flex;justify-content:center;padding:14px 0 26px}
+  .cl-editbtn{background:transparent;border:1px solid var(--gold-line,rgba(200,164,91,.35));color:var(--muted,#9a9a9a);
+    font:600 12px/1 Inter,system-ui,sans-serif;padding:9px 16px;border-radius:999px;cursor:pointer;letter-spacing:.03em}
+  .cl-editbtn:hover{border-color:var(--gold,#c8a45b);color:var(--gold,#c8a45b)}
+  .cl-editbtn.on{background:var(--gold,#c8a45b);color:#0b0b0b;border-color:var(--gold,#c8a45b)}
+  .cl-sec-tools,.cl-item-tools{display:inline-flex;gap:6px;margin-left:8px;vertical-align:middle}
+  .cl-mini{background:transparent;border:1px solid rgba(200,164,91,.45);color:var(--gold,#c8a45b);
+    width:28px;height:28px;border-radius:8px;cursor:pointer;font-size:13px;line-height:1;padding:0}
+  .cl-mini:hover{background:rgba(200,164,91,.15)}
+  .cl-mini.danger{border-color:rgba(255,107,107,.5);color:#ff8f8f}
+  .cl-add{margin:10px 0 4px;background:transparent;border:1px dashed rgba(200,164,91,.5);color:var(--gold,#c8a45b);
+    padding:9px 14px;border-radius:10px;cursor:pointer;font:600 13px/1 Inter,system-ui,sans-serif}
+  .cl-add:hover{background:rgba(200,164,91,.1)}
+  .cl-editing .checklist-card{border-style:dashed}
+  .cl-daily-tag{font-size:11px;font-weight:700;color:var(--gold,#c8a45b);opacity:.8;margin-left:6px}
+</style>
+<script>
+(function(){
+  const SB_URL  = "https://xiwdbvxnjcrdwjhmpjnf.supabase.co";
+  const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhpd2RidnhuamNyZHdqaG1wam5mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ2NjE1NzAsImV4cCI6MjA3MDIzNzU3MH0.d14QNY5Pof9j3zmlbs-5gBTs25s6xo_XYhyVbWE2P1k";
+  const PASSWORD = "kikker";
+  const H = { apikey:SB_ANON, Authorization:"Bearer "+SB_ANON, "Content-Type":"application/json" };
+
+  let ITEMS = [];
+  let editMode = {};                       // per pagina aan/uit
+  let unlocked = sessionStorage.getItem("zusje_cl_unlocked") === "1";
+
+  const esc = s => String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+
+  // Weekdag met nachtgrens 02:00 (zelfde logica als de rest van de app)
+  function weekdayNow(){
+    const tz="Europe/Amsterdam", now=new Date();
+    const hour=Number(new Intl.DateTimeFormat('nl-NL',{timeZone:tz,hour:'2-digit',hour12:false}).format(now));
+    const ref=(hour<2)?new Date(now.getTime()-2*3600*1000):now;
+    return new Intl.DateTimeFormat('nl-NL',{timeZone:tz,weekday:'short'}).format(ref).toLowerCase().replace('.','');
+  }
+
+  async function api(path, opts){
+    const r = await fetch(SB_URL+"/rest/v1/"+path, Object.assign({headers:H, cache:"no-store"}, opts||{}));
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    return r.status===204 ? null : r.json().catch(()=>null);
+  }
+
+  async function load(){
+    try{
+      ITEMS = await api("checklist_items?select=*&order=page,section_order,sort_order") || [];
+    }catch(e){ console.warn("Checklist-items laden mislukt:", e); ITEMS = []; }
+    renderAll();
+  }
+
+  function pagesOf(page){
+    const wd = weekdayNow();
+    const rows = ITEMS.filter(r => r.page === page)
+                      .filter(r => !r.weekday || r.weekday === wd);
+    const secs = [];
+    rows.forEach(r=>{
+      let s = secs.find(x=>x.name === r.section);
+      if(!s){ s = {name:r.section, order:r.section_order, items:[]}; secs.push(s); }
+      s.items.push(r);
+    });
+    secs.sort((a,b)=>a.order-b.order);
+    return secs;
+  }
+
+  function itemHtml(it, editing){
+    const id = "cl-item-"+it.id;
+    const tools = editing ? `<span class="cl-item-tools">
+        <button class="cl-mini" title="Bewerken" data-act="edit-item" data-id="${it.id}">✎</button>
+        <button class="cl-mini danger" title="Verwijderen" data-act="del-item" data-id="${it.id}">🗑</button>
+      </span>` : "";
+    const dayTag = it.weekday ? `<span class="cl-daily-tag">(${esc(it.weekday)})</span>` : "";
+    if(it.important){
+      return `<div class="checklist-card important">
+        <input type="checkbox" id="${id}">
+        <label for="${id}">
+          <span class="important-badge">Belangrijk</span>
+          ${esc(it.label)}${dayTag}
+          ${it.important_text ? `<span class="important-text">${esc(it.important_text)}</span>` : ""}
+        </label>${tools}
+      </div>`;
+    }
+    return `<div class="checklist-card">
+      <input type="checkbox" id="${id}"><label for="${id}">${esc(it.label)}${dayTag}</label>${tools}
+    </div>`;
+  }
+
+  function renderPage(page){
+    const host = document.querySelector(`.sections-host[data-host="${page}"]`);
+    if(!host) return;
+    const editing = !!editMode[page];
+    const secs = pagesOf(page);
+    let html = "";
+    secs.forEach(sec=>{
+      const secTools = editing ? `<span class="cl-sec-tools">
+          <button class="cl-mini" title="Categorie hernoemen" data-act="edit-sec" data-page="${page}" data-sec="${esc(sec.name)}">✎</button>
+          <button class="cl-mini danger" title="Categorie verwijderen" data-act="del-sec" data-page="${page}" data-sec="${esc(sec.name)}">🗑</button>
+        </span>` : "";
+      html += `<div class="section">
+        <div class="section-heading">${esc(sec.name)}${secTools}</div>
+        <div class="checklist-grid">${sec.items.map(it=>itemHtml(it, editing)).join("")}</div>
+        ${editing ? `<button class="cl-add" data-act="add-item" data-page="${page}" data-sec="${esc(sec.name)}">+ Punt toevoegen</button>` : ""}
+      </div>`;
+    });
+    if(editing){
+      html += `<button class="cl-add" data-act="add-sec" data-page="${page}">+ Categorie toevoegen</button>`;
+    }
+    if(!secs.length && !editing){
+      html += `<div class="section"><div class="section-heading">Nog geen punten</div></div>`;
+    }
+    host.innerHTML = html;
+    host.closest(".checklist-page").classList.toggle("cl-editing", editing);
+  }
+
+  function ensureEditBar(page){
+    const pageEl = document.querySelector(`.checklist-page[data-page="${page}"]`);
+    if(!pageEl || pageEl.querySelector(".cl-editbar")) return;
+    const bar = document.createElement("div");
+    bar.className = "cl-editbar";
+    bar.innerHTML = `<button class="cl-editbtn" data-act="toggle-edit" data-page="${page}">✎ Lijst bewerken</button>`;
+    pageEl.appendChild(bar);
+  }
+
+  function renderAll(){
+    ["keuken-koude","keuken-bakjes","keuken-frituur","keuken-warme","keuken-uitgifte","keuken-algemeen"].forEach(p=>{ renderPage(p); ensureEditBar(p); });
+    if(typeof window.clApplyLang === "function") window.clApplyLang();
+  }
+
+  function askPassword(){
+    if(unlocked) return true;
+    const v = prompt("Wachtwoord om de checklist te bewerken:");
+    if(v === null) return false;
+    if(v.trim().toLowerCase() === PASSWORD){
+      unlocked = true;
+      sessionStorage.setItem("zusje_cl_unlocked","1");
+      return true;
+    }
+    alert("Onjuist wachtwoord.");
+    return false;
+  }
+
+  async function refresh(){ await load(); }
+
+  document.addEventListener("click", async (e)=>{
+    const btn = e.target.closest("[data-act]");
+    if(!btn) return;
+    const act  = btn.dataset.act;
+    const page = btn.dataset.page;
+    const sec  = btn.dataset.sec;
+    const id   = btn.dataset.id;
+
+    if(act === "toggle-edit"){
+      if(!editMode[page] && !askPassword()) return;
+      editMode[page] = !editMode[page];
+      btn.classList.toggle("on", editMode[page]);
+      btn.textContent = editMode[page] ? "✓ Klaar met bewerken" : "✎ Lijst bewerken";
+      renderPage(page);
+      if(typeof window.clApplyLang === "function") window.clApplyLang();
+      return;
+    }
+    if(!unlocked) return;
+
+    try{
+      if(act === "edit-item"){
+        const it = ITEMS.find(x=>String(x.id)===String(id)); if(!it) return;
+        const v = prompt("Punt aanpassen:", it.label);
+        if(v===null || !v.trim()) return;
+        await api("checklist_items?id=eq."+id, {method:"PATCH", body:JSON.stringify({label:v.trim()})});
+        await refresh();
+      }
+      else if(act === "del-item"){
+        const it = ITEMS.find(x=>String(x.id)===String(id)); if(!it) return;
+        if(!confirm(`Punt verwijderen?\n\n"${it.label}"`)) return;
+        await api("checklist_items?id=eq."+id, {method:"DELETE"});
+        await refresh();
+      }
+      else if(act === "add-item"){
+        const v = prompt("Nieuw punt:");
+        if(v===null || !v.trim()) return;
+        const inSec = ITEMS.filter(x=>x.page===page && x.section===sec);
+        const secOrder = inSec.length ? inSec[0].section_order : 1;
+        const maxSort  = inSec.reduce((m,x)=>Math.max(m,x.sort_order||0),0);
+        await api("checklist_items", {method:"POST", body:JSON.stringify({
+          page, section:sec, section_order:secOrder, label:v.trim(), sort_order:maxSort+1
+        })});
+        await refresh();
+      }
+      else if(act === "edit-sec"){
+        const v = prompt("Categorie hernoemen:", sec);
+        if(v===null || !v.trim() || v.trim()===sec) return;
+        await api(`checklist_items?page=eq.${encodeURIComponent(page)}&section=eq.${encodeURIComponent(sec)}`,
+          {method:"PATCH", body:JSON.stringify({section:v.trim()})});
+        await refresh();
+      }
+      else if(act === "del-sec"){
+        const n = ITEMS.filter(x=>x.page===page && x.section===sec).length;
+        if(!confirm(`Categorie "${sec}" en alle ${n} punten erin verwijderen?`)) return;
+        await api(`checklist_items?page=eq.${encodeURIComponent(page)}&section=eq.${encodeURIComponent(sec)}`, {method:"DELETE"});
+        await refresh();
+      }
+      else if(act === "add-sec"){
+        const name = prompt("Naam van de nieuwe categorie:");
+        if(name===null || !name.trim()) return;
+        const first = prompt("Eerste punt in deze categorie:");
+        if(first===null || !first.trim()) return;
+        const maxSec = ITEMS.filter(x=>x.page===page).reduce((m,x)=>Math.max(m,x.section_order||0),0);
+        await api("checklist_items", {method:"POST", body:JSON.stringify({
+          page, section:name.trim(), section_order:maxSec+1, label:first.trim(), sort_order:1
+        })});
+        await refresh();
+      }
+    }catch(err){
+      alert("Opslaan mislukt. Probeer het opnieuw.");
+      console.warn(err);
+    }
+  });
+
+  load();
+})();
+</script>
+
+<div class="cl-lang" role="group" aria-label="Taal / Language">
+  <button id="clLangNL" type="button">NL</button>
+  <button id="clLangEN" type="button">EN</button>
+</div>
+<style>
+.cl-lang{position:fixed;top:10px;right:10px;z-index:9999;display:inline-flex;border:1px solid var(--gold);border-radius:999px;overflow:hidden;background:rgba(11,11,11,.9)}
+.cl-lang button{border:0;background:transparent;color:#fff;font:600 13px/1 system-ui,-apple-system,sans-serif;padding:8px 13px;cursor:pointer}
+.cl-lang button.active{background:var(--gold);color:#0b0b0b}
+</style>
+<script>
+(function(){
+  const NL2EN = {"Openen": "Opening", "Beneden": "Downstairs", "Boven": "Upstairs", "Run": "Run", "← Terug naar menu": "← Back to menu", "Checklist Openen": "Opening checklist", "Werk de lijst op volgorde af": "Work through the list in order", "HOUD ALTIJD DE TELEFOON BIJ TIJDENS HET WERKEN. ALLE TELEFOONTJES MOETEN WORDEN BEANTWOORD!": "ALWAYS KEEP THE PHONE WITH YOU WHILE WORKING. ALL CALLS MUST BE ANSWERED!", "□ Terras voorbereiden": "□ Prepare the terrace", "Containers naar binnen.": "Bring the containers inside.", "Belangrijk": "Important", "Terras helemaal vrij maken van sigarettenpeuken en andere rotzooi.": "Completely clear the terrace of cigarette butts and other litter.", "Wordt vaak vergeten — De uitstraling van de zaak is cruciaal!": "Often forgotten — the appearance of the venue is crucial!", "Terrasstoelen en tafels netjes en recht.": "Terrace chairs and tables neat and straight.", "Parasol goed openklappen, Stoepbord plaatsen, Kussens neerleggen op de bank, Tafelgarnering correct plaatsen (Plantjes, kaarsjes, Menu en drankenkaarten)": "Open the parasol properly, place the sidewalk sign, put the cushions on the bench, place the table decoration correctly (plants, candles, menus and drink cards)", "Kaarsjes waar nodig vervangen zodat ze de hele avond mee kunnen": "Replace candles where needed so they last the whole evening", "Spaghettimat rechtleggen": "Straighten the spaghetti mat", "Rommel en peuken uit plantenbak halen": "Remove litter and butts from the planter", "Terraskar netjes maken!": "Tidy up the terrace cart!", "□ Voor opening van het restaurant": "□ Before the restaurant opens", "Was ophangen en nieuwe was aanzetten. LET OP VOOR PENNEN IN DE ZAKKEN!!!": "Hang up the laundry and start a new load. WATCH OUT FOR PENS IN THE POCKETS!!!", "Poleermachine en Lattiz aanzetten, bestek/koffiekopjes poleren.": "Turn on the polishing machine and Lattiz, polish cutlery/coffee cups.", "Allergiestroken, verjaardagskaartjes en kinderkaarten klaarleggen voor de lunch.": "Prepare allergy slips, birthday cards and children's cards for lunch.", "Fruit snijden en aanvullen (passievrucht, munt, gember, rozemarijn), alles stickeren en klaarzetten.": "Cut and restock fruit (passion fruit, mint, ginger, rosemary), label everything and set it out.", "Waterflessen bijvullen.": "Refill the water bottles.", "Run klaarzetten: sauzenpompen, tipjes, chips.": "Set up the run: sauce pumps, tips, chips.", "Bestek beneden recht leggen, tafelattributen controleren.": "Lay out the cutlery downstairs straight, check the table items.", "Lamellen overal netjes en op gelijke hoogte.": "Blinds everywhere neat and at equal height.", "Kaarsjes aanzetten (ook toiletten).": "Light the candles (toilets too).", "Computer en muziek aan, verlichting op “Duister”.": "Computer and music on, lighting set to 'Duister'.", "IJsblokjes halen, wasbakken vol laten lopen.": "Get ice cubes, let the sinks fill up.", "Bestelling opruimen (ma, do, za).": "Put away the delivery (Mon, Thu, Sat).", "MADEBLUE waterkaartjes en bierviltjes aanvullen.": "Restock MADEBLUE water cards and beer coasters.", "Verwarming aanzetten.": "Turn on the heating.", "⏰ Voor 16:00 klaar": "⏰ Done before 16:00", "Stoelen en tafels uit beide garderobes.": "Chairs and tables out of both cloakrooms.", "Voor 16:00: indekken, stoelen recht, kaarten klaarzetten en versieren.": "Before 16:00: set the tables, chairs straight, prepare cards and decorate.", "Reserveringen: groepen bellen, allergieën checken, WhatsApp herinneringen sturen.": "Reservations: call groups, check allergies, send WhatsApp reminders.", "Reserveringslijst opnieuw uitprinten en overschrijven.": "Reprint and rewrite the reservation list.", "Kaartjes voor morgen schrijven (stroken, allergenen, verjaardagen).": "Write the cards for tomorrow (slips, allergens, birthdays).", "Tafelgarnering checken.": "Check the table decoration.", "Tafelgarnering controleren volgens protocol plaatsen. Drankenkaartjes en topkaartjes netjes. Kaarsje per 4 gasten in het midden!": "Check the table decoration and place it according to protocol. Drink cards and top cards neat. One candle per 4 guests in the middle!", "Tafelindeling checken.": "Check the table layout.", "Koffiedoosjes checken.": "Check the coffee boxes.", "Personeelsdrank koud zetten voor de avond.": "Chill the staff drinks for the evening.", "Checklist verzenden": "Submit checklist", "Tip: Dashboard vinkt": "Tip: the dashboard checks", "af. Reset om 04:00.": "off. Resets at 04:00.", "✔ Dank je — checklist ontvangen!": "✔ Thank you — checklist received!", "❌ Verzenden mislukt — probeer het opnieuw.": "❌ Submission failed — please try again.", "Sluitchecklist — Bar beneden": "Closing checklist — Downstairs bar", "□ Bar schoonmaken": "□ Clean the bar", "Wijnen stickeren met datum wanneer geopend (OOK RODE WIJNEN).": "Label wines with the date when opened (RED WINES TOO).", "Kratten met lege flesjes naar de kelder of in de lift.": "Crates of empty bottles to the cellar or in the lift.", "Bar schoonmaken met warm sopje met Addix.": "Clean the bar with warm soapy water with Addix.", "Onderkant van opvangplaten niet vergeten.": "Don't forget the underside of the drip trays.", "Matjes onder bierglazen door de poleermachine halen.": "Run the mats under the beer glasses through the polishing machine.", "Bierglazen netjes terugplaatsen met labels naar voren.": "Put the beer glasses back neatly with labels facing front.", "Borstel, stop, afschuimers en ijsbak door de poleermachine.": "Brush, plug, skimmers and ice bin through the polishing machine.", "Filters en onderdelen poleermachine door de spoel.": "Filters and polishing machine parts through the dishwasher.", "Alle dienbladen naar de spoel brengen.": "Bring all trays to the dishwasher.", "Fruit en kruiden controleren, afdekken en terug in de koeling.": "Check fruit and herbs, cover and return to the fridge.", "Snoepjes, kaartjes, biervilten, rietjes en stokjes bijvullen.": "Restock sweets, cards, beer coasters, straws and sticks.", "Vuilniszakken verwisselen, volle naar kelder.": "Change the bin bags, full ones to the cellar.", "Biertap reinigen, putjes spoelen met water en azijn.": "Clean the beer tap, rinse the drip trays with water and vinegar.", "Alle tappen afdekken met folie.": "Cover all taps with foil.", "☕ Koffiehoek": "☕ Coffee corner", "Filterdragers reinigen met middel en programma starten.": "Clean the filter holders with cleaner and start the programme.", "Lekbak en koffiedrapbak leeg en schoon.": "Drip tray and coffee grounds tray empty and clean.", "Lattiz schoonmaken, lekbak leeg, lattiz uit.": "Clean the Lattiz, empty the drip tray, Lattiz off.", "Kopjes, schotels en glazen poleren.": "Polish cups, saucers and glasses.", "Buitenkant koffiemachine schoon en vlekvrij.": "Outside of the coffee machine clean and spotless.", "□ Overige taken": "□ Other tasks", "Bovenkant van de bar netjes en leeg.": "Top of the bar neat and empty.", "Computerhoek netjes en schoon.": "Computer corner neat and clean.", "Waterflessen naar boven brengen.": "Bring the water bottles upstairs.", "Werkbank bij kassa schoonmaken en kassascherm poetsen.": "Clean the workbench by the till and wipe the till screen.", "Tafels schoonmaken en schuiven, garnering controleren.": "Clean and move the tables, check the decoration.", "Indekken met bestek.": "Set the tables with cutlery.", "Vloer rondom prullenbak netjes en schoon.": "Floor around the bin neat and clean.", "Garderobe vrij van stoelen, tafels, kratjes etc.": "Cloakroom clear of chairs, tables, crates etc.", "Terraskar opgeruimd en netjes.": "Terrace cart tidy and neat.", "⏱️ Daggebonden taken": "⏱️ Day-specific tasks", "Tip: het dashboard vinkt": "Tip: the dashboard checks", "Bediening onder": "Service downstairs", "af zodra je indient.": "off as soon as you submit.", "✔️ Dank je — checklist ontvangen!": "✔️ Thank you — checklist received!", "Checklist Bar Afsluiten & Restaurant Taken (Boven)": "Checklist Closing the Bar & Restaurant Tasks (Upstairs)", "□ Bar afsluiten": "□ Close the bar", "Wijnen stickeren met datum wanneer geopend.": "Label wines with the date when opened.", "Bar schoonmaken met warm sopje met allesreiniger of Addix.": "Clean the bar with warm soapy water with all-purpose cleaner or Addix.", "Onderkant van de opvangplaten niet vergeten.": "Don't forget the underside of the drip trays.", "Borstel, wasbakstop, afschuimers, ijsbak door de poleermachine.": "Brush, sink plug, skimmers, ice bin through the polishing machine.", "Fruit en kruiden controleren, afdekken, terug in keukenkoeling.": "Check fruit and herbs, cover, return to the kitchen fridge.", "Snoepjes, kaartjes, rekeningmapjes, biervilten, rietjes, stampers en stokjes bijvullen.": "Restock sweets, cards, bill folders, beer coasters, straws, muddlers and sticks.", "Kassascherm poetsen met blauwe spray.": "Wipe the till screen with the blue spray.", "Vuilniszakken wisselen, volle naar de kelder.": "Change the bin bags, full ones to the cellar.", "Tap reinigen met tapreiniger, putjes spoelen met water en azijn.": "Clean the tap with tap cleaner, rinse the drip trays with water and vinegar.", "Alle tappen afgedekt met folie.": "All taps covered with foil.", "□ Restaurant taken": "□ Restaurant tasks", "Werkbank bij kassa opruimen en schoonmaken. Kassa poetsen.": "Tidy and clean the workbench by the till. Wipe the till.", "Verwarming uitzetten.": "Turn off the heating.", "Tafels schoon en schuiven. Tafelgarnering goed zetten en controleren.": "Tables clean and moved. Set and check the table decoration.", "Indekken met placemats, servetten en glazen.": "Set the tables with placemats, napkins and glasses.", "Sopje weggooien en andere zooi opruimen.": "Throw away the soapy water and clear up other mess.", "Kaarsjes uitmaken.": "Put out the candles.", "Bediening boven": "Service upstairs", "Checklist — Run": "Checklist — Run", "□ Run": "□ Run", "Dienbladen poetsen": "Wipe the trays", "Run schoonmaken": "Clean the run", "Sauzen in de koeling": "Sauces in the fridge", "Glaswerk van de run terug naar de bar": "Glassware from the run back to the bar", "Vuilniszak run verwisselen": "Change the run bin bag", "Kast met broodbakken poetsen": "Wipe the cupboard with bread bins", "Klaptafels schoonmaken": "Clean the folding tables", "Run vloer vegen": "Sweep the run floor", "Koffiedoosjes uit de spoel halen": "Take the coffee boxes out of the dishwasher", "Extra dagtaken (Zie dashboard)": "Extra daily tasks (See dashboard)", "direct af zodra je indient.": "off immediately as soon as you submit."};
+  const PH = { nl:"Je naam\u2026", en:"Your name\u2026" };
+  let clLang = localStorage.getItem("zusje_checklist_lang") || "nl";
+  function translate(toEN){
+    const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+    const nodes = []; let n;
+    while (n = w.nextNode()) nodes.push(n);
+    nodes.forEach(node => {
+      const raw = node.nodeValue; const t = raw.trim();
+      if (!t) return;
+      if (toEN){
+        const en = NL2EN[t];
+        if (en !== undefined){ if (node.__nl == null) node.__nl = raw; node.nodeValue = raw.replace(t, en); }
+      } else if (node.__nl != null){ node.nodeValue = node.__nl; }
+    });
+    document.querySelectorAll(".naam-input").forEach(i => { i.placeholder = toEN ? PH.en : PH.nl; });
+  }
+  function apply(){
+    translate(clLang === "en");
+    const nl = document.getElementById("clLangNL"), en = document.getElementById("clLangEN");
+    if (nl) nl.classList.toggle("active", clLang === "nl");
+    if (en) en.classList.toggle("active", clLang === "en");
+    document.documentElement.lang = clLang;
+  }
+  function setLang(l){ clLang = l; localStorage.setItem("zusje_checklist_lang", l); apply(); }
+  document.getElementById("clLangNL").addEventListener("click", () => setLang("nl"));
+  document.getElementById("clLangEN").addEventListener("click", () => setLang("en"));
+  // Beschikbaar maken zodat dynamisch geladen checklist-items ook vertaald worden.
+  window.clApplyLang = apply;
+  apply();
+})();
+</script>
+
+</body>
+</html>
