@@ -11,6 +11,10 @@ html,body{margin:0;background:var(--bg);color:#fff;
   font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
 .wrap{max-width:760px;margin:0 auto;padding:24px 16px calc(48px + env(safe-area-inset-bottom))}
 
+.backbtn{display:inline-block;border:1px solid var(--line);background:transparent;color:var(--gold);
+  font-family:inherit;font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;cursor:pointer;
+  margin-bottom:16px;text-decoration:none}
+.backbtn:hover{background:#1a1a1a;border-color:var(--gold)}
 .head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
 .head img{width:44px;height:44px;object-fit:contain}
 h1{font-size:23px;font-weight:600;margin:0}
@@ -78,6 +82,7 @@ input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,
 <body>
 <div class="wrap">
   <div id="formView">
+    <a class="backbtn" href="index.html">← Terug naar Management</a>
     <div class="head">
       <img src="../logo.png" alt="">
       <h1>Aanmelding nieuwe medewerker</h1>
@@ -222,6 +227,7 @@ input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,
     <h2>Bedankt voor je aanmelding!</h2>
     <p>De gegevens en documenten zijn verstuurd naar de administratie.<br>Je hoeft verder niets te doen.</p>
     <button type="button" id="againBtn">Nog een medewerker aanmelden</button>
+    <p style="margin-top:14px"><a class="backbtn" href="index.html">← Terug naar Management</a></p>
   </div>
 </div>
 

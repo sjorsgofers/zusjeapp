@@ -58,34 +58,14 @@ input:focus,textarea:focus,select:focus{border-color:var(--gold);box-shadow:0 0 
 .toast.show{opacity:1}
 .hidden{display:none !important}
 .err{color:#ff9b9b;font-size:13px;margin-top:8px}
-/* Wachtwoordscherm */
-#lockScreen{position:fixed;inset:0;background:var(--bg2);display:flex;align-items:center;justify-content:center;padding:24px;z-index:100}
-.lock-card{width:100%;max-width:400px;border:1px solid var(--line);background:var(--bg2);border-radius:20px;padding:28px 24px;text-align:center;
-  box-shadow:0 14px 42px rgba(200,164,91,.12)}
-.lock-icon{font-size:32px;margin-bottom:10px}
-.lock-card h2{margin:0 0 6px;font-size:20px;font-weight:600;color:#fff}
-.lock-card p{margin:0 0 18px;font-size:13px;color:var(--muted)}
-.lock-card input{width:100%;min-height:50px;border:1px solid var(--line);border-radius:14px;background:var(--bg);color:#fff;
-  font-size:16px;padding:0 16px;outline:none;text-align:center;margin-bottom:12px}
-.lock-card input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,164,91,.16)}
-.lock-card button{width:100%;min-height:48px;border:1px solid var(--gold);background:var(--gold);color:#0b0b0b;
-  border-radius:24px;font-size:15px;font-weight:700;cursor:pointer}
-.lock-err{color:#ff9b9b;font-size:13px;margin-top:10px;min-height:18px}
+.backbtn{border:1px solid var(--line);background:transparent;color:var(--gold);font-family:inherit;
+  font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;cursor:pointer;margin-bottom:14px}
+.backbtn:hover{background:#1a1a1a;border-color:var(--gold)}
 </style>
 </head>
 <body>
-<div id="lockScreen">
-  <div class="lock-card">
-    <div class="lock-icon">🔒</div>
-    <h2>Taken &amp; agenda</h2>
-    <p>Voer het wachtwoord in om taken te beheren.</p>
-    <input id="lockInput" type="password" placeholder="Wachtwoord" aria-label="Wachtwoord" autocomplete="off">
-    <button id="lockBtn" type="button">Ontgrendelen</button>
-    <p class="lock-err" id="lockErr"></p>
-  </div>
-</div>
-
 <div class="wrap">
+  <button class="backbtn" id="backBtn" type="button">← Terug naar Management</button>
   <h1>Taken &amp; agenda</h1>
   <p class="sub">Extra taken en dagnotities voor het dashboard. Losse of herhalende punten.</p>
 
@@ -366,41 +346,13 @@ $("saveBtn").addEventListener("click", save);
 $("cancelBtn").addEventListener("click", resetForm);
 resetForm();
 
-/* ---- Wachtwoordslot: pas laden zodra ontgrendeld ---- */
-(function(){
-  const PASSWORD = "kikker";
-  // Restanten van de eerdere "onthouden"-versie opruimen
-  try{ ["zusje_mgmt_unlocked","zusje_taken_unlocked","zusje_cl_unlocked"].forEach(k=>{
-    localStorage.removeItem(k); sessionStorage.removeItem(k);
-  }); }catch(e){}
+/* Geen eigen wachtwoord meer: deze pagina is alleen bereikbaar via Management,
+   en daar is het wachtwoord al ingevoerd. */
+load();
 
-  function markUnlocked(key){
-    try{ localStorage.setItem(key, String(Date.now())); }catch(e){}
-  }
-
-  const gate = $("lockScreen"), input = $("lockInput"), err = $("lockErr");
-  function unlock(){
-    gate.style.display = "none";
-    load();
-  }
-  function tryUnlock(){
-    if((input.value||"").trim().toLowerCase() === PASSWORD){ err.textContent=""; unlock(); }
-    else { err.textContent = "Onjuist wachtwoord."; input.value=""; input.focus(); }
-  }
-  $("lockBtn").addEventListener("click", tryUnlock);
-  input.addEventListener("keydown", e=>{ if(e.key==="Enter") tryUnlock(); });
-  setTimeout(()=>input.focus(), 100);
-
-  // Altijd opnieuw vragen (zie management/index.html)
-  function lock(){
-    gate.style.display = "";
-    input.value = "";
-    err.textContent = "";
-  }
-  window.addEventListener("message", e=>{
-    if(e.data && e.data.type === "zusjeLock") lock();
-  });
-})();
+document.getElementById("backBtn").addEventListener("click", ()=>{
+  try{ window.parent.postMessage({ type:"zusjeGoTab", tab:"management" }, "*"); }catch(e){}
+});
 </script>
 </body>
 </html>
