@@ -357,6 +357,13 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
     screensaver.classList.remove("show");
     screensaver.setAttribute("aria-hidden","true");
     saverOn = false;
+    // Fullscreen weer verlaten als we die zelf hadden aangezet
+    try{
+      if (document.fullscreenElement || document.webkitFullscreenElement){
+        const ex = document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen;
+        if (ex){ const r = ex.call(document); if (r && r.catch) r.catch(()=>{}); }
+      }
+    }catch(_){}
   }
   // Automatisch tonen — nooit op het Table-tabblad.
   function autoShow(){
@@ -392,7 +399,21 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
     // Klik op het logo linksboven → screensaver meteen tonen.
     const trigger = document.getElementById("ssTrigger");
     if (trigger){
-      const fire = e => { e.stopPropagation(); clearTimeout(idleTimer); showSaver(); };
+      const fire = e => {
+        e.stopPropagation();
+        clearTimeout(idleTimer);
+        // Handmatig het dashboard tonen => ook fullscreen, zodat het scherm
+        // helemaal gevuld is (browserbalken weg).
+        try{
+          const el = document.documentElement;
+          const req = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
+          if (req && !document.fullscreenElement && !document.webkitFullscreenElement){
+            const r = req.call(el);
+            if (r && r.catch) r.catch(()=>{});   // door de browser geweigerd: gewoon doorgaan
+          }
+        }catch(_){}
+        showSaver();
+      };
       trigger.addEventListener("click", fire);
       trigger.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") fire(e); });
     }
@@ -424,7 +445,7 @@ html,body{margin:0;padding:0;height:100%;background:var(--bg);color:#fff;
   function siteName(){ return SITES[currentSite()].naam; }
 
   // Sub-apps krijgen de vestiging mee als ?loc=<vestiging>
-  const APP_VERSION = "2026-08-21c";   // ophogen bij elke deploy => verse sub-apps, nooit uit cache
+  const APP_VERSION = "2026-08-21d";   // ophogen bij elke deploy => verse sub-apps, nooit uit cache
   function withSite(src){
     if (!src || /^https?:\/\//.test(src)) return src;   // externe pagina's ongemoeid
     const sep = src.includes("?") ? "&" : "?";
