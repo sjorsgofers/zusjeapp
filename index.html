@@ -61,10 +61,10 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
 
 /* Dashboard-knop (logo) */
 .logobtn{display:inline-flex;align-items:center;gap:8px;flex:0 0 auto;margin-right:2px;padding:4px 12px 4px 4px;
-  background:linear-gradient(180deg,rgba(200,164,91,.10),rgba(200,164,91,.03));
+  background:linear-gradient(180deg,rgba(38,30,17,.9),rgba(15,11,7,.92));
   border:1px solid var(--line);border-radius:999px;cursor:pointer;
   transition:all .2s var(--ease)}
-.logobtn:hover{background:linear-gradient(180deg,rgba(200,164,91,.20),rgba(200,164,91,.06));
+.logobtn:hover{background:linear-gradient(180deg,rgba(52,41,22,.94),rgba(20,15,9,.94));
   border-color:var(--line-strong);transform:translateY(-1px);box-shadow:var(--shadow-gold)}
 .logobtn:active{transform:translateY(0) scale(.98)}
 .logobtn-txt{font-size:13.5px;font-weight:600;letter-spacing:.02em;line-height:1;white-space:nowrap;padding-right:2px;
@@ -74,10 +74,11 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
 .tabs{display:flex;gap:8px;flex:1;justify-content:center;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:3px 0}
 .tabs::-webkit-scrollbar{display:none}
 .tab{appearance:none;flex:0 0 auto;position:relative;border:1px solid var(--line);
-  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0));color:var(--txt);
+  background:linear-gradient(180deg,rgba(24,19,11,.86),rgba(13,10,6,.9));color:var(--txt);
+  box-shadow:0 4px 14px -6px rgba(0,0,0,.55);
   font-family:inherit;font-size:14.5px;font-weight:600;letter-spacing:.01em;padding:10px 22px;border-radius:999px;cursor:pointer;
   transition:all .2s var(--ease);white-space:nowrap}
-.tab:hover{border-color:var(--line-strong);background:linear-gradient(180deg,rgba(200,164,91,.14),rgba(200,164,91,.04));
+.tab:hover{border-color:var(--line-strong);background:linear-gradient(180deg,rgba(46,37,20,.92),rgba(20,15,9,.92));
   transform:translateY(-1px)}
 .tab:active{transform:translateY(0) scale(.98)}
 .tab.active{background:var(--grad-gold);color:#241a0c;border-color:transparent;
@@ -88,7 +89,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   background:transparent;color:var(--gold);display:grid;place-items:center;cursor:pointer;text-decoration:none;font-size:17px;
   transition:all .2s var(--ease)}
 .tablink:hover{background:rgba(200,164,91,.12);border-color:var(--line-strong);transform:translateY(-1px)}
-.minibtn{flex:0 0 auto;border:1px solid var(--line);background:transparent;color:var(--gold);font-family:inherit;
+.minibtn{flex:0 0 auto;border:1px solid var(--line);background:linear-gradient(180deg,rgba(24,19,11,.86),rgba(13,10,6,.9));color:var(--gold);font-family:inherit;
   font-size:12.5px;font-weight:600;padding:8px 13px;border-radius:999px;cursor:pointer;white-space:nowrap;
   transition:all .2s var(--ease)}
 .minibtn:hover{background:rgba(200,164,91,.12);border-color:var(--line-strong);transform:translateY(-1px)}
@@ -99,7 +100,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
 .sitebtn{flex:0 0 auto;border:1px solid var(--line);background:transparent;color:var(--gold);font-family:inherit;
   font-size:12.5px;font-weight:600;letter-spacing:.03em;padding:8px 15px;border-radius:999px;cursor:pointer;white-space:nowrap;
   transition:all .2s var(--ease)}
-.sitebtn:hover{background:rgba(200,164,91,.12);border-color:var(--line-strong);transform:translateY(-1px)}
+.sitebtn:hover{background:linear-gradient(180deg,rgba(46,37,20,.92),rgba(20,15,9,.92));border-color:var(--line-strong);transform:translateY(-1px)}
 
 /* Kiosk-knop */
 .tab-kiosk{display:inline-flex;align-items:center;gap:8px;padding-left:13px}
@@ -406,6 +407,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   let idleTimer = null;
   let saverOn = false;
   let idleReady = false;
+  let saverShownAt = 0;   // gratieperiode: negeer (synthetische) events vlak na tonen
 
   function showSaver(){
     const f = document.getElementById("f-screensaver");
@@ -413,6 +415,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
     screensaver.classList.add("show");
     screensaver.setAttribute("aria-hidden","false");
     saverOn = true;
+    saverShownAt = Date.now();
   }
   function hideSaver(){
     screensaver.classList.remove("show");
@@ -433,7 +436,12 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   }
   function onActivity(){
     if (!idleReady) return;
-    if (saverOn) hideSaver();
+    if (saverOn){
+      // Fullscreen-overgang veroorzaakt synthetische mousemove/scroll-events
+      // die de saver direct zouden sluiten — 1,5 s negeren na tonen.
+      if (Date.now() - saverShownAt < 1500) return;
+      hideSaver();
+    }
     clearTimeout(idleTimer);
     idleTimer = setTimeout(autoShow, IDLE_MS);
   }
@@ -506,7 +514,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   function siteName(){ return SITES[currentSite()].naam; }
 
   // Sub-apps krijgen de vestiging mee als ?loc=<vestiging>
-  const APP_VERSION = "2026-08-22b";   // ophogen bij elke deploy => verse sub-apps, nooit uit cache
+  const APP_VERSION = "2026-08-22c";   // ophogen bij elke deploy => verse sub-apps, nooit uit cache
   function withSite(src){
     if (!src || /^https?:\/\//.test(src)) return src;   // externe pagina's ongemoeid
     const sep = src.includes("?") ? "&" : "?";
