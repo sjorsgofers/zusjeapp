@@ -79,6 +79,10 @@ input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(200,
 #done p{color:var(--muted);font-size:14px;line-height:1.6;margin:0 0 20px}
 #done button{min-height:48px;padding:0 24px;border:1px solid var(--gold);background:transparent;color:var(--gold);
   border-radius:24px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit}
+.dlform{display:block;margin-top:9px;padding:11px 15px;border:1px dashed var(--line);border-radius:14px;
+  color:var(--gold);font-size:13.5px;font-weight:600;text-decoration:none;line-height:1.45;
+  background:rgba(200,164,91,.05);transition:all .18s var(--ease)}
+.dlform:hover{border-color:var(--gold);background:rgba(200,164,91,.12)}
 </style>
 </head>
 <body>
@@ -202,6 +206,9 @@ input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(200,
             <span class="txt"><span class="name">Bestand kiezen of foto maken</span><span class="meta">JPG, PNG of PDF</span></span>
             <input type="file" id="tax_form" accept=".jpg,.jpeg,.png,.pdf,image/*">
           </label>
+          <a class="dlform" href="https://download.belastingdienst.nl/belastingdienst/docs/model_opgaaf_gegevens_loonheffingen_lh0082z12fol.pdf" target="_blank" rel="noopener">
+            ⬇️ Download het loonheffingsformulier (PDF) — print, vul in en onderteken
+          </a>
         </div>
       </div>
 
