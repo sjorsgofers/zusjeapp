@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aanmelden — 't Zusje Roermond</title>
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="apple-touch-icon" href="../favicon.png">
+<style>
+:root{--gold:#c8a45b;--gold-bright:#f0d28a;--bg:#0b0906;--bg2:#120d08;--line:rgba(200,164,91,.3);--muted:rgba(245,241,232,.55);--grad-gold:linear-gradient(180deg,#f4dc9c 0%,#d9b26a 55%,#c8a45b 100%);--ease:cubic-bezier(.4,0,.2,1)}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;background:radial-gradient(ellipse 90% 45% at 50% -8%, rgba(200,164,91,.10), transparent 60%),linear-gradient(180deg,#0d0a07,#0b0906);color:#f5f1e8;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:24px 16px calc(48px + env(safe-area-inset-bottom))}
+
+.backbtn{display:inline-block;border:1px solid var(--line);background:transparent;color:var(--gold);
+  font-family:inherit;font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;cursor:pointer;
+  margin-bottom:16px;text-decoration:none}
+.backbtn:hover{background:#1a1a1a;border-color:var(--gold)}
+.head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.head img{width:44px;height:44px;object-fit:contain}
+h1{font-size:23px;font-weight:600;margin:0}
+.sub{color:var(--muted);font-size:14px;margin:0 0 24px}
+
+.card{border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#171208,#100c07);padding:20px;margin-bottom:16px;box-shadow:0 12px 30px -14px rgba(0,0,0,.6),inset 0 1px 0 rgba(240,210,138,.07)}
+.card h2{font-size:13px;font-weight:700;margin:0 0 16px;color:var(--gold);
+  text-transform:uppercase;letter-spacing:.6px}
+
+.field{margin-bottom:15px}
+.field:last-child{margin-bottom:0}
+label{display:block;font-size:13px;color:rgba(255,255,255,.8);margin:0 0 6px;font-weight:500}
+.req{color:var(--gold)}
+input[type=text],input[type=date],input[type=tel],input[type=email],select{
+  width:100%;min-height:48px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:#fff;
+  font-size:16px;padding:0 14px;outline:none;font-family:inherit}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),linear-gradient(135deg,var(--gold) 50%,transparent 50%);
+  background-position:calc(100% - 20px) 21px,calc(100% - 14px) 21px;background-size:6px 6px,6px 6px;background-repeat:no-repeat;padding-right:40px}
+input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(200,164,91,.15),0 0 20px -8px rgba(200,164,91,.4)}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.row>.field{flex:1;min-width:150px}
+.hint{font-size:12px;color:var(--muted);margin-top:5px}
+
+/* radio's */
+.radios{display:flex;gap:8px;flex-wrap:wrap}
+.radio{flex:1;min-width:100px;position:relative}
+.radio input{position:absolute;opacity:0;width:0;height:0}
+.radio span{display:block;text-align:center;border:1px solid var(--line);border-radius:12px;padding:12px 8px;
+  font-size:14px;font-weight:600;cursor:pointer;transition:all .15s ease}
+.radio input:checked+span{background:var(--grad-gold);color:#241a0c;border-color:transparent;box-shadow:0 4px 12px -4px rgba(200,164,91,.5)}
+.radio input:focus-visible+span{box-shadow:0 0 0 3px rgba(200,164,91,.3)}
+
+/* uploads */
+.upload{border:1px dashed var(--line);border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;
+  cursor:pointer;transition:border-color .15s ease,background .15s ease}
+.upload:hover{border-color:var(--gold);background:rgba(200,164,91,.05)}
+.upload.filled{border-style:solid;border-color:var(--gold);background:rgba(200,164,91,.1);box-shadow:0 0 18px -8px rgba(200,164,91,.35)}
+.upload input{display:none}
+.upload .ico{font-size:20px;flex:0 0 auto}
+.upload .txt{flex:1;min-width:0}
+.upload .name{font-size:13.5px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.upload .meta{font-size:11.5px;color:var(--muted);margin-top:2px}
+
+/* akkoord */
+.check{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px}
+.check input{width:20px;height:20px;accent-color:var(--gold);flex:0 0 auto;margin-top:2px}
+.check label{margin:0;font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.85)}
+
+.btn{width:100%;min-height:54px;border:none;background:var(--grad-gold);color:#241a0c;
+  border-radius:999px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:4px;box-shadow:0 8px 24px -8px rgba(200,164,91,.5),inset 0 1px 0 rgba(255,255,255,.5);transition:all .18s var(--ease)}
+.btn:hover:not(:disabled){filter:brightness(1.06);transform:translateY(-1px)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.msg{margin-top:14px;padding:14px 16px;border-radius:12px;font-size:14px;line-height:1.5;display:none}
+.msg.err{display:block;background:rgba(255,107,107,.12);border:1px solid rgba(255,107,107,.45);color:#ff9b9b}
+.msg.ok{display:block;background:rgba(200,164,91,.12);border:1px solid var(--gold);color:var(--gold)}
+.progress{font-size:13px;color:var(--muted);text-align:center;margin-top:10px;min-height:18px}
+
+#done{display:none;text-align:center;padding:40px 20px}
+#done .big{font-size:48px;margin-bottom:12px}
+#done h2{font-size:22px;margin:0 0 8px;color:var(--gold)}
+#done p{color:var(--muted);font-size:14px;line-height:1.6;margin:0 0 20px}
+#done button{min-height:48px;padding:0 24px;border:1px solid var(--gold);background:transparent;color:var(--gold);
+  border-radius:24px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="formView">
+    <div class="head">
+      <img src="../logo.png" alt="">
+      <h1>Aanmelding nieuwe medewerker</h1>
+    </div>
+    <p class="sub">Alle gegevens worden direct naar de administratie gemaild. Velden met <span class="req">*</span> zijn verplicht.</p>
+
+    <form id="signupForm" novalidate>
+      <div class="card">
+        <h2>Persoonsgegevens</h2>
+
+        <div class="field">
+          <label for="fullName">Volledige naam <span class="req">*</span></label>
+          <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label>Geslacht <span class="req">*</span></label>
+          <div class="radios">
+            <label class="radio"><input type="radio" name="gender" value="Man"><span>Man</span></label>
+            <label class="radio"><input type="radio" name="gender" value="Vrouw"><span>Vrouw</span></label>
+            <label class="radio"><input type="radio" name="gender" value="Non-binair"><span>Non-binair</span></label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="bsn">Burgerservicenummer (BSN) <span class="req">*</span></label>
+            <input type="text" id="bsn" name="bsn" inputmode="numeric" required>
+          </div>
+          <div class="field">
+            <label for="birthDate">Geboortedatum <span class="req">*</span></label>
+            <input type="date" id="birthDate" name="birthDate" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="birthCountry">Geboorteland <span class="req">*</span></label>
+          <input type="text" id="birthCountry" name="birthCountry" value="Nederland" required>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="postcode">Postcode <span class="req">*</span></label>
+            <input type="text" id="postcode" name="postcode" placeholder="1234 AB" required>
+          </div>
+          <div class="field">
+            <label for="houseNumber">Huisnummer <span class="req">*</span></label>
+            <input type="text" id="houseNumber" name="houseNumber" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="mobile">Mobiel nummer <span class="req">*</span></label>
+            <input type="tel" id="mobile" name="mobile" placeholder="+31 6 12 34 56 78" required>
+          </div>
+          <div class="field">
+            <label for="email">E-mailadres <span class="req">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="department">Afdeling <span class="req">*</span></label>
+            <select id="department" name="department" required>
+              <option value="">-- Kies een afdeling --</option>
+              <option>Bediening</option>
+              <option>Keuken</option>
+              <option>Spoelkeuken</option>
+              <option>Schoonmaak</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="iban">IBAN-nummer <span class="req">*</span></label>
+            <input type="text" id="iban" name="iban" placeholder="NL00BANK0123456789" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Documenten</h2>
+        <p class="hint" style="margin:-8px 0 14px">Foto's worden automatisch verkleind zodat de mail niet te groot wordt.</p>
+
+        <div class="field">
+          <label>ID-kaart / Paspoort — voorkant <span class="req">*</span></label>
+          <label class="upload" data-for="id_front">
+            <span class="ico">🪪</span>
+            <span class="txt"><span class="name">Bestand kiezen of foto maken</span><span class="meta">JPG, PNG of PDF</span></span>
+            <input type="file" id="id_front" accept=".jpg,.jpeg,.png,.pdf,image/*">
+          </label>
+        </div>
+
+        <div class="field">
+          <label>ID-kaart / Paspoort — achterkant <span class="req">*</span></label>
+          <label class="upload" data-for="id_back">
+            <span class="ico">🪪</span>
+            <span class="txt"><span class="name">Bestand kiezen of foto maken</span><span class="meta">JPG, PNG of PDF</span></span>
+            <input type="file" id="id_back" accept=".jpg,.jpeg,.png,.pdf,image/*">
+          </label>
+        </div>
+
+        <div class="field">
+          <label>Bankpas (met zichtbare IBAN) <span class="req">*</span></label>
+          <label class="upload" data-for="bank_card">
+            <span class="ico">💳</span>
+            <span class="txt"><span class="name">Bestand kiezen of foto maken</span><span class="meta">JPG, PNG of PDF</span></span>
+            <input type="file" id="bank_card" accept=".jpg,.jpeg,.png,.pdf,image/*">
+          </label>
+        </div>
+
+        <div class="field">
+          <label>Loonheffingsformulier (ingevuld &amp; ondertekend) <span class="req">*</span></label>
+          <label class="upload" data-for="tax_form">
+            <span class="ico">📄</span>
+            <span class="txt"><span class="name">Bestand kiezen of foto maken</span><span class="meta">JPG, PNG of PDF</span></span>
+            <input type="file" id="tax_form" accept=".jpg,.jpeg,.png,.pdf,image/*">
+          </label>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Akkoord</h2>
+        <div class="check">
+          <input type="checkbox" id="confirm_correct">
+          <label for="confirm_correct">Ik verklaar dat ik alle gegevens naar waarheid heb ingevuld.</label>
+        </div>
+        <div class="check">
+          <input type="checkbox" id="confirm_privacy">
+          <label for="confirm_privacy">Ik geef toestemming dat mijn gegevens worden gebruikt voor mijn arbeidsadministratie.</label>
+        </div>
+
+        <button type="submit" class="btn" id="submitBtn">Verzenden</button>
+        <div class="progress" id="progress"></div>
+        <div class="msg" id="msg"></div>
+      </div>
+    </form>
+  </div>
+
+  <div id="done">
+    <div class="big">✅</div>
+    <h2>Bedankt voor je aanmelding!</h2>
+    <p>De gegevens en documenten zijn verstuurd naar de administratie.<br>Je hoeft verder niets te doen.</p>
+    <button type="button" id="againBtn">Nog een aanmelding invullen</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  // Apps Script dat de mail met bijlagen naar roermond@zusje.nl stuurt
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzLA7ptHlCQ_8UNu_KPLHgY06nI4bRJ4HIxs0BdPX3J9Y5zzXhY_HVU4SG-o9XKZ1rypQ/exec";
+
+  const $ = id => document.getElementById(id);
+  const form = $('signupForm'), btn = $('submitBtn'), msg = $('msg'), prog = $('progress');
+  const FILES = ['id_front','id_back','bank_card','tax_form'];
+  const MAX_DIM = 1600, JPEG_Q = 0.72, MAX_TOTAL = 18 * 1024 * 1024;
+
+  // Bestandsnaam tonen zodra er iets gekozen is
+  FILES.forEach(id=>{
+    const input = $(id), box = input.closest('.upload');
+    input.addEventListener('change', ()=>{
+      const f = input.files && input.files[0];
+      box.classList.toggle('filled', !!f);
+      box.querySelector('.name').textContent = f ? f.name : 'Bestand kiezen of foto maken';
+      box.querySelector('.meta').textContent = f ? (Math.round(f.size/1024) + ' KB') : 'JPG, PNG of PDF';
+    });
+  });
+
+  function showMsg(type, html){ msg.className = 'msg ' + type; msg.innerHTML = html; }
+  function clearMsg(){ msg.className = 'msg'; msg.innerHTML = ''; }
+
+  // Afbeeldingen verkleinen zodat de mail binnen de limiet blijft (PDF blijft ongemoeid)
+  function processFile(file){
+    return new Promise((resolve, reject)=>{
+      if(!file.type.startsWith('image/')){
+        const r = new FileReader();
+        r.onload = ()=> resolve({ data:(r.result+'').split(',')[1]||'', name:file.name, type:file.type||'application/octet-stream' });
+        r.onerror = reject;
+        r.readAsDataURL(file);
+        return;
+      }
+      const r = new FileReader();
+      r.onload = ()=>{
+        const img = new Image();
+        img.onload = ()=>{
+          let {width:w, height:h} = img;
+          const scale = Math.min(1, MAX_DIM/Math.max(w,h));
+          w = Math.round(w*scale); h = Math.round(h*scale);
+          const c = document.createElement('canvas');
+          c.width = w; c.height = h;
+          const ctx = c.getContext('2d');
+          ctx.fillStyle = '#fff'; ctx.fillRect(0,0,w,h);
+          ctx.drawImage(img, 0, 0, w, h);
+          const dataUrl = c.toDataURL('image/jpeg', JPEG_Q);
+          const base = file.name.replace(/\.[^.]+$/,'');
+          resolve({ data:dataUrl.split(',')[1], name: base + '.jpg', type:'image/jpeg' });
+        };
+        img.onerror = reject;
+        img.src = r.result;
+      };
+      r.onerror = reject;
+      r.readAsDataURL(file);
+    });
+  }
+
+  function validate(){
+    const errors = [];
+    const val = id => ($(id).value||'').trim();
+    if(!val('fullName')) errors.push('Vul de volledige naam in.');
+    if(!document.querySelector('input[name="gender"]:checked')) errors.push('Kies een geslacht.');
+    if(!/^\d{8,9}$/.test(val('bsn').replace(/\s/g,''))) errors.push('Controleer het BSN (8 of 9 cijfers).');
+    if(!val('birthDate')) errors.push('Vul de geboortedatum in.');
+    if(!val('birthCountry')) errors.push('Vul het geboorteland in.');
+    if(!val('postcode')) errors.push('Vul de postcode in.');
+    if(!val('houseNumber')) errors.push('Vul het huisnummer in.');
+    const mobile = val('mobile').replace(/\s/g,'');
+    if(!/^(\+31|0)6\d{8}$/.test(mobile)) errors.push('Controleer het mobiele nummer (bijv. +31 6 12345678).');
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val('email'))) errors.push('Controleer het e-mailadres.');
+    if(!val('department')) errors.push('Kies een afdeling.');
+    const iban = val('iban').toUpperCase().replace(/\s/g,'');
+    if(!/^NL\d{2}[A-Z]{4}\d{10}$/.test(iban)) errors.push('Controleer de IBAN (bijv. NL00BANK0123456789).');
+    FILES.forEach(id=>{ if(!$(id).files || !$(id).files.length) errors.push('Upload alle vier de documenten.'); });
+    if(!$('confirm_correct').checked || !$('confirm_privacy').checked) errors.push('Zet beide vinkjes onderaan.');
+    return [...new Set(errors)];
+  }
+
+  form.addEventListener('submit', async e=>{
+    e.preventDefault();
+    clearMsg();
+    const errors = validate();
+    if(errors.length){ showMsg('err', errors.join('<br>')); window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'}); return; }
+
+    btn.disabled = true; btn.textContent = 'Verzenden…';
+    prog.textContent = 'Documenten voorbereiden…';
+    try{
+      const processed = {};
+      let total = 0;
+      for(let i=0;i<FILES.length;i++){
+        const id = FILES[i];
+        prog.textContent = 'Document ' + (i+1) + ' van ' + FILES.length + ' voorbereiden…';
+        processed[id] = await processFile($(id).files[0]);
+        total += (processed[id].data.length * 3) / 4;
+      }
+      if(total > MAX_TOTAL) throw new Error('De documenten zijn samen te groot (' + Math.round(total/1024/1024) + ' MB). Maak de fotos kleiner en probeer opnieuw.');
+
+      const fd = new FormData();
+      ['fullName','bsn','birthDate','birthCountry','postcode','houseNumber','mobile','email','department','iban']
+        .forEach(k => fd.append(k, ($(k).value||'').trim()));
+      fd.append('gender', document.querySelector('input[name="gender"]:checked').value);
+      FILES.forEach(id=>{
+        fd.append(id + '_data', processed[id].data);
+        fd.append(id + '_name', processed[id].name);
+        fd.append(id + '_type', processed[id].type);
+      });
+
+      prog.textContent = 'Versturen naar de administratie…';
+      const r = await fetch(SCRIPT_URL, { method:'POST', body: fd });
+      let ok = r.ok;
+      try{ const j = await r.json(); ok = ok && j && j.ok !== false; }catch(_){}
+      if(!ok) throw new Error('De administratie kon het formulier niet ontvangen.');
+
+      $('formView').style.display = 'none';
+      $('done').style.display = 'block';
+      window.scrollTo({top:0});
+    }catch(err){
+      showMsg('err', (err && err.message) ? err.message : 'Er ging iets mis bij het verzenden. Probeer het opnieuw.');
+    }finally{
+      btn.disabled = false; btn.textContent = 'Verzenden'; prog.textContent = '';
+    }
+  });
+
+  $('againBtn').addEventListener('click', ()=>{
+    form.reset();
+    FILES.forEach(id=>{
+      const box = $(id).closest('.upload');
+      box.classList.remove('filled');
+      box.querySelector('.name').textContent = 'Bestand kiezen of foto maken';
+      box.querySelector('.meta').textContent = 'JPG, PNG of PDF';
+    });
+    clearMsg();
+    $('done').style.display = 'none';
+    $('formView').style.display = 'block';
+  });
+})();
+</script>
+</body>
+</html>
