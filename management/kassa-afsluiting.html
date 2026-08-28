@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kassa afsluiting</title>
+<style>
+:root{--gold:#c8a45b;--gold-bright:#f0d28a;--bg:#0b0906;--bg2:#120d08;
+--line:rgba(200,164,91,.3);--muted:rgba(245,241,232,.55);
+--grad-gold:linear-gradient(180deg,#f4dc9c 0%,#d9b26a 55%,#c8a45b 100%);
+--ease:cubic-bezier(.4,0,.2,1)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:
+  radial-gradient(ellipse 90% 45% at 50% -8%, rgba(200,164,91,.10), transparent 60%),
+  linear-gradient(180deg,#0d0a07,#0b0906);color:#f5f1e8;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:20px 16px 60px}
+.backbtn{display:inline-block;border:1px solid var(--line);background:transparent;color:var(--gold);
+  border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:600;text-decoration:none;margin-bottom:14px;
+  transition:all .18s var(--ease)}
+.backbtn:hover{background:rgba(200,164,91,.12);border-color:var(--gold)}
+h1{font-size:24px;font-weight:750;margin:0 0 4px}
+.sub{color:var(--muted);font-size:13.5px;margin:0 0 18px;line-height:1.5}
+.card{border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#171208,#100c07);
+  padding:18px;margin-bottom:16px;box-shadow:0 12px 30px -14px rgba(0,0,0,.6),inset 0 1px 0 rgba(240,210,138,.07)}
+.card h2{font-size:15px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--gold-bright);margin:0 0 14px}
+.field{margin-bottom:13px}
+.field label{display:block;font-size:13.5px;font-weight:600;margin-bottom:6px}
+input{width:100%;min-height:46px;border:1px solid var(--line);border-radius:13px;padding:0 14px;
+  background:rgba(0,0,0,.35);color:#f5f1e8;font-size:16px;font-family:inherit;outline:none;
+  transition:all .2s var(--ease)}
+input:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(200,164,91,.15),0 0 20px -8px rgba(200,164,91,.4)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rij{display:grid;grid-template-columns:96px 1fr 110px;gap:10px;align-items:center;margin-bottom:9px}
+.rij .coupure{font-size:14.5px;font-weight:700;color:var(--gold-bright)}
+.rij .som{font-size:14px;text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+.subtotaal{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);
+  margin-top:12px;padding-top:11px;font-weight:800;font-size:15px}
+.subtotaal span:last-child{font-variant-numeric:tabular-nums}
+.balans{border:1px solid var(--line);border-radius:20px;padding:18px;margin-bottom:16px;
+  background:linear-gradient(180deg,rgba(200,164,91,.12),rgba(200,164,91,.03))}
+.balans .r{display:flex;justify-content:space-between;font-size:14.5px;margin:5px 0;font-variant-numeric:tabular-nums}
+.balans .r.tot{font-weight:800;font-size:16px;border-top:1px solid var(--line);padding-top:9px;margin-top:9px}
+.balans .r.diff{font-weight:800;font-size:16px}
+.diff-ok{color:#4ade80}.diff-af{color:#fbbf24}
+.btn{width:100%;min-height:54px;border:none;background:var(--grad-gold);color:#241a0c;
+  border-radius:999px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:4px;
+  box-shadow:0 8px 24px -8px rgba(200,164,91,.5),inset 0 1px 0 rgba(255,255,255,.5);transition:all .18s var(--ease)}
+.btn:hover:not(:disabled){filter:brightness(1.06);transform:translateY(-1px)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+#msg{display:none;margin-top:12px;text-align:center;font-weight:700;font-size:14px;padding:12px 16px;border-radius:14px}
+#msg.ok{display:block;color:#c9f2d6;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.4)}
+#msg.err{display:block;color:#ffc9c9;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.4)}
+.envelop{margin-top:14px;text-align:center;font-size:13px;font-weight:800;color:#f6e3b4;text-transform:uppercase;
+  letter-spacing:.03em;line-height:1.5}
+#done{display:none;text-align:center;padding:60px 20px}
+#done .big{font-size:48px;margin-bottom:12px}
+#done h2{font-size:22px;margin:0 0 8px;color:var(--gold)}
+#done p{color:var(--muted);font-size:14px;line-height:1.6;margin:0 0 20px}
+@media(max-width:560px){.grid2{grid-template-columns:1fr}.rij{grid-template-columns:76px 1fr 90px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="formView">
+    <a class="backbtn" href="index.html">← Terug naar Management</a>
+    <h1>Kassa afsluiting</h1>
+    <p class="sub" id="datumRegel"></p>
+
+    <div class="card">
+      <h2>Algemeen</h2>
+      <div class="field"><label for="naam">Naam</label><input type="text" id="naam" autocomplete="off"></div>
+      <div class="grid2">
+        <div class="field"><label for="omzet">Totaal omzet incl. btw (€)</label><input type="text" id="omzet" inputmode="decimal" class="geld"></div>
+        <div class="field"><label for="epin">Totaal pin dag — EPIN (€)</label><input type="text" id="epin" inputmode="decimal" class="geld"></div>
+        <div class="field"><label for="pinOffline">Pin offline (€)</label><input type="text" id="pinOffline" inputmode="decimal" class="geld"></div>
+        <div class="field"><label for="marketing">Marketing acties (€)</label><input type="text" id="marketing" inputmode="decimal" class="geld"></div>
+        <div class="field"><label for="opRekening">Op rekening (€)</label><input type="text" id="opRekening" inputmode="decimal" class="geld"></div>
+        <div class="field"><label for="uitKas">Uit kas — bonnetjes contant (€)</label><input type="text" id="uitKas" inputmode="decimal" class="geld"></div>
+        <div class="field"><label for="contant">Contant (€)</label><input type="text" id="contant" inputmode="decimal" class="geld"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Cadeaubonnen</h2>
+      <div class="rij"><span class="coupure">€ 50</span><input type="text" id="cb50" inputmode="numeric" class="tel" placeholder="aantal"><span class="som" data-som="cb50">€ 0,00</span></div>
+      <div class="rij"><span class="coupure">€ 40</span><input type="text" id="cb40" inputmode="numeric" class="tel" placeholder="aantal"><span class="som" data-som="cb40">€ 0,00</span></div>
+      <div class="rij"><span class="coupure">€ 20</span><input type="text" id="cb20" inputmode="numeric" class="tel" placeholder="aantal"><span class="som" data-som="cb20">€ 0,00</span></div>
+      <div class="rij"><span class="coupure">€ 10</span><input type="text" id="cb10" inputmode="numeric" class="tel" placeholder="aantal"><span class="som" data-som="cb10">€ 0,00</span></div>
+      <div class="rij"><span class="coupure">Tapas</span><input type="text" id="tapas" inputmode="decimal" class="geld" placeholder="€ bedrag"><span class="som" data-som="tapas">€ 0,00</span></div>
+      <div class="subtotaal"><span>Totaal cadeaubonnen</span><span id="cbTotaal">€ 0,00</span></div>
+    </div>
+
+    <div class="card">
+      <h2>Gestort in Smartsafe</h2>
+      <div class="rij"><span class="coupure">€ 100</span><input type="text" id="ss100" inputmode="numeric" class="tel" placeholder="aantal"><span class="som" data-som="ss100">€ 0,00</span></div>
+      <div class="rij"><span class="coupure">€ 50</span><input type="text" id="ss50" inputmode="numeric" class="tel" placeholder="aantal"><span class="som" data-som="ss50">€ 0,00</span></div>
+      <div class="rij"><span class="coupure">€ 20</span><input type="text" id="ss20" inputmode="numeric" class="tel" placeholder="aantal"><span class="som" data-som="ss20">€ 0,00</span></div>
+      <div class="rij"><span class="coupure">€ 10</span><input type="text" id="ss10" inputmode="numeric" class="tel" placeholder="aantal"><span class="som" data-som="ss10">€ 0,00</span></div>
+      <div class="rij"><span class="coupure">€ 5</span><input type="text" id="ss5" inputmode="numeric" class="tel" placeholder="aantal"><span class="som" data-som="ss5">€ 0,00</span></div>
+      <div class="subtotaal"><span>Totaal gestort</span><span id="ssTotaal">€ 0,00</span></div>
+    </div>
+
+    <div class="balans">
+      <div class="r"><span>EPIN + pin offline</span><span id="bPin">€ 0,00</span></div>
+      <div class="r"><span>Cadeaubonnen</span><span id="bCb">€ 0,00</span></div>
+      <div class="r"><span>Marketing + op rekening + uit kas</span><span id="bOverig">€ 0,00</span></div>
+      <div class="r"><span>Contant</span><span id="bContant">€ 0,00</span></div>
+      <div class="r tot"><span>Totaal geteld</span><span id="bTotaal">€ 0,00</span></div>
+      <div class="r"><span>Omzet volgens kassa</span><span id="bOmzet">€ 0,00</span></div>
+      <div class="r diff"><span>Verschil</span><span id="bVerschil">€ 0,00</span></div>
+    </div>
+
+    <button type="button" class="btn" id="verzendBtn">Afsluiting verzenden</button>
+    <div id="msg"></div>
+    <p class="envelop">Let op! Bewaar 200 euro in de envelop samen met de cadeaubonnen en bonnetjes</p>
+  </div>
+
+  <div id="done">
+    <div class="big">✅</div>
+    <h2>Kassa afsluiting verzonden!</h2>
+    <p>Het document in Drive is ingevuld en de PDF is gemaild naar de administratie.</p>
+    <p style="margin-top:14px"><a class="backbtn" href="index.html">← Terug naar Management</a></p>
+  </div>
+</div>
+
+<script>
+(function(){
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx6XXMHSoVzK_YWDLSq16mtLCgaiT5tpUDcjieL1RUgyUH71VGdkr2II8nqudqjcMYY/exec";
+
+  const $ = id => document.getElementById(id);
+  const geld = n => "€ " + (Math.round(n*100)/100).toLocaleString("nl-NL",{minimumFractionDigits:2,maximumFractionDigits:2});
+  const num = v => { const n = Number(String(v||"").replace(/\./g,"").replace(",", ".")); return isNaN(n) ? 0 : n; };
+
+  const vandaag = new Date();
+  $('datumRegel').textContent = vandaag.toLocaleDateString("nl-NL",{weekday:"long",day:"2-digit",month:"2-digit",year:"numeric"});
+
+  const COUPURES = {cb50:50,cb40:40,cb20:20,cb10:10,ss100:100,ss50:50,ss20:20,ss10:10,ss5:5};
+
+  function herbereken(){
+    let cb = 0, ss = 0;
+    for (const id in COUPURES){
+      const bedrag = (id === 'tapas') ? num($(id).value) : num($(id).value) * COUPURES[id];
+      document.querySelector('[data-som="'+id+'"]').textContent = geld(bedrag);
+      if (id.startsWith('cb')) cb += bedrag; else ss += bedrag;
+    }
+    const tapas = num($('tapas').value);
+    document.querySelector('[data-som="tapas"]').textContent = geld(tapas);
+    cb += tapas;
+    $('cbTotaal').textContent = geld(cb);
+    $('ssTotaal').textContent = geld(ss);
+
+    const pin = num($('epin').value) + num($('pinOffline').value);
+    const overig = num($('marketing').value) + num($('opRekening').value) + num($('uitKas').value);
+    const contant = num($('contant').value);
+    const totaal = pin + cb + overig + contant;
+    const omzet = num($('omzet').value);
+    const verschil = totaal - omzet;
+
+    $('bPin').textContent = geld(pin);
+    $('bCb').textContent = geld(cb);
+    $('bOverig').textContent = geld(overig);
+    $('bContant').textContent = geld(contant);
+    $('bTotaal').textContent = geld(totaal);
+    $('bOmzet').textContent = geld(omzet);
+    const v = $('bVerschil');
+    v.textContent = (verschil > 0 ? "+" : "") + geld(verschil).replace("€ -","− € ");
+    v.className = Math.abs(verschil) < 0.005 ? "diff-ok" : "diff-af";
+    return {cb, ss};
+  }
+  document.querySelectorAll('input').forEach(i => i.addEventListener('input', herbereken));
+  herbereken();
+
+  $('verzendBtn').addEventListener('click', async () => {
+    const btn = $('verzendBtn'), msg = $('msg');
+    const {ss} = herbereken();
+    const data = {
+      naam: $('naam').value.trim(),
+      omzet: num($('omzet').value), epin: num($('epin').value), pinOffline: $('pinOffline').value ? num($('pinOffline').value) : "",
+      marketing: $('marketing').value ? num($('marketing').value) : "",
+      opRekening: $('opRekening').value ? num($('opRekening').value) : "",
+      uitKas: $('uitKas').value ? num($('uitKas').value) : "",
+      contant: $('contant').value ? num($('contant').value) : "",
+      cb50: $('cb50').value, cb40: $('cb40').value, cb20: $('cb20').value, cb10: $('cb10').value,
+      tapas: $('tapas').value ? num($('tapas').value) : "",
+      ss100: $('ss100').value, ss50: $('ss50').value, ss20: $('ss20').value, ss10: $('ss10').value, ss5: $('ss5').value,
+      smartsafeTotaal: ss || ""
+    };
+    if (!data.naam){ msg.className='err'; msg.textContent='Vul je naam in.'; return; }
+    if (!data.omzet){ msg.className='err'; msg.textContent='Vul de totale omzet in.'; return; }
+
+    btn.disabled = true; btn.textContent = 'Bezig met verzenden…'; msg.className=''; msg.style.display='none';
+    try{
+      const r = await fetch(SCRIPT_URL, { method:'POST', body: JSON.stringify(data) });
+      const j = await r.json();
+      if (!j.ok) throw new Error(j.error || 'Onbekende fout');
+      document.getElementById('formView').style.display='none';
+      document.getElementById('done').style.display='block';
+      window.scrollTo(0,0);
+    }catch(err){
+      msg.className='err';
+      msg.textContent='❌ Verzenden mislukt: ' + err.message;
+      btn.disabled = false; btn.textContent = 'Afsluiting verzenden';
+    }
+  });
+})();
+</script>
+</body>
+</html>
