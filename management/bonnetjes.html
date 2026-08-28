@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bonnetjes</title>
+<style>
+:root{--gold:#c8a45b;--gold-bright:#f0d28a;--bg:#0b0906;--bg2:#120d08;
+--line:rgba(200,164,91,.3);--muted:rgba(245,241,232,.55);
+--grad-gold:linear-gradient(180deg,#f4dc9c 0%,#d9b26a 55%,#c8a45b 100%);
+--ease:cubic-bezier(.4,0,.2,1)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:
+  radial-gradient(ellipse 90% 45% at 50% -8%, rgba(200,164,91,.10), transparent 60%),
+  linear-gradient(180deg,#0d0a07,#0b0906);color:#f5f1e8;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:640px;margin:0 auto;padding:20px 16px 60px}
+.backbtn{display:inline-block;border:1px solid var(--line);background:transparent;color:var(--gold);
+  border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:600;text-decoration:none;margin-bottom:14px;
+  transition:all .18s var(--ease)}
+.backbtn:hover{background:rgba(200,164,91,.12);border-color:var(--gold)}
+h1{font-size:24px;font-weight:750;margin:0 0 4px}
+.sub{color:var(--muted);font-size:13.5px;margin:0 0 18px;line-height:1.5}
+.upload{display:block;border:2px dashed rgba(200,164,91,.4);border-radius:20px;padding:26px 18px;text-align:center;
+  cursor:pointer;background:rgba(200,164,91,.04);transition:all .2s var(--ease);margin-bottom:16px}
+.upload:hover{border-color:var(--gold);background:rgba(200,164,91,.1)}
+.upload .ico{font-size:30px;display:block;margin-bottom:8px}
+.upload .txt{font-size:15px;font-weight:700;color:var(--gold-bright)}
+.upload .meta{display:block;font-size:12.5px;color:var(--muted);margin-top:5px}
+.upload input{display:none}
+.item{border:1px solid rgba(200,164,91,.24);border-radius:16px;background:linear-gradient(180deg,#16110a,#100c07);
+  padding:13px 15px;margin-bottom:10px;box-shadow:0 6px 16px -8px rgba(0,0,0,.5)}
+.item .kop{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.item .bestand{flex:1;font-size:13px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.item .weg{flex:0 0 auto;width:28px;height:28px;border:1px solid rgba(239,68,68,.4);border-radius:999px;
+  background:rgba(239,68,68,.1);color:#ffb4b4;font-size:14px;font-weight:700;cursor:pointer;display:grid;place-items:center;
+  font-family:inherit;transition:all .15s var(--ease)}
+.item .weg:hover{background:rgba(239,68,68,.25)}
+.item label{display:block;font-size:12.5px;font-weight:600;color:var(--muted);margin-bottom:5px}
+.item input{width:100%;min-height:42px;border:1px solid var(--line);border-radius:12px;padding:0 13px;
+  background:rgba(0,0,0,.35);color:#f5f1e8;font-size:15px;font-family:inherit;outline:none;transition:all .2s var(--ease)}
+.item input:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(200,164,91,.15)}
+.btn{width:100%;min-height:54px;border:none;background:var(--grad-gold);color:#241a0c;
+  border-radius:999px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:6px;
+  box-shadow:0 8px 24px -8px rgba(200,164,91,.5),inset 0 1px 0 rgba(255,255,255,.5);transition:all .18s var(--ease)}
+.btn:hover:not(:disabled){filter:brightness(1.06);transform:translateY(-1px)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+#msg{display:none;margin-top:12px;text-align:center;font-weight:700;font-size:14px;padding:12px 16px;border-radius:14px}
+#msg.ok{display:block;color:#c9f2d6;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.4)}
+#msg.err{display:block;color:#ffc9c9;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.4)}
+#done{display:none;text-align:center;padding:60px 20px}
+#done .big{font-size:48px;margin-bottom:12px}
+#done h2{font-size:22px;margin:0 0 8px;color:var(--gold)}
+#done p{color:var(--muted);font-size:14px;line-height:1.6;margin:0 0 20px}
+#done button{min-height:48px;padding:0 24px;border:1px solid var(--gold);background:transparent;color:var(--gold);
+  border-radius:999px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="formView">
+    <a class="backbtn" href="index.html">← Terug naar Management</a>
+    <h1>Bonnetjes</h1>
+    <p class="sub">Upload een of meer bonnetjes of facturen — elk bestand wordt direct doorgemaild naar de administratie.</p>
+
+    <label class="upload">
+      <span class="ico">🧾</span>
+      <span class="txt">Bestanden kiezen of foto maken</span>
+      <span class="meta">JPG, PNG of PDF — meerdere tegelijk mogelijk</span>
+      <input type="file" id="picker" accept=".jpg,.jpeg,.png,.pdf,image/*" multiple>
+    </label>
+
+    <div id="lijst"></div>
+
+    <button type="button" class="btn" id="verzendBtn" disabled>Verzenden</button>
+    <div id="msg"></div>
+  </div>
+
+  <div id="done">
+    <div class="big">✅</div>
+    <h2>Bonnetjes verzonden!</h2>
+    <p id="doneTekst"></p>
+    <button type="button" id="nogEen">Nog meer uploaden</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx6XXMHSoVzK_YWDLSq16mtLCgaiT5tpUDcjieL1RUgyUH71VGdkr2II8nqudqjcMYY/exec";
+  const MAX_DIM = 1600, JPEG_Q = 0.72, MAX_TOTAL = 18 * 1024 * 1024;
+
+  const $ = id => document.getElementById(id);
+  let items = []; // {file, naam}
+
+  $('picker').addEventListener('change', () => {
+    [...$('picker').files].forEach(f => items.push({ file: f, naam: f.name.replace(/\.[^.]+$/, "") }));
+    $('picker').value = "";
+    render();
+  });
+
+  function render(){
+    const lijst = $('lijst');
+    lijst.innerHTML = "";
+    items.forEach((it, i) => {
+      const d = document.createElement('div');
+      d.className = 'item';
+      d.innerHTML =
+        '<div class="kop"><span class="bestand"></span><button type="button" class="weg" aria-label="Verwijderen">✕</button></div>' +
+        '<label>Naam van de bijlage</label><input type="text">';
+      d.querySelector('.bestand').textContent = it.file.name + ' (' + Math.round(it.file.size/1024) + ' kB)';
+      const inp = d.querySelector('input');
+      inp.value = it.naam;
+      inp.addEventListener('input', () => { it.naam = inp.value; });
+      d.querySelector('.weg').addEventListener('click', () => { items.splice(i,1); render(); });
+      lijst.appendChild(d);
+    });
+    $('verzendBtn').disabled = !items.length;
+  }
+
+  // Foto's verkleinen zodat de mail niet te groot wordt; PDF's blijven zoals ze zijn.
+  function verklein(file){
+    return new Promise(resolve => {
+      if (!/^image\//.test(file.type)) {
+        file.arrayBuffer().then(buf => resolve({ mime: file.type || "application/octet-stream", data: buf }));
+        return;
+      }
+      const img = new Image();
+      img.onload = () => {
+        let { width: w, height: h } = img;
+        if (Math.max(w, h) > MAX_DIM) { const s = MAX_DIM / Math.max(w, h); w = Math.round(w*s); h = Math.round(h*s); }
+        const c = document.createElement('canvas'); c.width = w; c.height = h;
+        c.getContext('2d').drawImage(img, 0, 0, w, h);
+        c.toBlob(b => b.arrayBuffer().then(buf => resolve({ mime: "image/jpeg", data: buf })), "image/jpeg", JPEG_Q);
+      };
+      img.onerror = () => file.arrayBuffer().then(buf => resolve({ mime: file.type, data: buf }));
+      img.src = URL.createObjectURL(file);
+    });
+  }
+  function naarB64(buf){
+    const b = new Uint8Array(buf); let s = "";
+    for (let i = 0; i < b.length; i += 0x8000) s += String.fromCharCode.apply(null, b.subarray(i, i + 0x8000));
+    return btoa(s);
+  }
+  function extensie(mime, origineel){
+    if (mime === "image/jpeg") return ".jpg";
+    if (mime === "application/pdf") return ".pdf";
+    const m = origineel.match(/\.[^.]+$/); return m ? m[0] : "";
+  }
+
+  $('verzendBtn').addEventListener('click', async () => {
+    const btn = $('verzendBtn'), msg = $('msg');
+    if (items.some(it => !it.naam.trim())){ msg.className='err'; msg.textContent='Geef elke bijlage een naam.'; return; }
+    btn.disabled = true; btn.textContent = 'Bezig met verzenden…'; msg.className=''; msg.style.display='none';
+    try{
+      const files = [];
+      let totaal = 0;
+      for (const it of items){
+        const { mime, data } = await verklein(it.file);
+        totaal += data.byteLength;
+        if (totaal > MAX_TOTAL) throw new Error('Bestanden samen te groot — verstuur ze in delen.');
+        files.push({ name: it.naam.trim() + extensie(mime, it.file.name), mime, data: naarB64(data) });
+      }
+      const r = await fetch(SCRIPT_URL, { method:'POST', body: JSON.stringify({ type:'bonnetjes', files }) });
+      const j = await r.json();
+      if (!j.ok) throw new Error(j.error || 'Onbekende fout');
+      $('doneTekst').textContent = j.aantal + ' bestand' + (j.aantal === 1 ? ' is' : 'en zijn') + ' doorgemaild naar de administratie.';
+      $('formView').style.display='none'; $('done').style.display='block'; window.scrollTo(0,0);
+    }catch(err){
+      msg.className='err'; msg.textContent='❌ Verzenden mislukt: ' + err.message;
+    }
+    btn.disabled = false; btn.textContent = 'Verzenden';
+  });
+
+  $('nogEen').addEventListener('click', () => {
+    items = []; render();
+    $('done').style.display='none'; $('formView').style.display='block';
+  });
+})();
+</script>
+</body>
+</html>

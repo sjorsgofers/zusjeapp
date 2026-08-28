@@ -516,7 +516,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   function siteName(){ return SITES[currentSite()].naam; }
 
   // Sub-apps krijgen de vestiging mee als ?loc=<vestiging>
-  const APP_VERSION = "2026-08-22g";   // ophogen bij elke deploy => verse sub-apps, nooit uit cache
+  const APP_VERSION = "2026-08-22h";   // ophogen bij elke deploy => verse sub-apps, nooit uit cache
   function withSite(src){
     if (!src || /^https?:\/\//.test(src)) return src;   // externe pagina's ongemoeid
     const sep = src.includes("?") ? "&" : "?";

@@ -59,6 +59,14 @@ input:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(200,164,91,.15),0
 #done h2{font-size:22px;margin:0 0 8px;color:var(--gold)}
 #done p{color:var(--muted);font-size:14px;line-height:1.6;margin:0 0 20px}
 @media(max-width:560px){.grid2{grid-template-columns:1fr}.rij{grid-template-columns:76px 1fr 90px}}
+.ib{display:inline-grid;place-items:center;width:17px;height:17px;margin-left:6px;vertical-align:-2px;
+  border:1px solid rgba(200,164,91,.5);border-radius:999px;background:rgba(200,164,91,.1);
+  color:var(--gold-bright);font-size:11px;font-weight:800;font-style:italic;font-family:Georgia,serif;
+  cursor:pointer;user-select:none;transition:all .15s var(--ease)}
+.ib:hover{background:rgba(200,164,91,.25)}
+.infobox{display:none;margin:-6px 0 12px;padding:10px 13px;border:1px dashed rgba(200,164,91,.4);border-radius:12px;
+  background:rgba(200,164,91,.07);color:#f6e3b4;font-size:13px;line-height:1.5}
+.infobox.open{display:block}
 </style>
 </head>
 <body>
@@ -72,18 +80,18 @@ input:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(200,164,91,.15),0
       <h2>Algemeen</h2>
       <div class="field"><label for="naam">Naam</label><input type="text" id="naam" autocomplete="off"></div>
       <div class="grid2">
-        <div class="field"><label for="omzet">Totaal omzet incl. btw (€)</label><input type="text" id="omzet" inputmode="decimal" class="geld"></div>
+        <div class="field"><label for="omzet">Totaal omzet incl. btw (€) <span class="ib" data-info="Het laagste grote bedrag op het Betaalwijze/gebruikersrapport.">i</span></label><input type="text" id="omzet" inputmode="decimal" class="geld"></div>
         <div class="field"><label for="epin">Totaal pin dag — EPIN (€)</label><input type="text" id="epin" inputmode="decimal" class="geld"></div>
-        <div class="field"><label for="pinOffline">Pin offline (€)</label><input type="text" id="pinOffline" inputmode="decimal" class="geld"></div>
-        <div class="field"><label for="marketing">Marketing acties (€)</label><input type="text" id="marketing" inputmode="decimal" class="geld"></div>
-        <div class="field"><label for="opRekening">Op rekening (€)</label><input type="text" id="opRekening" inputmode="decimal" class="geld"></div>
-        <div class="field"><label for="uitKas">Uit kas — bonnetjes contant (€)</label><input type="text" id="uitKas" inputmode="decimal" class="geld"></div>
+        <div class="field"><label for="pinOffline">Pin offline (€) <span class="ib" data-info="Staat als een apart Epin-bedrag op het dagrapport en valt onder overige betaalwijze.">i</span></label><input type="text" id="pinOffline" inputmode="decimal" class="geld"></div>
+        <div class="field"><label for="marketing">Marketing acties (€) <span class="ib" data-info="Vul het totaalbedrag van overige acties in.">i</span></label><input type="text" id="marketing" inputmode="decimal" class="geld"></div>
+        <div class="field"><label for="opRekening">Op rekening (€) <span class="ib" data-info="Vul het totaalbedrag in van alle tafels die op factuur hebben gegeten.">i</span></label><input type="text" id="opRekening" inputmode="decimal" class="geld"></div>
+        <div class="field"><label for="uitKas">Uit kas — bonnetjes contant (€) <span class="ib" data-info="Als er geld uit de kassa is gepakt om voorgeschoten geld terug te geven, vul dat bedrag hier in. Bewaar het kassabonnetje en upload hem via Bonnetjes.">i</span></label><input type="text" id="uitKas" inputmode="decimal" class="geld"></div>
         <div class="field"><label for="contant">Contant (€)</label><input type="text" id="contant" inputmode="decimal" class="geld"></div>
       </div>
     </div>
 
     <div class="card">
-      <h2>Cadeaubonnen</h2>
+      <h2>Cadeaubonnen <span class="ib" data-info="Vul per coupure het aantal cadeaubonnen in, niet het totaalbedrag.">i</span></h2>
       <div class="rij"><span class="coupure">€ 50</span><input type="text" id="cb50" inputmode="numeric" class="tel" placeholder="aantal"><span class="som" data-som="cb50">€ 0,00</span></div>
       <div class="rij"><span class="coupure">€ 40</span><input type="text" id="cb40" inputmode="numeric" class="tel" placeholder="aantal"><span class="som" data-som="cb40">€ 0,00</span></div>
       <div class="rij"><span class="coupure">€ 20</span><input type="text" id="cb20" inputmode="numeric" class="tel" placeholder="aantal"><span class="som" data-som="cb20">€ 0,00</span></div>
@@ -93,7 +101,7 @@ input:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(200,164,91,.15),0
     </div>
 
     <div class="card">
-      <h2>Gestort in Smartsafe</h2>
+      <h2>Gestort in Smartsafe <span class="ib" data-info="Vul per coupure het aantal biljetten in, niet het totaalbedrag.">i</span></h2>
       <div class="rij"><span class="coupure">€ 100</span><input type="text" id="ss100" inputmode="numeric" class="tel" placeholder="aantal"><span class="som" data-som="ss100">€ 0,00</span></div>
       <div class="rij"><span class="coupure">€ 50</span><input type="text" id="ss50" inputmode="numeric" class="tel" placeholder="aantal"><span class="som" data-som="ss50">€ 0,00</span></div>
       <div class="rij"><span class="coupure">€ 20</span><input type="text" id="ss20" inputmode="numeric" class="tel" placeholder="aantal"><span class="som" data-som="ss20">€ 0,00</span></div>
@@ -169,6 +177,16 @@ input:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(200,164,91,.15),0
     v.className = Math.abs(verschil) < 0.005 ? "diff-ok" : "diff-af";
     return {cb, ss};
   }
+
+  // Info-knopjes: toggle uitlegtekst onder het bijbehorende veld/kopje
+  document.querySelectorAll('.ib').forEach(ib => {
+    const box = document.createElement('div');
+    box.className = 'infobox';
+    box.textContent = ib.dataset.info;
+    const host = ib.closest('.field') || ib.closest('h2');
+    host.parentNode.insertBefore(box, host.nextSibling);
+    ib.addEventListener('click', e => { e.preventDefault(); box.classList.toggle('open'); });
+  });
   document.querySelectorAll('input').forEach(i => i.addEventListener('input', herbereken));
   herbereken();
 
