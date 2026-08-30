@@ -142,7 +142,10 @@ input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(200,
         <div class="row">
           <div class="field">
             <label for="mobile">Mobiel nummer <span class="req">*</span></label>
-            <input type="tel" id="mobile" name="mobile" placeholder="+31 6 12 34 56 78" required>
+            <div style="display:grid;grid-template-columns:86px 1fr;gap:8px">
+              <input type="tel" id="landcode" value="+31" aria-label="Landcode" style="text-align:center">
+              <input type="tel" id="mobile" name="mobile" placeholder="6 12 34 56 78" required>
+            </div>
           </div>
           <div class="field">
             <label for="email">E-mailadres <span class="req">*</span></label>
@@ -241,7 +244,7 @@ input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(200,
 <script>
 (function(){
   // Apps Script dat de mail met bijlagen naar roermond@zusje.nl stuurt
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzLA7ptHlCQ_8UNu_KPLHgY06nI4bRJ4HIxs0BdPX3J9Y5zzXhY_HVU4SG-o9XKZ1rypQ/exec";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx6XXMHSoVzK_YWDLSq16mtLCgaiT5tpUDcjieL1RUgyUH71VGdkr2II8nqudqjcMYY/exec";
 
   const $ = id => document.getElementById(id);
   const form = $('signupForm'), btn = $('submitBtn'), msg = $('msg'), prog = $('progress');
@@ -306,8 +309,12 @@ input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(200,
     if(!val('birthCountry')) errors.push('Vul het geboorteland in.');
     if(!val('postcode')) errors.push('Vul de postcode in.');
     if(!val('houseNumber')) errors.push('Vul het huisnummer in.');
-    const mobile = val('mobile').replace(/\s/g,'');
-    if(!/^(\+31|0)6\d{8}$/.test(mobile)) errors.push('Controleer het mobiele nummer (bijv. +31 6 12345678).');
+    const landcode = val('landcode').replace(/\s/g,'') || '+31';
+    let mobiel = val('mobile').replace(/\D/g,'');
+    if(mobiel.startsWith('0')) mobiel = mobiel.slice(1);
+    if(!/^\+\d{1,3}$/.test(landcode)) errors.push('Controleer de landcode (bijv. +31).');
+    else if(landcode === '+31' && !/^6\d{8}$/.test(mobiel)) errors.push('Controleer het mobiele nummer (bijv. 6 12 34 56 78).');
+    else if(landcode !== '+31' && !/^\d{6,12}$/.test(mobiel)) errors.push('Controleer het mobiele nummer.');
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val('email'))) errors.push('Controleer het e-mailadres.');
     if(!val('department')) errors.push('Kies een afdeling.');
     const iban = val('iban').toUpperCase().replace(/\s/g,'');
@@ -336,18 +343,30 @@ input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 4px rgba(200,
       }
       if(total > MAX_TOTAL) throw new Error('De documenten zijn samen te groot (' + Math.round(total/1024/1024) + ' MB). Maak de fotos kleiner en probeer opnieuw.');
 
-      const fd = new FormData();
-      ['fullName','bsn','birthDate','birthCountry','postcode','houseNumber','mobile','email','department','iban']
-        .forEach(k => fd.append(k, ($(k).value||'').trim()));
-      fd.append('gender', document.querySelector('input[name="gender"]:checked').value);
-      FILES.forEach(id=>{
-        fd.append(id + '_data', processed[id].data);
-        fd.append(id + '_name', processed[id].name);
-        fd.append(id + '_type', processed[id].type);
+      // Telefoonnummer als één kopieerbaar internationaal nummer
+      let mobiel = ($('mobile').value||'').replace(/\D/g,'');
+      if(mobiel.startsWith('0')) mobiel = mobiel.slice(1);
+      const telefoon = (($('landcode').value||'+31').replace(/\s/g,'')) + mobiel;
+      // Geboortedatum als dd-mm-jjjj (direct kopieerbaar)
+      const gd = ($('birthDate').value||'').split('-');
+      const geboortedatum = gd.length === 3 ? gd[2] + '-' + gd[1] + '-' + gd[0] : $('birthDate').value;
+
+      const velden = {};
+      ['fullName','bsn','birthCountry','postcode','houseNumber','email','department','iban']
+        .forEach(k => velden[k] = ($(k).value||'').trim());
+      velden.birthDate = geboortedatum;
+      velden.mobile = telefoon;
+      velden.gender = document.querySelector('input[name="gender"]:checked').value;
+
+      // Bijlagen: eerst wat het is, dan de naam van de medewerker
+      const LABELS = { id_front:'ID voorkant', id_back:'ID achterkant', bank_card:'Bankpas', tax_form:'Loonheffingsformulier' };
+      const files = FILES.map(id => {
+        const ext = (processed[id].name.match(/\.[^.]+$/) || [''])[0];
+        return { name: LABELS[id] + ' - ' + velden.fullName + ext, mime: processed[id].type, data: processed[id].data };
       });
 
       prog.textContent = 'Versturen naar de administratie…';
-      const r = await fetch(SCRIPT_URL, { method:'POST', body: fd });
+      const r = await fetch(SCRIPT_URL, { method:'POST', body: JSON.stringify({ type:'medewerker', velden, files }) });
       let ok = r.ok;
       try{ const j = await r.json(); ok = ok && j && j.ok !== false; }catch(_){}
       if(!ok) throw new Error('De administratie kon het formulier niet ontvangen.');
