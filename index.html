@@ -208,6 +208,20 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   .login-row{flex-direction:column}
   .login-input,.login-btn{width:100%}
 }
+
+/* App-brede melding (TEXT/HELP vanuit Tafeloverzicht) */
+#appAlert{position:fixed;inset:0;z-index:2147483647;display:none;align-items:center;justify-content:center;
+  padding:24px;text-align:center;cursor:pointer;
+  background:radial-gradient(1200px 700px at 50% -20%, #2a1a08 0%, transparent 60%), #0b0906;
+  animation:appAlertIn .18s ease-out}
+#appAlert.show{display:flex}
+@keyframes appAlertIn{from{opacity:0;transform:scale(.98)}to{opacity:1;transform:scale(1)}}
+#appAlertText{font-size:clamp(36px,9vw,96px);font-weight:900;line-height:1.08;white-space:pre-wrap;
+  word-break:break-word;max-width:min(1000px,94vw);color:var(--gold);letter-spacing:-.01em;
+  text-shadow:0 0 40px rgba(255,255,255,.3);animation:appAlertPulse 1.8s ease-in-out infinite}
+@keyframes appAlertPulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.15)}}
+#appAlertHint{position:absolute;left:0;right:0;bottom:max(26px,env(safe-area-inset-bottom));
+  font-size:14px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:rgba(245,241,232,.45)}
 </style>
 </head>
 <body>
@@ -291,12 +305,20 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   </main>
 </div>
 
+
+<!-- App-brede melding -->
+<div id="appAlert" role="alert" aria-live="assertive">
+  <div id="appAlertText"></div>
+  <div id="appAlertHint">Tik om te sluiten</div>
+</div>
+
 <!-- Screensaver overlay (dashboard) -->
 <div id="screensaver" aria-hidden="true">
   <iframe id="f-screensaver" title="Dashboard" data-src="https://sjorsgofers.github.io/monitor-dashboard/"
           allow="fullscreen" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 (function(){
   const TABS = ["dranken","allergenen","checklists","keukenchecklists","taken","table","labels","management","kiosk"];
@@ -335,6 +357,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
     if (!TABS.includes(name)) name = "table";
     lockSecureTabs();
     currentTab = name;
+    if (alertOpen && ALERT_SKIP_TABS.includes(name)) verbergMelding();
     ensureLoaded(name);
     TABS.forEach(t => {
       const f = frame(t);
@@ -490,7 +513,83 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
     }
   }
 
+
+  /* ---------- App-brede melding (TEXT/HELP vanuit het Tafeloverzicht) ----------
+     Een bericht verschijnt op elk apparaat, ongeacht welk tabblad open staat.
+     Uitzondering: apparaten die op Management of Taken staan slaan hem over. */
+  const ALERT_SUPABASE_URL  = "https://xiwdbvxnjcrdwjhmpjnf.supabase.co";
+  const ALERT_SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhpd2RidnhuamNyZHdqaG1wam5mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ2NjE1NzAsImV4cCI6MjA3MDIzNzU3MH0.d14QNY5Pof9j3zmlbs-5gBTs25s6xo_XYhyVbWE2P1k";
+  const ALERT_CLEAR = "__CLEAR__";
+  const ALERT_SKIP_TABS = ["management","taken"];
+
+  const appAlert = document.getElementById("appAlert");
+  const appAlertText = document.getElementById("appAlertText");
+  let alertOpen = false;
+  let alertAudio = null;
+
+  function alertBeep(freq, delay){
+    try{
+      if (!alertAudio) alertAudio = new (window.AudioContext || window.webkitAudioContext)();
+      if (alertAudio.state === "suspended") alertAudio.resume();
+      const t0 = alertAudio.currentTime + delay;
+      const osc = alertAudio.createOscillator(), g = alertAudio.createGain();
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(freq, t0);
+      g.gain.setValueAtTime(0.0001, t0);
+      g.gain.exponentialRampToValueAtTime(.22, t0 + .01);
+      g.gain.exponentialRampToValueAtTime(0.0001, t0 + .12);
+      osc.connect(g); g.connect(alertAudio.destination);
+      osc.start(t0); osc.stop(t0 + .14);
+    }catch(e){}
+  }
+
+  function toonMelding(tekst){
+    const msg = (tekst || "").toString().trim();
+    if (!msg) return;
+    if (ALERT_SKIP_TABS.includes(currentTab)) return;   // managementpagina's overslaan
+    appAlertText.textContent = msg;
+    appAlert.classList.add("show");
+    alertOpen = true;
+    alertBeep(880, 0); alertBeep(1320, .14);
+    if (navigator.vibrate) navigator.vibrate([60,60,60]);
+  }
+  function verbergMelding(){
+    appAlert.classList.remove("show");
+    alertOpen = false;
+  }
+  async function wisMeldingOveral(){
+    try{
+      await fetch(ALERT_SUPABASE_URL + "/rest/v1/help_events", {
+        method: "POST",
+        headers: { apikey: ALERT_SUPABASE_ANON, Authorization: "Bearer " + ALERT_SUPABASE_ANON,
+                   "Content-Type": "application/json", Prefer: "return=minimal" },
+        body: JSON.stringify({ kind: ALERT_CLEAR })
+      });
+    }catch(e){}
+  }
+  appAlert.addEventListener("click", async () => {
+    if (!alertOpen) return;
+    verbergMelding();
+    await wisMeldingOveral();
+  });
+
+  function startMeldingen(){
+    if (!window.supabase || !window.supabase.createClient) return;
+    try{
+      const sb = window.supabase.createClient(ALERT_SUPABASE_URL, ALERT_SUPABASE_ANON);
+      sb.channel("shell_help_events")
+        .on("postgres_changes", { event:"INSERT", schema:"public", table:"help_events" }, payload => {
+          const kind = payload && payload.new && payload.new.kind;
+          if (!kind) return;
+          if (kind === ALERT_CLEAR) { verbergMelding(); return; }
+          toonMelding(kind);
+        })
+        .subscribe();
+    }catch(e){}
+  }
+
   function startApp(){
+    startMeldingen();
     document.getElementById("siteGate").classList.add("hidden");
     document.getElementById("loginGate").classList.add("hidden");
     shell.classList.add("show");
@@ -516,7 +615,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   function siteName(){ return SITES[currentSite()].naam; }
 
   // Sub-apps krijgen de vestiging mee als ?loc=<vestiging>
-  const APP_VERSION = "2026-08-22k";   // ophogen bij elke deploy => verse sub-apps, nooit uit cache
+  const APP_VERSION = "2026-09-02a";   // ophogen bij elke deploy => verse sub-apps, nooit uit cache
   function withSite(src){
     if (!src || /^https?:\/\//.test(src)) return src;   // externe pagina's ongemoeid
     const sep = src.includes("?") ? "&" : "?";
