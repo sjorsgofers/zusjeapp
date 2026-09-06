@@ -434,7 +434,12 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
 
   function showSaver(){
     const f = document.getElementById("f-screensaver");
-    if (f && f.dataset.src && !f.src) f.src = f.dataset.src;
+    // Dashboard krijgt de vestiging mee, anders toont het de taken van beide
+    // vestigingen door elkaar (en dus alles dubbel).
+    if (f && f.dataset.src && !f.src){
+      const sep = f.dataset.src.includes("?") ? "&" : "?";
+      f.src = f.dataset.src + sep + "loc=" + currentSite();
+    }
     screensaver.classList.add("show");
     screensaver.setAttribute("aria-hidden","false");
     saverOn = true;
@@ -615,7 +620,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   function siteName(){ return SITES[currentSite()].naam; }
 
   // Sub-apps krijgen de vestiging mee als ?loc=<vestiging>
-  const APP_VERSION = "2026-09-02a";   // ophogen bij elke deploy => verse sub-apps, nooit uit cache
+  const APP_VERSION = "2026-09-02b";   // ophogen bij elke deploy => verse sub-apps, nooit uit cache
   function withSite(src){
     if (!src || /^https?:\/\//.test(src)) return src;   // externe pagina's ongemoeid
     const sep = src.includes("?") ? "&" : "?";
