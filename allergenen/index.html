@@ -108,6 +108,17 @@ summary::-webkit-details-marker{display:none}
   summary{padding:10px 15px}
   .detail-wrap{padding:0 15px 13px}
 }
+
+/* Suggesties voor dieetgroepen */
+#aj-app .groepen{margin:14px 0 4px}
+#aj-app .groepen-kop{font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;
+  color:#f0d28a !important;margin-bottom:9px;opacity:.85}
+#aj-app .chips{display:flex;flex-wrap:wrap;gap:7px}
+#aj-app .chip{border:1px solid rgba(200,164,91,.32);border-radius:999px;padding:7px 14px;font-size:13px;
+  font-weight:600;color:#f5f1e8 !important;background:rgba(200,164,91,.07);cursor:pointer;
+  font-family:inherit !important;transition:all .16s cubic-bezier(.4,0,.2,1)}
+#aj-app .chip:hover{background:rgba(200,164,91,.2);border-color:rgba(200,164,91,.6);transform:translateY(-1px)}
+#aj-app .chip:active{transform:scale(.96)}
 </style>
 </head>
 
@@ -126,6 +137,30 @@ summary::-webkit-details-marker{display:none}
           </div>
         </div>
         <button id="searchBtn" class="btn btn-search" type="button">Zoek</button>
+        <div class="groepen">
+          <div class="groepen-kop">Ook te zoeken op dieetgroep</div>
+          <div class="chips">
+            <button type="button" class="chip">Nachtschade</button>
+            <button type="button" class="chip">Peulvruchten</button>
+            <button type="button" class="chip">Citrus</button>
+            <button type="button" class="chip">Histamine</button>
+            <button type="button" class="chip">Gist</button>
+            <button type="button" class="chip">Alcohol</button>
+            <button type="button" class="chip">Kool</button>
+            <button type="button" class="chip">Paddenstoelen</button>
+            <button type="button" class="chip">Uienfamilie</button>
+            <button type="button" class="chip">Vegetarisch</button>
+            <button type="button" class="chip">Vegan</button>
+            <button type="button" class="chip">Glutamaat</button>
+            <button type="button" class="chip">Suiker</button>
+            <button type="button" class="chip">FODMAP</button>
+            <button type="button" class="chip">Zaden</button>
+            <button type="button" class="chip">Granen</button>
+            <button type="button" class="chip">Pittig</button>
+            <button type="button" class="chip">Halal</button>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -198,36 +233,213 @@ const ALLERGEN_GROUPS = {
 };
 
 
-// Groepen die alleen uitklappen wanneer je de groepsnaam zelf zoekt.
-// Zo blijft zoeken op "tomaat" gewoon tomaat, maar geeft "nachtschade"
-// alle gerechten uit de nachtschadefamilie.
-const NACHTSCHADE = [
-  // tomaat
-  "tomaat","tomaten","tomatenpuree","tomatensap","tomatensoep","tomatensaus","tomatenketchup","ketchup",
-  "pruimtomaten","gepofte tomaat","zongedroogde tomaat","zongedroogde tomaten","passata","marinarasaus",
-  "bruschetta salsa","salsa","pico del gallo","antiboise","tomatenconcentraat",
-  // aardappel
+/* ===== Dieet- en voedselgroepen =====
+   Deze groepen klappen ALLEEN uit wanneer je de groepsnaam zelf zoekt.
+   Zo blijft zoeken op "tomaat" gewoon tomaat, terwijl "nachtschade" de hele
+   familie toont. Losse ingrediënten blijven dus onveranderd werken. */
+
+const G_NACHTSCHADE = [
+  "tomaat","tomaten","tomatenpuree","tomatenconcentraat","tomatensap","tomatensoep","tomatensaus",
+  "tomatenketchup","ketchup","pruimtomaten","gepofte tomaat","zongedroogde tomaat","zongedroogde tomaten",
+  "passata","marinarasaus","bruschetta salsa","salsa","pico del gallo","antiboise","tomaten cremesoepje",
   "aardappel","aardappelen","aardappelzetmeel","gemodificeerd aardappelzetmeel","aardappelgratin",
   "aardappelgratin taartje","aardappelflensje","aardappelpuree","aardappel puree","aardappelvlokken",
-  "friet","frietje","truffelfrietje","kentang","tator tots","pommes","gnocchi",
-  // paprika
-  "paprika","paprikapoeder","paprika extract","paprika-extract","gerookte paprika","pimenton",
-  "gegrilde paprika","gegrilde rode paprika","gegrilde gele paprika","rode paprika gedroogd","piquillo",
-  // pepers (Capsicum) - LET OP: zwarte/witte peper en piment horen hier NIET bij
-  "chili","chilipeper","chilipepers","chilipoeder","chiliflakes","rode chili","groene chilipeper",
-  "gezouten chilipepers","gemalen rode chilipepers","chili peper-extract","chipotle",
+  "friet","frietje","truffelfrietje","kentang","tator tots","pommes","gnocchi","rosti",
+  "paprika","paprikapoeder","paprika extract","paprika-extract","gerookte paprika","pimenton","piquillo",
+  "gegrilde paprika","gegrilde rode paprika","gegrilde gele paprika","rode paprika gedroogd",
+  "chili","chilipeper","chilipepers","chilipoeder","chiliflakes","chilisaus","rode chili","groene chilipeper",
+  "gezouten chilipepers","gemalen rode chilipepers","chili peper-extract","chipotle","ancho",
   "jalapeno","jalapeno pepers","groene jalapeno pepers","spaanse peper","rode peper","rode peper gesneden",
   "verse rode pepers","cayennepeper","cayenne","peperoncino","sambal","sambal oelek","tabasco",
-  "sriracha","sriracha mayonaise","harissa","piri piri","gochujang","ajvar",
-  // overige nachtschades
+  "sriracha","sriracha mayonaise","harissa","piri piri","gochujang","ajvar","arrabbiata",
   "aubergine","gegrilde aubergine","baba ganoush","goji","gojibes","gojibessen","physalis","tomatillo"
 ];
 
+const G_PEULVRUCHTEN = [
+  "peulvruchten","peulvrucht","boon","bonen","bonenmeel","witte bonen","bruine bonen","kidneybonen",
+  "zwarte bonen","cannellini","borlotti","sperziebonen","haricots verts","tuinbonen","kievitsbonen",
+  "linzen","linzeneiwit","rode linzen","kikkererwt","kikkererwten","kikkererwtenmeel","hummus","houmous",
+  "erwt","erwten","doperwt","doperwten","doperwtenextract","erwteneiwit","erwteneiwitisolaat","erwtenmeel",
+  "kapucijners","soja","sojabonen","sojaboon","sojasaus","sojasauspoeder","soja eiwit","sojaeiwit",
+  "sojalecithine","soja lecithine","sojabloem","sojaolie","sojapasta","edamame","tofu","tempeh","miso",
+  "pinda","pindas","pindakaas","pindasaus","aardnoot","arachide","lupine","lupinemeel","falafel","johannesbroodpitmeel"
+];
+
+const G_CITRUS = [
+  "citrus","citroen","citroensap","citroenschil","citroenschuim","citroenpuree","citroensorbet",
+  "citroensorbetijs","gebrande citroen","citroenschijfje","gesneden partje citroen","citroen-limoen",
+  "citroenzuur","citrusvezel","limoen","limoensap","limoenblad","limoenblaadjes","gesneden limoen",
+  "sinaasappel","sinaasappelsap","sinaasappelschil","appelsien","mandarijn","mandarijnsap","mandarijnschuim",
+  "grapefruit","pomelo","yuzu","bergamot","kumquat","limonade siroop"
+];
+
+const G_HISTAMINE = [
+  "oude kaas","parmezaan","parmezaanse","parmezaanschuim","parmigiano","grana padano","gorgonzola",
+  "blauwader","roquefort","manchego","cheddar","brie","camembert","emmentaler","gruyere",
+  "wijn","rode wijn","witte wijn","rijstwijn","sherry","port","bier","champagne","prosecco",
+  "azijn","azijnpoeder","azijnzuur","wijnazijn","balsamico","balsamicoazijn","balsamicodressing","rijstazijn",
+  "zuurkool","kimchi","miso","sojasaus","sojasauspoeder","vissaus","worcestershire","worcestersaus",
+  "gistextract","gist","gistpoeder","zuurdesem","tempeh",
+  "salami","chorizo","pastrami","runderpastrami","serranoham","serrano","fuet","bacon","spek","ham","worst",
+  "gerookte zalm","tonijn","tonijnsalade","tonijntartaar","makreel","ansjovis","sardine","haring","surimi",
+  "spinazie","spinaziepoeder","spinazielasagne","avocado","tomaat","tomaten","tomatenpuree","aubergine",
+  "chocolade","melkchocolade","cacao","cacaopoeder","cacaomassa","cacaoboter","cacaobestanddelen",
+  "walnoot","cashew","pinda","aardbei","ananas","citroen","sinaasappel","papaja"
+];
+
+const G_GIST = [
+  "gist","gistextract","gistpoeder","biergist","zuurdesem","desem","brood","broodkruim","broodkruimels",
+  "paneermeel","panko","croutons","knoflook croutons","naan","grissini","bierdeeg","bier",
+  "wijn","rode wijn","witte wijn","sojasaus","miso","tempeh","zuurkool","kimchi","azijn","balsamico",
+  "smaakversterker","bouillon","bouillonpoeder","marmite"
+];
+
+const G_ALCOHOL = [
+  "alcohol","wijn","rode wijn","witte wijn","rijstwijn","kookwijn","sherry","port","madeira","marsala",
+  "bier","pils","champagne","prosecco","cava","likeur","rum","cognac","brandy","whisky","wodka","gin",
+  "amaretto","triple sec","cointreau","grand marnier","pernod","calvados","vermouth","limoncello","baileys"
+];
+
+const G_KOOL = [
+  "kool","koolsoorten","kruisbloemigen","witte kool","rode kool","spitskool","boerenkool","savooiekool",
+  "chinese kool","paksoi","spruitjes","spruiten","broccoli","broccolirijst","bloemkool","bloemkoolsalade",
+  "gepaneerde bloemkool","koolsalade","koolrabi","koolraap","raap","rucola","radijs","radijsjes","rammenas",
+  "mierikswortel","wasabi","wasabipoeder","wasabikruiding","mosterd","mosterdzaad","mosterdmeel","dijon",
+  "waterkers","tuinkers","romanesco"
+];
+
+const G_PADDENSTOEL = [
+  "paddenstoel","paddenstoelen","champignon","champignons","kastanjechampignon","shiitake","oesterzwam",
+  "eekhoorntjesbrood","portobello","truffel","truffelmayonaise","truffelstukjes","truffeltapenade",
+  "truffelolie","truffelfrietje","gorgonzola","blauwader","roquefort","brie","camembert","schimmelkaas",
+  "quorn","mycoproteine"
+];
+
+const G_ALLIUM = [
+  "ui","uien","uienpoeder","ui poeder","bosui","lente-ui","lenteui","zilverui","zilveruien","rode ui",
+  "gefrituurde ui","uienchutney","amsterdamse uien relish","zoetzure komkommer ui","zoetzure rode ui",
+  "sjalot","sjalotten","prei","bieslook","bieslooksaus","daslook",
+  "knoflook","knoflookpoeder","knoflookpuree","knoflooksaus","knoflookmayonaise","knoflook croutons",
+  "knoflook olie","knoflook orzo","look","aioli"
+];
+
+const G_DIERLIJK = [
+  "vlees","rundvlees","varkensvlees","kippenvlees","kalfsvlees","gehakt","rund","varken","kip","kalfsmuis",
+  "bacon","spek","buikspek","ham","serranoham","fuet","worst","knakworst","hotdog","pastrami","chorizo",
+  "shortrib","stoofvlees","draadjesvlees","steak","pepersteak","schnitzel","kipsate","carpaccio","beef",
+  "ossenhaas","sucade","ribfingers","runderfond","kippenbouillon","runderbouillon","eend","lam","kalkoen",
+  "vis","zalm","tonijn","kabeljauw","koolvis","pangasius","haring","ansjovis","makreel","forel","vissaus",
+  "vispoeder","visextract","surimi","kibbeling","garnaal","garnalen","gamba","scampi","kreeft","krab",
+  "mossel","mosselen","oester","oesters","inktvis","calamari","octopus",
+  "melk","koemelk","room","slagroom","kookroom","boter","roomboter","botervet","karnemelk","yoghurt","labneh",
+  "kaas","cheddar","mozzarella","parmezaan","feta","geitenkaas","brie","mascarpone","ricotta","gouda",
+  "melkpoeder","melkeiwit","wei","weipoeder","stremsel","roomijs","gecondenseerde melk",
+  "ei","eieren","eigeel","eidooier","eiwit","eipoeder","kippenei","scharrelei","meringue","mayonaise",
+  "honing","gelatine","karmijn","e120","bijenwas","schellak"
+];
+
+const G_VEGETARISCH = [
+  "vlees","rundvlees","varkensvlees","kippenvlees","kalfsvlees","gehakt","rund","varken","kip","kalfsmuis",
+  "bacon","spek","buikspek","ham","serranoham","fuet","worst","knakworst","hotdog","pastrami","chorizo",
+  "shortrib","stoofvlees","draadjesvlees","steak","pepersteak","schnitzel","kipsate","carpaccio","beef",
+  "ossenhaas","sucade","ribfingers","runderfond","kippenbouillon","runderbouillon","eend","lam","kalkoen",
+  "vis","zalm","tonijn","kabeljauw","koolvis","pangasius","haring","ansjovis","makreel","forel","vissaus",
+  "vispoeder","visextract","surimi","kibbeling","garnaal","garnalen","gamba","scampi","kreeft","krab",
+  "mossel","mosselen","oester","oesters","inktvis","calamari","octopus",
+  "gelatine","stremsel","karmijn","e120","worcestershire","worcestersaus"
+];
+
+const G_GLUTAMAAT = [
+  "glutamaat","mononatriumglutamaat","smaakversterker","smaakversterkers","e621","e627","e631","e635",
+  "gistextract","gist","bouillon","bouillonpoeder","kippenbouillon","runderbouillon","groentebouillon",
+  "sojasaus","vissaus","maggi","aroma","aroma s","natuurlijk aroma"
+];
+
+const G_SUIKER = [
+  "suiker","suikers","rietsuiker","suikerriet","suikerrietmelasse","suikerbietstroop","suikerbietenpulp",
+  "suikersiroop","suikerstroop","basterdsuiker","poedersuiker","glucose","glucosepoeder","glucosesiroop",
+  "glucosestroop","glucose-fructose","glucose-fructosestroop","fructose","fructosestroop","fructosegehalte",
+  "dextrose","maltose","maltodextrine","lactose","siroop","maissiroop","appelstroop","honing","agavesiroop",
+  "ahornsiroop","melasse","karamel","karamelsiroop","sorbitol","xylitol","maltitol","aspartaam","sucralose"
+];
+
+const G_FODMAP = [
+  "ui","uien","uienpoeder","bosui","lente-ui","zilverui","zilveruien","rode ui","sjalot","sjalotten","prei",
+  "knoflook","knoflookpoeder","knoflookpuree","knoflooksaus","knoflookmayonaise","look","aioli",
+  "tarwe","tarwebloem","tarwemeel","tarwezetmeel","durum","couscous","bulgur","brood","paneermeel","panko",
+  "croutons","naan","orzo","pasta","spaghetti","penne","rogge","gerst",
+  "peulvruchten","bonen","witte bonen","bruine bonen","kidneybonen","linzen","kikkererwten","hummus",
+  "doperwt","doperwten","erwten","soja","sojabonen","edamame","cashew","pistache",
+  "melk","koemelk","room","slagroom","yoghurt","karnemelk","ijs","roomijs","gecondenseerde melk","lactose",
+  "appel","appelblokjes","appelpartjes","appelstroop","peer","mango","kersen","watermeloen","perzik",
+  "abrikoos","nectarine","pruim","vijg","vijgen","vijgenjam","dadel","rozijn","rozijnen",
+  "honing","agavesiroop","fructosestroop","glucose-fructosestroop","sorbitol","xylitol","maltitol",
+  "bloemkool","gepaneerde bloemkool","champignon","champignons","paddenstoelen","asperge","artisjok",
+  "zuurkool","kimchi","cashewnoot"
+];
+
+const G_ZADEN = [
+  "zaden","zaad","pitten","sesam","sesamzaad","sesamolie","sesampasta","tahin","tahini","gomasio","za atar",
+  "zonnebloempit","zonnebloempitten","zonnebloemolie","zonnebloemlecithine","pompoenpit","pompoenpitten",
+  "lijnzaad","maanzaad","chiazaad","hennepzaad","papaverzaad","quinoazaad","pijnboompitten",
+  "mosterdzaad","korianderzaad","venkelzaad","komijnzaad","selderijzaad","karwijzaad","koolzaad","raapzaad"
+];
+
+const G_GRANEN = [
+  "granen","graan","tarwe","tarwebloem","tarwemeel","tarwezetmeel","tarwegriesmeel","tarwevezel","tarwegluten",
+  "durum","durumtarwe","durumgriesmeel","spelt","kamut","rogge","roggebloem","gerst","gerstemout","haver",
+  "havermout","mout","moutextract","couscous","bulgur","orzo","seitan","brood","broodkruim","paneermeel",
+  "panko","croutons","naan","grissini","pasta","spaghetti","penne","noedels","mie",
+  "rijst","rijstbloem","rijstebloem","rijstmeel","rijstzetmeel","rijstolie","rijstazijn","broccolirijst",
+  "mais","maisbloem","maiszetmeel","maissiroop","polenta","quinoa","quinoazaad","boekweit","boekweitsalade",
+  "gierst","sorghum","teff","amarant","tapioca","tapiocazetmeel","zetmeel"
+];
+
+const G_PITTIG = [
+  "pittig","scherp","chili","chilipeper","chilipepers","chilipoeder","chiliflakes","chilisaus","rode chili",
+  "groene chilipeper","gezouten chilipepers","gemalen rode chilipepers","chili peper-extract","chipotle",
+  "jalapeno","groene jalapeno pepers","spaanse peper","rode peper","rode peper gesneden","verse rode pepers",
+  "cayennepeper","cayenne","peperoncino","sambal","sambal oelek","tabasco","sriracha","sriracha mayonaise",
+  "harissa","piri piri","gochujang","arrabbiata","wasabi","wasabipoeder","wasabikruiding","mierikswortel",
+  "currypasta","rode curry","groene curry"
+];
+
 const ONE_WAY_GROUPS = {
-  "nachtschade": NACHTSCHADE,
-  "nachtschades": NACHTSCHADE,
-  "nachtschadefamilie": NACHTSCHADE,
-  "solanaceae": NACHTSCHADE
+  "nachtschade": G_NACHTSCHADE, "nachtschades": G_NACHTSCHADE,
+  "nachtschadefamilie": G_NACHTSCHADE, "solanaceae": G_NACHTSCHADE,
+
+  "peulvruchten": G_PEULVRUCHTEN, "peulvrucht": G_PEULVRUCHTEN, "peulen": G_PEULVRUCHTEN,
+
+  "citrus": G_CITRUS, "citrusvruchten": G_CITRUS, "citrusvrucht": G_CITRUS,
+
+  "histamine": G_HISTAMINE, "histamine intolerantie": G_HISTAMINE, "histaminevrij": G_HISTAMINE,
+
+  "gist": G_GIST, "gistvrij": G_GIST, "fermentatie": G_GIST, "gefermenteerd": G_GIST,
+
+  "alcohol": G_ALCOHOL, "alcoholvrij": G_ALCOHOL, "drank": G_ALCOHOL,
+
+  "kool": G_KOOL, "koolsoorten": G_KOOL, "kruisbloemigen": G_KOOL, "brassica": G_KOOL,
+
+  "paddenstoelen": G_PADDENSTOEL, "paddenstoel": G_PADDENSTOEL, "champignons": G_PADDENSTOEL,
+  "schimmel": G_PADDENSTOEL, "schimmels": G_PADDENSTOEL,
+
+  "uienfamilie": G_ALLIUM, "ui familie": G_ALLIUM, "allium": G_ALLIUM, "lookfamilie": G_ALLIUM,
+
+  "dierlijk": G_DIERLIJK, "dierlijke producten": G_DIERLIJK, "veganistisch": G_DIERLIJK, "vegan": G_DIERLIJK,
+
+  "vegetarisch": G_VEGETARISCH, "vega": G_VEGETARISCH,
+
+  "glutamaat": G_GLUTAMAAT, "smaakversterker": G_GLUTAMAAT, "smaakversterkers": G_GLUTAMAAT, "msg": G_GLUTAMAAT,
+
+  "suiker": G_SUIKER, "suikers": G_SUIKER, "suikervrij": G_SUIKER,
+
+  "fodmap": G_FODMAP, "fodmaps": G_FODMAP, "prikkelbare darm": G_FODMAP,
+
+  "zaden": G_ZADEN, "pitten": G_ZADEN, "zaden en pitten": G_ZADEN,
+
+  "granen": G_GRANEN, "graan": G_GRANEN, "graanvrij": G_GRANEN,
+
+  "pittig": G_PITTIG, "scherp": G_PITTIG, "heet": G_PITTIG
 };
 
 const INGREDIENT_VARIANTS = {
@@ -483,6 +695,16 @@ document.getElementById("searchBtn").addEventListener("click", () => {
   if (document.activeElement) document.activeElement.blur();
 });
 wireInput(document.getElementById("q"));
+
+// Chips: zet de dieetgroep in het eerste vrije veld en zoek meteen.
+document.querySelectorAll(".chip").forEach(chip => {
+  chip.addEventListener("click", () => {
+    const velden = [...document.querySelectorAll(".allergy-input")];
+    const leeg = velden.find(v => !v.value.trim()) || velden[velden.length - 1];
+    if (leeg) leeg.value = chip.textContent.trim();
+    document.getElementById("searchBtn").click();
+  });
+});
 </script>
 
 </div>
