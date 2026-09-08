@@ -197,6 +197,39 @@ const ALLERGEN_GROUPS = {
   "lupine":["lupine","lupinemeel"]
 };
 
+
+// Groepen die alleen uitklappen wanneer je de groepsnaam zelf zoekt.
+// Zo blijft zoeken op "tomaat" gewoon tomaat, maar geeft "nachtschade"
+// alle gerechten uit de nachtschadefamilie.
+const NACHTSCHADE = [
+  // tomaat
+  "tomaat","tomaten","tomatenpuree","tomatensap","tomatensoep","tomatensaus","tomatenketchup","ketchup",
+  "pruimtomaten","gepofte tomaat","zongedroogde tomaat","zongedroogde tomaten","passata","marinarasaus",
+  "bruschetta salsa","salsa","pico del gallo","antiboise","tomatenconcentraat",
+  // aardappel
+  "aardappel","aardappelen","aardappelzetmeel","gemodificeerd aardappelzetmeel","aardappelgratin",
+  "aardappelgratin taartje","aardappelflensje","aardappelpuree","aardappel puree","aardappelvlokken",
+  "friet","frietje","truffelfrietje","kentang","tator tots","pommes","gnocchi",
+  // paprika
+  "paprika","paprikapoeder","paprika extract","paprika-extract","gerookte paprika","pimenton",
+  "gegrilde paprika","gegrilde rode paprika","gegrilde gele paprika","rode paprika gedroogd","piquillo",
+  // pepers (Capsicum) - LET OP: zwarte/witte peper en piment horen hier NIET bij
+  "chili","chilipeper","chilipepers","chilipoeder","chiliflakes","rode chili","groene chilipeper",
+  "gezouten chilipepers","gemalen rode chilipepers","chili peper-extract","chipotle",
+  "jalapeno","jalapeno pepers","groene jalapeno pepers","spaanse peper","rode peper","rode peper gesneden",
+  "verse rode pepers","cayennepeper","cayenne","peperoncino","sambal","sambal oelek","tabasco",
+  "sriracha","sriracha mayonaise","harissa","piri piri","gochujang","ajvar",
+  // overige nachtschades
+  "aubergine","gegrilde aubergine","baba ganoush","goji","gojibes","gojibessen","physalis","tomatillo"
+];
+
+const ONE_WAY_GROUPS = {
+  "nachtschade": NACHTSCHADE,
+  "nachtschades": NACHTSCHADE,
+  "nachtschadefamilie": NACHTSCHADE,
+  "solanaceae": NACHTSCHADE
+};
+
 const INGREDIENT_VARIANTS = {
   "ui":["ui","uien","bosui","zilverui","zilveruien","rode ui","lente ui","lenteui","sjalot","sjalotten","uienpoeder","ui poeder","gefrituurde ui","amsterdamse uien relish","zoetzure komkommer ui","zoetzure rode ui","uienchutney","bieslook","bieslooksaus"],
   "knoflook":["knoflook","knoflookpoeder","knoflookpuree","knoflooksaus","knoflookmayonaise","knoflook croutons","knoflook olie","knoflook orzo","look","aioli"],
@@ -234,6 +267,10 @@ function matchesSmartTerm(component, term) {
   };
   for (const key in ALLERGEN_GROUPS) collect(key, ALLERGEN_GROUPS[key]);
   for (const key in INGREDIENT_VARIANTS) collect(key, INGREDIENT_VARIANTS[key]);
+  // Eenrichtingsgroepen: alleen uitklappen op de groepsnaam zelf.
+  for (const key in ONE_WAY_GROUPS) {
+    if (normalize(key) === term) ONE_WAY_GROUPS[key].forEach(a => targets.add(normalize(a)));
+  }
   if (term === "vlees" || term === "vleeswaren") {
     ["vlees","rundvlees","varkensvlees","kippenvlees","kalfsvlees","gehakt","rund","varken","kip","kalfsmuis","bacon","spek","buikspek","ham","serranoham","fuet","worst","knakworst","hotdog","pastrami","runderpastrami","shortrib","stoofvlees","draadjesvlees","steak","pepersteak","schnitzel","kipsate","kippenhaasje","carpaccio","beef","ossenhaas","sucade","ribfingers"].forEach(m => targets.add(normalize(m)));
   }
