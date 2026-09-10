@@ -283,6 +283,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
     <div class="subrow hidden" data-subrow="keuken">
       <button class="subtab" type="button" data-tab="allergenen">Allergenen</button>
       <button class="subtab" type="button" data-tab="keukenchecklists">Checklists</button>
+      <button class="subtab" type="button" data-tab="haccp">HACCP</button>
       <button class="subtab" type="button" data-tab="labels">Labels</button>
     </div>
   </nav>
@@ -298,6 +299,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
     <iframe id="f-keukenchecklists" class="frame" title="Keukenchecklists" data-src="keukenchecklists/index.html"></iframe>
     <iframe id="f-taken"      class="frame"        title="Taken & agenda" data-src="taken/index.html"></iframe>
     <iframe id="f-table"      class="frame"        title="Table"      data-src="table/index.html"></iframe>
+    <iframe id="f-haccp"      class="frame"        title="HACCP"      data-src="haccp/index.html"></iframe>
     <iframe id="f-labels"     class="frame"        title="Labels"     data-src="https://desktop-o25ac4v.tail7db321.ts.net/" referrerpolicy="no-referrer"></iframe>
     <iframe id="f-management" class="frame"        title="Management" data-src="management/index.html"></iframe>
     <iframe id="f-kiosk"      class="frame"        title="Kiosk"      data-src="https://kiosk.shiftbase.com/"
@@ -321,9 +323,9 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 (function(){
-  const TABS = ["dranken","allergenen","checklists","keukenchecklists","taken","table","labels","management","kiosk"];
+  const TABS = ["dranken","allergenen","checklists","keukenchecklists","haccp","taken","table","labels","management","kiosk"];
   // Welke pagina's onder welke hoofdcategorie vallen (eerste = standaard)
-  const GROUPS = { bediening:["table","checklists","dranken","reserveringen"], keuken:["allergenen","keukenchecklists","labels"] };
+  const GROUPS = { bediening:["table","checklists","dranken","reserveringen"], keuken:["allergenen","keukenchecklists","haccp","labels"] };
   function groupOf(tab){
     for (const g in GROUPS) if (GROUPS[g].includes(tab)) return g;
     return null;
@@ -491,7 +493,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
     bindActivity(document);
     bindActivity(screensaver);           // moving over the dashboard dismisses it
     // frames already loaded before init get bound too
-    ["dranken","allergenen","checklists","keukenchecklists","taken","table","labels","management","kiosk"].forEach(n => {
+    ["dranken","allergenen","checklists","keukenchecklists","haccp","taken","table","labels","management","kiosk"].forEach(n => {
       const f = frame(n); if (f && f.src) attachFrameActivity(f);
     });
     idleTimer = setTimeout(autoShow, IDLE_MS);
@@ -620,7 +622,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   function siteName(){ return SITES[currentSite()].naam; }
 
   // Sub-apps krijgen de vestiging mee als ?loc=<vestiging>
-  const APP_VERSION = "2026-09-08a";   // ophogen bij elke deploy => verse sub-apps, nooit uit cache
+  const APP_VERSION = "2026-09-10a";   // ophogen bij elke deploy => verse sub-apps, nooit uit cache
   function withSite(src){
     if (!src || /^https?:\/\//.test(src)) return src;   // externe pagina's ongemoeid
     const sep = src.includes("?") ? "&" : "?";

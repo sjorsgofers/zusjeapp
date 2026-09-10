@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HACCP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0906; --bg-2:#0e0b07; --card:#151009; --card-2:#191309;
+  --text:#f5f1e8; --muted:#b8b0a0;
+  --gold:#c8a45b; --gold-bright:#f0d28a;
+  --gold-line:rgba(200,164,91,.4); --gold-soft:rgba(200,164,91,.14);
+  --success:#22c55e; --danger:#ef4444;
+  --grad-gold:linear-gradient(180deg,#f4dc9c 0%,#d9b26a 55%,#c8a45b 100%);
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{min-height:100%}
+body{
+  margin:0;
+  background:
+    radial-gradient(ellipse 90% 40% at 50% -5%, rgba(200,164,91,.10), transparent 60%),
+    linear-gradient(180deg,#0d0a07 0%,#0b0906 100%);
+  color:var(--text);
+  font-family:Inter,'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1100px;margin:0 auto;padding:22px 18px 72px}
+
+/* ---------- schermen ---------- */
+.screen{display:none}
+.screen.active{display:block;animation:screenIn .25s var(--ease)}
+@keyframes screenIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(180deg,rgba(30,24,15,.85),rgba(17,13,8,.9));
+  border:1px solid var(--gold-line);border-radius:24px;padding:22px 20px 18px;
+  box-shadow:0 16px 44px -14px rgba(0,0,0,.6),0 0 40px -18px rgba(200,164,91,.3),
+    inset 0 1px 0 rgba(240,210,138,.12);
+  margin-bottom:18px;
+}
+.hero::before{content:"";position:absolute;left:18%;right:18%;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(240,210,138,.65),transparent)}
+.hero-title{margin:0;text-align:center;font-size:clamp(24px,3.4vw,36px);font-weight:750;letter-spacing:-.01em;
+  background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-date{text-align:center;color:var(--muted);font-size:13.5px;margin-top:7px}
+
+/* ---------- bereik + sync ---------- */
+.balk{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-top:16px}
+.bereik{display:flex;gap:7px;flex-wrap:wrap}
+.bereik button{appearance:none;border:1px solid rgba(200,164,91,.3);background:rgba(200,164,91,.06);
+  color:var(--text);border-radius:999px;padding:9px 17px;font:600 13.5px Inter,sans-serif;cursor:pointer;
+  transition:all .16s var(--ease)}
+.bereik button:hover{background:rgba(200,164,91,.16)}
+.bereik button.aan{background:var(--grad-gold);color:#241a0c;border-color:transparent;font-weight:800;
+  box-shadow:0 4px 14px -4px rgba(200,164,91,.5)}
+.sync{font-size:12.5px;font-weight:700;border-radius:999px;padding:7px 14px;white-space:nowrap;
+  border:1px solid rgba(200,164,91,.28);color:var(--muted);background:rgba(0,0,0,.25)}
+.sync.ok{color:#c9f2d6;border-color:rgba(34,197,94,.4);background:rgba(34,197,94,.1)}
+.sync.wacht{color:#f6e3b4;border-color:var(--gold-line);background:var(--gold-soft)}
+
+/* ---------- categorieën ---------- */
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:18px}
+.cat{position:relative;text-align:left;border:1px solid rgba(200,164,91,.3);border-radius:20px;
+  background:linear-gradient(180deg,#191309 0%,#120d07 100%);padding:18px;cursor:pointer;color:var(--text);
+  font-family:inherit;display:block;width:100%;
+  box-shadow:0 10px 26px -10px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.03);
+  transition:transform .22s var(--ease),border-color .22s var(--ease),box-shadow .22s var(--ease)}
+.cat:hover{transform:translateY(-3px);border-color:var(--gold);
+  box-shadow:0 18px 40px -12px rgba(0,0,0,.6),0 8px 30px -8px rgba(200,164,91,.35)}
+.cat:active{transform:translateY(-1px) scale(.985)}
+.cat-naam{font-size:17.5px;font-weight:800;color:var(--gold-bright);line-height:1.25;margin-bottom:12px}
+.cat-tel{display:flex;gap:8px;flex-wrap:wrap}
+.pil{font-size:12px;font-weight:700;border-radius:999px;padding:4px 11px;border:1px solid rgba(200,164,91,.28);
+  color:var(--muted);background:rgba(0,0,0,.25);white-space:nowrap}
+.pil.open{background:var(--grad-gold);color:#241a0c;border-color:transparent}
+.pil.klaar{color:#c9f2d6;border-color:rgba(34,197,94,.35);background:rgba(34,197,94,.1)}
+
+/* ---------- topbar op subschermen ---------- */
+.topbar{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.terug{appearance:none;border:none;background:var(--grad-gold);color:#241a0c;border-radius:999px;
+  padding:12px 18px;font:800 14px Inter,sans-serif;cursor:pointer;
+  box-shadow:0 6px 18px -6px rgba(200,164,91,.5),inset 0 1px 0 rgba(255,255,255,.5);transition:all .18s var(--ease)}
+.terug:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.terug:active{transform:scale(.97)}
+.schermtitel{flex:1;text-align:center;margin:0;font-size:clamp(20px,3vw,28px);font-weight:750;color:#fff}
+
+/* ---------- takenlijst ---------- */
+.taken{display:grid;gap:12px}
+.taak{border:1px solid rgba(200,164,91,.24);border-radius:16px;
+  background:linear-gradient(180deg,#16110a 0%,#100c07 100%);padding:15px 16px;cursor:pointer;
+  color:var(--text);font-family:inherit;text-align:left;width:100%;display:block;
+  box-shadow:0 6px 18px -8px rgba(0,0,0,.5);transition:all .18s var(--ease)}
+.taak:hover{transform:translateY(-1px);border-color:var(--gold);
+  box-shadow:0 12px 26px -10px rgba(0,0,0,.55),0 0 20px -8px rgba(200,164,91,.25)}
+.taak.af{opacity:.5}
+.taak-naam{font-size:15.5px;font-weight:700;line-height:1.45;margin-bottom:8px}
+.taak-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tag{font-size:11.5px;font-weight:700;border-radius:999px;padding:3px 10px;
+  border:1px solid rgba(200,164,91,.28);color:var(--muted);background:rgba(0,0,0,.25)}
+.tag.nu{background:var(--grad-gold);color:#241a0c;border-color:transparent}
+.tag.gedaan{color:#c9f2d6;border-color:rgba(34,197,94,.4);background:rgba(34,197,94,.12)}
+.leeg{border:1px dashed rgba(200,164,91,.35);border-radius:18px;padding:30px 16px;text-align:center;color:var(--muted)}
+
+/* ---------- formulier ---------- */
+.paneel{background:linear-gradient(180deg,rgba(30,24,15,.8),rgba(17,13,8,.85));
+  border:1px solid var(--gold-line);border-radius:20px;padding:20px;margin-bottom:16px;
+  box-shadow:0 14px 34px -14px rgba(0,0,0,.55),inset 0 1px 0 rgba(240,210,138,.08)}
+.instructie{border:1px solid rgba(200,164,91,.3);border-radius:14px;padding:12px 15px;margin-bottom:16px;
+  background:linear-gradient(180deg,rgba(200,164,91,.12),rgba(200,164,91,.03));
+  color:#f6e3b4;font-size:13.5px;line-height:1.55}
+.veld{display:block;margin-bottom:15px}
+.lbl{display:block;font-size:13px;font-weight:700;color:var(--muted);margin-bottom:7px}
+input[type=text],input[type=number],select,textarea{
+  width:100%;min-height:50px;border:1px solid var(--gold-line);border-radius:13px;padding:12px 14px;
+  background:rgba(0,0,0,.35);color:var(--text);font:400 16px Inter,sans-serif;outline:none;
+  transition:all .2s var(--ease)}
+textarea{min-height:88px;resize:vertical;line-height:1.5}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);
+  box-shadow:0 0 0 4px rgba(200,164,91,.15),0 0 20px -8px rgba(200,164,91,.4)}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),
+  linear-gradient(135deg,var(--gold) 50%,transparent 50%);
+  background-position:calc(100% - 21px) 22px,calc(100% - 15px) 22px;background-size:6px 6px;background-repeat:no-repeat;
+  padding-right:44px}
+.meting{display:grid;grid-template-columns:1fr 132px;gap:11px;align-items:center}
+.meting.mis input{border-color:var(--danger);box-shadow:0 0 0 4px rgba(239,68,68,.14)}
+.oordeel{margin-top:8px;font-size:13px;font-weight:700;border-radius:12px;padding:10px 13px;line-height:1.45}
+.oordeel.goed{color:#c9f2d6;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.4)}
+.oordeel.fout{color:#ffc9c9;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.4)}
+.oordeel.let{color:#f6e3b4;background:var(--gold-soft);border:1px solid var(--gold-line)}
+
+/* schakelaar n.v.t. */
+.schakel{display:flex;align-items:center;justify-content:space-between;gap:14px;
+  border:1px solid rgba(200,164,91,.3);border-radius:16px;padding:14px 16px;margin-bottom:16px;
+  background:rgba(0,0,0,.22);cursor:pointer}
+.schakel span{font-size:14.5px;font-weight:700}
+.sw{flex:0 0 auto;width:54px;height:31px;border-radius:999px;background:rgba(255,255,255,.13);
+  position:relative;transition:background .2s var(--ease)}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:25px;height:25px;border-radius:999px;
+  background:#f5f1e8;transition:transform .2s var(--ease)}
+.schakel.aan{border-color:var(--gold)}
+.schakel.aan .sw{background:var(--gold)}
+.schakel.aan .sw::after{transform:translateX(23px)}
+
+/* duimen */
+.duimen{display:grid;gap:10px}
+.duimrij{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  border:1px solid rgba(200,164,91,.22);border-radius:14px;padding:12px 14px;background:rgba(0,0,0,.2)}
+.duimrij b{font-size:14.5px;font-weight:700}
+.duimknoppen{display:flex;gap:8px}
+.duim{appearance:none;border:1px solid rgba(200,164,91,.3);background:rgba(0,0,0,.3);border-radius:12px;
+  width:52px;height:44px;font-size:19px;cursor:pointer;transition:all .16s var(--ease)}
+.duim:hover{background:rgba(200,164,91,.14)}
+.duim.op.aan{background:rgba(34,197,94,.22);border-color:var(--success)}
+.duim.neer.aan{background:rgba(239,68,68,.22);border-color:var(--danger)}
+
+/* keuzeknoppen */
+.keuzes{display:flex;gap:10px;flex-wrap:wrap}
+.keuze{appearance:none;flex:1 1 150px;min-height:52px;border:1px solid rgba(200,164,91,.3);
+  background:rgba(0,0,0,.3);color:var(--text);border-radius:14px;font:700 15px Inter,sans-serif;cursor:pointer;
+  transition:all .16s var(--ease)}
+.keuze:hover{background:rgba(200,164,91,.14)}
+.keuze.aan{background:var(--grad-gold);color:#241a0c;border-color:transparent;font-weight:800}
+
+.opslaan{width:100%;min-height:56px;border:none;background:var(--grad-gold);color:#241a0c;border-radius:999px;
+  font:800 16.5px Inter,sans-serif;cursor:pointer;margin-top:4px;
+  box-shadow:0 8px 24px -8px rgba(200,164,91,.5),inset 0 1px 0 rgba(255,255,255,.5);transition:all .18s var(--ease)}
+.opslaan:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.opslaan:active{transform:scale(.98)}
+
+.melding{display:none;margin-top:14px;text-align:center;font-weight:700;font-size:14px;padding:13px 16px;border-radius:14px}
+.melding.ok{display:block;color:#c9f2d6;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.4)}
+.melding.fout{display:block;color:#ffc9c9;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.4)}
+
+@media(max-width:640px){
+  .wrap{padding:18px 13px 60px}
+  .cats{grid-template-columns:1fr}
+  .meting{grid-template-columns:1fr}
+  .schermtitel{width:100%;order:3;text-align:left}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Categorieën -->
+  <section id="scherm-cats" class="screen active">
+    <div class="hero">
+      <h1 class="hero-title">HACCP registratie</h1>
+      <div class="hero-date" id="datumRegel"></div>
+      <div class="balk">
+        <div class="bereik" id="bereik">
+          <button type="button" data-bereik="vandaag" class="aan">Vandaag</button>
+          <button type="button" data-bereik="week">Deze week</button>
+          <button type="button" data-bereik="alle">Alles</button>
+        </div>
+        <div class="sync" id="syncStatus">—</div>
+      </div>
+    </div>
+    <div class="cats" id="cats"></div>
+  </section>
+
+  <!-- 2. Takenlijst -->
+  <section id="scherm-taken" class="screen">
+    <div class="topbar">
+      <button class="terug" type="button" id="terugCats">← Terug</button>
+      <h2 class="schermtitel" id="catTitel"></h2>
+    </div>
+    <div class="taken" id="taken"></div>
+  </section>
+
+  <!-- 3. Registratieformulier -->
+  <section id="scherm-form" class="screen">
+    <div class="topbar">
+      <button class="terug" type="button" id="terugTaken">← Terug</button>
+      <h2 class="schermtitel" id="taakTitel"></h2>
+    </div>
+    <div class="paneel">
+      <div class="instructie" id="instructie" hidden></div>
+      <div class="schakel" id="nvtSchakel">
+        <span id="nvtLabel">Niet van toepassing</span>
+        <div class="sw"></div>
+      </div>
+      <div id="velden"></div>
+      <label class="veld">
+        <span class="lbl">Opmerkingen (optioneel)</span>
+        <textarea id="opmerking" placeholder="Bijzonderheden, genomen actie…"></textarea>
+      </label>
+      <button class="opslaan" type="button" id="opslaanBtn">Registratie opslaan</button>
+      <div class="melding" id="melding"></div>
+    </div>
+  </section>
+
+</div>
+
+<script src="taken.js"></script>
+<script>
+(function(){
+"use strict";
+
+/* Apps Script web-app die wegschrijft in "HACCP registratie ZROE".
+   Vervang deze URL als er een nieuwe implementatie komt. */
+var ENDPOINT = "https://script.google.com/macros/s/AKfycbwEIE4wYEt2bS9FQ7HZtHQbbiEvZGEX1wpA_zlh_k8JTBf6cExg0vV9loeoVRiE91Mb/exec";
+var OPSLAG = "haccp_registraties";
+
+var registraties = lees();
+var bereik = "vandaag";
+var huidigeCat = null, huidigeTaak = null;
+var invoer = leegInvoer();
+
+/* ---------------- opslag ---------------- */
+function lees(){
+  try { return JSON.parse(localStorage.getItem(OPSLAG) || "[]"); } catch(e){ return []; }
+}
+function bewaar(){
+  try { localStorage.setItem(OPSLAG, JSON.stringify(registraties)); } catch(e){}
+}
+function leegInvoer(){ return { nvt:false, norm:"", velden:{}, beoordeling:{}, keuze:"", opmerking:"" }; }
+
+/* ---------------- datum ---------------- */
+function pad(n){ return (n<10?"0":"")+n; }
+function vandaag(){ var d=new Date(); d.setHours(0,0,0,0); return d; }
+function isoDag(d){ return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()); }
+function weekdag(d){ return d.getDay()===0 ? 7 : d.getDay(); }
+function maandagVan(d){ var m=new Date(d); m.setDate(m.getDate()-(weekdag(m)-1)); m.setHours(0,0,0,0); return m; }
+function zondagVan(d){ var z=maandagVan(d); z.setDate(z.getDate()+6); return z; }
+function nlDatum(d){
+  var dagen=["Zondag","Maandag","Dinsdag","Woensdag","Donderdag","Vrijdag","Zaterdag"];
+  return dagen[d.getDay()]+" "+pad(d.getDate())+"-"+pad(d.getMonth()+1)+"-"+d.getFullYear();
+}
+function korteDatum(d){ return pad(d.getDate())+"-"+pad(d.getMonth()+1); }
+
+/* ---------------- planning ---------------- */
+function frequentieTekst(f){
+  if (f.type==="dag") return "Elke dag";
+  if (f.type==="week") return "Elke week";
+  if (f.n===13) return "Elk kwartaal";
+  if (f.n===52) return "Elk jaar";
+  return "Elke "+f.n+" weken";
+}
+/* deadline binnen de lopende periode, of null als de taak nu niet loopt */
+function deadlineVan(taak, ref){
+  var f = taak.frequentie;
+  if (f.type==="dag") return new Date(ref);
+  if (f.type==="week"){ var d=maandagVan(ref); d.setDate(d.getDate()+(f.dag-1)); return d; }
+  var start = new Date(f.start+"T00:00:00");
+  var weken = Math.round((maandagVan(ref)-maandagVan(start))/(7*86400000));
+  if (weken < 0 || weken % f.n !== 0) return null;
+  return zondagVan(ref);
+}
+function periodeSleutel(taak, ref){
+  return taak.frequentie.type==="dag" ? isoDag(ref) : isoDag(maandagVan(ref));
+}
+function isAf(taak, ref){
+  var s = periodeSleutel(taak, ref);
+  return registraties.some(function(r){ return r.taakId===taak.id && r.periode===s; });
+}
+/* taken van een categorie binnen het gekozen bereik */
+function takenVoor(catId, keuze){
+  var nu = vandaag(), uit = [];
+  TAKEN.forEach(function(t){
+    if (t.cat !== catId) return;
+    var dl = deadlineVan(t, nu);
+    if (keuze === "alle"){ uit.push({taak:t, deadline:dl, af: dl ? isAf(t,nu) : false}); return; }
+    if (!dl) return;
+    var isVandaag = isoDag(dl) === isoDag(nu);
+    if (keuze==="vandaag" && !isVandaag) return;
+    if (keuze==="week" && isVandaag) return;
+    uit.push({taak:t, deadline:dl, af: isAf(t,nu)});
+  });
+  return uit;
+}
+function aantalOpen(catId, keuze){
+  return takenVoor(catId, keuze).filter(function(x){ return !x.af; }).length;
+}
+
+/* ---------------- normcontrole ---------------- */
+function normLabel(veld){
+  if (veld.label) return veld.label;
+  var prefix = veld.prefix || "Norm";
+  var teken = veld.richting==="hoger" ? " of hoger" : (veld.richting==="lager" ? " of lager" : "");
+  var eenheid = veld.type==="getal" ? (" "+(veld.eenheid||"")) : "°C";
+  return prefix+": "+veld.limiet+eenheid+teken+(veld.suffix||"");
+}
+function binnenNorm(veld, waarde){
+  if (waarde==="" || waarde===null || waarde===undefined) return null;
+  var w = parseFloat(waarde);
+  if (isNaN(w)) return null;
+  if (veld.richting==="lager") return w <= veld.limiet;
+  if (veld.richting==="hoger") return w >= veld.limiet;
+  if (veld.richting==="gelijk") return Math.abs(w-veld.limiet) <= (veld.marge||1);
+  return null;
+}
+
+/* ---------------- schermen ---------------- */
+function toonScherm(id){
+  ["scherm-cats","scherm-taken","scherm-form"].forEach(function(s){
+    document.getElementById(s).classList.toggle("active", s===id);
+  });
+  window.scrollTo(0,0);
+}
+
+function tekenCats(){
+  document.getElementById("datumRegel").textContent = nlDatum(new Date());
+  var host = document.getElementById("cats");
+  host.innerHTML = "";
+  CATEGORIEEN.forEach(function(c){
+    var totaal = takenVoor(c.id, bereik).length;
+    var open = aantalOpen(c.id, bereik);
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "cat";
+    var naam = document.createElement("div");
+    naam.className = "cat-naam"; naam.textContent = c.naam;
+    var tel = document.createElement("div"); tel.className = "cat-tel";
+    if (!totaal){
+      tel.appendChild(pil("Niets ingepland",""));
+    } else if (open){
+      tel.appendChild(pil(open+" open","open"));
+      if (totaal-open) tel.appendChild(pil((totaal-open)+" gedaan","klaar"));
+    } else {
+      tel.appendChild(pil("Alles gedaan","klaar"));
+    }
+    b.appendChild(naam); b.appendChild(tel);
+    b.onclick = function(){ openCat(c); };
+    host.appendChild(b);
+  });
+  tekenSync();
+}
+function pil(tekst, klasse){
+  var s = document.createElement("span");
+  s.className = "pil"+(klasse?" "+klasse:"");
+  s.textContent = tekst;
+  return s;
+}
+
+function openCat(c){
+  huidigeCat = c;
+  document.getElementById("catTitel").textContent = c.naam;
+  tekenTaken();
+  toonScherm("scherm-taken");
+}
+
+function tekenTaken(){
+  var host = document.getElementById("taken");
+  host.innerHTML = "";
+  var lijst = takenVoor(huidigeCat.id, bereik);
+  if (!lijst.length){
+    var leeg = document.createElement("div");
+    leeg.className = "leeg";
+    leeg.textContent = bereik==="alle"
+      ? "Er zijn nog geen taken in deze categorie."
+      : "Geen taken voor dit bereik. Kies 'Alles' om alle taken te zien.";
+    host.appendChild(leeg);
+    return;
+  }
+  var nu = vandaag();
+  lijst.forEach(function(x){
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "taak" + (x.af ? " af" : "");
+    var naam = document.createElement("div");
+    naam.className = "taak-naam"; naam.textContent = x.taak.naam;
+    var meta = document.createElement("div"); meta.className = "taak-meta";
+    if (x.af){
+      meta.appendChild(tag("Gedaan","gedaan"));
+    } else if (x.deadline){
+      var vandaagDl = isoDag(x.deadline)===isoDag(nu);
+      meta.appendChild(tag(vandaagDl ? "Vandaag" : "Voor "+korteDatum(x.deadline), vandaagDl ? "nu" : ""));
+    }
+    meta.appendChild(tag(frequentieTekst(x.taak.frequentie),""));
+    if (x.taak.afdeling) meta.appendChild(tag(x.taak.afdeling,""));
+    b.appendChild(naam); b.appendChild(meta);
+    b.onclick = function(){ openTaak(x.taak); };
+    host.appendChild(b);
+  });
+}
+function tag(tekst, klasse){
+  var s = document.createElement("span");
+  s.className = "tag"+(klasse?" "+klasse:"");
+  s.textContent = tekst;
+  return s;
+}
+
+/* ---------------- formulier ---------------- */
+function openTaak(t){
+  huidigeTaak = t;
+  invoer = leegInvoer();
+  document.getElementById("taakTitel").textContent = t.naam;
+  var ins = document.getElementById("instructie");
+  if (t.instructie){ ins.textContent = t.instructie; ins.hidden = false; }
+  else { ins.hidden = true; }
+  document.getElementById("nvtLabel").textContent = t.nvtLabel || "Niet van toepassing";
+  document.getElementById("opmerking").value = "";
+  var m = document.getElementById("melding"); m.className = "melding"; m.textContent = "";
+  tekenFormulier();
+  toonScherm("scherm-form");
+}
+
+/* Bij een normkeuze hoort een temperatuurveld; dat staat net als in de
+   originele app onder de productnaam. */
+function veldenVoor(t){
+  var uit = [], wachtend = null;
+  t.velden.forEach(function(v){
+    uit.push(v);
+    if (v.type === "normkeuze"){
+      var gekozen = invoer.norm || v.standaard || v.opties[0].naam;
+      invoer.norm = gekozen;
+      var opt = v.opties.filter(function(o){ return o.naam===gekozen; })[0];
+      if (opt && opt.limiet !== null && opt.limiet !== undefined){
+        wachtend = { type:"temperatuur", limiet:opt.limiet, richting:opt.richting, sleutel:"normtemp" };
+      }
+    } else if (wachtend && v.type === "tekst"){
+      uit.push(wachtend); wachtend = null;
+    }
+  });
+  if (wachtend) uit.push(wachtend);
+  return uit;
+}
+
+function tekenFormulier(){
+  document.getElementById("nvtSchakel").classList.toggle("aan", invoer.nvt);
+  var host = document.getElementById("velden");
+  host.innerHTML = "";
+  if (invoer.nvt) return;   // niets in te vullen
+  veldenVoor(huidigeTaak).forEach(function(v,i){
+    host.appendChild(tekenVeld(v,i));
+  });
+}
+
+function tekenVeld(v, i){
+  var sleutel = v.sleutel || (v.type+"-"+i);
+
+  if (v.type === "normkeuze"){
+    var l = document.createElement("label"); l.className = "veld";
+    l.appendChild(lblEl(v.label));
+    var sel = document.createElement("select");
+    v.opties.forEach(function(o){
+      var op = document.createElement("option");
+      op.value = o.naam; op.textContent = o.naam;
+      if (o.naam === invoer.norm) op.selected = true;
+      sel.appendChild(op);
+    });
+    sel.onchange = function(){
+      invoer.norm = this.value;
+      delete invoer.velden.normtemp;
+      tekenFormulier();
+    };
+    l.appendChild(sel);
+    return l;
+  }
+
+  if (v.type === "tekst"){
+    var lt = document.createElement("label"); lt.className = "veld";
+    lt.appendChild(lblEl(v.label));
+    var inp = document.createElement("input");
+    inp.type = "text"; inp.value = invoer.velden[sleutel] || "";
+    inp.oninput = function(){ invoer.velden[sleutel] = this.value; };
+    lt.appendChild(inp);
+    return lt;
+  }
+
+  if (v.type === "temperatuur" || v.type === "getal"){
+    var wrap = document.createElement("div"); wrap.className = "veld";
+    wrap.appendChild(lblEl(normLabel(v)));
+    var rij = document.createElement("div"); rij.className = "meting";
+    var num = document.createElement("input");
+    num.type = "number"; num.step = "0.1";
+    num.placeholder = v.type==="getal" ? (v.eenheid||"waarde") : "°C";
+    num.inputMode = "decimal";
+    if (invoer.velden[sleutel] !== undefined) num.value = invoer.velden[sleutel];
+    var oordeel = document.createElement("div");
+    function beoordeel(){
+      var ok = binnenNorm(v, num.value);
+      rij.classList.toggle("mis", ok === false && !v.richtwaarde);
+      if (ok === null){ oordeel.className = "oordeel"; oordeel.textContent = ""; return; }
+      if (ok){ oordeel.className = "oordeel goed"; oordeel.textContent = "Binnen de norm."; return; }
+      if (v.richtwaarde){
+        oordeel.className = "oordeel let";
+        oordeel.textContent = "Buiten de richtwaarde — let op en noteer dit bij de opmerkingen.";
+      } else {
+        oordeel.className = "oordeel fout";
+        oordeel.textContent = "Buiten de norm! Onderneem actie en noteer die bij de opmerkingen.";
+      }
+    }
+    num.oninput = function(){ invoer.velden[sleutel] = this.value; beoordeel(); };
+    rij.appendChild(num);
+    var eenheid = document.createElement("span");
+    eenheid.className = "pil";
+    eenheid.textContent = v.type==="getal" ? (v.eenheid||"") : "°C";
+    rij.appendChild(eenheid);
+    wrap.appendChild(rij);
+    wrap.appendChild(oordeel);
+    beoordeel();
+    return wrap;
+  }
+
+  if (v.type === "beoordeling"){
+    var wb = document.createElement("div"); wb.className = "veld";
+    wb.appendChild(lblEl(v.label));
+    var box = document.createElement("div"); box.className = "duimen";
+    v.items.forEach(function(item){
+      var r = document.createElement("div"); r.className = "duimrij";
+      var naam = document.createElement("b"); naam.textContent = item;
+      var kn = document.createElement("div"); kn.className = "duimknoppen";
+      [["op","👍",true],["neer","👎",false]].forEach(function(d){
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "duim "+d[0]+(invoer.beoordeling[item]===d[2] ? " aan" : "");
+        b.textContent = d[1];
+        b.setAttribute("aria-label", item+" "+(d[2]?"in orde":"niet in orde"));
+        b.onclick = function(){
+          invoer.beoordeling[item] = (invoer.beoordeling[item]===d[2]) ? undefined : d[2];
+          if (invoer.beoordeling[item]===undefined) delete invoer.beoordeling[item];
+          tekenFormulier();
+        };
+        kn.appendChild(b);
+      });
+      r.appendChild(naam); r.appendChild(kn);
+      box.appendChild(r);
+    });
+    wb.appendChild(box);
+    return wb;
+  }
+
+  if (v.type === "keuze"){
+    var wk = document.createElement("div"); wk.className = "veld";
+    wk.appendChild(lblEl(v.label));
+    var kb = document.createElement("div"); kb.className = "keuzes";
+    v.opties.forEach(function(o){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "keuze"+(invoer.keuze===o ? " aan" : "");
+      b.textContent = o;
+      b.onclick = function(){ invoer.keuze = o; tekenFormulier(); };
+      kb.appendChild(b);
+    });
+    wk.appendChild(kb);
+    return wk;
+  }
+
+  return document.createElement("span");
+}
+function lblEl(tekst){
+  var s = document.createElement("span");
+  s.className = "lbl"; s.textContent = tekst || "";
+  return s;
+}
+
+/* ---------------- opslaan ---------------- */
+function nieuwId(){
+  var d = new Date();
+  return "R"+d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+"-"+
+    pad(d.getHours())+pad(d.getMinutes())+pad(d.getSeconds())+"-"+
+    Math.random().toString(36).slice(2,6).toUpperCase();
+}
+
+function opslaan(){
+  var t = huidigeTaak, nu = new Date();
+  var metingen = [], product = "";
+  invoer.opmerking = document.getElementById("opmerking").value.trim();
+
+  if (!invoer.nvt){
+    var mis = [];
+    veldenVoor(t).forEach(function(v,i){
+      var sleutel = v.sleutel || (v.type+"-"+i);
+      if (v.type === "tekst"){
+        if (!product) product = invoer.velden[sleutel] || "";
+      }
+      if (v.type === "temperatuur" || v.type === "getal"){
+        var w = invoer.velden[sleutel];
+        if (w === undefined || w === "") mis.push(normLabel(v));
+        var ok = binnenNorm(v, w);
+        metingen.push({
+          norm: normLabel(v),
+          waarde: (w===undefined ? "" : w),
+          oordeel: ok===null ? "" : (ok ? "Binnen norm" : (v.richtwaarde ? "Buiten richtwaarde" : "Buiten norm"))
+        });
+      }
+      if (v.type === "keuze" && !invoer.keuze) mis.push(v.label);
+    });
+    if (mis.length){
+      return toonMelding("fout", "Vul eerst in: "+mis.join(", ")+".");
+    }
+  }
+
+  var rec = {
+    id: nieuwId(),
+    taakId: t.id,
+    taak: t.naam,
+    categorie: (CATEGORIEEN.filter(function(c){ return c.id===t.cat; })[0]||{}).naam || "",
+    afdeling: t.afdeling || "",
+    periode: periodeSleutel(t, vandaag()),
+    moment: nu.toISOString(),
+    nvt: !!invoer.nvt,
+    normgroep: invoer.nvt ? "" : (invoer.norm || ""),
+    product: invoer.nvt ? "" : product,
+    metingen: invoer.nvt ? [] : metingen,
+    beoordeling: invoer.nvt ? {} : invoer.beoordeling,
+    antwoord: invoer.nvt ? "" : (invoer.keuze || ""),
+    opmerking: invoer.opmerking || "",
+    verzonden: false
+  };
+  registraties.push(rec);
+  bewaar();
+
+  var buitenNorm = rec.metingen.filter(function(m){ return m.oordeel==="Buiten norm"; }).length;
+  toonMelding("ok", buitenNorm
+    ? "Opgeslagen — let op: "+buitenNorm+" meting buiten de norm."
+    : "Registratie opgeslagen.");
+
+  verstuur(rec);
+  setTimeout(function(){
+    tekenCats(); tekenTaken(); toonScherm("scherm-taken");
+  }, 900);
+}
+
+function toonMelding(soort, tekst){
+  var m = document.getElementById("melding");
+  m.className = "melding "+soort;
+  m.textContent = tekst;
+}
+
+/* ---------------- verzenden ---------------- */
+function lading(rec){
+  return {
+    id: rec.id, moment: rec.moment, categorie: rec.categorie, taak: rec.taak,
+    afdeling: rec.afdeling, nvt: !!rec.nvt, normgroep: rec.normgroep || "",
+    product: rec.product || "", metingen: rec.metingen || [],
+    beoordeling: rec.beoordeling || {}, antwoord: rec.antwoord || "",
+    opmerking: rec.opmerking || ""
+  };
+}
+function markeerVerzonden(id){
+  registraties.forEach(function(r){ if (r.id===id) r.verzonden = true; });
+  bewaar(); tekenSync();
+}
+function verstuur(rec, klaar){
+  if (!ENDPOINT){ tekenSync(); if (klaar) klaar(false); return; }
+  var pakket = lading(rec), afgerond = false;
+  function gelukt(a){
+    if (afgerond) return; afgerond = true;
+    if (a && a.ok) markeerVerzonden(rec.id); else tekenSync();
+    if (klaar) klaar(!!(a && a.ok));
+  }
+  // Content-Type bewust op text/plain: dan komt er geen CORS-preflight.
+  fetch(ENDPOINT, { method:"POST", body: JSON.stringify(pakket) })
+    .then(function(r){ return r.json(); })
+    .then(gelukt)
+    .catch(function(){ viaScript(pakket, gelukt); });
+  setTimeout(function(){
+    if (!afgerond){ afgerond = true; tekenSync(); if (klaar) klaar(false); }
+  }, 20000);
+}
+/* Fallback zonder CORS: Apps Script antwoordt via een callback in een <script>-tag. */
+function viaScript(pakket, klaar){
+  var naam = "haccpCb"+Math.random().toString(36).slice(2,9);
+  var s = document.createElement("script"), opgeruimd = false;
+  function ruimOp(){
+    if (opgeruimd) return; opgeruimd = true;
+    try { delete window[naam]; } catch(e){ window[naam] = undefined; }
+    if (s.parentNode) s.parentNode.removeChild(s);
+  }
+  window[naam] = function(a){ ruimOp(); klaar(a); };
+  s.onerror = function(){ ruimOp(); klaar(null); };
+  s.src = ENDPOINT+"?callback="+naam+"&data="+encodeURIComponent(JSON.stringify(pakket));
+  document.body.appendChild(s);
+  setTimeout(ruimOp, 25000);
+}
+function wachtrij(){ return registraties.filter(function(r){ return !r.verzonden; }); }
+function verstuurWachtrij(){
+  var rij = wachtrij();
+  if (!rij.length || !ENDPOINT) return;
+  rij.forEach(function(r){ verstuur(r); });
+}
+function tekenSync(){
+  var e = document.getElementById("syncStatus");
+  if (!ENDPOINT){ e.className = "sync"; e.textContent = "Niet gekoppeld"; return; }
+  var open = wachtrij().length;
+  if (open){ e.className = "sync wacht"; e.textContent = open+" wacht op verzenden"; }
+  else { e.className = "sync ok"; e.textContent = "Alles doorgegeven"; }
+}
+
+/* ---------------- bediening ---------------- */
+document.getElementById("bereik").addEventListener("click", function(e){
+  var b = e.target.closest("button[data-bereik]");
+  if (!b) return;
+  bereik = b.dataset.bereik;
+  [].forEach.call(this.querySelectorAll("button"), function(x){
+    x.classList.toggle("aan", x===b);
+  });
+  tekenCats();
+  if (huidigeCat) tekenTaken();
+});
+document.getElementById("terugCats").onclick = function(){ tekenCats(); toonScherm("scherm-cats"); };
+document.getElementById("terugTaken").onclick = function(){ tekenTaken(); toonScherm("scherm-taken"); };
+document.getElementById("nvtSchakel").onclick = function(){
+  invoer.nvt = !invoer.nvt;
+  tekenFormulier();
+};
+document.getElementById("opslaanBtn").onclick = opslaan;
+
+/* De iPad in de keuken heeft niet altijd wifi: de wachtrij loopt vanzelf leeg. */
+window.addEventListener("online", verstuurWachtrij);
+setInterval(verstuurWachtrij, 120000);
+
+tekenCats();
+verstuurWachtrij();
+})();
+</script>
+</body>
+</html>
