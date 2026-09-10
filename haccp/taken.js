@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------------
-   HACCP taken - overgenomen uit de Eurofins/Bureau de Wit app
-   ('t Zusje Roermond). Pas hier taken aan; de module leest alleen dit bestand.
+   HACCP taken - volledige overname van de Eurofins/Bureau de Wit app
+   ('t Zusje Roermond). Pas hier taken aan; de app leest alleen dit bestand.
 ------------------------------------------------------------------ */
 
 const AFDELINGEN = ['Warmekant', 'Koudekant', 'Spoelkeuken', 'Bar', 'Algemeen', 'Magazijn'];
