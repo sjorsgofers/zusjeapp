@@ -507,6 +507,7 @@
 
   function tekenSync() {
     var e = document.getElementById('syncStatus');
+    if (!e) return;   // statusbadge staat niet (meer) op de pagina
     if (!koppeling.endpoint) { e.className = 'sync uit'; e.textContent = 'Niet gekoppeld'; return; }
     var open = wachtrij().length;
     if (open) { e.className = 'sync wacht'; e.textContent = open + ' in wachtrij'; }
@@ -580,17 +581,20 @@
 
   /* ---------------- start ---------------- */
   function start() {
-    document.getElementById('knopHistorie').onclick = function () { tekenHistorie(); toon('ovHistorie'); };
-    document.getElementById('btnOpslaan').onclick = opslaan;
-    document.getElementById('btnExport').onclick = exporteer;
+    /* Knoppen die niet op de pagina staan (Historie, Koppeling) worden overgeslagen:
+       dan krijgt de handler een leeg object en gebeurt er niets. */
+    function knop(id) { return document.getElementById(id) || {}; }
+    knop('knopHistorie').onclick = function () { tekenHistorie(); toon('ovHistorie'); };
+    knop('btnOpslaan').onclick = opslaan;
+    knop('btnExport').onclick = exporteer;
 
     var vEnd = document.getElementById('veldEndpoint');
     var mld = document.getElementById('koppelMelding');
-    document.getElementById('knopKoppeling').onclick = function () {
+    knop('knopKoppeling').onclick = function () {
       vEnd.value = koppeling.endpoint;
       mld.textContent = ''; toon('ovKoppeling');
     };
-    document.getElementById('btnKoppelOpslaan').onclick = function () {
+    knop('btnKoppelOpslaan').onclick = function () {
       koppeling = { endpoint: vEnd.value.trim() };
       schrijfOp(OPSLAG_KOP, koppeling);
       mld.className = 'melding goed'; mld.textContent = 'Opgeslagen.';
@@ -599,7 +603,7 @@
         if (totaal) { mld.textContent = 'Opgeslagen. ' + gelukt + ' van ' + totaal + ' uit de wachtrij verstuurd.'; }
       });
     };
-    document.getElementById('btnTest').onclick = function () {
+    knop('btnTest').onclick = function () {
       mld.className = 'melding'; mld.textContent = 'Bezig met testen…';
       koppeling = { endpoint: vEnd.value.trim() };
       testVerbinding(function (a) {
@@ -608,7 +612,7 @@
                                     : 'Geen verbinding: ' + ((a && a.bericht) || 'onbekende fout');
       });
     };
-    document.getElementById('btnWachtrij').onclick = function () {
+    knop('btnWachtrij').onclick = function () {
       mld.className = 'melding'; mld.textContent = 'Bezig met versturen…';
       verstuurWachtrij(function (gelukt, totaal) {
         mld.className = 'melding ' + (gelukt === totaal ? 'goed' : 'fout');

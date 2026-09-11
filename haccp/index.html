@@ -156,23 +156,25 @@
   .hint a{color:var(--oranje)}
   .melding{font-size:13px;font-weight:600;margin:10px 0 0}
   .melding.goed{color:var(--groen)} .melding.fout{color:var(--rood)}
+
+  /* ---------- titel + spreadsheetknop ---------- */
+  .titelrij{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:4px 0 18px}
+  .titelrij h1{margin:0}
+  .knop-sheet{display:inline-flex;align-items:center;gap:6px;background:var(--grad-gold);color:#241a0c;
+    text-decoration:none;font-weight:700;font-size:14px;padding:10px 18px;border-radius:99px;
+    box-shadow:0 6px 18px -6px rgba(200,164,91,.5),inset 0 1px 0 rgba(255,255,255,.5);transition:filter .15s,transform .15s}
+  .knop-sheet:hover{filter:brightness(1.06);transform:translateY(-1px)}
+  .knop-sheet:active{transform:scale(.97)}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="kop">
-    <div class="merk">'t Zusje <span>HACCP</span></div>
-    <div class="kop-rechts">
-      <span class="sync" id="syncStatus" title="Koppeling met het Google-spreadsheet">–</span>
-      <button class="knop-tekst" id="knopHistorie">Historie</button>
-      <button class="knop-tekst" id="knopKoppeling">Koppeling</button>
-    </div>
-  </div>
-</header>
-
 <main>
-  <h1>Taken uitvoeren</h1>
+  <div class="titelrij">
+    <h1>Taken uitvoeren</h1>
+    <a class="knop-sheet" href="https://docs.google.com/spreadsheets/d/1-Vy5ebrcC8FM9-zetaa3zq7pkBv0yw2BFIBzbY3DMhI/edit"
+       target="_blank" rel="noopener">Open spreadsheet &#8599;</a>
+  </div>
 
   <div class="tellers">
     <div class="teller"><div><small>Openstaand vandaag</small><b id="tVandaag">0</b></div><div class="bal oranje" id="bVandaag">0</div></div>
@@ -206,37 +208,7 @@
   </div>
 </div>
 
-<!-- historie -->
-<div class="overlay" id="ovHistorie" hidden>
-  <div class="dlg">
-    <div class="dlg-kop"><h2>Historie</h2><button class="sluit" data-sluit="ovHistorie">×</button></div>
-    <div class="dlg-body" id="histBody"></div>
-    <div class="dlg-voet">
-      <button class="btn grijs" id="btnExport">Exporteer CSV</button>
-      <button class="btn grijs" data-sluit="ovHistorie">Sluiten</button>
-    </div>
-  </div>
-</div>
 
-<!-- koppeling -->
-<div class="overlay" id="ovKoppeling" hidden>
-  <div class="dlg" style="max-width:520px">
-    <div class="dlg-kop"><h2>Koppeling met het spreadsheet</h2><button class="sluit" data-sluit="ovKoppeling">×</button></div>
-    <div class="dlg-body">
-      <p class="hint">Elke opgeslagen registratie wordt naar het Google-spreadsheet
-        <b>HACCP registratie ZROE</b> geschreven. Lukt dat even niet, dan blijft de registratie in de
-        wachtrij staan en gaat hij automatisch alsnog mee.</p>
-      <label class="veld"><span class="lbl">Web-app URL (eindigt op /exec)</span>
-        <input type="text" id="veldEndpoint" placeholder="https://script.google.com/macros/s/.../exec"></label>
-      <div id="koppelMelding"></div>
-    </div>
-    <div class="dlg-voet">
-      <button class="btn grijs" id="btnWachtrij">Wachtrij nu versturen</button>
-      <button class="btn grijs" id="btnTest">Verbinding testen</button>
-      <button class="btn primair" id="btnKoppelOpslaan">Opslaan</button>
-    </div>
-  </div>
-</div>
 
 <script src="instellingen.js"></script>
 <script src="taken.js"></script>
