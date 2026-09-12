@@ -505,13 +505,17 @@
     });
   }
 
+  /* De indicator blijft weg zolang alles doorgegeven is; hij verschijnt pas
+     als er registraties klaarstaan (bijvoorbeeld als de iPad geen wifi had). */
   function tekenSync() {
     var e = document.getElementById('syncStatus');
-    if (!e) return;   // statusbadge staat niet (meer) op de pagina
-    if (!koppeling.endpoint) { e.className = 'sync uit'; e.textContent = 'Niet gekoppeld'; return; }
+    if (!e) return;
+    if (!koppeling.endpoint) { e.hidden = false; e.textContent = 'Niet gekoppeld'; return; }
     var open = wachtrij().length;
-    if (open) { e.className = 'sync wacht'; e.textContent = open + ' in wachtrij'; }
-    else { e.className = 'sync ok'; e.textContent = 'Spreadsheet bij'; }
+    if (!open) { e.hidden = true; return; }
+    e.hidden = false;
+    e.textContent = open === 1 ? '1 registratie wacht op verzenden'
+                               : open + ' registraties wachten op verzenden';
   }
 
   function testVerbinding(klaar) {
@@ -586,6 +590,7 @@
     function knop(id) { return document.getElementById(id) || {}; }
     knop('knopHistorie').onclick = function () { tekenHistorie(); toon('ovHistorie'); };
     knop('btnOpslaan').onclick = opslaan;
+    knop('syncStatus').onclick = function () { verstuurWachtrij(); };
     knop('btnExport').onclick = exporteer;
 
     var vEnd = document.getElementById('veldEndpoint');
